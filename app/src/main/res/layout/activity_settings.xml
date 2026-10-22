@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/scroll"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/fg"
+            android:textSize="26sp"
+            android:fontFamily="@font/space_grotesk"
+            android:textFontWeight="700"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btn_enable"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/s_enable"
+            android:textColor="#FFFFFF"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/space_grotesk"
+            android:textFontWeight="600"
+            android:background="@drawable/btn_accent"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btn_choose"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/s_choose"
+            android:textColor="@color/fg"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/space_grotesk"
+            android:textFontWeight="600"
+            android:background="@drawable/btn_ghost"
+            android:stateListAnimator="@null" />
+
+        <TextView style="@style/SectionTitle" android:text="@string/s_langs" />
+        <TextView style="@style/SectionHint" android:text="@string/s_langs_hint" />
+        <CheckBox android:id="@+id/lang_en" style="@style/Check" android:text="@string/s_en" />
+        <CheckBox android:id="@+id/lang_ro" style="@style/Check" android:text="@string/s_ro" />
+
+        <TextView style="@style/SectionTitle" android:text="@string/s_size" />
+        <SeekBar android:id="@+id/size" style="@style/Slider" android:max="50" />
+
+        <TextView style="@style/SectionTitle" android:text="@string/s_offset" />
+        <SeekBar android:id="@+id/offset" style="@style/Slider" android:max="80" />
+
+        <Switch android:id="@+id/haptic" style="@style/SwitchRow" android:text="@string/s_haptic" />
+        <TextView style="@style/SectionHint" android:text="@string/s_strength" />
+        <SeekBar android:id="@+id/haptic_strength" style="@style/Slider" android:max="99" />
+
+        <Switch android:id="@+id/sound" style="@style/SwitchRow" android:text="@string/s_sound" />
+        <TextView style="@style/SectionHint" android:text="@string/s_volume" />
+        <SeekBar android:id="@+id/volume" style="@style/Slider" android:max="99" />
+
+        <TextView style="@style/SectionTitle" android:text="@string/s_try" />
+        <EditText
+            android:id="@+id/try_it"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="96dp"
+            android:gravity="top"
+            android:padding="12dp"
+            android:hint="@string/s_try_hint"
+            android:textColor="@color/fg"
+            android:textColorHint="@color/fg_muted"
+            android:textSize="16sp"
+            android:fontFamily="@font/space_grotesk"
+            android:inputType="textMultiLine|textCapSentences"
+            android:background="@drawable/field"
+            android:layout_marginBottom="60dp" />
+    </LinearLayout>
+</ScrollView>

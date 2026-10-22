@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opensolr Keys</string>
+    <string name="s_enable">Tastatur aktivieren</string>
+    <string name="s_choose">Tastatur wählen</string>
+    <string name="s_langs">Sprachen für Autokorrektur</string>
+    <string name="s_langs_hint">Wörter werden nur korrigiert, wenn sie nicht im Wörterbuch stehen. Nichts verlässt das Telefon.</string>
+    <string name="s_en">Englisch</string>
+    <string name="s_ro">Rumänisch</string>
+    <string name="s_size">Tastengröße</string>
+    <string name="s_offset">Abstand unten</string>
+    <string name="s_haptic">Vibration</string>
+    <string name="s_strength">Stärke</string>
+    <string name="s_sound">Tastenton</string>
+    <string name="s_volume">Lautstärke</string>
+    <string name="s_try">Ausprobieren</string>
+    <string name="s_try_hint">Hier tippen</string>
+    <string name="s_return">Return</string>
+    <string name="s_abc">ABC</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opensolr Keys</string>
+    <string name="s_enable">キーボードを有効化</string>
+    <string name="s_choose">キーボードを選択</string>
+    <string name="s_langs">自動修正の言語</string>
+    <string name="s_langs_hint">辞書にない単語だけを修正します。データは端末外に送られません。</string>
+    <string name="s_en">英語</string>
+    <string name="s_ro">ルーマニア語</string>
+    <string name="s_size">キーの大きさ</string>
+    <string name="s_offset">下の余白</string>
+    <string name="s_haptic">振動</string>
+    <string name="s_strength">強さ</string>
+    <string name="s_sound">キー音</string>
+    <string name="s_volume">音量</string>
+    <string name="s_try">試す</string>
+    <string name="s_try_hint">ここに入力</string>
+    <string name="s_return">改行</string>
+    <string name="s_abc">ABC</string>
+</resources>

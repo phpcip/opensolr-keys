@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opensolr Keys</string>
+    <string name="s_enable">Enable keyboard</string>
+    <string name="s_choose">Choose keyboard</string>
+    <string name="s_langs">Autocorrect languages</string>
+    <string name="s_langs_hint">Words are only fixed when they are not in the dictionary. Nothing leaves the phone.</string>
+    <string name="s_en">English</string>
+    <string name="s_ro">Romanian</string>
+    <string name="s_size">Key size</string>
+    <string name="s_offset">Bottom offset</string>
+    <string name="s_haptic">Vibration</string>
+    <string name="s_strength">Strength</string>
+    <string name="s_sound">Key sound</string>
+    <string name="s_volume">Volume</string>
+    <string name="s_try">Try it</string>
+    <string name="s_try_hint">Type here</string>
+    <string name="s_return">return</string>
+    <string name="s_abc">ABC</string>
+</resources>

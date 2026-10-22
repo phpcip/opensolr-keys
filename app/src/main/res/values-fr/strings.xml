@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opensolr Keys</string>
+    <string name="s_enable">Activer le clavier</string>
+    <string name="s_choose">Choisir le clavier</string>
+    <string name="s_langs">Langues de correction</string>
+    <string name="s_langs_hint">Les mots ne sont corrigés que s’ils sont absents du dictionnaire. Rien ne quitte le téléphone.</string>
+    <string name="s_en">Anglais</string>
+    <string name="s_ro">Roumain</string>
+    <string name="s_size">Taille des touches</string>
+    <string name="s_offset">Marge basse</string>
+    <string name="s_haptic">Vibration</string>
+    <string name="s_strength">Intensité</string>
+    <string name="s_sound">Son des touches</string>
+    <string name="s_volume">Volume</string>
+    <string name="s_try">Essayer</string>
+    <string name="s_try_hint">Écrire ici</string>
+    <string name="s_return">retour</string>
+    <string name="s_abc">ABC</string>
+</resources>

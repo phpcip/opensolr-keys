@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opensolr Keys</string>
+    <string name="s_enable">Activează tastatura</string>
+    <string name="s_choose">Alege tastatura</string>
+    <string name="s_langs">Limbi pentru autocorectare</string>
+    <string name="s_langs_hint">Cuvintele se corectează doar când nu sunt în dicționar. Nimic nu pleacă din telefon.</string>
+    <string name="s_en">Engleză</string>
+    <string name="s_ro">Română</string>
+    <string name="s_size">Mărimea tastelor</string>
+    <string name="s_offset">Distanța de jos</string>
+    <string name="s_haptic">Vibrație</string>
+    <string name="s_strength">Intensitate</string>
+    <string name="s_sound">Sunet taste</string>
+    <string name="s_volume">Volum</string>
+    <string name="s_try">Încearcă</string>
+    <string name="s_try_hint">Scrie aici</string>
+    <string name="s_return">enter</string>
+    <string name="s_abc">ABC</string>
+</resources>

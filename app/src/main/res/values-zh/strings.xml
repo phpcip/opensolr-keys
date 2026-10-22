@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Opensolr Keys</string>
+    <string name="s_enable">启用键盘</string>
+    <string name="s_choose">选择键盘</string>
+    <string name="s_langs">自动更正语言</string>
+    <string name="s_langs_hint">仅更正词典中不存在的单词。不会有任何数据离开手机。</string>
+    <string name="s_en">英语</string>
+    <string name="s_ro">罗马尼亚语</string>
+    <string name="s_size">按键大小</string>
+    <string name="s_offset">底部间距</string>
+    <string name="s_haptic">振动</string>
+    <string name="s_strength">强度</string>
+    <string name="s_sound">按键音</string>
+    <string name="s_volume">音量</string>
+    <string name="s_try">试一试</string>
+    <string name="s_try_hint">在此输入</string>
+    <string name="s_return">换行</string>
+    <string name="s_abc">ABC</string>
+</resources>
