@@ -270,16 +270,17 @@ class KeyboardView(ctx: Context) : View(ctx) {
         c.drawArc(rect, 20f, 140f, false, stroke)
     }
 
+    /** Any touch on the keyboard goes to the nearest key: edges and gaps count as the key beside them. */
     private fun keyAt(x: Float, y: Float): Key? {
-        for (k in keys) if (k.hit(x, y)) return k
-        // between keys: pick the nearest in the same row
         var best: Key? = null; var bestD = Float.MAX_VALUE
         for (k in keys) {
-            if (y < k.y - rowGap / 2 || y >= k.y + k.h + rowGap / 2) continue
             val dx = when { x < k.x -> k.x - x; x > k.x + k.w -> x - k.x - k.w; else -> 0f }
-            if (dx < bestD) { bestD = dx; best = k }
+            val dy = when { y < k.y -> k.y - y; y > k.y + k.h -> y - k.y - k.h; else -> 0f }
+            val dist = dx * dx + dy * dy
+            if (dist < bestD) { bestD = dist; best = k }
+            if (dist == 0f) return k
         }
-        return if (bestD <= gap) best else null
+        return best
     }
 
     override fun onTouchEvent(e: MotionEvent): Boolean {
