@@ -46,6 +46,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     val colorShadow = if (dark) Color.parseColor("#1A1A1C") else Color.parseColor("#898A8D")
     private val colorHighlight = Color.parseColor("#007AFF")
     private val colorHint = Color.parseColor("#8E8E93")
+    private val colorBorder = Color.parseColor("#6E6E73")
 
     private val fill = Paint(Paint.ANTI_ALIAS_FLAG)
     private val text = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = Typeface.SANS_SERIF }
@@ -372,12 +373,12 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private fun showPreview(k: Key) {
         removeCallbacks(hidePreview)
         val label = if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text
-        val pw = (k.w * 1.6f).roundToInt()
-        val ph = (k.h * 2.25f).roundToInt()
+        val pw = (k.w * 1.8f).roundToInt()
+        val ph = (k.h * 2.4f).roundToInt()
         getLocationInWindow(winPos)
         val px = (winPos[0] + k.x + k.w / 2 - pw / 2).roundToInt()
         val py = (winPos[1] + k.y + k.h - ph).roundToInt()
-        previewView.set(label, k.w, k.h, keyH * 0.95f)
+        previewView.set(label, k.w, k.h, keyH * 1.15f)
         if (preview.isShowing) preview.update(px, py, pw, ph)
         else { preview.width = pw; preview.height = ph; preview.contentView = previewView; preview.showAtLocation(this, android.view.Gravity.NO_GRAVITY, px, py) }
         previewView.invalidate()
@@ -412,9 +413,9 @@ class KeyboardView(ctx: Context) : View(ctx) {
             path.lineTo(kx0, bodyBottom + r); path.quadTo(kx0, bodyBottom, kx0 - r, bodyBottom)
             path.lineTo(r, bodyBottom); path.quadTo(0f, bodyBottom, 0f, bodyBottom - r)
             path.lineTo(0f, top + r); path.quadTo(0f, top, r, top); path.close()
-            p.color = colorShadow; p.style = Paint.Style.STROKE; p.strokeWidth = 1 * d
-            c.drawPath(path, p)
             p.color = colorKey; p.style = Paint.Style.FILL
+            c.drawPath(path, p)
+            p.color = colorBorder; p.style = Paint.Style.STROKE; p.strokeWidth = 1.5f * d
             c.drawPath(path, p)
             t.color = colorText; t.textSize = fontPx
             c.drawText(label, w / 2, bodyBottom / 2 - (t.descent() + t.ascent()) / 2, t)
