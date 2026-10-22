@@ -27,6 +27,9 @@ class SettingsActivity : Activity() {
         scroll.setOnApplyWindowInsetsListener { v, insets ->
             val bars = insets.getInsets(WindowInsets.Type.systemBars() or WindowInsets.Type.ime())
             v.setPadding(0, bars.top, 0, bars.bottom)
+            // keep the field you type in visible above the keyboard
+            val field = findViewById<android.view.View>(R.id.try_it)
+            if (field.isFocused) v.post { field.requestRectangleOnScreen(android.graphics.Rect(0, 0, field.width, field.height), false) }
             insets
         }
 

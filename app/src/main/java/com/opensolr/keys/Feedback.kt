@@ -8,7 +8,6 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
-import java.io.File
 
 /** Key click sound (the system's own key tone) and vibration, both with user-set strength. */
 class Feedback(private val ctx: Context, private val prefs: Prefs) {
@@ -26,12 +25,9 @@ class Feedback(private val ctx: Context, private val prefs: Prefs) {
     private val ids = HashMap<Kind, Int>()
 
     init {
-        // the system's own tap sound, the one every stock Pixel plays when you touch things
-        val tick = listOf("/system/media/audio/ui/Effect_Tick.ogg", "/product/media/audio/ui/Effect_Tick.ogg").map(::File).firstOrNull { it.exists() }
-        if (tick != null) {
-            val id = pool.load(tick.absolutePath, 1)
-            for (k in Kind.entries) ids[k] = id
-        }
+        // the Pixel tap sound, bundled so it is the same on every phone
+        val id = pool.load(ctx, R.raw.tick, 1)
+        for (k in Kind.entries) ids[k] = id
     }
 
     fun key(kind: Kind) {
