@@ -376,7 +376,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         val px = (winPos[0] + accentLeft).roundToInt()
         val py = (winPos[1] + k.y - keyH * 1.1f - accentView.pad * 2 - 4 * d).roundToInt()
         val ph = (keyH * 1.1f + accentView.pad * 2).roundToInt()
-        accentView.select(0)
+        accentView.select(Accents.defaultIndex(k.text, chars))
         if (accents.isShowing) accents.update(px, py, pw.roundToInt(), ph) else { accents.width = pw.roundToInt(); accents.height = ph; accents.contentView = accentView; accents.showAtLocation(this, android.view.Gravity.NO_GRAVITY, px, py) }
     }
 
