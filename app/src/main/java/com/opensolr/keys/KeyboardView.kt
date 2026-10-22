@@ -355,7 +355,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private fun onLongPress() {
         val k = activeKey ?: return
         val alts = Accents.of(k.text, mode == Mode.LETTERS && shift != Shift.OFF) ?: return
-        val chars = (if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text) + alts
+        // only the alternatives: the key's own letter is what a plain tap already gives
+        val chars = alts
         if (preview.isShowing) preview.dismiss()
         accentView.setup(chars.map { it.toString() }, unit, keyH * 1.1f, keyH * 0.5f)
         val pw = accentView.cellW * chars.length + accentView.pad * 2
