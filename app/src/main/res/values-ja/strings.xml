@@ -20,5 +20,8 @@
     <string name="s_learned_hint">修正を拒否した単語です。削除すると再び修正対象になります。</string>
     <string name="s_learned_empty">まだありません</string>
     <string name="s_emoji_search">絵文字を検索</string>
+    <string name="s_learned_edit">リストを編集</string>
+    <string name="s_learned_file_hint">1行に1語。</string>
+    <string name="s_save">保存</string>
     <string name="s_abc">ABC</string>
 </resources>

@@ -20,5 +20,8 @@
     <string name="s_learned_hint">Palabras cuya corrección rechazaste. Quita una para que vuelva a corregirse.</string>
     <string name="s_learned_empty">Ninguna todavía</string>
     <string name="s_emoji_search">Buscar emoji</string>
+    <string name="s_learned_edit">Editar la lista</string>
+    <string name="s_learned_file_hint">Una palabra por línea.</string>
+    <string name="s_save">Guardar</string>
     <string name="s_abc">ABC</string>
 </resources>

@@ -33,6 +33,9 @@ class SettingsActivity : Activity() {
         findViewById<android.view.View>(R.id.btn_enable).setOnClickListener {
             startActivity(Intent(Settings.ACTION_INPUT_METHOD_SETTINGS))
         }
+        findViewById<android.view.View>(R.id.btn_learned).setOnClickListener {
+            startActivity(Intent(this, WordsActivity::class.java))
+        }
         findViewById<android.view.View>(R.id.btn_choose).setOnClickListener {
             (getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager).showInputMethodPicker()
         }
@@ -62,48 +65,6 @@ class SettingsActivity : Activity() {
         val sound = findViewById<Switch>(R.id.sound)
         sound.isChecked = prefs.sound
         sound.setOnCheckedChangeListener { _, on -> prefs.sound = on }
-    }
-
-    private val onPrefChange = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
-        if (key == "learned") renderLearned()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        renderLearned()
-        getSharedPreferences("keys", MODE_PRIVATE).registerOnSharedPreferenceChangeListener(onPrefChange)
-    }
-
-    override fun onPause() {
-        getSharedPreferences("keys", MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(onPrefChange)
-        super.onPause()
-    }
-
-    /** Words kept as typed; each row has an × that forgets the word. */
-    private fun renderLearned() {
-        val box = findViewById<LinearLayout>(R.id.learned)
-        box.removeAllViews()
-        val d = resources.displayMetrics.density
-        val words = prefs.learned.sorted()
-        if (words.isEmpty()) {
-            box.addView(TextView(this).apply {
-                text = getString(R.string.s_learned_empty); textSize = 14f; setTextColor(getColor(R.color.fg_muted))
-                typeface = resources.getFont(R.font.space_grotesk_medium)
-            })
-            return
-        }
-        for (w in words) {
-            val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL; minimumHeight = (44 * d).toInt() }
-            row.addView(TextView(this).apply {
-                text = w; textSize = 16f; setTextColor(getColor(R.color.fg)); typeface = resources.getFont(R.font.space_grotesk_medium)
-            }, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT).apply { weight = 1f })
-            row.addView(TextView(this).apply {
-                text = "×"; textSize = 22f; gravity = Gravity.CENTER; setTextColor(getColor(R.color.fg))
-                setPadding((16 * d).toInt(), 0, (8 * d).toInt(), 0)
-                setOnClickListener { prefs.forget(w); renderLearned() }
-            }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, (44 * d).toInt()))
-            box.addView(row)
-        }
     }
 
     private fun slider(id: Int, value: Int, onChange: (Int) -> Unit) {

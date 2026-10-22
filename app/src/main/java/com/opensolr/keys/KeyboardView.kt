@@ -45,6 +45,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     val colorText = if (dark) Color.WHITE else Color.BLACK
     val colorShadow = if (dark) Color.parseColor("#1A1A1C") else Color.parseColor("#898A8D")
     private val colorHighlight = Color.parseColor("#007AFF")
+    private val colorHint = Color.parseColor("#8E8E93")
 
     private val fill = Paint(Paint.ANTI_ALIAS_FLAG)
     private val text = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = Typeface.SANS_SERIF }
@@ -99,7 +100,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
 
     fun keyboardHeight(): Int {
         val kh = 48 * d * sizePercent / 100f
-        return (topPad + 4 * kh + 3 * rowGap + bottomPad).roundToInt()
+        val rowsH = rows.sumOf { r -> (kh * (r.firstOrNull()?.heightScale ?: 1f)).toDouble() }.toFloat()
+        return (topPad + rowsH + (rows.size - 1) * rowGap + bottomPad).roundToInt()
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -113,19 +115,22 @@ class KeyboardView(ctx: Context) : View(ctx) {
         val w = wInt.toFloat()
         unit = (w - 2 * side - 9 * gap) / 10f
         keyH = 48 * d * sizePercent / 100f
+        var y = topPad
+        val last = rows.size - 1
         for ((r, row) in rows.withIndex()) {
-            val y = topPad + r * (keyH + rowGap)
-            for (k in row) { k.y = y; k.h = keyH }
-            when (r) {
-                0, 1 -> {
-                    val total = row.size * unit + (row.size - 1) * gap
-                    var x = (w - total) / 2
-                    for (k in row) { k.x = x; k.w = unit; x += unit + gap }
+            val rh = keyH * (row.firstOrNull()?.heightScale ?: 1f)
+            for (k in row) { k.y = y; k.h = rh }
+            when {
+                r == last -> {
+                    var x = side
+                    val fixed = row.filter { it.weight > 0f }.sumOf { (it.weight * unit).toDouble() }.toFloat()
+                    val spaceW = w - 2 * side - fixed - (row.size - 1) * gap
+                    for (k in row) { k.x = x; k.w = if (k.weight > 0f) k.weight * unit else spaceW; x += k.w + gap }
                 }
-                2 -> {
-                    val first = row.first(); val last = row.last()
+                r == last - 1 -> {
+                    val first = row.first(); val lastK = row.last()
                     first.x = side; first.w = unit * first.weight
-                    last.w = unit * last.weight; last.x = w - side - last.w
+                    lastK.w = unit * lastK.weight; lastK.x = w - side - lastK.w
                     val mid = row.subList(1, row.size - 1)
                     if (mid.size == 7) {
                         val total = 7 * unit + 6 * gap
@@ -134,19 +139,19 @@ class KeyboardView(ctx: Context) : View(ctx) {
                     } else {
                         val big = gap * 2.3f
                         val start = first.x + first.w + big
-                        val end = last.x - big
+                        val end = lastK.x - big
                         val kw = (end - start - (mid.size - 1) * gap) / mid.size
                         var x = start
                         for (k in mid) { k.x = x; k.w = kw; x += kw + gap }
                     }
                 }
                 else -> {
-                    var x = side
-                    val fixed = row.filter { it.weight > 0f }.sumOf { (it.weight * unit).toDouble() }.toFloat()
-                    val spaceW = w - 2 * side - fixed - (row.size - 1) * gap
-                    for (k in row) { k.x = x; k.w = if (k.weight > 0f) k.weight * unit else spaceW; x += k.w + gap }
+                    val total = row.size * unit + (row.size - 1) * gap
+                    var x = (w - total) / 2
+                    for (k in row) { k.x = x; k.w = unit; x += unit + gap }
                 }
             }
+            y += rh + rowGap
         }
     }
 
@@ -155,7 +160,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         for (k in keys) drawKey(c, k)
     }
 
-    private fun isSpecial(k: Key) = when (k.type) {
+    private fun isSpecial(k: Key) = k.special || when (k.type) {
         KType.CHAR, KType.SPACE -> false
         else -> true
     }
@@ -165,7 +170,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         var color = if (isSpecial(k)) colorSpecial else colorKey
         if (k.type == KType.SHIFT && shift != Shift.OFF) color = Color.WHITE
         else if (isSpecial(k) && pressed) color = colorKey
-        else if (k.type == KType.SPACE && pressed) color = colorSpecial
+        else if ((k.type == KType.SPACE || k.type == KType.CHAR) && pressed && !k.special) color = colorSpecial
         if (k.type == KType.ENTER) {
             val r = k.h / 2
             fill.color = colorShadow
@@ -188,9 +193,15 @@ class KeyboardView(ctx: Context) : View(ctx) {
         when (k.type) {
             KType.CHAR -> {
                 text.color = ink
-                text.textSize = keyH * 0.6f
+                text.textSize = k.h * 0.6f
                 val s = if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text
                 c.drawText(s, cx, cy - (text.descent() + text.ascent()) / 2, text)
+                val hint = if (mode == Mode.LETTERS) Accents.hint(k.text) else null
+                if (hint != null) {
+                    text.color = colorHint
+                    text.textSize = k.h * 0.24f
+                    c.drawText(hint, k.x + k.w - 5 * d - text.measureText(hint) / 2, k.y + 4 * d - text.ascent(), text)
+                }
             }
             KType.SPACE, KType.MODE, KType.ENTER -> {
                 text.color = ink

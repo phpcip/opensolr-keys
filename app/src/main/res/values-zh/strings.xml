@@ -20,5 +20,8 @@
     <string name="s_learned_hint">你拒绝更正的词。删除后将再次被自动更正。</string>
     <string name="s_learned_empty">暂无</string>
     <string name="s_emoji_search">搜索表情</string>
+    <string name="s_learned_edit">编辑列表</string>
+    <string name="s_learned_file_hint">每行一个词。</string>
+    <string name="s_save">保存</string>
     <string name="s_abc">ABC</string>
 </resources>

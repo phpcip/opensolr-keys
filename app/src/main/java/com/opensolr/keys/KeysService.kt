@@ -35,6 +35,24 @@ class HideKeyView(ctx: android.content.Context, bg: Int, ink: Int, onTap: () -> 
     }
 }
 
+/** The emoji button under the keys. */
+class SmileyView(ctx: android.content.Context, bg: Int, ink: Int, onTap: () -> Unit) : View(ctx) {
+    private val d = resources.displayMetrics.density
+    private val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply { color = ink }
+    private val r = android.graphics.RectF()
+    init { setBackgroundColor(bg); isClickable = true; setOnClickListener { onTap() } }
+    override fun onDraw(c: android.graphics.Canvas) {
+        val cx = width / 2f; val cy = height / 2f; val rad = 9 * d
+        p.style = android.graphics.Paint.Style.STROKE; p.strokeWidth = 1.6f * d; p.strokeCap = android.graphics.Paint.Cap.ROUND
+        c.drawCircle(cx, cy, rad, p)
+        r.set(cx - rad * 0.6f, cy - rad * 0.45f, cx + rad * 0.6f, cy + rad * 0.6f)
+        c.drawArc(r, 20f, 140f, false, p)
+        p.style = android.graphics.Paint.Style.FILL
+        c.drawCircle(cx - rad * 0.38f, cy - rad * 0.25f, rad * 0.13f, p)
+        c.drawCircle(cx + rad * 0.38f, cy - rad * 0.25f, rad * 0.13f, p)
+    }
+}
+
 class KeysService : InputMethodService(), KeyboardView.Listener {
     private lateinit var prefs: Prefs
     private lateinit var feedback: Feedback
@@ -56,6 +74,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     /** The last word written that the next word may still change (ca/că, their/there). */
     private class Pending(val prev: String?, val word: String)
     private var pending: Pending? = null
+    private var viewWasHidden = true
     /** Non-null while the keys type into the emoji search instead of the app. */
     private var emojiSearch: String? = null
 
@@ -82,8 +101,13 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         content.addView(kb, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         root.addView(content, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
 
+        // under the keys: emoji on the left, the hide chevron in the middle
+        val strip = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
+        strip.addView(SmileyView(this, kb.colorBg, kb.colorText) { toggleEmoji() }, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
         hideKey = HideKeyView(this, kb.colorBg, kb.colorText) { requestHideSelf(0) }
-        root.addView(hideKey, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (26 * d).roundToInt()))
+        strip.addView(hideKey, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT).apply { weight = 1f })
+        strip.addView(View(this).apply { setBackgroundColor(kb.colorBg) }, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
+        root.addView(strip, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (30 * d).roundToInt()))
         spacer = View(this)
         root.addView(spacer, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (prefs.bottomOffsetDp * d).roundToInt()))
         emojiPanel = null
@@ -99,7 +123,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         applyBottomSpace()
         root.post { applyBottomSpace(); hideSystemImeBar() }
         // a restart (same field, re-laid out) keeps the emoji panel or search open
-        if (!restarting) { hideEmoji(); emojiSearch = null }
+        if (!restarting || viewWasHidden) { hideEmoji(); emojiSearch = null }
+        viewWasHidden = false
 
         val cls = info.inputType and InputType.TYPE_MASK_CLASS
         val variation = info.inputType and InputType.TYPE_MASK_VARIATION
@@ -149,6 +174,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     }
 
     override fun onFinishInputView(finishingInput: Boolean) {
+        viewWasHidden = true
         kb.dismissPopups()
         super.onFinishInputView(finishingInput)
     }
@@ -396,6 +422,12 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private fun commitEmoji(e: String) {
         feedback.key(Feedback.Kind.STANDARD)
         currentInputConnection?.commitText(e, 1)
+    }
+
+    private fun toggleEmoji() {
+        feedback.key(Feedback.Kind.STANDARD)
+        if (emojiSearch != null) { emojiSearch = null; updateShift() }
+        if (emojiPanel?.visibility == View.VISIBLE) { hideEmoji(); updateBar() } else showEmoji()
     }
 
     private fun startEmojiSearch() {

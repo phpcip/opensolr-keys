@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/words_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/s_learned"
+        android:textColor="@color/fg"
+        android:textSize="22sp"
+        android:fontFamily="@font/space_grotesk"
+        android:textFontWeight="700"
+        android:layout_marginTop="8dp" />
+
+    <TextView style="@style/SectionHint" android:text="@string/s_learned_file_hint" />
+
+    <EditText
+        android:id="@+id/words"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:padding="12dp"
+        android:textColor="@color/fg"
+        android:textSize="16sp"
+        android:fontFamily="monospace"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:background="@drawable/field" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/s_save"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="@font/space_grotesk"
+        android:textFontWeight="600"
+        android:background="@drawable/btn_accent"
+        android:stateListAnimator="@null" />
+</LinearLayout>
