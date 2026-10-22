@@ -1,0 +1,9 @@
+The word and word-pair frequency tables (assets/dict_*.bin, assets/bigrams_*.bin) were
+computed from the OpenSubtitles2018 monolingual corpora distributed by OPUS
+(https://opus.nlpl.eu/OpenSubtitles.php).
+
+P. Lison and J. Tiedemann, 2016, OpenSubtitles2016: Extracting Large Parallel Corpora from
+Movie and TV Subtitles. In Proceedings of the 10th International Conference on Language
+Resources and Evaluation (LREC 2016).
+
+The tables contain only aggregate counts, no subtitle text.

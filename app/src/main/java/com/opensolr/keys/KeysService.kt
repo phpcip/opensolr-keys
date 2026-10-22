@@ -53,6 +53,9 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private var lastSpaceAt = 0L
     private var lastCorrection: Pair<String, String>? = null
     private var rejectedWord: String? = null
+    /** The last word written that the next word may still change (ca/că, their/there). */
+    private class Pending(val prev: String?, val word: String)
+    private var pending: Pending? = null
     /** Non-null while the keys type into the emoji search instead of the app. */
     private var emojiSearch: String? = null
 
@@ -120,7 +123,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             action == EditorInfo.IME_ACTION_DONE -> "done"
             else -> getString(R.string.s_return)
         }
-        lastCorrection = null; rejectedWord = null
+        lastCorrection = null; rejectedWord = null; pending = null
         if (!restarting) kb.shift = KeyboardView.Shift.OFF
         updateShift()
         updateBar()
@@ -228,6 +231,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
                         rejectedWord = lc.first
                         prefs.learn(lc.first)
                         lastCorrection = null
+                        pending = null
                         updateShift(); updateBar()
                         return
                     }
@@ -275,15 +279,52 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         return before.substring(i)
     }
 
+    /** The word before [word] in the text, when only one separator sits between them. */
+    private fun previousWord(ic: InputConnection, word: String): String? {
+        val before = ic.getTextBeforeCursor(96, 0)?.toString() ?: return null
+        if (!before.endsWith(word)) return null
+        var i = before.length - word.length
+        val sepEnd = i
+        while (i > 0 && (before[i - 1] == ' ' || before[i - 1] == ',')) i--
+        if (i == sepEnd || i == 0) return null
+        val wordEnd = i
+        while (i > 0 && (before[i - 1].isLetter() || before[i - 1] == '\'')) i--
+        return if (i < wordEnd) before.substring(i, wordEnd) else null
+    }
+
     private fun applyCorrection(ic: InputConnection) {
         lastCorrection = null
         if (!autocorrect) return
-        val word = currentWord(ic)
-        if (word.isEmpty() || word.startsWith(":") || word == rejectedWord || word.lowercase() in prefs.learned) return
-        val fixed = Dictionary.correct(word) ?: return
-        ic.deleteSurroundingText(word.length, 0)
-        ic.commitText(fixed, 1)
-        lastCorrection = word to fixed
+        val typed = currentWord(ic)
+        if (typed.isEmpty() || typed.startsWith(":")) { pending = null; return }
+        var word = typed
+        var prev = previousWord(ic, word)
+        prev = revisePrevious(ic, prev, word)
+        if (word == rejectedWord || word.lowercase() in prefs.learned) { pending = null; return }
+        val fixed = Dictionary.choose(prev, word, null)
+        if (fixed != null) {
+            ic.deleteSurroundingText(word.length, 0)
+            ic.commitText(fixed, 1)
+            lastCorrection = word to fixed
+            word = fixed
+        }
+        pending = if (Dictionary.isAmbiguous(word) && typed == Dictionary.strip(typed)) Pending(prev, word) else null
+    }
+
+    /** With the next word known, rewrites the previous ambiguous word when the context says so. */
+    private fun revisePrevious(ic: InputConnection, prev: String?, next: String): String? {
+        val p = pending ?: return prev
+        pending = null
+        if (prev == null || prev != p.word) return prev
+        if (prev.lowercase() in prefs.learned) return prev
+        val better = Dictionary.choose(p.prev, prev, next, revising = true) ?: return prev
+        val before = ic.getTextBeforeCursor(96, 0)?.toString() ?: return prev
+        val tail = before.length - next.length
+        val start = before.lastIndexOf(prev, tail - 1)
+        if (start < 0 || tail - (start + prev.length) > 2) return prev
+        ic.deleteSurroundingText(before.length - start, 0)
+        ic.commitText(better + before.substring(start + prev.length), 1)
+        return better
     }
 
     private fun updateBar() {
@@ -307,7 +348,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         val emojis = Emoji.suggest(word)
         for (e in emojis) bar.addView(chip(e, 22f) { replaceWord(word, e) })
         if (emojis.isEmpty() && autocorrect && !word.startsWith(":") && word != rejectedWord && word.lowercase() !in prefs.learned) {
-            val fixed = Dictionary.correct(word)
+            val fixed = Dictionary.choose(previousWord(ic, word), word, null)
             if (fixed != null) bar.addView(correctionChip(fixed, { replaceWord(word, fixed) }, { prefs.learn(word); rejectedWord = word; updateBar() }))
         }
         barScroll.scrollTo(0, 0)
