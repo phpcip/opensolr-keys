@@ -86,6 +86,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private val winPos = IntArray(2)
 
     private val longPress = Runnable { onLongPress() }
+    // the balloon lingers a moment after the finger lifts, like on iOS
+    private val hidePreview = Runnable { if (preview.isShowing && activeKey?.type != KType.CHAR) preview.dismiss() }
     private val repeat = object : Runnable {
         override fun run() {
             val k = activeKey ?: return
@@ -334,8 +336,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
                 else -> {}
             }
         }
-        if (preview.isShowing) preview.dismiss()
         activeKey = null; pressedKey = null; activePointer = -1
+        if (preview.isShowing) { removeCallbacks(hidePreview); postDelayed(hidePreview, 60) }
         invalidate()
     }
 
@@ -356,6 +358,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     }
 
     private fun showPreview(k: Key) {
+        removeCallbacks(hidePreview)
         val label = if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text
         val pw = (k.w * 1.6f).roundToInt()
         val ph = (k.h * 2.25f).roundToInt()
@@ -369,7 +372,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     }
 
     fun dismissPopups() {
-        removeCallbacks(longPress); removeCallbacks(repeat)
+        removeCallbacks(longPress); removeCallbacks(repeat); removeCallbacks(hidePreview)
         if (preview.isShowing) preview.dismiss()
         if (accents.isShowing) accents.dismiss()
         activeKey = null; pressedKey = null
