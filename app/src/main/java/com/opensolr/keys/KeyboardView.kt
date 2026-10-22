@@ -68,6 +68,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
 
     private var activeKey: Key? = null
     private var activePointer = -1
+    private var downX = 0f; private var downY = 0f
     private var pressedKey: Key? = null
     private var repeatFired = false
     private var lastShiftTap = 0L
@@ -154,6 +155,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
             }
             y += rh + rowGap
         }
+        // keep the system's back gesture off the edge keys (the system allows 200dp per edge)
+        systemGestureExclusionRects = listOf(android.graphics.Rect(0, 0, wInt, min(y, 200 * d).roundToInt()))
     }
 
     override fun onDraw(c: Canvas) {
@@ -290,6 +293,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
                 activeKey?.let { finish(it, true) }
                 val k = keyAt(e.getX(idx), e.getY(idx)) ?: return true
                 activePointer = e.getPointerId(idx)
+                downX = e.getX(idx); downY = e.getY(idx)
                 press(k)
             }
             MotionEvent.ACTION_MOVE -> {
@@ -309,7 +313,12 @@ class KeyboardView(ctx: Context) : View(ctx) {
             MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP -> {
                 if (e.getPointerId(e.actionIndex) == activePointer) activeKey?.let { finish(it, true) }
             }
-            MotionEvent.ACTION_CANCEL -> activeKey?.let { finish(it, false) }
+            MotionEvent.ACTION_CANCEL -> {
+                // the system cancels edge touches it mistakes for a gesture: a finger that barely moved still typed
+                val idx = e.findPointerIndex(activePointer)
+                val moved = idx >= 0 && (kotlin.math.abs(e.getX(idx) - downX) > 12 * d || kotlin.math.abs(e.getY(idx) - downY) > 12 * d)
+                activeKey?.let { finish(it, !moved && !accents.isShowing) }
+            }
         }
         return true
     }

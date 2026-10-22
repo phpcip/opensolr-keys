@@ -21,13 +21,22 @@ import kotlin.math.max
 import kotlin.math.roundToInt
 
 /** The chevron under the keys that hides the keyboard, like the iPad key. */
-class HideKeyView(ctx: android.content.Context, bg: Int, ink: Int, onTap: () -> Unit) : View(ctx) {
+class HideKeyView(ctx: android.content.Context, bg: Int, ink: Int, onTap: () -> Unit, private val forward: (View, android.view.MotionEvent) -> Boolean) : View(ctx) {
     private val d = resources.displayMetrics.density
     private val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply {
         style = android.graphics.Paint.Style.STROKE; strokeWidth = 2f * d; strokeCap = android.graphics.Paint.Cap.ROUND; strokeJoin = android.graphics.Paint.Join.ROUND; color = ink
     }
     private val path = android.graphics.Path()
-    init { setBackgroundColor(bg); isClickable = true; setOnClickListener { onTap() } }
+    private var onChevron = false
+    init { setBackgroundColor(bg) }
+    override fun onTouchEvent(e: android.view.MotionEvent): Boolean {
+        if (e.actionMasked == android.view.MotionEvent.ACTION_DOWN) onChevron = kotlin.math.abs(e.x - width / 2f) < 40 * d
+        if (!onChevron) return forward(this, e)
+        if (e.actionMasked == android.view.MotionEvent.ACTION_UP) onTapRef()
+        return true
+    }
+    private fun onTapRef() = onTap()
+    private val onTap = onTap
     override fun onDraw(c: android.graphics.Canvas) {
         val cx = width / 2f; val cy = height / 2f; val s = 7 * d
         path.reset(); path.moveTo(cx - s, cy - s * 0.45f); path.lineTo(cx, cy + s * 0.45f); path.lineTo(cx + s, cy - s * 0.45f)
@@ -120,6 +129,9 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         barScroll.addView(bar, ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT))
         root.addView(barScroll, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (40 * d).roundToInt()))
 
+        bar.setOnTouchListener { _, e -> forwardToKeys(bar, e) }
+        barScroll.setOnTouchListener { _, e -> forwardToKeys(barScroll, e) }
+
         content = FrameLayout(this)
         content.addView(kb, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         root.addView(content, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
@@ -127,15 +139,30 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         // under the keys: emoji on the left, the hide chevron in the middle
         val strip = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
         strip.addView(SmileyView(this, kb.colorBg, kb.colorText) { toggleEmoji() }, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
-        hideKey = HideKeyView(this, kb.colorBg, kb.colorText) { requestHideSelf(0) }
+        hideKey = HideKeyView(this, kb.colorBg, kb.colorText, { requestHideSelf(0) }) { v, e -> forwardToKeys(v, e) }
         strip.addView(hideKey, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT).apply { weight = 1f })
-        strip.addView(View(this).apply { setBackgroundColor(kb.colorBg) }, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
+        val rightPad = View(this).apply { setBackgroundColor(kb.colorBg) }
+        rightPad.setOnTouchListener { v, e -> forwardToKeys(v, e) }
+        strip.addView(rightPad, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
         root.addView(strip, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (30 * d).roundToInt()))
         spacer = View(this)
         root.addView(spacer, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (prefs.bottomOffsetDp * d).roundToInt()))
         emojiPanel = null
         root.viewTreeObserver.addOnGlobalLayoutListener { hideSystemImeBar() }
         return root
+    }
+
+    private val loc = IntArray(2); private val kbLoc = IntArray(2)
+
+    /** A touch beside the keys (bar above, strip below) is handed to the nearest key. */
+    private fun forwardToKeys(from: View, e: android.view.MotionEvent): Boolean {
+        if (kb.visibility != View.VISIBLE) return false
+        from.getLocationInWindow(loc); kb.getLocationInWindow(kbLoc)
+        val copy = android.view.MotionEvent.obtain(e)
+        copy.offsetLocation((loc[0] - kbLoc[0]).toFloat(), (loc[1] - kbLoc[1]).toFloat())
+        kb.dispatchTouchEvent(copy)
+        copy.recycle()
+        return true
     }
 
     override fun onStartInputView(info: EditorInfo, restarting: Boolean) {
