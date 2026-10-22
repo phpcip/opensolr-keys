@@ -20,6 +20,21 @@ import android.widget.TextView
 import kotlin.math.max
 import kotlin.math.roundToInt
 
+/** The chevron under the keys that hides the keyboard, like the iPad key. */
+class HideKeyView(ctx: android.content.Context, bg: Int, ink: Int, onTap: () -> Unit) : View(ctx) {
+    private val d = resources.displayMetrics.density
+    private val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply {
+        style = android.graphics.Paint.Style.STROKE; strokeWidth = 2f * d; strokeCap = android.graphics.Paint.Cap.ROUND; strokeJoin = android.graphics.Paint.Join.ROUND; color = ink
+    }
+    private val path = android.graphics.Path()
+    init { setBackgroundColor(bg); isClickable = true; setOnClickListener { onTap() } }
+    override fun onDraw(c: android.graphics.Canvas) {
+        val cx = width / 2f; val cy = height / 2f; val s = 7 * d
+        path.reset(); path.moveTo(cx - s, cy - s * 0.45f); path.lineTo(cx, cy + s * 0.45f); path.lineTo(cx + s, cy - s * 0.45f)
+        c.drawPath(path, p)
+    }
+}
+
 class KeysService : InputMethodService(), KeyboardView.Listener {
     private lateinit var prefs: Prefs
     private lateinit var feedback: Feedback
@@ -29,6 +44,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private lateinit var barScroll: HorizontalScrollView
     private lateinit var content: FrameLayout
     private lateinit var spacer: View
+    private lateinit var hideKey: View
     private var emojiPanel: EmojiPanel? = null
     private var d = 1f
 
@@ -61,6 +77,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         content.addView(kb, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         root.addView(content, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
 
+        hideKey = HideKeyView(this, kb.colorBg, kb.colorText) { requestHideSelf(0) }
+        root.addView(hideKey, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (26 * d).roundToInt()))
         spacer = View(this)
         root.addView(spacer, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (prefs.bottomOffsetDp * d).roundToInt()))
         emojiPanel = null
@@ -73,7 +91,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         Emoji.ensureLoaded(this)
         kb.sizePercent = prefs.sizePercent
         applyBottomSpace()
-        root.post { applyBottomSpace() }
+        root.post { applyBottomSpace(); hideSystemImeBar() }
         hideEmoji()
 
         val cls = info.inputType and InputType.TYPE_MASK_CLASS
@@ -102,6 +120,15 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         kb.shift = KeyboardView.Shift.OFF
         updateShift()
         updateBar()
+    }
+
+    /** The system draws its own back/switcher strip inside our window; we draw our own hide key instead. */
+    private fun hideSystemImeBar() {
+        val decor = window?.window?.decorView as? ViewGroup ?: return
+        for (i in 0 until decor.childCount) {
+            val v = decor.getChildAt(i)
+            if (v !== root.parent && v.javaClass.name.contains("NavigationBar")) v.visibility = View.GONE
+        }
     }
 
     /** Keeps the keys above the gesture bar: real inset, never below a fixed minimum, plus the user's offset. */
