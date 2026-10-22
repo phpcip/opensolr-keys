@@ -1,0 +1,1 @@
+Long press delay defaults to 200 ms. Settings and kept words survive reinstalls through the system backup.

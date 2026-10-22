@@ -17,7 +17,7 @@ class Prefs(ctx: Context) {
 
     /** Long-press delay in ms, 50..550 in steps of 50. */
     var longPressMs: Int
-        get() = sp.getInt("longpress", 300)
+        get() = sp.getInt("longpress", 200)
         set(v) = sp.edit().putInt("longpress", v).apply()
 
     var haptic: Boolean
