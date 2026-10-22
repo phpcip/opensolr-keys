@@ -20,7 +20,7 @@ object Accents {
         'a' to "ăâáàäãåā", 'e' to "éèêëēę", 'i' to "îíìïī", 'o' to "öóòôõøō", 'u' to "üúùûū",
         's' to "șşßśš", 't' to "țţ", 'c' to "çćč", 'n' to "ñń", 'z' to "žźż", 'y' to "ÿý", 'l' to "ł",
         'g' to "ğ", 'd' to "đ", '-' to "–—•", '$' to "€£¥₩₽", '"' to "„“”«»", '\'' to "‘’`", '.' to "…",
-        '?' to "¿", '!' to "¡", ',' to "@\"'_-?!:/;,.",
+        '?' to "¿", '!' to "¡", ',' to "@\"'_-?!;/:,.",
         '1' to "¹½⅓¼⅛", '2' to "²⅔", '3' to "³¾⅜", '4' to "⁴", '5' to "⁵⅝", '6' to "⁶", '7' to "⁷⅞", '8' to "⁸", '9' to "⁹", '0' to "⁰ⁿ∅°"
     )
     /** Which alternative starts selected: the comma on the comma key, the first one elsewhere. */
