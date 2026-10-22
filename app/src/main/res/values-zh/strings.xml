@@ -16,5 +16,8 @@
     <string name="s_try">试一试</string>
     <string name="s_try_hint">在此输入</string>
     <string name="s_return">换行</string>
+    <string name="s_learned">按原样保留的词</string>
+    <string name="s_learned_hint">你拒绝更正的词。删除后将再次被自动更正。</string>
+    <string name="s_learned_empty">暂无</string>
     <string name="s_abc">ABC</string>
 </resources>

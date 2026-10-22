@@ -36,6 +36,14 @@ class Prefs(ctx: Context) {
         get() = sp.getStringSet("langs", null) ?: systemLangs()
         set(v) = sp.edit().putStringSet("langs", v).apply()
 
+    /** Words the user kept as typed; never corrected again. Editable in settings. */
+    var learned: Set<String>
+        get() = sp.getStringSet("learned", null) ?: emptySet()
+        set(v) = sp.edit().putStringSet("learned", v).apply()
+
+    fun learn(word: String) { learned = learned + word.lowercase() }
+    fun forget(word: String) { learned = learned - word.lowercase() }
+
     companion object {
         val SUPPORTED = listOf("en", "ro")
 

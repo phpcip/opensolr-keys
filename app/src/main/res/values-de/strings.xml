@@ -16,5 +16,8 @@
     <string name="s_try">Ausprobieren</string>
     <string name="s_try_hint">Hier tippen</string>
     <string name="s_return">Return</string>
+    <string name="s_learned">Unverändert gelassene Wörter</string>
+    <string name="s_learned_hint">Wörter, deren Korrektur du abgelehnt hast. Entferne eines, um es wieder korrigieren zu lassen.</string>
+    <string name="s_learned_empty">Noch keine</string>
     <string name="s_abc">ABC</string>
 </resources>

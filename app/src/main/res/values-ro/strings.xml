@@ -16,5 +16,8 @@
     <string name="s_try">Încearcă</string>
     <string name="s_try_hint">Scrie aici</string>
     <string name="s_return">enter</string>
+    <string name="s_learned">Cuvinte păstrate cum le-ai scris</string>
+    <string name="s_learned_hint">Cuvinte la care ai refuzat corectarea. Scoate unul ca să fie corectat din nou.</string>
+    <string name="s_learned_empty">Niciunul încă</string>
     <string name="s_abc">ABC</string>
 </resources>

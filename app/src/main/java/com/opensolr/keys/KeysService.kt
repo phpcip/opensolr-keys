@@ -207,6 +207,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
                         ic.deleteSurroundingText(before.length, 0)
                         ic.commitText(lc.first + before.last(), 1)
                         rejectedWord = lc.first
+                        prefs.learn(lc.first)
                         lastCorrection = null
                         updateShift(); updateBar()
                         return
@@ -259,7 +260,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         lastCorrection = null
         if (!autocorrect) return
         val word = currentWord(ic)
-        if (word.isEmpty() || word.startsWith(":") || word == rejectedWord) return
+        if (word.isEmpty() || word.startsWith(":") || word == rejectedWord || word.lowercase() in prefs.learned) return
         val fixed = Dictionary.correct(word) ?: return
         ic.deleteSurroundingText(word.length, 0)
         ic.commitText(fixed, 1)
@@ -274,9 +275,9 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         if (word != rejectedWord) rejectedWord = null
         val emojis = Emoji.suggest(word)
         for (e in emojis) bar.addView(chip(e, 22f) { replaceWord(word, e) })
-        if (emojis.isEmpty() && autocorrect && !word.startsWith(":") && word != rejectedWord) {
+        if (emojis.isEmpty() && autocorrect && !word.startsWith(":") && word != rejectedWord && word.lowercase() !in prefs.learned) {
             val fixed = Dictionary.correct(word)
-            if (fixed != null) bar.addView(chip(fixed, 17f) { rejectedWord = word; updateBar() })
+            if (fixed != null) bar.addView(correctionChip(fixed, { replaceWord(word, fixed) }, { prefs.learn(word); rejectedWord = word; updateBar() }))
         }
         barScroll.scrollTo(0, 0)
     }
@@ -288,6 +289,26 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         background = GradientDrawable().apply { cornerRadius = 5 * d; setColor(kb.colorKey) }
         layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, (30 * d).roundToInt()).apply { marginEnd = (6 * d).toInt() }
         setOnClickListener { feedback.key(Feedback.Kind.STANDARD); onTap() }
+    }
+
+    /** The pending correction: tap applies it, the × keeps the typed word and remembers it. */
+    private fun correctionChip(label: String, onApply: () -> Unit, onDismiss: () -> Unit): View {
+        val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
+        row.background = GradientDrawable().apply { cornerRadius = 5 * d; setColor(kb.colorKey) }
+        row.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, (30 * d).roundToInt()).apply { marginEnd = (6 * d).toInt() }
+        val t = TextView(this).apply {
+            text = label; textSize = 17f; gravity = Gravity.CENTER; setTextColor(kb.colorText); typeface = Typeface.SANS_SERIF
+            setPadding((12 * d).toInt(), 0, (8 * d).toInt(), 0)
+            setOnClickListener { feedback.key(Feedback.Kind.STANDARD); onApply() }
+        }
+        val x = TextView(this).apply {
+            text = "×"; textSize = 20f; gravity = Gravity.CENTER; setTextColor(kb.colorText); typeface = Typeface.SANS_SERIF
+            setPadding((8 * d).toInt(), 0, (12 * d).toInt(), 0)
+            setOnClickListener { feedback.key(Feedback.Kind.STANDARD); onDismiss() }
+        }
+        row.addView(t, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT))
+        row.addView(x, LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT))
+        return row
     }
 
     private fun replaceWord(word: String, with: String) {

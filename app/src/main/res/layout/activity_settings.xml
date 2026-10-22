@@ -69,6 +69,14 @@
         <TextView style="@style/SectionHint" android:text="@string/s_volume" />
         <SeekBar android:id="@+id/volume" style="@style/Slider" android:max="99" />
 
+        <TextView style="@style/SectionTitle" android:text="@string/s_learned" />
+        <TextView style="@style/SectionHint" android:text="@string/s_learned_hint" />
+        <LinearLayout
+            android:id="@+id/learned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
         <TextView style="@style/SectionTitle" android:text="@string/s_try" />
         <EditText
             android:id="@+id/try_it"

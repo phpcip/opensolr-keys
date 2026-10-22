@@ -16,5 +16,8 @@
     <string name="s_try">Try it</string>
     <string name="s_try_hint">Type here</string>
     <string name="s_return">return</string>
+    <string name="s_learned">Words kept as typed</string>
+    <string name="s_learned_hint">Words you refused to have corrected. Remove one to let autocorrect touch it again.</string>
+    <string name="s_learned_empty">None yet</string>
     <string name="s_abc">ABC</string>
 </resources>

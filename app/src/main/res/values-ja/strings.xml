@@ -16,5 +16,8 @@
     <string name="s_try">試す</string>
     <string name="s_try_hint">ここに入力</string>
     <string name="s_return">改行</string>
+    <string name="s_learned">そのまま残す単語</string>
+    <string name="s_learned_hint">修正を拒否した単語です。削除すると再び修正対象になります。</string>
+    <string name="s_learned_empty">まだありません</string>
     <string name="s_abc">ABC</string>
 </resources>

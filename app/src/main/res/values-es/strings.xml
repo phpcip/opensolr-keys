@@ -16,5 +16,8 @@
     <string name="s_try">Probar</string>
     <string name="s_try_hint">Escribe aquí</string>
     <string name="s_return">intro</string>
+    <string name="s_learned">Palabras guardadas tal cual</string>
+    <string name="s_learned_hint">Palabras cuya corrección rechazaste. Quita una para que vuelva a corregirse.</string>
+    <string name="s_learned_empty">Ninguna todavía</string>
     <string name="s_abc">ABC</string>
 </resources>
