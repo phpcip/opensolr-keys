@@ -173,7 +173,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         else if (isSpecial(k) && pressed) color = colorKey
         else if ((k.type == KType.SPACE || k.type == KType.CHAR) && pressed && !k.special) color = colorSpecial
         if (k.type == KType.ENTER) {
-            val r = k.h / 2
+            val r = min(k.w, k.h) / 2
             fill.color = colorShadow
             c.drawCircle(k.x + k.w / 2, k.y + r + d, r, fill)
             fill.color = if (pressed) colorKey else colorHighlight

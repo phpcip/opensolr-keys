@@ -78,14 +78,37 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     /** Non-null while the keys type into the emoji search instead of the app. */
     private var emojiSearch: String? = null
 
+    /** Settings changed while the keyboard is up (size, offset sliders) apply right away. */
+    private val onPrefChange = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+        if (key == "size" || key == "offset") applyLayoutPrefs()
+    }
+
     override fun onCreate() {
         super.onCreate()
         prefs = Prefs(this)
         feedback = Feedback(this, prefs)
         d = resources.displayMetrics.density
+        getSharedPreferences("keys", MODE_PRIVATE).registerOnSharedPreferenceChangeListener(onPrefChange)
     }
 
-    override fun onDestroy() { feedback.release(); super.onDestroy() }
+    override fun onDestroy() {
+        getSharedPreferences("keys", MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(onPrefChange)
+        feedback.release()
+        super.onDestroy()
+    }
+
+    private fun applyLayoutPrefs() {
+        if (!::kb.isInitialized) return
+        kb.sizePercent = prefs.sizePercent
+        applyBottomSpace()
+        val panel = emojiPanel
+        if (panel != null) {
+            val open = panel.visibility == View.VISIBLE
+            content.removeView(panel)
+            emojiPanel = null
+            if (open) showEmoji()
+        }
+    }
 
     override fun onCreateInputView(): View {
         kb = KeyboardView(this).apply { listener = this@KeysService; sizePercent = prefs.sizePercent }
