@@ -311,7 +311,6 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
                         ic.deleteSurroundingText(before.length, 0)
                         ic.commitText(lc.first + before.last(), 1)
                         rejectedWord = lc.first
-                        prefs.learn(lc.first)
                         lastCorrection = null
                         pending = null
                         updateShift(); updateBar()

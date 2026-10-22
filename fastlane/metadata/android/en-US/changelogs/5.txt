@@ -1,0 +1,1 @@
+Undoing a correction with backspace no longer adds the word to the kept list; only the x on a suggestion does.
