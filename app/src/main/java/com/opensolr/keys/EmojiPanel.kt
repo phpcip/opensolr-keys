@@ -65,9 +65,9 @@ class EmojiPanel(
             }
             true
         }
-        bottom.addView(abc, LayoutParams(0, (42 * d).roundToInt()).apply { weight = 1f; marginEnd = (6 * d).toInt() })
+        bottom.addView(abc, LayoutParams(0, (48 * d).roundToInt()).apply { weight = 1f; marginEnd = (6 * d).toInt() })
         bottom.addView(View(ctx), LayoutParams(0, 1).apply { weight = 3f })
-        bottom.addView(del, LayoutParams(0, (42 * d).roundToInt()).apply { weight = 1f; marginStart = (6 * d).toInt() })
+        bottom.addView(del, LayoutParams(0, (48 * d).roundToInt()).apply { weight = 1f; marginStart = (6 * d).toInt() })
         addView(bottom, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
         show(current)
     }

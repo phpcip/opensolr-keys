@@ -54,11 +54,11 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private var rows: List<List<Key>> = Layouts.rows(Mode.LETTERS)
     private var keys: List<Key> = rows.flatten()
 
-    private val gap = 6 * d
-    private val rowGap = 11 * d
-    private val side = 3 * d
-    private val topPad = 8 * d
-    private val bottomPad = 5 * d
+    private val gap = 4 * d
+    private val rowGap = 8 * d
+    private val side = 2 * d
+    private val topPad = 7 * d
+    private val bottomPad = 4 * d
     private val radius = 5 * d
     private var unit = 0f
     private var keyH = 0f
@@ -95,7 +95,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     init { isClickable = true }
 
     fun keyboardHeight(): Int {
-        val kh = 42 * d * sizePercent / 100f
+        val kh = 48 * d * sizePercent / 100f
         return (topPad + 4 * kh + 3 * rowGap + bottomPad).roundToInt()
     }
 
@@ -109,7 +109,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         if (wInt == 0) return
         val w = wInt.toFloat()
         unit = (w - 2 * side - 9 * gap) / 10f
-        keyH = 42 * d * sizePercent / 100f
+        keyH = 48 * d * sizePercent / 100f
         for ((r, row) in rows.withIndex()) {
             val y = topPad + r * (keyH + rowGap)
             for (k in row) { k.y = y; k.h = keyH }
@@ -160,9 +160,18 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private fun drawKey(c: Canvas, k: Key) {
         val pressed = k === pressedKey
         var color = if (isSpecial(k)) colorSpecial else colorKey
-        if (k.type == KType.SHIFT && shift != Shift.OFF) color = if (dark) Color.WHITE else Color.WHITE
+        if (k.type == KType.SHIFT && shift != Shift.OFF) color = Color.WHITE
         else if (isSpecial(k) && pressed) color = colorKey
         else if (k.type == KType.SPACE && pressed) color = colorSpecial
+        if (k.type == KType.ENTER) {
+            val r = k.h / 2
+            fill.color = colorShadow
+            c.drawCircle(k.x + k.w / 2, k.y + r + d, r, fill)
+            fill.color = if (pressed) colorKey else colorHighlight
+            c.drawCircle(k.x + k.w / 2, k.y + r, r, fill)
+            drawReturn(c, k.x + k.w / 2, k.y + r, Color.WHITE)
+            return
+        }
         rect.set(k.x, k.y + d, k.x + k.w, k.y + k.h + d)
         fill.color = colorShadow
         c.drawRoundRect(rect, radius, radius, fill)
@@ -176,13 +185,13 @@ class KeyboardView(ctx: Context) : View(ctx) {
         when (k.type) {
             KType.CHAR -> {
                 text.color = ink
-                text.textSize = keyH * 0.53f
+                text.textSize = keyH * 0.6f
                 val s = if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text
                 c.drawText(s, cx, cy - (text.descent() + text.ascent()) / 2, text)
             }
             KType.SPACE, KType.MODE, KType.ENTER -> {
                 text.color = ink
-                text.textSize = keyH * 0.38f
+                text.textSize = keyH * 0.36f
                 val s = when (k.type) { KType.ENTER -> enterLabel; else -> k.label }
                 c.drawText(s, cx, cy - (text.descent() + text.ascent()) / 2, text)
             }
@@ -210,6 +219,17 @@ class KeyboardView(ctx: Context) : View(ctx) {
                 c.drawLine(cx - s * 0.5f, cy + s * 1.25f, cx + s * 0.5f, cy + s * 1.25f, stroke)
             }
         }
+    }
+
+    private fun drawReturn(c: Canvas, cx: Float, cy: Float, ink: Int) {
+        val s = keyH * 0.18f
+        stroke.color = ink; stroke.strokeWidth = 2f * d
+        path.reset()
+        path.moveTo(cx + s, cy - s * 0.9f); path.lineTo(cx + s, cy + s * 0.2f); path.lineTo(cx - s, cy + s * 0.2f)
+        c.drawPath(path, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.3f, cy - s * 0.5f); path.lineTo(cx - s, cy + s * 0.2f); path.lineTo(cx - s * 0.3f, cy + s * 0.9f)
+        c.drawPath(path, stroke)
     }
 
     private fun drawDelete(c: Canvas, cx: Float, cy: Float, ink: Int) {
