@@ -1,0 +1,1 @@
+The key right of space is a period; its long press starts on the comma, with the period one step to the right.
