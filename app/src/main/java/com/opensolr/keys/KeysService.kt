@@ -499,7 +499,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         val panel = emojiPanel ?: EmojiPanel(this, kb, (kb.keyboardHeight() * 1.7f).toInt(), { e ->
             feedback.key(Feedback.Kind.STANDARD)
             currentInputConnection?.commitText(e, 1)
-        }, { feedback.key(Feedback.Kind.STANDARD); hideEmoji() }, {
+        }, { feedback.key(Feedback.Kind.STANDARD); hideEmoji(); updateBar() }, {
             feedback.key(Feedback.Kind.DELETE)
             onKey(Key(KType.DELETE), null)
         }).also { emojiPanel = it; content.addView(it) }
