@@ -23,5 +23,6 @@
     <string name="s_learned_edit">Liste bearbeiten</string>
     <string name="s_learned_file_hint">Ein Wort pro Zeile.</string>
     <string name="s_save">Speichern</string>
+    <string name="s_longpress">Dauer für langes Drücken</string>
     <string name="s_abc">ABC</string>
 </resources>

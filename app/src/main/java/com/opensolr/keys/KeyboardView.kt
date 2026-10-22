@@ -32,6 +32,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         set(v) { field = v; invalidate() }
     var mode = Mode.LETTERS
         set(v) { field = v; rows = Layouts.rows(v); keys = rows.flatten(); layoutKeys(width); invalidate() }
+    var longPressMs = 300L
     var shift = Shift.OFF
         set(v) { field = v; invalidate() }
 
@@ -306,7 +307,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
                     removeCallbacks(longPress)
                     activeKey = k; pressedKey = k
                     showPreview(k)
-                    postDelayed(longPress, 300)
+                    postDelayed(longPress, longPressMs)
                     invalidate()
                 }
             }
@@ -327,7 +328,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         activeKey = k; pressedKey = k; repeatFired = false
         listener?.onPressed(k)
         when (k.type) {
-            KType.CHAR -> { showPreview(k); postDelayed(longPress, 300) }
+            KType.CHAR -> { showPreview(k); postDelayed(longPress, longPressMs) }
             KType.DELETE -> { listener?.onKey(k, null); postDelayed(repeat, 350) }
             KType.SHIFT -> {
                 val now = SystemClock.uptimeMillis()

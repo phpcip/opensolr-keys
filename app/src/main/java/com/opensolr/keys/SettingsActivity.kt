@@ -59,6 +59,9 @@ class SettingsActivity : Activity() {
 
         slider(R.id.size, prefs.sizePercent - 80) { prefs.sizePercent = it + 80 }
         slider(R.id.offset, prefs.bottomOffsetDp) { prefs.bottomOffsetDp = it }
+        val lpValue = findViewById<TextView>(R.id.longpress_value)
+        lpValue.text = "${prefs.longPressMs} ms"
+        slider(R.id.longpress, prefs.longPressMs / 50 - 1) { prefs.longPressMs = (it + 1) * 50; lpValue.text = "${prefs.longPressMs} ms" }
         slider(R.id.haptic_strength, prefs.hapticStrength - 1) { prefs.hapticStrength = it + 1 }
         slider(R.id.volume, prefs.volume - 1) { prefs.volume = it + 1 }
 

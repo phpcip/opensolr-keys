@@ -90,6 +90,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     /** Settings changed while the keyboard is up (size, offset sliders) apply right away. */
     private val onPrefChange = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
         if (key == "size" || key == "offset") applyLayoutPrefs()
+        if (key == "longpress" && ::kb.isInitialized) kb.longPressMs = prefs.longPressMs.toLong()
     }
 
     override fun onCreate() {
@@ -174,6 +175,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         Dictionary.ensureLoaded(this, prefs.langs)
         Emoji.ensureLoaded(this)
         kb.sizePercent = prefs.sizePercent
+        kb.longPressMs = prefs.longPressMs.toLong()
         applyBottomSpace()
         root.post { applyBottomSpace(); hideSystemImeBar() }
         // a restart (same field, re-laid out) keeps the emoji panel or search open

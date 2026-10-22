@@ -23,5 +23,6 @@
     <string name="s_learned_edit">リストを編集</string>
     <string name="s_learned_file_hint">1行に1語。</string>
     <string name="s_save">保存</string>
+    <string name="s_longpress">長押しの時間</string>
     <string name="s_abc">ABC</string>
 </resources>

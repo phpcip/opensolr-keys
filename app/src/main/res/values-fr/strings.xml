@@ -23,5 +23,6 @@
     <string name="s_learned_edit">Modifier la liste</string>
     <string name="s_learned_file_hint">Un mot par ligne.</string>
     <string name="s_save">Enregistrer</string>
+    <string name="s_longpress">Durée de l’appui long</string>
     <string name="s_abc">ABC</string>
 </resources>

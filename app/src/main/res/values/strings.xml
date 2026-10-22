@@ -23,5 +23,6 @@
     <string name="s_learned_edit">Edit the list</string>
     <string name="s_learned_file_hint">One word per line.</string>
     <string name="s_save">Save</string>
+    <string name="s_longpress">Long press delay</string>
     <string name="s_abc">ABC</string>
 </resources>

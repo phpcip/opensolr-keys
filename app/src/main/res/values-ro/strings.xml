@@ -23,5 +23,6 @@
     <string name="s_learned_edit">Editează lista</string>
     <string name="s_learned_file_hint">Un cuvânt pe linie.</string>
     <string name="s_save">Salvează</string>
+    <string name="s_longpress">Durata apăsării lungi</string>
     <string name="s_abc">ABC</string>
 </resources>

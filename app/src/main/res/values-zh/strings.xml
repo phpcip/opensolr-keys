@@ -23,5 +23,6 @@
     <string name="s_learned_edit">编辑列表</string>
     <string name="s_learned_file_hint">每行一个词。</string>
     <string name="s_save">保存</string>
+    <string name="s_longpress">长按时长</string>
     <string name="s_abc">ABC</string>
 </resources>

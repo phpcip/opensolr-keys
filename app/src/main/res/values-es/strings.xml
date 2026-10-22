@@ -23,5 +23,6 @@
     <string name="s_learned_edit">Editar la lista</string>
     <string name="s_learned_file_hint">Una palabra por línea.</string>
     <string name="s_save">Guardar</string>
+    <string name="s_longpress">Duración de la pulsación larga</string>
     <string name="s_abc">ABC</string>
 </resources>
