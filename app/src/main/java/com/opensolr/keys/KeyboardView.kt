@@ -35,7 +35,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
     var shift = Shift.OFF
         set(v) { field = v; invalidate() }
 
-    private val dark = (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+    // always the light iOS look: white keys, whatever the system theme
+    private val dark = false
     private val d = resources.displayMetrics.density
 
     val colorBg = if (dark) Color.parseColor("#2A2A2C") else Color.parseColor("#D1D3D9")
