@@ -89,6 +89,22 @@
             android:background="@drawable/btn_ghost"
             android:stateListAnimator="@null" />
 
+        <TextView style="@style/SectionTitle" android:text="@string/s_updates" />
+        <TextView android:id="@+id/version" style="@style/SectionHint" />
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/s_check_updates"
+            android:textColor="@color/fg"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/space_grotesk"
+            android:textFontWeight="600"
+            android:background="@drawable/btn_ghost"
+            android:stateListAnimator="@null" />
+
         <TextView style="@style/SectionTitle" android:text="@string/s_try" />
         <EditText
             android:id="@+id/try_it"

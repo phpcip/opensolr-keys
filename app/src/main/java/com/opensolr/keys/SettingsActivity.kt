@@ -36,6 +36,8 @@ class SettingsActivity : Activity() {
         findViewById<android.view.View>(R.id.btn_enable).setOnClickListener {
             startActivity(Intent(Settings.ACTION_INPUT_METHOD_SETTINGS))
         }
+        findViewById<TextView>(R.id.version).text = getString(R.string.s_version, BuildConfig.VERSION_NAME)
+        findViewById<android.view.View>(R.id.btn_update).setOnClickListener { Updates.open(this) }
         findViewById<android.view.View>(R.id.btn_learned).setOnClickListener {
             startActivity(Intent(this, WordsActivity::class.java))
         }

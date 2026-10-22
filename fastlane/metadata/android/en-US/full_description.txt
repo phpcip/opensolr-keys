@@ -1,0 +1,8 @@
+Opensolr Keys is a keyboard that looks and feels like the iOS keyboard and does nothing else.
+
+- No network permission. Nothing you type ever leaves the phone.
+- No accounts, no analytics, no dependencies. One small app.
+- Big, bordered keys with the iOS layout, a number row, key preview and long-press symbols and accents (Romanian diacritics first).
+- Small, context-aware autocorrect from offline word tables for English and Romanian. Romanian diacritics are restored by context. Words you keep as typed are remembered, and the list is yours to edit.
+- Emoji picker with search, plus emoji suggestions while typing.
+- The Pixel tap sound with its own volume, vibration with its own strength, key size and bottom offset, long-press delay.

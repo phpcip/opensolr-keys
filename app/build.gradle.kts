@@ -24,6 +24,22 @@ android {
         versionName = "1.0.0"
     }
 
+    flavorDimensions += "store"
+    productFlavors {
+        create("github") {
+            dimension = "store"
+            buildConfigField("boolean", "PLAY_BUILD", "false")
+        }
+        create("play") {
+            dimension = "store"
+            buildConfigField("boolean", "PLAY_BUILD", "true")
+        }
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
     signingConfigs {
         if (!signingProperties.isEmpty) {
             create("release") {

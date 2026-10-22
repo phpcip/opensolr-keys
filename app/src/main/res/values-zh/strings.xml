@@ -24,5 +24,8 @@
     <string name="s_learned_file_hint">每行一个词。</string>
     <string name="s_save">保存</string>
     <string name="s_longpress">长按时长</string>
+    <string name="s_updates">更新</string>
+    <string name="s_version">版本 %1$s。键盘从不联网；更新来自你安装它的地方。</string>
+    <string name="s_check_updates">检查更新</string>
     <string name="s_abc">ABC</string>
 </resources>

@@ -24,5 +24,8 @@
     <string name="s_learned_file_hint">One word per line.</string>
     <string name="s_save">Save</string>
     <string name="s_longpress">Long press delay</string>
+    <string name="s_updates">Updates</string>
+    <string name="s_version">Version %1$s. The keyboard never connects to the internet; updates come from where you installed it.</string>
+    <string name="s_check_updates">Check for updates</string>
     <string name="s_abc">ABC</string>
 </resources>

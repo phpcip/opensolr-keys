@@ -24,5 +24,8 @@
     <string name="s_learned_file_hint">Una palabra por línea.</string>
     <string name="s_save">Guardar</string>
     <string name="s_longpress">Duración de la pulsación larga</string>
+    <string name="s_updates">Actualizaciones</string>
+    <string name="s_version">Versión %1$s. El teclado nunca se conecta a internet; las actualizaciones vienen de donde lo instalaste.</string>
+    <string name="s_check_updates">Buscar actualizaciones</string>
     <string name="s_abc">ABC</string>
 </resources>

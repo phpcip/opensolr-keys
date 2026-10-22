@@ -24,5 +24,8 @@
     <string name="s_learned_file_hint">Ein Wort pro Zeile.</string>
     <string name="s_save">Speichern</string>
     <string name="s_longpress">Dauer für langes Drücken</string>
+    <string name="s_updates">Updates</string>
+    <string name="s_version">Version %1$s. Die Tastatur geht nie ins Internet; Updates kommen von dort, wo du sie installiert hast.</string>
+    <string name="s_check_updates">Nach Updates suchen</string>
     <string name="s_abc">ABC</string>
 </resources>
