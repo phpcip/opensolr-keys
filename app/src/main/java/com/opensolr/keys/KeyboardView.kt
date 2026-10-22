@@ -155,8 +155,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
             }
             y += rh + rowGap
         }
-        // keep the system's back gesture off the edge keys (the system allows 200dp per edge)
-        systemGestureExclusionRects = listOf(android.graphics.Rect(0, 0, wInt, min(y, 200 * d).roundToInt()))
+        // keep the system back gesture off every key
+        systemGestureExclusionRects = listOf(android.graphics.Rect(0, 0, wInt, y.roundToInt()))
     }
 
     override fun onDraw(c: Canvas) {

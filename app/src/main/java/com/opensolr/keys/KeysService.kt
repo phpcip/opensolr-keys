@@ -148,7 +148,11 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         spacer = View(this)
         root.addView(spacer, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (prefs.bottomOffsetDp * d).roundToInt()))
         emojiPanel = null
-        root.viewTreeObserver.addOnGlobalLayoutListener { hideSystemImeBar() }
+        root.viewTreeObserver.addOnGlobalLayoutListener {
+            hideSystemImeBar()
+            // nothing on the keyboard is reserved for the system's edge gestures
+            root.systemGestureExclusionRects = listOf(android.graphics.Rect(0, 0, root.width, root.height))
+        }
         return root
     }
 
