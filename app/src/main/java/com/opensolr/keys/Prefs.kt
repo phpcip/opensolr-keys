@@ -21,7 +21,7 @@ class Prefs(ctx: Context) {
         set(v) = sp.edit().putInt("longpress", v).apply()
 
     var haptic: Boolean
-        get() = sp.getBoolean("haptic", true)
+        get() = sp.getBoolean("haptic", false)
         set(v) = sp.edit().putBoolean("haptic", v).apply()
 
     var hapticStrength: Int
