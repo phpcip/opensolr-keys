@@ -84,6 +84,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         spacer = View(this)
         root.addView(spacer, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (prefs.bottomOffsetDp * d).roundToInt()))
         emojiPanel = null
+        root.viewTreeObserver.addOnGlobalLayoutListener { hideSystemImeBar() }
         return root
     }
 
@@ -94,7 +95,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         kb.sizePercent = prefs.sizePercent
         applyBottomSpace()
         root.post { applyBottomSpace(); hideSystemImeBar() }
-        hideEmoji()
+        // a restart (same field, re-laid out) keeps the emoji panel or search open
+        if (!restarting) { hideEmoji(); emojiSearch = null }
 
         val cls = info.inputType and InputType.TYPE_MASK_CLASS
         val variation = info.inputType and InputType.TYPE_MASK_VARIATION
@@ -118,8 +120,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             action == EditorInfo.IME_ACTION_DONE -> "done"
             else -> getString(R.string.s_return)
         }
-        lastCorrection = null; rejectedWord = null; emojiSearch = null
-        kb.shift = KeyboardView.Shift.OFF
+        lastCorrection = null; rejectedWord = null
+        if (!restarting) kb.shift = KeyboardView.Shift.OFF
         updateShift()
         updateBar()
     }
@@ -366,7 +368,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     private fun showEmoji() {
         kb.dismissPopups()
-        val panel = emojiPanel ?: EmojiPanel(this, kb, kb.keyboardHeight(), { e ->
+        val panel = emojiPanel ?: EmojiPanel(this, kb, (kb.keyboardHeight() * 1.7f).toInt(), { e ->
             feedback.key(Feedback.Kind.STANDARD)
             currentInputConnection?.commitText(e, 1)
         }, { feedback.key(Feedback.Kind.STANDARD); hideEmoji() }, {
