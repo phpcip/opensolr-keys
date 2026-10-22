@@ -38,6 +38,17 @@ object Emoji {
         }.start()
     }
 
+    /** Free search for the emoji picker: exact keyword, then prefix, then contains. */
+    fun search(query: String): List<String> {
+        val q = query.trim().lowercase().removePrefix(":")
+        if (q.isEmpty()) return emptyList()
+        val out = LinkedHashSet<String>()
+        keywords[q]?.let { out.addAll(it) }
+        for ((k, v) in keywords) if (k.startsWith(q)) { out.addAll(v); if (out.size >= 30) break }
+        if (out.size < 30) for ((k, v) in keywords) if (k.contains(q)) { out.addAll(v); if (out.size >= 30) break }
+        return out.take(30)
+    }
+
     /** Suggestions for the word being typed: exact keyword, or ":prefix" search. */
     fun suggest(word: String): List<String> {
         if (word.isEmpty()) return emptyList()

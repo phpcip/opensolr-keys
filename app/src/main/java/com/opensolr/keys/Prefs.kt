@@ -20,7 +20,7 @@ class Prefs(ctx: Context) {
         set(v) = sp.edit().putBoolean("haptic", v).apply()
 
     var hapticStrength: Int
-        get() = sp.getInt("haptic_strength", 50)
+        get() = sp.getInt("haptic_strength", 8)
         set(v) = sp.edit().putInt("haptic_strength", v).apply()
 
     var sound: Boolean

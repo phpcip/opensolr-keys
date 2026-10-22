@@ -53,6 +53,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private var lastSpaceAt = 0L
     private var lastCorrection: Pair<String, String>? = null
     private var rejectedWord: String? = null
+    /** Non-null while the keys type into the emoji search instead of the app. */
+    private var emojiSearch: String? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -116,7 +118,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             action == EditorInfo.IME_ACTION_DONE -> "done"
             else -> getString(R.string.s_return)
         }
-        lastCorrection = null; rejectedWord = null
+        lastCorrection = null; rejectedWord = null; emojiSearch = null
         kb.shift = KeyboardView.Shift.OFF
         updateShift()
         updateBar()
@@ -167,6 +169,21 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     override fun onKey(key: Key, text: String?) {
         val ic = currentInputConnection ?: return
+        val q = emojiSearch
+        if (q != null) {
+            when (key.type) {
+                KType.CHAR -> emojiSearch = q + (text ?: "")
+                KType.SPACE -> emojiSearch = "$q "
+                KType.DELETE -> emojiSearch = q.dropLast(1)
+                KType.ENTER -> { emojiSearch = null; updateShift() }
+                KType.MODE -> kb.mode = when (key.label) { "123" -> Mode.NUMBERS; "#+=" -> Mode.SYMBOLS; else -> Mode.LETTERS }
+                KType.EMOJI -> { emojiSearch = null; showEmoji() }
+                KType.SHIFT -> {}
+            }
+            if (kb.shift == KeyboardView.Shift.ON && key.type == KType.CHAR) kb.shift = KeyboardView.Shift.OFF
+            updateBar()
+            return
+        }
         when (key.type) {
             KType.CHAR -> {
                 val t = text ?: return
@@ -269,6 +286,18 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     private fun updateBar() {
         bar.removeAllViews()
+        val q = emojiSearch
+        if (q != null) {
+            bar.addView(chip("\uD83D\uDD0D " + q.ifEmpty { getString(R.string.s_emoji_search) }, 17f) {})
+            bar.addView(chip("×", 20f) { emojiSearch = null; updateShift(); updateBar() })
+            for (e in Emoji.search(q)) bar.addView(chip(e, 22f) { commitEmoji(e); emojiSearch = null; updateShift(); updateBar() })
+            barScroll.scrollTo(0, 0)
+            return
+        }
+        if (emojiPanel?.visibility == View.VISIBLE) {
+            bar.addView(chip("\uD83D\uDD0D " + getString(R.string.s_emoji_search), 17f) { startEmojiSearch() })
+            return
+        }
         val ic = currentInputConnection ?: return
         val word = currentWord(ic)
         if (word.isEmpty()) return
@@ -321,6 +350,20 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     // ---- emoji panel ----
 
+    private fun commitEmoji(e: String) {
+        feedback.key(Feedback.Kind.STANDARD)
+        currentInputConnection?.commitText(e, 1)
+    }
+
+    private fun startEmojiSearch() {
+        feedback.key(Feedback.Kind.STANDARD)
+        emojiSearch = ""
+        hideEmoji()
+        kb.mode = Mode.LETTERS
+        kb.shift = KeyboardView.Shift.OFF
+        updateBar()
+    }
+
     private fun showEmoji() {
         kb.dismissPopups()
         val panel = emojiPanel ?: EmojiPanel(this, kb, kb.keyboardHeight(), { e ->
@@ -332,6 +375,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         }).also { emojiPanel = it; content.addView(it) }
         panel.visibility = View.VISIBLE
         kb.visibility = View.INVISIBLE
+        updateBar()
     }
 
     private fun hideEmoji() {

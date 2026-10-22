@@ -19,5 +19,6 @@
     <string name="s_learned">Mots gardés tels quels</string>
     <string name="s_learned_hint">Mots dont tu as refusé la correction. Retire-en un pour qu’il soit à nouveau corrigé.</string>
     <string name="s_learned_empty">Aucun pour l’instant</string>
+    <string name="s_emoji_search">Chercher un emoji</string>
     <string name="s_abc">ABC</string>
 </resources>

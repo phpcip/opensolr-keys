@@ -274,7 +274,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         when (e.actionMasked) {
             MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> {
                 val idx = e.actionIndex
-                activeKey?.let { finish(it, false) }
+                activeKey?.let { finish(it, true) }
                 val k = keyAt(e.getX(idx), e.getY(idx)) ?: return true
                 activePointer = e.getPointerId(idx)
                 press(k)
