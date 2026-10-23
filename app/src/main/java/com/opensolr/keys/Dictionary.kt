@@ -25,6 +25,8 @@ object Dictionary {
     private const val MARGIN_CONTEXT = 0.8
     private const val MARGIN_REVISE = 0.3
     private const val MARGIN_ALONE = 0.46
+    /** A typed word that only lacks diacritics (masina → mașina) switches on a smaller lead: both spellings are in the corpus. */
+    private const val MARGIN_DIACRITICS = 0.25
 
     /** Words that are all valid but often swapped; the context picks between them. */
     private val confusables = listOf(
@@ -163,6 +165,7 @@ object Dictionary {
         if (known) {
             val margin = when {
                 revising -> MARGIN_REVISE
+                strip(b) == strip(lw) -> MARGIN_DIACRITICS
                 p == null && n == null -> MARGIN_ALONE
                 else -> MARGIN_CONTEXT
             }
@@ -171,9 +174,13 @@ object Dictionary {
         return recase(typed, b)
     }
 
+    /** Close typos of [w], found through the letters without diacritics, so mancarw reaches mâncare as well as mancare. */
     private fun edits(m: Model, w: String): List<String> {
         val found = HashMap<String, Int>()
-        fun consider(c: String) { val f = m.freq[c] ?: return; found[c] = f }
+        fun consider(c: String) {
+            val forms = m.classes[strip(c)] ?: return
+            for (f in forms) found[f] = m.freq[f] ?: 0
+        }
         val n = w.length
         for (i in 0 until n) consider(w.substring(0, i) + w.substring(i + 1))
         for (i in 0 until n - 1) consider(w.substring(0, i) + w[i + 1] + w[i] + w.substring(i + 2))
