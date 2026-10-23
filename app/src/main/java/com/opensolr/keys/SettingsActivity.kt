@@ -79,6 +79,9 @@ class SettingsActivity : Activity() {
         val haptic = findViewById<Switch>(R.id.haptic)
         haptic.isChecked = prefs.haptic
         haptic.setOnCheckedChangeListener { _, on -> prefs.haptic = on }
+        val fun_ = findViewById<Switch>(R.id.fun_words)
+        fun_.isChecked = prefs.funWords
+        fun_.setOnCheckedChangeListener { _, on -> prefs.funWords = on }
         val sound = findViewById<Switch>(R.id.sound)
         sound.isChecked = prefs.sound
         sound.setOnCheckedChangeListener { _, on -> prefs.sound = on }

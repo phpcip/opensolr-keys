@@ -29,4 +29,6 @@
     <string name="s_check_updates">检查更新</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">恢复默认设置</string>
+    <string name="s_fun">趣味替换</string>
+    <string name="s_fun_hint">politician → parasite，government → the Regime，European Union → EURSS。脏话永不被纠正。</string>
 </resources>

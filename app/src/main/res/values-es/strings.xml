@@ -29,4 +29,6 @@
     <string name="s_check_updates">Buscar actualizaciones</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Restablecer valores predeterminados</string>
+    <string name="s_fun">Sustituciones divertidas</string>
+    <string name="s_fun_hint">politician → parasite, government → the Regime, European Union → EURSS. Las palabrotas nunca se corrigen.</string>
 </resources>

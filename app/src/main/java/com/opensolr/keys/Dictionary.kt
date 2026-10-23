@@ -27,6 +27,7 @@ object Dictionary {
     private const val MARGIN_ALONE = 0.46
     /** A typed word that only lacks diacritics (masina → mașina) switches on a smaller lead: both spellings are in the corpus. */
     private const val MARGIN_DIACRITICS = 0.25
+    private const val PROTECTED_FREQ = 40_000
 
     /** Words that are all valid but often swapped; the context picks between them. */
     private val confusables = listOf(
@@ -76,6 +77,15 @@ object Dictionary {
                     }
                 } catch (_: Exception) {
                 }
+            }
+            // Rude words are never rare: a typo near one reaches it, and no tamer word wins over it
+            for (w in Fun.PROTECTED) {
+                var id = ids[w]
+                if (id == null) {
+                    id = ids.size; ids[w] = id
+                    classes.getOrPut(strip(w)) { ArrayList(2) }.add(w)
+                }
+                freq[w] = maxOf(freq[w] ?: 0, PROTECTED_FREQ)
             }
             val packed = bi.copyOf(n)
             packed.sort()
@@ -151,6 +161,7 @@ object Dictionary {
         if (typed.length > 1 && typed.substring(1).any { it.isUpperCase() }) return null
         val lw = typed.lowercase()
         if (!lw.all { it.isLetter() || it == '\'' }) return null
+        if (Fun.protectedWord(lw)) return null
         if (!revising && lw != strip(lw)) return null
         val known = m.freq.containsKey(lw)
         val cands = candidates(m, lw)
