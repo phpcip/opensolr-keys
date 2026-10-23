@@ -28,4 +28,5 @@
     <string name="s_version">Versión %1$s. El teclado nunca se conecta a internet; las actualizaciones vienen de donde lo instalaste.</string>
     <string name="s_check_updates">Buscar actualizaciones</string>
     <string name="s_abc">ABC</string>
+    <string name="s_defaults">Restablecer valores predeterminados</string>
 </resources>

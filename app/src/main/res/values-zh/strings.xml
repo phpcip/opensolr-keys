@@ -28,4 +28,5 @@
     <string name="s_version">版本 %1$s。键盘从不联网；更新来自你安装它的地方。</string>
     <string name="s_check_updates">检查更新</string>
     <string name="s_abc">ABC</string>
+    <string name="s_defaults">恢复默认设置</string>
 </resources>

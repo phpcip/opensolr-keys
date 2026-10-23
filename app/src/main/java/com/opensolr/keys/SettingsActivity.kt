@@ -42,6 +42,11 @@ class SettingsActivity : Activity() {
         }
         findViewById<TextView>(R.id.version).text = getString(R.string.s_version, BuildConfig.VERSION_NAME)
         findViewById<android.view.View>(R.id.btn_update).setOnClickListener { Updates.open(this) }
+        findViewById<android.view.View>(R.id.btn_defaults).setOnClickListener { v ->
+            v.performHapticFeedback(android.view.HapticFeedbackConstants.CONFIRM)
+            prefs.restoreDefaults()
+            recreate()
+        }
         findViewById<android.view.View>(R.id.btn_learned).setOnClickListener {
             startActivity(Intent(this, WordsActivity::class.java))
         }
@@ -83,7 +88,12 @@ class SettingsActivity : Activity() {
         val s = findViewById<SeekBar>(id)
         s.progress = value
         s.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(sb: SeekBar, p: Int, fromUser: Boolean) { if (fromUser) onChange(p) }
+            override fun onProgressChanged(sb: SeekBar, p: Int, fromUser: Boolean) {
+                if (!fromUser) return
+                // a tick at every step, so the slider is felt as well as seen
+                sb.performHapticFeedback(android.view.HapticFeedbackConstants.CLOCK_TICK)
+                onChange(p)
+            }
             override fun onStartTrackingTouch(sb: SeekBar) {}
             override fun onStopTrackingTouch(sb: SeekBar) {}
         })

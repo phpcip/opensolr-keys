@@ -28,4 +28,5 @@
     <string name="s_version">バージョン %1$s。キーボードはインターネットに接続しません。アップデートはインストール元から提供されます。</string>
     <string name="s_check_updates">アップデートを確認</string>
     <string name="s_abc">ABC</string>
+    <string name="s_defaults">初期設定に戻す</string>
 </resources>

@@ -28,4 +28,5 @@
     <string name="s_version">Version %1$s. Le clavier ne se connecte jamais à Internet ; les mises à jour viennent de là où tu l’as installé.</string>
     <string name="s_check_updates">Vérifier les mises à jour</string>
     <string name="s_abc">ABC</string>
+    <string name="s_defaults">Rétablir les valeurs par défaut</string>
 </resources>

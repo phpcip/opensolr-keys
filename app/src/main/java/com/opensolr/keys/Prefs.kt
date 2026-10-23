@@ -46,6 +46,12 @@ class Prefs(ctx: Context) {
         get() = sp.getStringSet("learned", null) ?: emptySet()
         set(v) = sp.edit().putStringSet("learned", v).apply()
 
+    /** Every setting back to its default; the words kept as typed stay. */
+    fun restoreDefaults() {
+        sp.edit().remove("size").remove("offset").remove("longpress").remove("haptic").remove("haptic_strength")
+            .remove("sound").remove("volume").remove("langs").apply()
+    }
+
     fun learn(word: String) { learned = learned + word.lowercase() }
     fun forget(word: String) { learned = learned - word.lowercase() }
 
