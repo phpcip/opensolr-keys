@@ -360,7 +360,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
             }
         }
         activeKey = null; pressedKey = null; activePointer = -1
-        if (preview.isShowing) { removeCallbacks(hidePreview); postDelayed(hidePreview, 60) }
+        if (preview.isShowing) { removeCallbacks(hidePreview); postDelayed(hidePreview, 110) }
         invalidate()
     }
 
@@ -385,7 +385,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         removeCallbacks(hidePreview)
         val label = if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text
         val pw = (k.w * 1.8f).roundToInt()
-        val ph = (k.h * 2.4f).roundToInt()
+        val ph = (k.h * 2.75f).roundToInt()
         getLocationInWindow(winPos)
         val px = (winPos[0] + k.x + k.w / 2 - pw / 2).roundToInt()
         val py = (winPos[1] + k.y + k.h - ph).roundToInt()

@@ -427,7 +427,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         if (word.isEmpty()) return
         if (word != rejectedWord) rejectedWord = null
         val emojis = Emoji.suggest(word)
-        for (e in emojis) bar.addView(chip(e, 22f) { replaceWord(word, e) })
+        for (e in emojis) bar.addView(chip(e, 22f) { replaceWord(word, e); prefs.useEmoji(e) })
         if (emojis.isEmpty() && autocorrect && !word.startsWith(":") && word != rejectedWord && word.lowercase() !in prefs.learned) {
             val fixed = Dictionary.choose(previousWord(ic, word), word, null)
             if (fixed != null) bar.addView(correctionChip(fixed, { replaceWord(word, fixed) }, { prefs.learn(word); rejectedWord = word; updateBar() }))
@@ -477,6 +477,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private fun commitEmoji(e: String) {
         feedback.key(Feedback.Kind.STANDARD)
         currentInputConnection?.commitText(e, 1)
+        prefs.useEmoji(e)
     }
 
     private fun toggleEmoji() {
@@ -496,9 +497,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     private fun showEmoji() {
         kb.dismissPopups()
-        val panel = emojiPanel ?: EmojiPanel(this, kb, (kb.keyboardHeight() * 1.7f).toInt(), { e ->
-            feedback.key(Feedback.Kind.STANDARD)
-            currentInputConnection?.commitText(e, 1)
+        val panel = emojiPanel ?: EmojiPanel(this, kb, (kb.keyboardHeight() * 1.2f).toInt(), { prefs.recentEmoji }, { e ->
+            commitEmoji(e)
         }, { feedback.key(Feedback.Kind.STANDARD); hideEmoji(); updateBar() }, {
             feedback.key(Feedback.Kind.DELETE)
             onKey(Key(KType.DELETE), null)

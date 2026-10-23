@@ -19,12 +19,13 @@ import kotlin.math.roundToInt
 /** Emoji picker shown in place of the keys: category tabs, grid, ABC and delete. */
 class EmojiPanel(
     ctx: Context, private val kb: KeyboardView, private val heightPx: Int,
+    private val recent: () -> List<String>,
     private val onEmoji: (String) -> Unit, private val onAbc: () -> Unit, private val onDelete: () -> Unit
 ) : LinearLayout(ctx) {
     private val d = resources.displayMetrics.density
     private val grid = GridView(ctx)
     private val tabs = LinearLayout(ctx)
-    private var current = Emoji.CATEGORIES[0].first
+    private var current = if (recent().isNotEmpty()) Emoji.RECENT else Emoji.CATEGORIES[1].first
 
     init {
         orientation = VERTICAL
@@ -49,7 +50,7 @@ class EmojiPanel(
         grid.stretchMode = GridView.STRETCH_COLUMN_WIDTH
         grid.setPadding((4 * d).toInt(), 0, (4 * d).toInt(), 0)
         grid.isVerticalScrollBarEnabled = false
-        grid.setOnItemClickListener { _, _, pos, _ -> onEmoji(grid.adapter.getItem(pos) as String) }
+        grid.setOnItemClickListener { _, _, pos, _ -> onEmoji(grid.adapter.getItem(pos) as String); if (current == Emoji.RECENT) show(current) }
         addView(grid, LayoutParams(LayoutParams.MATCH_PARENT, 0).apply { weight = 1f })
 
         val bottom = LinearLayout(ctx).apply { orientation = HORIZONTAL }
@@ -84,7 +85,7 @@ class EmojiPanel(
             val sel = Emoji.CATEGORIES[i].first == cat
             v.background = if (sel) GradientDrawable().apply { cornerRadius = 5 * d; setColor(kb.colorKey) } else null
         }
-        val items = Emoji.byCategory[cat] ?: emptyList()
+        val items = if (cat == Emoji.RECENT) recent() else Emoji.byCategory[cat] ?: emptyList()
         grid.adapter = object : BaseAdapter() {
             override fun getCount() = items.size
             override fun getItem(p: Int) = items[p]

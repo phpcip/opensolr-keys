@@ -4,7 +4,9 @@ import android.content.Context
 
 /** Offline emoji list with keywords, for the picker and for word → emoji suggestions. */
 object Emoji {
+    const val RECENT = "Recent"
     val CATEGORIES = listOf(
+        RECENT to "🕘",
         "Smileys & Emotion" to "😀", "People & Body" to "👋", "Animals & Nature" to "🐻",
         "Food & Drink" to "🍔", "Travel & Places" to "🚗", "Activities" to "⚽",
         "Objects" to "💡", "Symbols" to "🔣", "Flags" to "🏁"

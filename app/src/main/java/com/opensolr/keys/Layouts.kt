@@ -67,7 +67,7 @@ object Layouts {
     private fun bottom(modeLabel: String) = listOf(
         Key(KType.MODE, modeLabel, weight = 1.3f),
         Key(KType.SPACE, " ", "space", weight = 0f),
-        Key(KType.CHAR, ".", weight = 1.3f, special = true),
+        Key(KType.CHAR, ".", weight = 1f, special = true),
         Key(KType.ENTER, "\n", "return", weight = 1.3f)
     )
 }

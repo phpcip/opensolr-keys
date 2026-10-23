@@ -52,6 +52,13 @@ class Prefs(ctx: Context) {
             .remove("sound").remove("volume").remove("langs").apply()
     }
 
+    /** Every emoji ever picked, the latest first; shown in the Recent tab of the picker. */
+    var recentEmoji: List<String>
+        get() = sp.getString("recent_emoji", "")!!.split('\u0001').filter { it.isNotEmpty() }
+        set(v) = sp.edit().putString("recent_emoji", v.joinToString("\u0001")).apply()
+
+    fun useEmoji(e: String) { recentEmoji = listOf(e) + recentEmoji.filter { it != e } }
+
     fun learn(word: String) { learned = learned + word.lowercase() }
     fun forget(word: String) { learned = learned - word.lowercase() }
 
