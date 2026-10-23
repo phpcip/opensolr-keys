@@ -7,7 +7,12 @@ class Key(val type: KType, val text: String = "", val label: String = text, val 
     fun hit(px: Float, py: Float) = px >= x && px < x + w && py >= y && py < y + h
 }
 
-enum class Mode { LETTERS, NUMBERS, SYMBOLS }
+enum class Mode {
+    LETTERS, NUMBERS, SYMBOLS,
+    /** Number pads, opened by the field itself: a PIN or plain number, a number with sign or decimals, a phone number, a date or time. */
+    PIN, DIGITS, PHONE, DATETIME;
+    val pad: Boolean get() = this == PIN || this == DIGITS || this == PHONE || this == DATETIME
+}
 
 /** Long-press alternatives: the Gboard symbol for the key first, then accents (Romanian first). */
 object Accents {
@@ -56,6 +61,12 @@ object Layouts {
             listOf(Key(KType.MODE, "#+=", weight = 1.3f)) + chars(".,?!'") + Key(KType.DELETE, weight = 1.3f),
             bottom("ABC")
         )
+        // Pads: big keys in columns; only the characters the field takes, return and delete
+        Mode.PIN -> listOf(chars("123"), chars("456"), chars("789"),
+            listOf(Key(KType.DELETE, special = true), Key(KType.CHAR, "0"), Key(KType.ENTER, "\n", "return")))
+        Mode.DIGITS -> pad("-+", ".,")
+        Mode.PHONE -> pad("-+", "*#")
+        Mode.DATETIME -> pad("/:", "-.")
         Mode.SYMBOLS -> listOf(
             chars("[]{}#%^*+="),
             chars("_\\|~<>€£¥•"),
@@ -65,6 +76,14 @@ object Layouts {
     }
 
     // The bottom row is taller (the first key's heightScale sets the row) and its side keys narrower, so the space bar is as big as it gets
+    /** 1-9 with [side] down the right, then [bottom] around 0 and return; delete under the side column. */
+    private fun pad(side: String, bottom: String) = listOf(
+        chars("123") + Key(KType.CHAR, side[0].toString(), special = true),
+        chars("456") + Key(KType.CHAR, side[1].toString(), special = true),
+        chars("789") + Key(KType.DELETE, special = true),
+        listOf(Key(KType.CHAR, bottom[0].toString(), special = true), Key(KType.CHAR, "0"), Key(KType.CHAR, bottom[1].toString(), special = true), Key(KType.ENTER, "\n", "return"))
+    )
+
     private fun bottom(modeLabel: String) = listOf(
         Key(KType.MODE, modeLabel, weight = 1.1f, heightScale = 1.3f),
         Key(KType.SPACE, " ", "space", weight = 0f),
