@@ -8,7 +8,7 @@ class Prefs(ctx: Context) {
     private val sp = ctx.getSharedPreferences("keys", Context.MODE_PRIVATE)
 
     var sizePercent: Int
-        get() = sp.getInt("size", 100)
+        get() = sp.getInt("size", 88)
         set(v) = sp.edit().putInt("size", v).apply()
 
     var bottomOffsetDp: Int
@@ -19,6 +19,11 @@ class Prefs(ctx: Context) {
     var longPressMs: Int
         get() = sp.getInt("longpress", 200)
         set(v) = sp.edit().putInt("longpress", v).apply()
+
+    /** How long the key balloon stays after the finger lifts, 10..110 ms. */
+    var previewMs: Int
+        get() = sp.getInt("preview", 40)
+        set(v) = sp.edit().putInt("preview", v).apply()
 
     var haptic: Boolean
         get() = sp.getBoolean("haptic", false)
@@ -33,7 +38,7 @@ class Prefs(ctx: Context) {
         set(v) = sp.edit().putBoolean("sound", v).apply()
 
     var volume: Int
-        get() = sp.getInt("volume", 50)
+        get() = sp.getInt("volume", 15)
         set(v) = sp.edit().putInt("volume", v).apply()
 
     /** Autocorrect languages; default = the system languages we have a dictionary for, else English. */
@@ -48,7 +53,7 @@ class Prefs(ctx: Context) {
 
     /** Every setting back to its default; the words kept as typed stay. */
     fun restoreDefaults() {
-        sp.edit().remove("size").remove("offset").remove("longpress").remove("haptic").remove("haptic_strength")
+        sp.edit().remove("size").remove("offset").remove("longpress").remove("preview").remove("haptic").remove("haptic_strength")
             .remove("sound").remove("volume").remove("langs").apply()
     }
 

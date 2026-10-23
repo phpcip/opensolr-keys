@@ -14,6 +14,7 @@ import android.view.View
 import android.widget.PopupWindow
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.math.abs
 import kotlin.math.roundToInt
 
 /** The keys, drawn to match the iOS keyboard: big rounded keys, bottom shadow line, preview balloon. */
@@ -33,6 +34,9 @@ class KeyboardView(ctx: Context) : View(ctx) {
     var mode = Mode.LETTERS
         set(v) { field = v; rows = Layouts.rows(v); keys = rows.flatten(); layoutKeys(width); invalidate() }
     var longPressMs = 300L
+    /** Likelihood of each letter a..z coming next in the word being typed; null when unknown. Set by the service. */
+    @Volatile var nextLetter: FloatArray? = null
+    var previewLingerMs = 40L
     var shift = Shift.OFF
         set(v) { field = v; invalidate() }
 
@@ -179,13 +183,13 @@ class KeyboardView(ctx: Context) : View(ctx) {
         if (k.type == KType.ENTER) {
             val r = min(k.w, k.h) / 2
             fill.color = colorShadow
-            c.drawCircle(k.x + k.w / 2, k.y + r + d, r, fill)
+            c.drawCircle(k.x + k.w / 2, k.y + r + 1.5f * d, r, fill)
             fill.color = if (pressed) colorKey else colorHighlight
             c.drawCircle(k.x + k.w / 2, k.y + r, r, fill)
             drawReturn(c, k.x + k.w / 2, k.y + r, Color.WHITE)
             return
         }
-        rect.set(k.x, k.y + d, k.x + k.w, k.y + k.h + d)
+        rect.set(k.x, k.y + 1.5f * d, k.x + k.w, k.y + k.h + 1.5f * d)
         fill.color = colorShadow
         c.drawRoundRect(rect, radius, radius, fill)
         rect.set(k.x, k.y, k.x + k.w, k.y + k.h)
@@ -275,17 +279,37 @@ class KeyboardView(ctx: Context) : View(ctx) {
     }
 
     /** Any touch on the keyboard goes to the nearest key: edges and gaps count as the key beside them. */
-    private fun keyAt(x: Float, y: Float): Key? {
+    /**
+     * The key under the finger, as iOS picks it: the touch point is lifted a little (fingers land below the centre
+     * of what they aim at), and among the letter keys around it the ones the dictionary expects next win a larger,
+     * invisible target. A touch on the middle of a key is always that key; the likelihood only decides the borders.
+     */
+    private fun keyAt(x: Float, yRaw: Float): Key? {
+        val y = yRaw - keyH * TOUCH_LIFT
         var best: Key? = null; var bestD = Float.MAX_VALUE
         for (k in keys) {
             val dx = when { x < k.x -> k.x - x; x > k.x + k.w -> x - k.x - k.w; else -> 0f }
             val dy = when { y < k.y -> k.y - y; y > k.y + k.h -> y - k.y - k.h; else -> 0f }
             val dist = dx * dx + dy * dy
             if (dist < bestD) { bestD = dist; best = k }
-            if (dist == 0f) return k
         }
-        return best
+        val geometric = best ?: return null
+        val p = nextLetter ?: return geometric
+        if (mode != Mode.LETTERS || !isLetterKey(geometric)) return geometric
+        var pick = geometric; var bestScore = -1f
+        for (k in keys) {
+            if (!isLetterKey(k)) continue
+            val dxn = (x - (k.x + k.w / 2)) / k.w
+            val dyn = (y - (k.y + k.h / 2)) / k.h
+            if (abs(dxn) > TARGET_REACH || abs(dyn) > TARGET_REACH) continue
+            val likely = p[k.text[0] - 'a'] + LIKELY_FLOOR
+            val score = likely * kotlin.math.exp(-(dxn * dxn + dyn * dyn) / (2f * TARGET_SIGMA * TARGET_SIGMA))
+            if (score > bestScore) { bestScore = score; pick = k }
+        }
+        return pick
     }
+
+    private fun isLetterKey(k: Key) = k.type == KType.CHAR && k.text.length == 1 && k.text[0] in 'a'..'z'
 
     override fun onTouchEvent(e: MotionEvent): Boolean {
         when (e.actionMasked) {
@@ -302,14 +326,9 @@ class KeyboardView(ctx: Context) : View(ctx) {
                 if (idx < 0) return true
                 val x = e.getX(idx); val y = e.getY(idx)
                 if (accents.isShowing) { accentView.select(((x - accentLeft) / accentView.cellW).toInt()); return true }
-                val k = keyAt(x, y)
-                if (k != null && k !== activeKey && activeKey?.type == KType.CHAR && k.type == KType.CHAR) {
-                    removeCallbacks(longPress)
-                    activeKey = k; pressedKey = k
-                    showPreview(k)
-                    postDelayed(longPress, longPressMs)
-                    invalidate()
-                }
+                // The key touched first is the key typed: a finger that slips onto a neighbour while pressing
+                // (m to k on the way down) does not change it. Only the long press is dropped once it slides.
+                if (abs(x - downX) > 10 * d || abs(y - downY) > 10 * d) removeCallbacks(longPress)
             }
             MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP -> {
                 if (e.getPointerId(e.actionIndex) == activePointer) activeKey?.let { finish(it, true) }
@@ -360,7 +379,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
             }
         }
         activeKey = null; pressedKey = null; activePointer = -1
-        if (preview.isShowing) { removeCallbacks(hidePreview); postDelayed(hidePreview, 110) }
+        if (preview.isShowing) { removeCallbacks(hidePreview); postDelayed(hidePreview, previewLingerMs) }
         invalidate()
     }
 
@@ -403,6 +422,17 @@ class KeyboardView(ctx: Context) : View(ctx) {
     }
 
     override fun onDetachedFromWindow() { dismissPopups(); super.onDetachedFromWindow() }
+
+    private companion object {
+        /** The touch point is read this much of a key height above the finger. */
+        const val TOUCH_LIFT = 0.08f
+        /** How far, in key widths and heights from a key's centre, a touch may still count for it. */
+        const val TARGET_REACH = 0.9f
+        /** The spread of the touch around the aimed key; at a key's centre nothing else can win. */
+        const val TARGET_SIGMA = 0.35f
+        /** Every letter keeps some chance, so an unexpected letter is still typed from its own key. */
+        const val LIKELY_FLOOR = 0.03f
+    }
 
     /** The enlarged key shown above a pressed letter. */
     private inner class BalloonView(ctx: Context) : View(ctx) {

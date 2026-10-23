@@ -1,0 +1,8 @@
+Part of the word and word-pair frequency tables (assets/dict_*.bin, assets/bigrams_*.bin) was
+computed from these corpora of the Leipzig Corpora Collection (https://wortschatz.uni-leipzig.de):
+ron_news_2020_1M, ron_news_2022_1M, ron_wikipedia_2021_1M, eng_news_2023_1M, eng_wikipedia_2016_1M.
+Only counts of words and word pairs are kept; no sentence of the corpora is in the app.
+
+D. Goldhahn, T. Eckart and U. Quasthoff, 2012, Building Large Monolingual Dictionaries at the
+Leipzig Corpora Collection: From 100 to 200 Languages. In Proceedings of the 8th International
+Conference on Language Resources and Evaluation (LREC 2012).

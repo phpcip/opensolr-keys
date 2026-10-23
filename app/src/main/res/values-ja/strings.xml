@@ -29,4 +29,5 @@
     <string name="s_check_updates">アップデートを確認</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">初期設定に戻す</string>
+    <string name="s_preview">キーの吹き出しの表示時間</string>
 </resources>

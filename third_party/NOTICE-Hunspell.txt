@@ -1,0 +1,10 @@
+The word lists (assets/dict_*.bin) include the word forms of these Hunspell dictionaries, expanded
+from their affix rules by tools/dict/unmunch.py. Source: https://github.com/LibreOffice/dictionaries
+
+ro/ro_RO  Romanian. Available under the GPL, the LGPL or the MPL, at your choice
+          (COPYING.GPL, COPYING.LGPL, COPYING.MPL in the source directory).
+en/en_US  English (US), from SCOWL. Copyright 2000-2018 by Kevin Atkinson and the other
+          contributors named in README_en_US.txt; permission to use, copy, modify, distribute
+          and sell the word lists is granted without fee, with the copyright and permission
+          notices kept, as stated there.
+en/en_GB  English (UK), under the LGPL, as stated in README_en_GB.txt.

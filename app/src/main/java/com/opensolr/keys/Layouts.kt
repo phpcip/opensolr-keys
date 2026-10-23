@@ -64,10 +64,11 @@ object Layouts {
         )
     }
 
+    // The bottom row is taller (the first key's heightScale sets the row) and its side keys narrower, so the space bar is as big as it gets
     private fun bottom(modeLabel: String) = listOf(
-        Key(KType.MODE, modeLabel, weight = 1.3f),
+        Key(KType.MODE, modeLabel, weight = 1.1f, heightScale = 1.3f),
         Key(KType.SPACE, " ", "space", weight = 0f),
-        Key(KType.CHAR, ".", weight = 1f, special = true),
-        Key(KType.ENTER, "\n", "return", weight = 1.3f)
+        Key(KType.CHAR, ".", weight = 0.85f, special = true),
+        Key(KType.ENTER, "\n", "return", weight = 1.1f)
     )
 }
