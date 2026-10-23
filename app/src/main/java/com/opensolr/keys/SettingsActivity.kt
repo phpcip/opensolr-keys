@@ -24,12 +24,16 @@ class SettingsActivity : Activity() {
         setContentView(R.layout.activity_settings)
         prefs = Prefs(this)
         val scroll = findViewById<android.view.View>(R.id.scroll)
+        var imeShown = false
         scroll.setOnApplyWindowInsetsListener { v, insets ->
             val bars = insets.getInsets(WindowInsets.Type.systemBars() or WindowInsets.Type.ime())
             v.setPadding(0, bars.top, 0, bars.bottom)
-            // keep the field you type in visible above the keyboard
+            // The field you type in is brought above the keyboard once, when the keyboard comes up; a keyboard that
+            // only changes height (the size and offset sliders) leaves the page where it is
+            val ime = insets.getInsets(WindowInsets.Type.ime()).bottom > 0
             val field = findViewById<android.view.View>(R.id.try_it)
-            if (field.isFocused) v.post { field.requestRectangleOnScreen(android.graphics.Rect(0, 0, field.width, field.height), false) }
+            if (ime && !imeShown && field.isFocused) v.post { field.requestRectangleOnScreen(android.graphics.Rect(0, 0, field.width, field.height), false) }
+            imeShown = ime
             insets
         }
 
