@@ -28,11 +28,6 @@ class Prefs(ctx: Context) {
         get() = sp.getInt("haptic_strength", 8)
         set(v) = sp.edit().putInt("haptic_strength", v).apply()
 
-    /** The joke replacements (politician → parasite, European Union → EURSS). */
-    var funWords: Boolean
-        get() = sp.getBoolean("fun", true)
-        set(v) = sp.edit().putBoolean("fun", v).apply()
-
     var sound: Boolean
         get() = sp.getBoolean("sound", true)
         set(v) = sp.edit().putBoolean("sound", v).apply()
@@ -54,7 +49,7 @@ class Prefs(ctx: Context) {
     /** Every setting back to its default; the words kept as typed stay. */
     fun restoreDefaults() {
         sp.edit().remove("size").remove("offset").remove("longpress").remove("haptic").remove("haptic_strength")
-            .remove("sound").remove("volume").remove("langs").remove("fun").apply()
+            .remove("sound").remove("volume").remove("langs").apply()
     }
 
     fun learn(word: String) { learned = learned + word.lowercase() }

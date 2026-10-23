@@ -29,6 +29,4 @@
     <string name="s_check_updates">Vérifier les mises à jour</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Rétablir les valeurs par défaut</string>
-    <string name="s_fun">Remplacements amusants</string>
-    <string name="s_fun_hint">politician → parasite, government → the Regime, European Union → EURSS. Les gros mots ne sont jamais corrigés.</string>
 </resources>

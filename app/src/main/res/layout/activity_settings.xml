@@ -73,9 +73,6 @@
         <TextView style="@style/SectionHint" android:text="@string/s_volume" />
         <SeekBar android:id="@+id/volume" style="@style/Slider" android:max="99" />
 
-        <Switch android:id="@+id/fun_words" style="@style/SwitchRow" android:text="@string/s_fun" />
-        <TextView style="@style/SectionHint" android:text="@string/s_fun_hint" />
-
         <Button
             android:id="@+id/btn_defaults"
             android:layout_width="match_parent"

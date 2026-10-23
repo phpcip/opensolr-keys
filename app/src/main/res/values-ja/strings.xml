@@ -29,6 +29,4 @@
     <string name="s_check_updates">アップデートを確認</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">初期設定に戻す</string>
-    <string name="s_fun">おもしろ置き換え</string>
-    <string name="s_fun_hint">politician → parasite、government → the Regime、European Union → EURSS。罵り言葉は修正されません。</string>
 </resources>
