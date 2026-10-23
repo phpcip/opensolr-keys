@@ -29,4 +29,6 @@
     <string name="s_check_updates">Nach Updates suchen</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Standardwerte wiederherstellen</string>
+    <string name="s_fun">Spaßersetzungen</string>
+    <string name="s_fun_hint">politician → parasite, government → the Regime, European Union → EURSS. Schimpfwörter werden nie korrigiert.</string>
 </resources>
