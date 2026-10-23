@@ -65,6 +65,10 @@
         <TextView android:id="@+id/longpress_value" style="@style/SectionHint" />
         <SeekBar android:id="@+id/longpress" style="@style/Slider" android:max="10" />
 
+        <TextView style="@style/SectionTitle" android:text="@string/s_preview" />
+        <TextView android:id="@+id/preview_value" style="@style/SectionHint" />
+        <SeekBar android:id="@+id/preview" style="@style/Slider" android:max="10" />
+
         <Switch android:id="@+id/haptic" style="@style/SwitchRow" android:text="@string/s_haptic" />
         <TextView style="@style/SectionHint" android:text="@string/s_strength" />
         <SeekBar android:id="@+id/haptic_strength" style="@style/Slider" android:max="99" />
