@@ -128,6 +128,12 @@ class KeyboardView(ctx: Context) : View(ctx) {
             val rh = keyH * (row.firstOrNull()?.heightScale ?: 1f)
             for (k in row) { k.y = y; k.h = rh }
             when {
+                mode.pad -> {
+                    val sum = row.sumOf { it.weight.toDouble() }.toFloat()
+                    val avail = w - 2 * side - (row.size - 1) * gap
+                    var x = side
+                    for (k in row) { k.x = x; k.w = avail * k.weight / sum; x += k.w + gap }
+                }
                 r == last -> {
                     var x = side
                     val fixed = row.filter { it.weight > 0f }.sumOf { (it.weight * unit).toDouble() }.toFloat()
@@ -385,6 +391,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
 
     private fun onLongPress() {
         val k = activeKey ?: return
+        if (mode.pad) return
         val alts = Accents.of(k.text, mode == Mode.LETTERS && shift != Shift.OFF) ?: return
         // only the alternatives: the key's own letter is what a plain tap already gives
         val chars = alts

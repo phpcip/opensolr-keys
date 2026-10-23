@@ -187,7 +187,15 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         val cls = info.inputType and InputType.TYPE_MASK_CLASS
         val variation = info.inputType and InputType.TYPE_MASK_VARIATION
         val numeric = cls == InputType.TYPE_CLASS_NUMBER || cls == InputType.TYPE_CLASS_PHONE || cls == InputType.TYPE_CLASS_DATETIME
-        kb.mode = if (numeric) Mode.NUMBERS else Mode.LETTERS
+        // Number fields get a pad that fits them; a numeric password is a PIN
+        val numFlags = info.inputType and (InputType.TYPE_NUMBER_FLAG_SIGNED or InputType.TYPE_NUMBER_FLAG_DECIMAL)
+        kb.mode = when {
+            cls == InputType.TYPE_CLASS_PHONE -> Mode.PHONE
+            cls == InputType.TYPE_CLASS_DATETIME -> Mode.DATETIME
+            cls == InputType.TYPE_CLASS_NUMBER && numFlags != 0 -> Mode.DIGITS
+            cls == InputType.TYPE_CLASS_NUMBER -> Mode.PIN
+            else -> Mode.LETTERS
+        }
         val password = variation == InputType.TYPE_TEXT_VARIATION_PASSWORD || variation == InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD ||
             variation == InputType.TYPE_TEXT_VARIATION_WEB_PASSWORD || variation == InputType.TYPE_NUMBER_VARIATION_PASSWORD
         val plainUri = variation == InputType.TYPE_TEXT_VARIATION_URI || variation == InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS ||
