@@ -12,7 +12,7 @@ enum class Mode { LETTERS, NUMBERS, SYMBOLS }
 /** Long-press alternatives: the Gboard symbol for the key first, then accents (Romanian first). */
 object Accents {
     private val symbols = mapOf(
-        'q' to '1', 'w' to '2', 'e' to '3', 'r' to '4', 't' to '5', 'y' to '6', 'u' to '7', 'i' to '8', 'o' to '9', 'p' to '0',
+        'q' to '%', 'w' to '\\', 'e' to '|', 'r' to '=', 't' to '[', 'y' to ']', 'u' to '<', 'i' to '>', 'o' to '{', 'p' to '}',
         'a' to '@', 's' to '#', 'd' to '$', 'f' to '_', 'g' to '&', 'h' to '-', 'j' to '+', 'k' to '(', 'l' to ')',
         'z' to '*', 'x' to '"', 'c' to '\'', 'v' to ':', 'b' to ';', 'n' to '!', 'm' to '?'
     )
