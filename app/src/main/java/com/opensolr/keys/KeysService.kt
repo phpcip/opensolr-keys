@@ -389,22 +389,6 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             lastCorrection = word to fixed
             word = fixed
         }
-        // The joke: some words, and some pairs of words, become others
-        if (prefs.funWords) {
-            val r = Fun.replace(prev, word)
-            if (r != null) {
-                val before = ic.getTextBeforeCursor(96, 0)?.toString() ?: ""
-                val gone = if (r.both && prev != null) {
-                    val start = before.lastIndexOf(prev, before.length - word.length - 1)
-                    if (start >= 0) before.length - start else word.length
-                } else word.length
-                ic.deleteSurroundingText(gone, 0)
-                ic.commitText(r.text, 1)
-                lastCorrection = (if (r.both) before.takeLast(gone) else word) to r.text
-                pending = null
-                return
-            }
-        }
         pending = if (Dictionary.isAmbiguous(word) && typed == Dictionary.strip(typed)) Pending(prev, word) else null
     }
 
