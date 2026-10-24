@@ -61,6 +61,12 @@ android {
     }
 
     buildTypes {
+        // test builds: no minification, signed with the same key so they install over the app without losing its data
+        debug {
+            if (!signingProperties.isEmpty) {
+                signingConfig = signingConfigs.getByName("release")
+            }
+        }
         release {
             isMinifyEnabled = true
             isShrinkResources = true

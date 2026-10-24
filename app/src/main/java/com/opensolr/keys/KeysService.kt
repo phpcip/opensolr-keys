@@ -21,37 +21,81 @@ import kotlin.math.max
 import kotlin.math.roundToInt
 
 /** The chevron under the keys that hides the keyboard, like the iPad key. */
-class HideKeyView(ctx: android.content.Context, bg: Int, ink: Int, onTap: () -> Unit, private val forward: (View, android.view.MotionEvent) -> Boolean) : View(ctx) {
-    private val d = resources.displayMetrics.density
+/** A round button under the keys: [fill] at rest, [press] while held, shrinks a little on the touch and springs back on release. */
+abstract class RoundKeyView(ctx: android.content.Context, bg: Int, private val fill: Int, private val press: Int, protected val ink: Int, private val onDown: () -> Unit, private val onTap: () -> Unit) : View(ctx) {
+    protected val d = resources.displayMetrics.density
+    private val disc = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG)
+    private var held = false
+    private var mix = 0f
+    private var anim: android.animation.ValueAnimator? = null
+    init { setBackgroundColor(bg) }
+
+    /** Touches outside the disc; the base keeps them. */
+    protected open fun outside(e: android.view.MotionEvent): Boolean = true
+    private fun onDisc(x: Float, y: Float) = kotlin.math.hypot(x - width / 2f, y - centerY()) < radius() + 10 * d
+    private fun radius() = kotlin.math.min(18 * d, width / 2f - 2 * d)
+    /** As low as it goes: the disc sits a few dp above the bottom edge of the screen. */
+    private fun centerY() = height - 6 * d - radius()
+    private var tracking = false
+
+    override fun onTouchEvent(e: android.view.MotionEvent): Boolean {
+        if (e.actionMasked == android.view.MotionEvent.ACTION_DOWN) tracking = onDisc(e.x, e.y)
+        if (!tracking) return outside(e)
+        when (e.actionMasked) {
+            android.view.MotionEvent.ACTION_DOWN -> { setHeld(true); onDown() }
+            android.view.MotionEvent.ACTION_MOVE -> setHeld(onDisc(e.x, e.y))
+            android.view.MotionEvent.ACTION_UP -> { val hit = held; setHeld(false); if (hit) onTap() }
+            android.view.MotionEvent.ACTION_CANCEL -> setHeld(false)
+        }
+        return true
+    }
+
+    private fun setHeld(on: Boolean) {
+        if (on == held) return
+        held = on
+        anim?.cancel()
+        anim = android.animation.ValueAnimator.ofFloat(mix, if (on) 1f else 0f).apply {
+            duration = if (on) 70 else 220
+            interpolator = if (on) android.view.animation.DecelerateInterpolator() else android.view.animation.OvershootInterpolator(3f)
+            addUpdateListener { mix = it.animatedValue as Float; invalidate() }
+            start()
+        }
+    }
+
+    override fun onDraw(c: android.graphics.Canvas) {
+        val cx = width / 2f; val cy = centerY()
+        val k = mix.coerceIn(0f, 1f)
+        disc.color = android.animation.ArgbEvaluator().evaluate(k, fill, press) as Int
+        val scale = 1f - 0.12f * mix
+        c.save(); c.scale(scale, scale, cx, cy)
+        c.drawCircle(cx, cy, radius(), disc)
+        drawIcon(c, cx, cy)
+        c.restore()
+    }
+
+    protected abstract fun drawIcon(c: android.graphics.Canvas, cx: Float, cy: Float)
+}
+
+/** The hide button, in the bottom right corner; touches beside the disc still reach the keys. */
+class HideKeyView(ctx: android.content.Context, bg: Int, fill: Int, press: Int, ink: Int, onDown: () -> Unit, onTap: () -> Unit, private val forward: (View, android.view.MotionEvent) -> Boolean) : RoundKeyView(ctx, bg, fill, press, ink, onDown, onTap) {
     private val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply {
         style = android.graphics.Paint.Style.STROKE; strokeWidth = 2f * d; strokeCap = android.graphics.Paint.Cap.ROUND; strokeJoin = android.graphics.Paint.Join.ROUND; color = ink
     }
     private val path = android.graphics.Path()
-    private var onChevron = false
-    init { setBackgroundColor(bg) }
-    override fun onTouchEvent(e: android.view.MotionEvent): Boolean {
-        if (e.actionMasked == android.view.MotionEvent.ACTION_DOWN) onChevron = kotlin.math.abs(e.x - width / 2f) < 40 * d
-        if (!onChevron) return forward(this, e)
-        if (e.actionMasked == android.view.MotionEvent.ACTION_UP) onTapRef()
-        return true
-    }
-    private fun onTapRef() = onTap()
-    private val onTap = onTap
-    override fun onDraw(c: android.graphics.Canvas) {
-        val cx = width / 2f; val cy = height / 2f; val s = 7 * d
-        path.reset(); path.moveTo(cx - s, cy - s * 0.45f); path.lineTo(cx, cy + s * 0.45f); path.lineTo(cx + s, cy - s * 0.45f)
+    override fun outside(e: android.view.MotionEvent) = forward(this, e)
+    override fun drawIcon(c: android.graphics.Canvas, cx: Float, cy: Float) {
+        val s = 6 * d
+        path.reset(); path.moveTo(cx - s, cy - s * 0.4f); path.lineTo(cx, cy + s * 0.5f); path.lineTo(cx + s, cy - s * 0.4f)
         c.drawPath(path, p)
     }
 }
 
-/** The emoji button under the keys. */
-class SmileyView(ctx: android.content.Context, bg: Int, ink: Int, onTap: () -> Unit) : View(ctx) {
-    private val d = resources.displayMetrics.density
+/** The emoji button, in the bottom left corner. */
+class SmileyView(ctx: android.content.Context, bg: Int, fill: Int, press: Int, ink: Int, onDown: () -> Unit, onTap: () -> Unit) : RoundKeyView(ctx, bg, fill, press, ink, onDown, onTap) {
     private val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply { color = ink }
     private val r = android.graphics.RectF()
-    init { setBackgroundColor(bg); isClickable = true; setOnClickListener { onTap() } }
-    override fun onDraw(c: android.graphics.Canvas) {
-        val cx = width / 2f; val cy = height / 2f; val rad = 9 * d
+    override fun drawIcon(c: android.graphics.Canvas, cx: Float, cy: Float) {
+        val rad = 8.5f * d
         p.style = android.graphics.Paint.Style.STROKE; p.strokeWidth = 1.6f * d; p.strokeCap = android.graphics.Paint.Cap.ROUND
         c.drawCircle(cx, cy, rad, p)
         r.set(cx - rad * 0.6f, cy - rad * 0.45f, cx + rad * 0.6f, cy + rad * 0.6f)
@@ -71,6 +115,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private lateinit var barScroll: HorizontalScrollView
     private lateinit var content: FrameLayout
     private lateinit var spacer: View
+    private var stripLow = false
     private lateinit var hideKey: View
     private var emojiPanel: EmojiPanel? = null
     private var d = 1f
@@ -125,7 +170,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         kb = KeyboardView(this).apply { listener = this@KeysService; sizePercent = prefs.sizePercent }
         root = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setBackgroundColor(kb.colorBg) }
 
-        barScroll = HorizontalScrollView(this).apply { isHorizontalScrollBarEnabled = false }
+        barScroll = HorizontalScrollView(this).apply { isHorizontalScrollBarEnabled = false; isFillViewport = true }
         bar = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
         bar.setPadding((6 * d).toInt(), 0, (6 * d).toInt(), 0)
         barScroll.addView(bar, ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT))
@@ -138,17 +183,17 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         content.addView(kb, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
         root.addView(content, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
 
-        // under the keys: emoji on the left, the hide chevron in the middle
+        // under the keys: emoji on the left, the hide chevron in the bottom right corner
         val strip = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
-        strip.addView(SmileyView(this, kb.colorBg, kb.colorText) { toggleEmoji() }, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
-        hideKey = HideKeyView(this, kb.colorBg, kb.colorText, { requestHideSelf(0) }) { v, e -> forwardToKeys(v, e) }
-        strip.addView(hideKey, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT).apply { weight = 1f })
-        val rightPad = View(this).apply { setBackgroundColor(kb.colorBg) }
-        rightPad.setOnTouchListener { v, e -> forwardToKeys(v, e) }
-        strip.addView(rightPad, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
-        root.addView(strip, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (30 * d).roundToInt()))
-        spacer = View(this)
-        root.addView(spacer, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (prefs.bottomOffsetDp * d).roundToInt()))
+        strip.addView(SmileyView(this, kb.colorBg, kb.colorSpecial, kb.colorKey, kb.colorText, { feedback.key(Feedback.Kind.STANDARD) }) { toggleEmoji() }, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
+        val middle = View(this).apply { setBackgroundColor(kb.colorBg) }
+        middle.setOnTouchListener { v, e -> forwardToKeys(v, e) }
+        strip.addView(middle, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT).apply { weight = 1f })
+        hideKey = HideKeyView(this, kb.colorBg, kb.colorSpecial, kb.colorKey, kb.colorText, { feedback.key(Feedback.Kind.STANDARD) }, { requestHideSelf(0) }) { v, e -> forwardToKeys(v, e) }
+        strip.addView(hideKey, LinearLayout.LayoutParams((64 * d).roundToInt(), ViewGroup.LayoutParams.MATCH_PARENT))
+        // the strip reaches the bottom of the screen: the gesture bar's space is under its buttons, not under the keys
+        root.addView(strip, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (40 * d).roundToInt()))
+        spacer = strip
         emojiPanel = null
         root.viewTreeObserver.addOnGlobalLayoutListener {
             hideSystemImeBar()
@@ -163,6 +208,9 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     /** A touch beside the keys (bar above, strip below) is handed to the nearest key. */
     private fun forwardToKeys(from: View, e: android.view.MotionEvent): Boolean {
         if (kb.visibility != View.VISIBLE) return false
+        // only the strip's top, right under the keys, reaches them; lower down a touch does nothing
+        if (e.actionMasked == android.view.MotionEvent.ACTION_DOWN) stripLow = from !== barScroll && e.y > 40 * d
+        if (stripLow) return true
         from.getLocationInWindow(loc); kb.getLocationInWindow(kbLoc)
         val copy = android.view.MotionEvent.obtain(e)
         copy.offsetLocation((loc[0] - kbLoc[0]).toFloat(), (loc[1] - kbLoc[1]).toFloat())
@@ -232,7 +280,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     /** Keeps the keys above the gesture bar: real inset, never below a fixed minimum, plus the user's offset. */
     private fun applyBottomSpace() {
         val inset = window?.window?.decorView?.rootWindowInsets?.getInsets(WindowInsets.Type.navigationBars())?.bottom ?: 0
-        val h = max(inset, (24 * d).roundToInt()) + (prefs.bottomOffsetDp * d).roundToInt()
+        val h = (40 * d).roundToInt() + max(inset, (24 * d).roundToInt()) + (prefs.bottomOffsetDp * d).roundToInt()
         if (spacer.layoutParams.height != h) {
             spacer.layoutParams = spacer.layoutParams.apply { height = h }
             spacer.requestLayout()
@@ -420,6 +468,38 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     private fun updateBar() {
         bar.removeAllViews()
+        fillBar()
+        // nothing to suggest: the settings cog on the left, the Opensolr logo on the right
+        if (bar.childCount == 0) {
+            bar.addView(iconChip(R.drawable.ic_cog, true) {
+                startActivity(android.content.Intent(this, SettingsActivity::class.java).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))
+            })
+            bar.addView(View(this), LinearLayout.LayoutParams(0, 1).apply { weight = 1f })
+            bar.addView(iconChip(R.drawable.opensolr_logo, false) {
+                runCatching {
+                    startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("https://opensolr.com"))
+                        .addCategory(android.content.Intent.CATEGORY_BROWSABLE).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))
+                }
+            })
+        }
+    }
+
+    /** A square icon button in the bar; [tint] paints the icon in the keys' text color. */
+    private fun iconChip(res: Int, tint: Boolean, onTap: () -> Unit) = android.widget.ImageView(this).apply {
+        setImageResource(res)
+        if (tint) setColorFilter(kb.colorText)
+        val pad = (6 * d).toInt()
+        setPadding(pad, pad, pad, pad)
+        scaleType = android.widget.ImageView.ScaleType.FIT_CENTER
+        background = android.graphics.drawable.RippleDrawable(
+            android.content.res.ColorStateList.valueOf(kb.colorSpecial), null,
+            GradientDrawable().apply { cornerRadius = 15 * d; setColor(Color.WHITE) })
+        contentDescription = if (tint) "Settings" else "Opensolr"
+        layoutParams = LinearLayout.LayoutParams((34 * d).roundToInt(), (30 * d).roundToInt()).apply { marginStart = (4 * d).toInt(); marginEnd = (4 * d).toInt() }
+        setOnClickListener { feedback.key(Feedback.Kind.STANDARD); onTap() }
+    }
+
+    private fun fillBar() {
         val q = emojiSearch
         if (q != null) {
             bar.addView(chip("\uD83D\uDD0D " + q.ifEmpty { getString(R.string.s_emoji_search) }, 17f) {})
