@@ -55,10 +55,12 @@ object Layouts {
             listOf(Key(KType.SHIFT, weight = 1.3f)) + chars("zxcvbnm") + Key(KType.DELETE, weight = 1.3f),
             bottom("123")
         )
+        // Both symbol pages keep the letters' five rows and their widths, so the keyboard does not change size between pages
         Mode.NUMBERS -> listOf(
             chars("1234567890"),
             chars("-/:;()$&@\""),
-            listOf(Key(KType.MODE, "#+=", weight = 1.3f)) + chars(".,?!'") + Key(KType.DELETE, weight = 1.3f),
+            chars("#%*+=_~<>"),
+            listOf(Key(KType.MODE, "#+=", weight = 1.3f)) + chars(".,?!'^`") + Key(KType.DELETE, weight = 1.3f),
             bottom("ABC")
         )
         // Pads: big keys in columns; only the characters the field takes, return and delete
@@ -70,7 +72,8 @@ object Layouts {
         Mode.SYMBOLS -> listOf(
             chars("[]{}#%^*+="),
             chars("_\\|~<>€£¥•"),
-            listOf(Key(KType.MODE, "123", weight = 1.3f)) + chars(".,?!'") + Key(KType.DELETE, weight = 1.3f),
+            chars("°§¶©®™±×÷"),
+            listOf(Key(KType.MODE, "123", weight = 1.3f)) + chars(",?!'„”…") + Key(KType.DELETE, weight = 1.3f),
             bottom("ABC")
         )
     }
