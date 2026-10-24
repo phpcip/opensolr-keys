@@ -54,8 +54,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private val colorBorder = Color.parseColor("#6E6E73")
 
     private val fill = Paint(Paint.ANTI_ALIAS_FLAG)
-    /** Inter Display Black: the open font closest to San Francisco, the face of the iOS keys, at its heaviest weight. */
-    private val keyFace: Typeface = ctx.resources.getFont(R.font.inter_display_black)
+    /** Inter Display Bold: the open font closest to San Francisco, the face of the iOS keys. */
+    private val keyFace: Typeface = ctx.resources.getFont(R.font.inter_display_bold)
     private val text = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = keyFace }
     private val stroke = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.STROKE; strokeCap = Paint.Cap.ROUND; strokeJoin = Paint.Join.ROUND }
     private val rect = RectF()
@@ -189,12 +189,14 @@ class KeyboardView(ctx: Context) : View(ctx) {
         else if (isSpecial(k) && pressed) color = colorKey
         else if ((k.type == KType.SPACE || k.type == KType.CHAR) && pressed && !k.special) color = colorSpecial
         if (k.type == KType.ENTER) {
-            val r = min(k.w, k.h) / 2
+            // The same rounded key as the others, filling its slot, in blue with the white return arrow
+            rect.set(k.x, k.y + 1.5f * d, k.x + k.w, k.y + k.h + 1.5f * d)
             fill.color = colorShadow
-            c.drawCircle(k.x + k.w / 2, k.y + r + 1.5f * d, r, fill)
+            c.drawRoundRect(rect, radius, radius, fill)
+            rect.set(k.x, k.y, k.x + k.w, k.y + k.h)
             fill.color = if (pressed) colorKey else colorHighlight
-            c.drawCircle(k.x + k.w / 2, k.y + r, r, fill)
-            drawReturn(c, k.x + k.w / 2, k.y + r, Color.WHITE)
+            c.drawRoundRect(rect, radius, radius, fill)
+            drawReturn(c, k.x + k.w / 2, k.y + k.h / 2, if (pressed) colorText else Color.WHITE)
             return
         }
         rect.set(k.x, k.y + 1.5f * d, k.x + k.w, k.y + k.h + 1.5f * d)
