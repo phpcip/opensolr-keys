@@ -433,18 +433,66 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             return
         }
         val ic = currentInputConnection ?: return
+        // A selection: the words in it that autocorrect would fix, offered as the whole corrected text
+        val selected = ic.getSelectedText(0)?.toString()
+        if (!selected.isNullOrEmpty()) {
+            kb.nextLetter = null
+            val fixed = if (autocorrect) fixedText(selected) else null
+            if (fixed != null) bar.addView(correctionChip(fixed, { feedback.key(Feedback.Kind.STANDARD); ic.commitText(fixed, 1); updateBar() }, { updateBar() }))
+            barScroll.scrollTo(0, 0)
+            return
+        }
         val word = currentWord(ic)
+        // The rest of the word after the cursor: placed inside or before a word, its suggestion comes back
+        val after = wordAfter(ic)
         // the letters likely to come next widen their keys' targets
-        kb.nextLetter = Dictionary.nextLetters(word)
-        if (word.isEmpty()) return
-        if (word != rejectedWord) rejectedWord = null
-        val emojis = Emoji.suggest(word)
+        kb.nextLetter = if (after.isEmpty()) Dictionary.nextLetters(word) else null
+        val whole = word + after
+        if (whole.isEmpty()) return
+        if (whole != rejectedWord) rejectedWord = null
+        val emojis = if (after.isEmpty()) Emoji.suggest(word) else emptyList()
         for (e in emojis) bar.addView(chip(e, 22f) { replaceWord(word, e); prefs.useEmoji(e) })
-        if (emojis.isEmpty() && autocorrect && !word.startsWith(":") && word != rejectedWord && word.lowercase() !in prefs.learned) {
-            val fixed = Dictionary.choose(previousWord(ic, word), word, null)
-            if (fixed != null) bar.addView(correctionChip(fixed, { replaceWord(word, fixed) }, { prefs.learn(word); rejectedWord = word; updateBar() }))
+        if (emojis.isEmpty() && autocorrect && !whole.startsWith(":") && whole != rejectedWord && whole.lowercase() !in prefs.learned) {
+            val fixed = Dictionary.choose(previousWord(ic, word), whole, null)
+            if (fixed != null) bar.addView(correctionChip(fixed, { replaceAround(word.length, after.length, fixed) }, { prefs.learn(whole); rejectedWord = whole; updateBar() }))
         }
         barScroll.scrollTo(0, 0)
+    }
+
+    /** The letters right after the cursor, up to the end of the word. */
+    private fun wordAfter(ic: InputConnection): String {
+        val after = ic.getTextAfterCursor(48, 0)?.toString() ?: return ""
+        var i = 0
+        while (i < after.length && (after[i].isLetter() || after[i] == '\'')) i++
+        return after.substring(0, i)
+    }
+
+    /** Replaces the word around the cursor: [before] letters behind it, [after] ahead of it. */
+    private fun replaceAround(before: Int, after: Int, with: String) {
+        val ic = currentInputConnection ?: return
+        ic.beginBatchEdit()
+        ic.deleteSurroundingText(before, after)
+        ic.commitText(with, 1)
+        ic.endBatchEdit()
+        lastCorrection = null
+        updateBar()
+    }
+
+    /** [text] with every word autocorrect would fix replaced, each read with its neighbours; null when nothing changes. */
+    private fun fixedText(text: String): String? {
+        val parts = Regex("[\\p{L}']+|[^\\p{L}']+").findAll(text).map { it.value }.toList()
+        val words = parts.indices.filter { parts[it][0].isLetter() }
+        var changed = false
+        val out = parts.toMutableList()
+        for ((n, i) in words.withIndex()) {
+            val w = parts[i]
+            if (w.lowercase() in prefs.learned) continue
+            val prev = words.getOrNull(n - 1)?.let { out[it] }
+            val next = words.getOrNull(n + 1)?.let { parts[it] }
+            val f = Dictionary.choose(prev, w, next) ?: continue
+            if (f != w) { out[i] = f; changed = true }
+        }
+        return if (changed) out.joinToString("") else null
     }
 
     private fun chip(label: String, size: Float, onTap: () -> Unit) = TextView(this).apply {

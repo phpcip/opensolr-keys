@@ -54,7 +54,9 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private val colorBorder = Color.parseColor("#6E6E73")
 
     private val fill = Paint(Paint.ANTI_ALIAS_FLAG)
-    private val text = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = Typeface.SANS_SERIF }
+    /** Inter Display Black: the open font closest to San Francisco, the face of the iOS keys, at its heaviest weight. */
+    private val keyFace: Typeface = ctx.resources.getFont(R.font.inter_display_black)
+    private val text = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = keyFace }
     private val stroke = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.STROKE; strokeCap = Paint.Cap.ROUND; strokeJoin = Paint.Join.ROUND }
     private val rect = RectF()
     private val path = Path()
@@ -431,6 +433,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     override fun onDetachedFromWindow() { dismissPopups(); super.onDetachedFromWindow() }
 
     private companion object {
+
         /** The touch point is read this much of a key height above the finger. */
         const val TOUCH_LIFT = 0.08f
         /** How far, in key widths and heights from a key's centre, a touch may still count for it. */
@@ -445,7 +448,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private inner class BalloonView(ctx: Context) : View(ctx) {
         private var label = ""; private var keyW = 0f; private var keyHt = 0f; private var fontPx = 0f
         private val p = Paint(Paint.ANTI_ALIAS_FLAG)
-        private val t = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = Typeface.SANS_SERIF }
+        private val t = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = keyFace }
         fun set(l: String, w: Float, h: Float, f: Float) { label = l; keyW = w; keyHt = h; fontPx = f }
         override fun onDraw(c: Canvas) {
             val w = width.toFloat(); val h = height.toFloat()
@@ -477,7 +480,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         val pad = 4 * d
         private var sel = 0
         private val p = Paint(Paint.ANTI_ALIAS_FLAG)
-        private val t = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = Typeface.SANS_SERIF }
+        private val t = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = keyFace }
         fun setup(list: List<String>, w: Float, h: Float, f: Float) { items = list; cellW = w; cellH = h; fontPx = f; sel = 0 }
         fun select(i: Int) { val n = i.coerceIn(0, items.size - 1); if (n != sel) { sel = n; invalidate() } }
         fun selected(): String? = items.getOrNull(sel)
