@@ -197,8 +197,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         emojiPanel = null
         root.viewTreeObserver.addOnGlobalLayoutListener {
             hideSystemImeBar()
-            // nothing on the keyboard is reserved for the system's edge gestures
-            root.systemGestureExclusionRects = listOf(android.graphics.Rect(0, 0, root.width, root.height))
+            // the keys are kept from the side edge gestures; the strip over the gesture bar stays the system's
+            root.systemGestureExclusionRects = listOf(android.graphics.Rect(0, 0, root.width, spacer.top))
         }
         return root
     }
@@ -209,7 +209,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private fun forwardToKeys(from: View, e: android.view.MotionEvent): Boolean {
         if (kb.visibility != View.VISIBLE) return false
         // only the strip's top, right under the keys, reaches them; lower down a touch does nothing
-        if (e.actionMasked == android.view.MotionEvent.ACTION_DOWN) stripLow = from !== barScroll && e.y > 40 * d
+        if (e.actionMasked == android.view.MotionEvent.ACTION_DOWN) stripLow = from !== barScroll && e.y > 6 * d
         if (stripLow) return true
         from.getLocationInWindow(loc); kb.getLocationInWindow(kbLoc)
         val copy = android.view.MotionEvent.obtain(e)
