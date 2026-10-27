@@ -45,7 +45,8 @@ class SettingsActivity : Activity() {
         findViewById<android.view.View>(R.id.btn_defaults).setOnClickListener { v ->
             v.performHapticFeedback(android.view.HapticFeedbackConstants.CONFIRM)
             prefs.restoreDefaults()
-            recreate()
+            // in place: a recreate() would hide the keyboard and give the controls back their old state
+            bindValues()
         }
         findViewById<android.view.View>(R.id.btn_learned).setOnClickListener {
             startActivity(Intent(this, WordsActivity::class.java))
@@ -56,46 +57,64 @@ class SettingsActivity : Activity() {
 
         val en = findViewById<CheckBox>(R.id.lang_en)
         val ro = findViewById<CheckBox>(R.id.lang_ro)
-        val langs = prefs.langs
-        en.isChecked = "en" in langs
-        ro.isChecked = "ro" in langs
         val saveLangs = { _: Any ->
             val set = LinkedHashSet<String>()
             if (en.isChecked) set.add("en")
             if (ro.isChecked) set.add("ro")
             prefs.langs = set
         }
-        en.setOnCheckedChangeListener { b, _ -> saveLangs(b) }
-        ro.setOnCheckedChangeListener { b, _ -> saveLangs(b) }
+        en.setOnCheckedChangeListener { b, _ -> if (!binding) saveLangs(b) }
+        ro.setOnCheckedChangeListener { b, _ -> if (!binding) saveLangs(b) }
 
-        slider(R.id.size, prefs.sizePercent - 80) { prefs.sizePercent = it + 80 }
-        slider(R.id.offset, prefs.bottomOffsetDp) { prefs.bottomOffsetDp = it }
-        val lpValue = findViewById<TextView>(R.id.longpress_value)
-        lpValue.text = "${prefs.longPressMs} ms"
-        slider(R.id.longpress, prefs.longPressMs / 50 - 1) { prefs.longPressMs = (it + 1) * 50; lpValue.text = "${prefs.longPressMs} ms" }
-        val pvValue = findViewById<TextView>(R.id.preview_value)
-        pvValue.text = "${prefs.previewMs} ms"
-        slider(R.id.preview, prefs.previewMs / 10 - 1) { prefs.previewMs = (it + 1) * 10; pvValue.text = "${prefs.previewMs} ms" }
-        slider(R.id.haptic_strength, prefs.hapticStrength - 1) { prefs.hapticStrength = it + 1 }
-        slider(R.id.volume, prefs.volume - 1) { prefs.volume = it + 1 }
+        slider(R.id.size, R.id.size_value, { prefs.sizePercent - 80 }, { "${prefs.sizePercent}%" }) { prefs.sizePercent = it + 80 }
+        slider(R.id.offset, R.id.offset_value, { prefs.bottomOffsetDp }, { "${prefs.bottomOffsetDp} dp" }) { prefs.bottomOffsetDp = it }
+        slider(R.id.longpress, R.id.longpress_value, { prefs.longPressMs / 50 - 1 }, { "${prefs.longPressMs} ms" }) { prefs.longPressMs = (it + 1) * 50 }
+        slider(R.id.preview, R.id.preview_value, { prefs.previewMs / 10 - 1 }, { "${prefs.previewMs} ms" }) { prefs.previewMs = (it + 1) * 10 }
+        slider(R.id.haptic_strength, R.id.haptic_strength_value, { prefs.hapticStrength - 1 }, { getString(R.string.s_strength) + ": ${prefs.hapticStrength}%" }) { prefs.hapticStrength = it + 1 }
+        slider(R.id.volume, R.id.volume_value, { prefs.volume - 1 }, { getString(R.string.s_volume) + ": ${prefs.volume}%" }) { prefs.volume = it + 1 }
 
         val haptic = findViewById<Switch>(R.id.haptic)
-        haptic.isChecked = prefs.haptic
-        haptic.setOnCheckedChangeListener { _, on -> prefs.haptic = on }
+        haptic.setOnCheckedChangeListener { _, on -> if (!binding) prefs.haptic = on }
         val sound = findViewById<Switch>(R.id.sound)
-        sound.isChecked = prefs.sound
-        sound.setOnCheckedChangeListener { _, on -> prefs.sound = on }
+        sound.setOnCheckedChangeListener { _, on -> if (!binding) prefs.sound = on }
+        bindValues()
     }
 
-    private fun slider(id: Int, value: Int, onChange: (Int) -> Unit) {
+    private var binding = false
+
+    /** Every control shows what is saved; only the user's own touches write back. */
+    private fun bindValues() {
+        binding = true
+        val langs = prefs.langs
+        findViewById<CheckBox>(R.id.lang_en).isChecked = "en" in langs
+        findViewById<CheckBox>(R.id.lang_ro).isChecked = "ro" in langs
+        for (r in sliderRefresh) r()
+        findViewById<Switch>(R.id.haptic).isChecked = prefs.haptic
+        findViewById<Switch>(R.id.sound).isChecked = prefs.sound
+        binding = false
+    }
+
+    override fun onRestoreInstanceState(state: Bundle) {
+        // the saved view state is older than the prefs; the prefs win
+        binding = true
+        super.onRestoreInstanceState(state)
+        bindValues()
+    }
+
+    /** Puts every slider and its exact value back from the saved prefs. */
+    private val sliderRefresh = ArrayList<() -> Unit>()
+
+    private fun slider(id: Int, labelId: Int, position: () -> Int, label: () -> String, onChange: (Int) -> Unit) {
         val s = findViewById<SeekBar>(id)
-        s.progress = value
+        val l = findViewById<TextView>(labelId)
+        sliderRefresh.add { s.progress = position(); l.text = label() }
         s.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar, p: Int, fromUser: Boolean) {
                 if (!fromUser) return
                 // a tick at every step, so the slider is felt as well as seen
                 sb.performHapticFeedback(android.view.HapticFeedbackConstants.CLOCK_TICK)
                 onChange(p)
+                l.text = label()
             }
             override fun onStartTrackingTouch(sb: SeekBar) {}
             override fun onStopTrackingTouch(sb: SeekBar) {}

@@ -56,9 +56,11 @@
         <CheckBox android:id="@+id/lang_ro" style="@style/Check" android:text="@string/s_ro" />
 
         <TextView style="@style/SectionTitle" android:text="@string/s_size" />
+        <TextView android:id="@+id/size_value" style="@style/SectionHint" />
         <SeekBar android:id="@+id/size" style="@style/Slider" android:max="50" />
 
         <TextView style="@style/SectionTitle" android:text="@string/s_offset" />
+        <TextView android:id="@+id/offset_value" style="@style/SectionHint" />
         <SeekBar android:id="@+id/offset" style="@style/Slider" android:max="80" />
 
         <TextView style="@style/SectionTitle" android:text="@string/s_longpress" />
@@ -70,11 +72,11 @@
         <SeekBar android:id="@+id/preview" style="@style/Slider" android:max="10" />
 
         <Switch android:id="@+id/haptic" style="@style/SwitchRow" android:text="@string/s_haptic" />
-        <TextView style="@style/SectionHint" android:text="@string/s_strength" />
+        <TextView android:id="@+id/haptic_strength_value" style="@style/SectionHint" />
         <SeekBar android:id="@+id/haptic_strength" style="@style/Slider" android:max="99" />
 
         <Switch android:id="@+id/sound" style="@style/SwitchRow" android:text="@string/s_sound" />
-        <TextView style="@style/SectionHint" android:text="@string/s_volume" />
+        <TextView android:id="@+id/volume_value" style="@style/SectionHint" />
         <SeekBar android:id="@+id/volume" style="@style/Slider" android:max="99" />
 
         <Button
