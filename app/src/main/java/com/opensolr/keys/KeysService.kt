@@ -33,9 +33,13 @@ abstract class RoundKeyView(ctx: android.content.Context, bg: Int, private val f
     /** Touches outside the disc; the base keeps them. */
     protected open fun outside(e: android.view.MotionEvent): Boolean = true
     private fun onDisc(x: Float, y: Float) = kotlin.math.hypot(x - width / 2f, y - centerY()) < radius() + 10 * d
-    private fun radius() = kotlin.math.min(18 * d, width / 2f - 2 * d)
-    /** As low as it goes: the disc sits a few dp above the bottom edge of the screen. */
-    private fun centerY() = height - 6 * d - radius()
+    private fun radius() = kotlin.math.min(22 * d, width / 2f - 2 * d)
+    /** The disc sits a few dp above the bottom edge of the screen; the view itself may reach past that edge. */
+    private fun centerY(): Float {
+        val visible = android.graphics.Rect()
+        val bottom = if (getLocalVisibleRect(visible)) visible.bottom.toFloat() else height.toFloat()
+        return bottom - 10 * d - radius()
+    }
     private var tracking = false
 
     override fun onTouchEvent(e: android.view.MotionEvent): Boolean {
@@ -79,12 +83,12 @@ abstract class RoundKeyView(ctx: android.content.Context, bg: Int, private val f
 /** The hide button, in the bottom right corner; touches beside the disc still reach the keys. */
 class HideKeyView(ctx: android.content.Context, bg: Int, fill: Int, press: Int, ink: Int, onDown: () -> Unit, onTap: () -> Unit, private val forward: (View, android.view.MotionEvent) -> Boolean) : RoundKeyView(ctx, bg, fill, press, ink, onDown, onTap) {
     private val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply {
-        style = android.graphics.Paint.Style.STROKE; strokeWidth = 2f * d; strokeCap = android.graphics.Paint.Cap.ROUND; strokeJoin = android.graphics.Paint.Join.ROUND; color = ink
+        style = android.graphics.Paint.Style.STROKE; strokeWidth = 2.3f * d; strokeCap = android.graphics.Paint.Cap.ROUND; strokeJoin = android.graphics.Paint.Join.ROUND; color = ink
     }
     private val path = android.graphics.Path()
     override fun outside(e: android.view.MotionEvent) = forward(this, e)
     override fun drawIcon(c: android.graphics.Canvas, cx: Float, cy: Float) {
-        val s = 6 * d
+        val s = 7.3f * d
         path.reset(); path.moveTo(cx - s, cy - s * 0.4f); path.lineTo(cx, cy + s * 0.5f); path.lineTo(cx + s, cy - s * 0.4f)
         c.drawPath(path, p)
     }
@@ -95,8 +99,8 @@ class SmileyView(ctx: android.content.Context, bg: Int, fill: Int, press: Int, i
     private val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply { color = ink }
     private val r = android.graphics.RectF()
     override fun drawIcon(c: android.graphics.Canvas, cx: Float, cy: Float) {
-        val rad = 8.5f * d
-        p.style = android.graphics.Paint.Style.STROKE; p.strokeWidth = 1.6f * d; p.strokeCap = android.graphics.Paint.Cap.ROUND
+        val rad = 10.4f * d
+        p.style = android.graphics.Paint.Style.STROKE; p.strokeWidth = 1.9f * d; p.strokeCap = android.graphics.Paint.Cap.ROUND
         c.drawCircle(cx, cy, rad, p)
         r.set(cx - rad * 0.6f, cy - rad * 0.45f, cx + rad * 0.6f, cy + rad * 0.6f)
         c.drawArc(r, 20f, 140f, false, p)
