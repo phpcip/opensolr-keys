@@ -71,6 +71,10 @@
         <TextView android:id="@+id/preview_value" style="@style/SectionHint" />
         <SeekBar android:id="@+id/preview" style="@style/Slider" android:max="10" />
 
+        <TextView style="@style/SectionTitle" android:text="@string/s_balloon" />
+        <TextView android:id="@+id/balloon_value" style="@style/SectionHint" />
+        <SeekBar android:id="@+id/balloon" style="@style/Slider" android:max="100" />
+
         <Switch android:id="@+id/haptic" style="@style/SwitchRow" android:text="@string/s_haptic" />
         <TextView android:id="@+id/haptic_strength_value" style="@style/SectionHint" />
         <SeekBar android:id="@+id/haptic_strength" style="@style/Slider" android:max="99" />

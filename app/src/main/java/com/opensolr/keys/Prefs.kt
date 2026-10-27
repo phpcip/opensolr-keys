@@ -25,6 +25,11 @@ class Prefs(ctx: Context) {
         get() = sp.getInt("preview", 40)
         set(v) = sp.edit().putInt("preview", v).apply()
 
+    /** Key balloon size in percent, 80..180: bigger also lifts it higher above the key. */
+    var balloonPercent: Int
+        get() = sp.getInt("balloon", 100)
+        set(v) = sp.edit().putInt("balloon", v).apply()
+
     var haptic: Boolean
         get() = sp.getBoolean("haptic", false)
         set(v) = sp.edit().putBoolean("haptic", v).apply()
@@ -53,7 +58,7 @@ class Prefs(ctx: Context) {
 
     /** Every setting back to its default; the words kept as typed stay. */
     fun restoreDefaults() {
-        sp.edit().remove("size").remove("offset").remove("longpress").remove("preview").remove("haptic").remove("haptic_strength")
+        sp.edit().remove("size").remove("offset").remove("longpress").remove("preview").remove("balloon").remove("haptic").remove("haptic_strength")
             .remove("sound").remove("volume").remove("langs").apply()
     }
 

@@ -30,4 +30,5 @@
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Standardwerte wiederherstellen</string>
     <string name="s_preview">Tastenballon bleibt</string>
+    <string name="s_balloon">Größe des Tastenballons</string>
 </resources>

@@ -30,4 +30,5 @@
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Restore defaults</string>
     <string name="s_preview">Key balloon stays</string>
+    <string name="s_balloon">Key balloon size</string>
 </resources>
