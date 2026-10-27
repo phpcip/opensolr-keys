@@ -30,4 +30,5 @@
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Restablecer valores predeterminados</string>
     <string name="s_preview">El globo de la tecla permanece</string>
+    <string name="s_balloon">Tamaño del globo</string>
 </resources>

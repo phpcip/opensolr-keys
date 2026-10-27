@@ -30,4 +30,5 @@
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Revino la setările implicite</string>
     <string name="s_preview">Balonul tastei rămâne</string>
+    <string name="s_balloon">Mărimea balonului</string>
 </resources>

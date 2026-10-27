@@ -70,6 +70,7 @@ class SettingsActivity : Activity() {
         slider(R.id.offset, R.id.offset_value, { prefs.bottomOffsetDp }, { "${prefs.bottomOffsetDp} dp" }) { prefs.bottomOffsetDp = it }
         slider(R.id.longpress, R.id.longpress_value, { prefs.longPressMs / 50 - 1 }, { "${prefs.longPressMs} ms" }) { prefs.longPressMs = (it + 1) * 50 }
         slider(R.id.preview, R.id.preview_value, { prefs.previewMs / 10 - 1 }, { "${prefs.previewMs} ms" }) { prefs.previewMs = (it + 1) * 10 }
+        slider(R.id.balloon, R.id.balloon_value, { prefs.balloonPercent - 80 }, { "${prefs.balloonPercent}%" }) { prefs.balloonPercent = it + 80 }
         slider(R.id.haptic_strength, R.id.haptic_strength_value, { prefs.hapticStrength - 1 }, { getString(R.string.s_strength) + ": ${prefs.hapticStrength}%" }) { prefs.hapticStrength = it + 1 }
         slider(R.id.volume, R.id.volume_value, { prefs.volume - 1 }, { getString(R.string.s_volume) + ": ${prefs.volume}%" }) { prefs.volume = it + 1 }
 
