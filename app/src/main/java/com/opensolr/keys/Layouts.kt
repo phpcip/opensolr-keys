@@ -65,7 +65,7 @@ object Layouts {
         )
         // Pads: big keys in columns; only the characters the field takes, return and delete
         Mode.PIN -> listOf(chars("123"), chars("456"), chars("789"),
-            listOf(Key(KType.DELETE, special = true), Key(KType.CHAR, "0"), Key(KType.ENTER, "\n", "return")))
+            listOf(Key(KType.CHAR, ".", special = true), Key(KType.CHAR, "0"), Key(KType.DELETE, weight = 0.5f, special = true), Key(KType.ENTER, "\n", "return", weight = 0.5f)))
         Mode.DIGITS -> pad("-+", ".,")
         Mode.PHONE -> pad("-+", "*#")
         Mode.DATETIME -> pad("/:", "-.")

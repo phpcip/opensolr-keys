@@ -397,8 +397,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
 
     private fun onLongPress() {
         val k = activeKey ?: return
-        if (mode.pad) return
-        val alts = Accents.of(k.text, mode == Mode.LETTERS && shift != Shift.OFF) ?: return
+        // on the pads only the decimal point has an alternative: the comma
+        val alts = if (mode.pad) (if (k.text == ".") "," else return) else Accents.of(k.text, mode == Mode.LETTERS && shift != Shift.OFF) ?: return
         // only the alternatives: the key's own letter is what a plain tap already gives
         val chars = alts
         if (preview.isShowing) preview.dismiss()
