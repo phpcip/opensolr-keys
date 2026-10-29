@@ -192,8 +192,10 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         barScroll.addView(bar, ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT))
         root.addView(barScroll, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (40 * d).roundToInt()))
 
-        bar.setOnTouchListener { _, e -> forwardToKeys(bar, e) }
-        barScroll.setOnTouchListener { _, e -> forwardToKeys(barScroll, e) }
+        // a bar with more than fits scrolls sideways under the finger; one that fits hands its empty space to the keys
+        fun barScrolls() = barScroll.canScrollHorizontally(1) || barScroll.canScrollHorizontally(-1)
+        bar.setOnTouchListener { _, e -> if (barScrolls()) false else forwardToKeys(bar, e) }
+        barScroll.setOnTouchListener { _, e -> if (barScrolls()) false else forwardToKeys(barScroll, e) }
 
         content = FrameLayout(this)
         content.addView(kb, FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT))
