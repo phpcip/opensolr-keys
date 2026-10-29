@@ -135,11 +135,13 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private var viewWasHidden = true
     /** Non-null while the keys type into the emoji search instead of the app. */
     private var emojiSearch: String? = null
-    /** The clipboard text last pasted from the bar: it leaves the bar until something new is copied. */
-    private var pastedClip: String? = null
+    /** The clipboard text taken off the bar with its × (kept as a hash, across restarts): back when something new is copied. */
+    private var dismissedClip: String?
+        get() = getSharedPreferences("keys", MODE_PRIVATE).getString("clip_dismissed", null)
+        set(v) { getSharedPreferences("keys", MODE_PRIVATE).edit().putString("clip_dismissed", v).apply() }
     private val clipboard by lazy { getSystemService(CLIPBOARD_SERVICE) as android.content.ClipboardManager }
     private val onClipChange = android.content.ClipboardManager.OnPrimaryClipChangedListener {
-        pastedClip = null
+        dismissedClip = null
         if (::bar.isInitialized) updateBar()
     }
 
@@ -498,35 +500,59 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
                         .addCategory(android.content.Intent.CATEGORY_BROWSABLE).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))
                 }
             })
+        } else if (emojiSearch == null && emojiPanel?.visibility != View.VISIBLE) {
+            // suggestions on the bar: the clipboard stays, at the right end after them, until its × is tapped
+            clipChip()?.let { chip ->
+                bar.addView(View(this), LinearLayout.LayoutParams(0, 1).apply { weight = 1f })
+                bar.addView(chip)
+            }
         }
     }
 
     /**
-     * The text on the clipboard as one short line; a tap pastes all of it. A clip the copying app marked sensitive
-     * (a password) shows as dots. Gone once pasted from here, back when something new is copied.
+     * The text on the clipboard as one short line: a tap pastes all of it, as often as wanted. The × button beside it
+     * empties the clipboard, and only that takes it off the bar. A clip the copying app marked sensitive (a password) shows as dots.
      */
     private fun clipChip(): View? {
         val clip = runCatching { clipboard.primaryClip }.getOrNull() ?: return null
         if (clip.itemCount == 0) return null
         val text = runCatching { clip.getItemAt(0).coerceToText(this)?.toString() }.getOrNull()
-        if (text.isNullOrBlank() || text == pastedClip) return null
+        if (text.isNullOrBlank() || text.hashCode().toString() == dismissedClip) return null
         val sensitive = android.os.Build.VERSION.SDK_INT >= 33 &&
             clip.description?.extras?.getBoolean(android.content.ClipDescription.EXTRA_IS_SENSITIVE) == true
         val line = if (sensitive) "••••••" else text.trim().replace(Regex("\\s+"), " ")
-        return chip(line, 15f) {
+        val row = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL; gravity = Gravity.CENTER_VERTICAL }
+        val pill = chip(line, 15f) {
             val ic = currentInputConnection ?: return@chip
             ic.commitText(text, 1)
-            pastedClip = text
             updateShift()
             updateBar()
         }.apply {
             maxLines = 1
             ellipsize = android.text.TextUtils.TruncateAt.END
-            // the cog and the logo keep their places on either side
-            maxWidth = resources.displayMetrics.widthPixels - (120 * d).roundToInt()
-            (layoutParams as LinearLayout.LayoutParams).marginEnd = 0
+            // the cog, the × and the logo keep their places
+            maxWidth = resources.displayMetrics.widthPixels - (170 * d).roundToInt()
             contentDescription = getString(R.string.s_paste)
         }
+        row.addView(pill)
+        // the × is a button of its own, drawn like a key: a tap empties the clipboard
+        val clear = TextView(this).apply {
+            setText("×"); textSize = 20f; gravity = Gravity.CENTER; setTextColor(kb.colorText); typeface = Typeface.SANS_SERIF
+            background = android.graphics.drawable.RippleDrawable(
+                android.content.res.ColorStateList.valueOf(kb.colorSpecial),
+                GradientDrawable().apply { cornerRadius = 5 * d; setColor(kb.colorKey); setStroke((1 * d).roundToInt(), kb.colorSpecial) }, null)
+            contentDescription = getString(R.string.s_clear_clipboard)
+            setOnClickListener {
+                feedback.key(Feedback.Kind.STANDARD)
+                val cleared = android.os.Build.VERSION.SDK_INT >= 28 && runCatching { clipboard.clearPrimaryClip() }.isSuccess
+                // where the clipboard cannot be emptied, the bar forgets this text until something new is copied
+                if (!cleared) dismissedClip = text.hashCode().toString()
+                updateBar()
+            }
+        }
+        row.addView(clear, LinearLayout.LayoutParams((34 * d).roundToInt(), (30 * d).roundToInt()))
+        row.layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, (30 * d).roundToInt())
+        return row
     }
 
     /** A square icon button in the bar; [tint] paints the icon in the keys' text color. */
