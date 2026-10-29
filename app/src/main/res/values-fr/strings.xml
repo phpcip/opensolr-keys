@@ -21,6 +21,7 @@
     <string name="s_learned_empty">Aucun pour l’instant</string>
     <string name="s_emoji_search">Chercher un emoji</string>
     <string name="s_paste">Coller</string>
+    <string name="s_clear_clipboard">Vider le presse-papiers</string>
     <string name="s_learned_edit">Modifier la liste</string>
     <string name="s_learned_file_hint">Un mot par ligne.</string>
     <string name="s_save">Enregistrer</string>

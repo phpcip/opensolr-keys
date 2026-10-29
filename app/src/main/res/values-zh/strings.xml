@@ -21,6 +21,7 @@
     <string name="s_learned_empty">暂无</string>
     <string name="s_emoji_search">搜索表情</string>
     <string name="s_paste">粘贴</string>
+    <string name="s_clear_clipboard">清空剪贴板</string>
     <string name="s_learned_edit">编辑列表</string>
     <string name="s_learned_file_hint">每行一个词。</string>
     <string name="s_save">保存</string>
