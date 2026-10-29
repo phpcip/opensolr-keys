@@ -135,6 +135,13 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private var viewWasHidden = true
     /** Non-null while the keys type into the emoji search instead of the app. */
     private var emojiSearch: String? = null
+    /** The clipboard text last pasted from the bar: it leaves the bar until something new is copied. */
+    private var pastedClip: String? = null
+    private val clipboard by lazy { getSystemService(CLIPBOARD_SERVICE) as android.content.ClipboardManager }
+    private val onClipChange = android.content.ClipboardManager.OnPrimaryClipChangedListener {
+        pastedClip = null
+        if (::bar.isInitialized) updateBar()
+    }
 
     /** Settings changed while the keyboard is up (size, offset sliders) apply right away. */
     private val onPrefChange = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
@@ -150,10 +157,12 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         feedback = Feedback(this, prefs)
         d = resources.displayMetrics.density
         getSharedPreferences("keys", MODE_PRIVATE).registerOnSharedPreferenceChangeListener(onPrefChange)
+        runCatching { clipboard.addPrimaryClipChangedListener(onClipChange) }
     }
 
     override fun onDestroy() {
         getSharedPreferences("keys", MODE_PRIVATE).unregisterOnSharedPreferenceChangeListener(onPrefChange)
+        runCatching { clipboard.removePrimaryClipChangedListener(onClipChange) }
         feedback.release()
         super.onDestroy()
     }
@@ -475,11 +484,13 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private fun updateBar() {
         bar.removeAllViews()
         fillBar()
-        // nothing to suggest: the settings cog on the left, the Opensolr logo on the right
+        // nothing to suggest: the settings cog on the left, the clipboard to paste in the middle, the Opensolr logo on the right
         if (bar.childCount == 0) {
             bar.addView(iconChip(R.drawable.ic_cog, true) {
                 startActivity(android.content.Intent(this, SettingsActivity::class.java).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))
             })
+            bar.addView(View(this), LinearLayout.LayoutParams(0, 1).apply { weight = 1f })
+            clipChip()?.let { bar.addView(it) }
             bar.addView(View(this), LinearLayout.LayoutParams(0, 1).apply { weight = 1f })
             bar.addView(iconChip(R.drawable.opensolr_logo, false) {
                 runCatching {
@@ -487,6 +498,34 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
                         .addCategory(android.content.Intent.CATEGORY_BROWSABLE).addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK))
                 }
             })
+        }
+    }
+
+    /**
+     * The text on the clipboard as one short line; a tap pastes all of it. A clip the copying app marked sensitive
+     * (a password) shows as dots. Gone once pasted from here, back when something new is copied.
+     */
+    private fun clipChip(): View? {
+        val clip = runCatching { clipboard.primaryClip }.getOrNull() ?: return null
+        if (clip.itemCount == 0) return null
+        val text = runCatching { clip.getItemAt(0).coerceToText(this)?.toString() }.getOrNull()
+        if (text.isNullOrBlank() || text == pastedClip) return null
+        val sensitive = android.os.Build.VERSION.SDK_INT >= 33 &&
+            clip.description?.extras?.getBoolean(android.content.ClipDescription.EXTRA_IS_SENSITIVE) == true
+        val line = if (sensitive) "••••••" else text.trim().replace(Regex("\\s+"), " ")
+        return chip(line, 15f) {
+            val ic = currentInputConnection ?: return@chip
+            ic.commitText(text, 1)
+            pastedClip = text
+            updateShift()
+            updateBar()
+        }.apply {
+            maxLines = 1
+            ellipsize = android.text.TextUtils.TruncateAt.END
+            // the cog and the logo keep their places on either side
+            maxWidth = resources.displayMetrics.widthPixels - (120 * d).roundToInt()
+            (layoutParams as LinearLayout.LayoutParams).marginEnd = 0
+            contentDescription = getString(R.string.s_paste)
         }
     }
 

@@ -20,6 +20,7 @@
     <string name="s_learned_hint">Cuvinte la care ai refuzat corectarea. Scoate unul ca să fie corectat din nou.</string>
     <string name="s_learned_empty">Niciunul încă</string>
     <string name="s_emoji_search">Caută emoji</string>
+    <string name="s_paste">Lipește</string>
     <string name="s_learned_edit">Editează lista</string>
     <string name="s_learned_file_hint">Un cuvânt pe linie.</string>
     <string name="s_save">Salvează</string>
