@@ -20,6 +20,7 @@
     <string name="s_learned_hint">Wörter, deren Korrektur du abgelehnt hast. Entferne eines, um es wieder korrigieren zu lassen.</string>
     <string name="s_learned_empty">Noch keine</string>
     <string name="s_emoji_search">Emoji suchen</string>
+    <string name="s_paste">Einfügen</string>
     <string name="s_learned_edit">Liste bearbeiten</string>
     <string name="s_learned_file_hint">Ein Wort pro Zeile.</string>
     <string name="s_save">Speichern</string>
