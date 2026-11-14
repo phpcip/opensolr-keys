@@ -50,7 +50,7 @@ class EmojiPanel(
         grid.stretchMode = GridView.STRETCH_COLUMN_WIDTH
         grid.setPadding((4 * d).toInt(), 0, (4 * d).toInt(), 0)
         grid.isVerticalScrollBarEnabled = false
-        grid.setOnItemClickListener { _, _, pos, _ -> onEmoji(grid.adapter.getItem(pos) as String); if (current == Emoji.RECENT) show(current) }
+        grid.setOnItemClickListener { _, _, pos, _ -> onEmoji(grid.adapter.getItem(pos) as String) }
         addView(grid, LayoutParams(LayoutParams.MATCH_PARENT, 0).apply { weight = 1f })
 
         val bottom = LinearLayout(ctx).apply { orientation = HORIZONTAL }
@@ -78,6 +78,9 @@ class EmojiPanel(
         typeface = Typeface.SANS_SERIF
         background = GradientDrawable().apply { cornerRadius = 5 * d; setColor(kb.colorSpecial) }
     }
+
+    /** The Recent tab is rebuilt when the panel opens, never under the finger. */
+    fun refreshRecent() { if (current == Emoji.RECENT) show(current) }
 
     fun show(cat: String) {
         current = cat

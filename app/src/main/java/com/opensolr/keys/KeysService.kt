@@ -135,6 +135,9 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private var viewWasHidden = true
     /** Non-null while the keys type into the emoji search instead of the app. */
     private var emojiSearch: String? = null
+    /** The emoji suggestions of the word just replaced by one of them: they stay on the bar for more taps. */
+    private var stickyEmoji: List<String>? = null
+    private var shownSearch: String? = null
     /** The clipboard text taken off the bar with its × (kept as a hash, across restarts): back when something new is copied. */
     private var dismissedClip: String?
         get() = getSharedPreferences("keys", MODE_PRIVATE).getString("clip_dismissed", null)
@@ -248,7 +251,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         applyBottomSpace()
         root.post { applyBottomSpace(); hideSystemImeBar() }
         // a restart (same field, re-laid out) keeps the emoji panel or search open
-        if (!restarting || viewWasHidden) { hideEmoji(); emojiSearch = null }
+        if (!restarting || viewWasHidden) { hideEmoji(); emojiSearch = null; stickyEmoji = null }
         viewWasHidden = false
 
         val cls = info.inputType and InputType.TYPE_MASK_CLASS
@@ -308,12 +311,14 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     override fun onFinishInputView(finishingInput: Boolean) {
         viewWasHidden = true
-        kb.dismissPopups()
+        if (::kb.isInitialized) kb.dismissPopups()
         super.onFinishInputView(finishingInput)
     }
 
     override fun onUpdateSelection(oldSelStart: Int, oldSelEnd: Int, newSelStart: Int, newSelEnd: Int, candidatesStart: Int, candidatesEnd: Int) {
         super.onUpdateSelection(oldSelStart, oldSelEnd, newSelStart, newSelEnd, candidatesStart, candidatesEnd)
+        // the editor can report its cursor before the keyboard view exists
+        if (!::kb.isInitialized) return
         updateShift()
         updateBar()
     }
@@ -333,6 +338,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     override fun onKey(key: Key, text: String?) {
         val ic = currentInputConnection ?: return
+        if (key.type != KType.DELETE) stickyEmoji = null
         val q = emojiSearch
         if (q != null) {
             when (key.type) {
@@ -577,10 +583,13 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         if (q != null) {
             bar.addView(chip("\uD83D\uDD0D " + q.ifEmpty { getString(R.string.s_emoji_search) }, 17f) {})
             bar.addView(chip("×", 20f) { emojiSearch = null; updateShift(); updateBar() })
-            for (e in Emoji.search(q)) bar.addView(chip(e, 22f) { commitEmoji(e); emojiSearch = null; updateShift(); updateBar() })
-            barScroll.scrollTo(0, 0)
+            for (e in Emoji.search(q)) bar.addView(chip(e, 22f) { commitEmoji(e) })
+            // picking one keeps the row where the finger left it
+            if (q != shownSearch) barScroll.scrollTo(0, 0)
+            shownSearch = q
             return
         }
+        shownSearch = null
         if (emojiPanel?.visibility == View.VISIBLE) {
             bar.addView(chip("\uD83D\uDD0D " + getString(R.string.s_emoji_search), 17f) { startEmojiSearch() })
             return
@@ -601,10 +610,15 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         // the letters likely to come next widen their keys' targets
         kb.nextLetter = if (after.isEmpty()) Dictionary.nextLetters(word) else null
         val whole = word + after
-        if (whole.isEmpty()) return
+        if (whole.isEmpty()) {
+            // the word became an emoji: its suggestions stay, each tap adds one more
+            stickyEmoji?.let { for (e in it) bar.addView(chip(e, 22f) { commitEmoji(e) }) }
+            return
+        }
+        stickyEmoji = null
         if (whole != rejectedWord) rejectedWord = null
         val emojis = if (after.isEmpty()) Emoji.suggest(word) else emptyList()
-        for (e in emojis) bar.addView(chip(e, 22f) { replaceWord(word, e); prefs.useEmoji(e) })
+        for (e in emojis) bar.addView(chip(e, 22f) { stickyEmoji = emojis; replaceWord(word, e); prefs.useEmoji(e) })
         if (emojis.isEmpty() && autocorrect && !whole.startsWith(":") && whole != rejectedWord && whole.lowercase() !in prefs.learned) {
             val fixed = Dictionary.choose(previousWord(ic, word), whole, null)
             if (fixed != null) bar.addView(correctionChip(fixed, { replaceAround(word.length, after.length, fixed) }, { prefs.learn(whole); rejectedWord = whole; updateBar() }))
@@ -716,6 +730,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             feedback.key(Feedback.Kind.DELETE)
             onKey(Key(KType.DELETE), null)
         }).also { emojiPanel = it; content.addView(it) }
+        panel.refreshRecent()
         panel.visibility = View.VISIBLE
         kb.visibility = View.INVISIBLE
         updateBar()
