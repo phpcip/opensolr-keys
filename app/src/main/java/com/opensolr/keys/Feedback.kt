@@ -9,7 +9,7 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
 
-/** Key click sound (the system's own key tone) and vibration, both with user-set strength. */
+/** Key click sound (the system's own key tone) and the key tap felt under the finger, both with user-set strength. */
 class Feedback(private val ctx: Context, private val prefs: Prefs) {
     enum class Kind { STANDARD, DELETE, SPACE, RETURN }
 
@@ -40,12 +40,28 @@ class Feedback(private val ctx: Context, private val prefs: Prefs) {
         if (prefs.haptic) vibrate()
     }
 
-    private fun vibrate() {
+    /**
+     * One short pulse per key, its force following the strength setting all the way: a faint, very short tick at the bottom,
+     * longer and harder towards the top. Motors that take scaled primitives get a scaled tick, then a scaled click.
+     */
+    fun vibrate() {
         val v = vibrator ?: return
-        val amp = (1 + prefs.hapticStrength * 2.54f).toInt().coerceIn(1, 255)
-        if (v.hasAmplitudeControl()) v.vibrate(VibrationEffect.createOneShot(10, amp))
-        else v.vibrate(VibrationEffect.createOneShot(10, VibrationEffect.DEFAULT_AMPLITUDE))
+        val s = prefs.hapticStrength.coerceIn(1, 100)
+        if (Build.VERSION.SDK_INT >= 30 &&
+            v.areAllPrimitivesSupported(VibrationEffect.Composition.PRIMITIVE_TICK, VibrationEffect.Composition.PRIMITIVE_CLICK)) {
+            val effect = VibrationEffect.startComposition()
+            if (s <= 50) effect.addPrimitive(VibrationEffect.Composition.PRIMITIVE_TICK, 0.1f + 0.9f * s / 50f)
+            else effect.addPrimitive(VibrationEffect.Composition.PRIMITIVE_CLICK, 0.3f + 0.7f * (s - 50) / 50f)
+            v.vibrate(effect.compose())
+            return
+        }
+        val ms = 4L + s / 12
+        val amp = (25 + s * 2.3f).toInt().coerceIn(1, 255)
+        v.vibrate(VibrationEffect.createOneShot(ms, if (v.hasAmplitudeControl()) amp else VibrationEffect.DEFAULT_AMPLITUDE))
     }
+
+    /** The tap alone, without the sound: one for every character a held delete removes. */
+    fun tick() { if (prefs.haptic) vibrate() }
 
     fun release() = pool.release()
 }

@@ -1,0 +1,6 @@
+Part of the emoji keywords (assets/emoji_index.txt) comes from the emoji annotations of the
+Unicode Common Locale Data Repository (https://github.com/unicode-org/cldr), English and Romanian:
+common/annotations and common/annotationsDerived.
+
+Copyright © 1991-present Unicode, Inc. All rights reserved.
+Distributed under the Unicode License v3 (https://www.unicode.org/license.txt).

@@ -111,6 +111,10 @@ class SmileyView(ctx: android.content.Context, bg: Int, fill: Int, press: Int, i
 }
 
 class KeysService : InputMethodService(), KeyboardView.Listener {
+    private companion object {
+        /** Word suggestions on the bar at once. */
+        const val WORD_CHIPS = 3
+    }
     private lateinit var prefs: Prefs
     private lateinit var feedback: Feedback
     private lateinit var kb: KeyboardView
@@ -129,6 +133,9 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private var lastSpaceAt = 0L
     private var lastCorrection: Pair<String, String>? = null
     private var rejectedWord: String? = null
+    /** Words whose correction was undone by hand in this text: sent as they are, they are learned and never corrected again. */
+    private val kept = LinkedHashSet<String>()
+    private var lastKeyAt = 0L
     /** The last word written that the next word may still change (ca/că, their/there). */
     private class Pending(val prev: String?, val word: String)
     private var pending: Pending? = null
@@ -137,6 +144,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     private var emojiSearch: String? = null
     /** The emoji suggestions of the word just replaced by one of them: they stay on the bar for more taps. */
     private var stickyEmoji: List<String>? = null
+    /** The word just picked from the bar: the space after it is written when the next word starts, so punctuation sits right against it. */
+    private var phantom: String? = null
     private var shownSearch: String? = null
     /** The clipboard text taken off the bar with its × (kept as a hash, across restarts): back when something new is copied. */
     private var dismissedClip: String?
@@ -284,7 +293,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             action == EditorInfo.IME_ACTION_DONE -> "done"
             else -> getString(R.string.s_return)
         }
-        lastCorrection = null; rejectedWord = null; pending = null
+        lastCorrection = null; rejectedWord = null; pending = null; phantom = null
+        if (!restarting) kept.clear()
         if (!restarting) kb.shift = KeyboardView.Shift.OFF
         updateShift()
         updateBar()
@@ -319,8 +329,20 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         super.onUpdateSelection(oldSelStart, oldSelEnd, newSelStart, newSelEnd, candidatesStart, candidatesEnd)
         // the editor can report its cursor before the keyboard view exists
         if (!::kb.isInitialized) return
+        // the app emptied the field by itself (a send button): the text went out as it was
+        if (kept.isNotEmpty() && newSelStart == 0 && newSelEnd == 0 && SystemClock.uptimeMillis() - lastKeyAt > 150) {
+            val ic = currentInputConnection
+            if (ic != null && ic.getTextAfterCursor(1, 0).isNullOrEmpty() && ic.getTextBeforeCursor(1, 0).isNullOrEmpty()) learnKept(null)
+        }
         updateShift()
         updateBar()
+    }
+
+    /** Learns the words kept against a correction; with [text] given, only the ones still in it. */
+    private fun learnKept(text: String?) {
+        val words = text?.lowercase()?.split(Regex("[^\\p{L}']+"))?.toSet()
+        for (w in kept) if (words == null || w in words) prefs.learn(w)
+        kept.clear()
     }
 
     // ---- keys ----
@@ -336,8 +358,11 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         )
     }
 
+    override fun onRepeat(key: Key) = feedback.tick()
+
     override fun onKey(key: Key, text: String?) {
         val ic = currentInputConnection ?: return
+        lastKeyAt = SystemClock.uptimeMillis()
         if (key.type != KType.DELETE) stickyEmoji = null
         val q = emojiSearch
         if (q != null) {
@@ -354,10 +379,14 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
             updateBar()
             return
         }
+        // a word picked from the bar is final: no correction on it, and its space comes with the next word
+        val picked = phantom?.let { ic.getTextBeforeCursor(it.length, 0)?.toString() == it } == true
+        phantom = null
         when (key.type) {
             KType.CHAR -> {
                 val t = text ?: return
-                if (t.length == 1 && t[0] in ".,!?;:)") applyCorrection(ic)
+                if (picked) { if (t[0].isLetterOrDigit()) ic.commitText(" ", 1) }
+                else if (t.length == 1 && t[0] in ".,!?;:)") applyCorrection(ic)
                 ic.commitText(t, 1)
                 afterChar()
             }
@@ -369,17 +398,18 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
                     ic.commitText(". ", 1)
                     lastSpaceAt = 0
                 } else {
-                    applyCorrection(ic)
+                    if (!picked) applyCorrection(ic)
                     ic.commitText(" ", 1)
                     lastSpaceAt = now
                 }
                 afterChar()
             }
             KType.ENTER -> {
-                applyCorrection(ic)
+                if (!picked) applyCorrection(ic)
                 val info = currentInputEditorInfo
                 val action = info.imeOptions and EditorInfo.IME_MASK_ACTION
                 if ((info.imeOptions and EditorInfo.IME_FLAG_NO_ENTER_ACTION) == 0 && action != EditorInfo.IME_ACTION_NONE && action != EditorInfo.IME_ACTION_UNSPECIFIED) {
+                    if (kept.isNotEmpty()) learnKept((ic.getTextBeforeCursor(4000, 0)?.toString() ?: "") + (ic.getTextAfterCursor(1000, 0)?.toString() ?: ""))
                     ic.performEditorAction(action)
                 } else {
                     ic.commitText("\n", 1)
@@ -394,6 +424,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
                         ic.deleteSurroundingText(before.length, 0)
                         ic.commitText(lc.first + before.last(), 1)
                         rejectedWord = lc.first
+                        kept.add(lc.first.lowercase())
                         lastCorrection = null
                         pending = null
                         updateShift(); updateBar()
@@ -607,6 +638,16 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         val word = currentWord(ic)
         // The rest of the word after the cursor: placed inside or before a word, its suggestion comes back
         val after = wordAfter(ic)
+        // an emoticon just typed (:) :)) <3 :P): the emoji it stands for
+        val tail = if (after.isEmpty()) ic.getTextBeforeCursor(24, 0)?.toString() else null
+        val face = tail?.let { Emoji.emoticon(it) }
+        if (face != null && tail != null) {
+            kb.nextLetter = null
+            val typed = tail.takeLast(face.first)
+            for (e in face.second) bar.addView(chip(e, 22f) { stickyEmoji = face.second; replaceWord(typed, e); prefs.useEmoji(e) })
+            barScroll.scrollTo(0, 0)
+            return
+        }
         // the letters likely to come next widen their keys' targets
         kb.nextLetter = if (after.isEmpty()) Dictionary.nextLetters(word) else null
         val whole = word + after
@@ -617,12 +658,29 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         }
         stickyEmoji = null
         if (whole != rejectedWord) rejectedWord = null
+        // the word just picked from the bar is done: nothing more to offer for it
+        val done = phantom
+        if (done != null) {
+            if (after.isEmpty() && ic.getTextBeforeCursor(done.length, 0)?.toString() == done) { kb.nextLetter = null; return }
+            phantom = null
+        }
+        // words first: the correction the space key would make, then what the word may be the start of; the emoji after them
+        if (autocorrect && !whole.startsWith(":")) {
+            val prev = previousWord(ic, word)
+            val fixed = if (whole != rejectedWord && whole.lowercase() !in prefs.learned) Dictionary.choose(prev, whole, null) else null
+            if (fixed != null) bar.addView(correctionChip(fixed, { pickWord(word.length, after.length, fixed) }, { prefs.learn(whole); rejectedWord = whole; updateBar() }))
+            if (after.isEmpty()) {
+                var room = WORD_CHIPS - bar.childCount
+                for (w in Dictionary.complete(prev, word, WORD_CHIPS)) {
+                    if (room <= 0) break
+                    if (w.equals(fixed, ignoreCase = true)) continue
+                    bar.addView(chip(w, 17f) { pickWord(word.length, 0, w) })
+                    room--
+                }
+            }
+        }
         val emojis = if (after.isEmpty()) Emoji.suggest(word) else emptyList()
         for (e in emojis) bar.addView(chip(e, 22f) { stickyEmoji = emojis; replaceWord(word, e); prefs.useEmoji(e) })
-        if (emojis.isEmpty() && autocorrect && !whole.startsWith(":") && whole != rejectedWord && whole.lowercase() !in prefs.learned) {
-            val fixed = Dictionary.choose(previousWord(ic, word), whole, null)
-            if (fixed != null) bar.addView(correctionChip(fixed, { replaceAround(word.length, after.length, fixed) }, { prefs.learn(whole); rejectedWord = whole; updateBar() }))
-        }
         barScroll.scrollTo(0, 0)
     }
 
@@ -643,6 +701,13 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         ic.endBatchEdit()
         lastCorrection = null
         updateBar()
+    }
+
+    /** A word chosen from the bar replaces the one around the cursor; at the end of the text its space waits for the next word. */
+    private fun pickWord(before: Int, after: Int, with: String) {
+        phantom = if (after == 0) with else null
+        replaceAround(before, after, with)
+        updateShift()
     }
 
     /** [text] with every word autocorrect would fix replaced, each read with its neighbours; null when nothing changes. */

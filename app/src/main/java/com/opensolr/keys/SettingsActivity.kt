@@ -17,12 +17,16 @@ import android.widget.Switch
 
 class SettingsActivity : Activity() {
     private lateinit var prefs: Prefs
+    private lateinit var feedback: Feedback
+
+    override fun onDestroy() { feedback.release(); super.onDestroy() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.setDecorFitsSystemWindows(false)
         setContentView(R.layout.activity_settings)
         prefs = Prefs(this)
+        feedback = Feedback(this, prefs)
         val scroll = findViewById<android.view.View>(R.id.scroll)
         var imeShown = false
         scroll.setOnApplyWindowInsetsListener { v, insets ->
@@ -71,7 +75,7 @@ class SettingsActivity : Activity() {
         slider(R.id.longpress, R.id.longpress_value, { prefs.longPressMs / 50 - 1 }, { "${prefs.longPressMs} ms" }) { prefs.longPressMs = (it + 1) * 50 }
         slider(R.id.preview, R.id.preview_value, { prefs.previewMs / 10 - 1 }, { "${prefs.previewMs} ms" }) { prefs.previewMs = (it + 1) * 10 }
         slider(R.id.balloon, R.id.balloon_value, { prefs.balloonPercent - 80 }, { "${prefs.balloonPercent}%" }) { prefs.balloonPercent = it + 80 }
-        slider(R.id.haptic_strength, R.id.haptic_strength_value, { prefs.hapticStrength - 1 }, { getString(R.string.s_strength) + ": ${prefs.hapticStrength}%" }) { prefs.hapticStrength = it + 1 }
+        slider(R.id.haptic_strength, R.id.haptic_strength_value, { prefs.hapticStrength - 1 }, { getString(R.string.s_strength) + ": ${prefs.hapticStrength}%" }, tick = false) { prefs.hapticStrength = it + 1; feedback.vibrate() }
         slider(R.id.volume, R.id.volume_value, { prefs.volume - 1 }, { getString(R.string.s_volume) + ": ${prefs.volume}%" }) { prefs.volume = it + 1 }
 
         val haptic = findViewById<Switch>(R.id.haptic)
@@ -105,15 +109,15 @@ class SettingsActivity : Activity() {
     /** Puts every slider and its exact value back from the saved prefs. */
     private val sliderRefresh = ArrayList<() -> Unit>()
 
-    private fun slider(id: Int, labelId: Int, position: () -> Int, label: () -> String, onChange: (Int) -> Unit) {
+    private fun slider(id: Int, labelId: Int, position: () -> Int, label: () -> String, tick: Boolean = true, onChange: (Int) -> Unit) {
         val s = findViewById<SeekBar>(id)
         val l = findViewById<TextView>(labelId)
         sliderRefresh.add { s.progress = position(); l.text = label() }
         s.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(sb: SeekBar, p: Int, fromUser: Boolean) {
                 if (!fromUser) return
-                // a tick at every step, so the slider is felt as well as seen
-                sb.performHapticFeedback(android.view.HapticFeedbackConstants.CLOCK_TICK)
+                // a tick at every step, so the slider is felt as well as seen; the strength slider gives the key tap itself instead
+                if (tick) sb.performHapticFeedback(android.view.HapticFeedbackConstants.CLOCK_TICK)
                 onChange(p)
                 l.text = label()
             }

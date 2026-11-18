@@ -22,6 +22,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
     interface Listener {
         fun onKey(key: Key, text: String?)
         fun onPressed(key: Key)
+        /** A held key (delete) acting again. */
+        fun onRepeat(key: Key)
     }
 
     enum class Shift { OFF, ON, LOCK }
@@ -66,7 +68,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private var rows: List<List<Key>> = Layouts.rows(Mode.LETTERS)
     private var keys: List<Key> = rows.flatten()
 
-    private val gap = 4 * d
+    private val gap = 3 * d
     private val rowGap = 8 * d
     private val side = 2 * d
     private val topPad = 7 * d
@@ -81,6 +83,10 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private var pressedKey: Key? = null
     private var repeatFired = false
     private var lastShiftTap = 0L
+    private var activeDownAt = 0L
+    private var lastUpKey: Key? = null
+    private var lastUpAt = 0L
+    private var lastUpX = 0f; private var lastUpY = 0f
 
     private val preview = PopupWindow(ctx).apply {
         isClippingEnabled = false; isTouchable = false; isFocusable = false
@@ -103,7 +109,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     private val repeat = object : Runnable {
         override fun run() {
             val k = activeKey ?: return
-            if (k.type == KType.DELETE) { repeatFired = true; listener?.onKey(k, null); postDelayed(this, 50) }
+            if (k.type == KType.DELETE) { repeatFired = true; listener?.onRepeat(k); listener?.onKey(k, null); postDelayed(this, 50) }
         }
     }
 
@@ -150,9 +156,10 @@ class KeyboardView(ctx: Context) : View(ctx) {
                     lastK.w = unit * lastK.weight; lastK.x = w - side - lastK.w
                     val mid = row.subList(1, row.size - 1)
                     if (mid.size == 7) {
-                        val total = 7 * unit + 6 * gap
+                        val kw = unit * WIDE_LOWER
+                        val total = 7 * kw + 6 * gap
                         var x = (w - total) / 2
-                        for (k in mid) { k.x = x; k.w = unit; x += unit + gap }
+                        for (k in mid) { k.x = x; k.w = kw; x += kw + gap }
                     } else {
                         val big = gap * 2.3f
                         val start = first.x + first.w + big
@@ -163,9 +170,11 @@ class KeyboardView(ctx: Context) : View(ctx) {
                     }
                 }
                 else -> {
-                    val total = row.size * unit + (row.size - 1) * gap
+                    // a row of fewer than ten keys widens them into the room at its sides
+                    val kw = if (row.size < 10) unit * WIDE_MIDDLE else unit
+                    val total = row.size * kw + (row.size - 1) * gap
                     var x = (w - total) / 2
-                    for (k in row) { k.x = x; k.w = unit; x += unit + gap }
+                    for (k in row) { k.x = x; k.w = kw; x += kw + gap }
                 }
             }
             y += rh + rowGap
@@ -327,10 +336,24 @@ class KeyboardView(ctx: Context) : View(ctx) {
         when (e.actionMasked) {
             MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> {
                 val idx = e.actionIndex
-                activeKey?.let { finish(it, true) }
-                val k = keyAt(e.getX(idx), e.getY(idx)) ?: return true
+                val x = e.getX(idx); val y = e.getY(idx)
+                val held = activeKey
+                if (held != null && e.actionMasked == MotionEvent.ACTION_DOWN) finish(held, true)
+                else if (held != null) {
+                    // one fingertip read by the screen as two contacts is still one touch: a second contact on the key
+                    // already held, or beside the first one in the same instant, types nothing
+                    val at = e.findPointerIndex(activePointer)
+                    val beside = at >= 0 && e.eventTime - activeDownAt < NOISE_MS &&
+                        abs(x - e.getX(at)) < unit * NOISE_REACH && abs(y - e.getY(at)) < keyH * NOISE_REACH
+                    if (beside || keyAt(x, y) === held) return true
+                    finish(held, true)
+                }
+                val k = keyAt(x, y) ?: return true
+                // a finger leaving the glass can flicker off and on again: the same key, on the same spot, an instant later, is that flicker
+                if (k === lastUpKey && e.eventTime - lastUpAt < NOISE_MS && abs(x - lastUpX) < unit * NOISE_REACH && abs(y - lastUpY) < keyH * NOISE_REACH) return true
                 activePointer = e.getPointerId(idx)
-                downX = e.getX(idx); downY = e.getY(idx)
+                activeDownAt = e.eventTime
+                downX = x; downY = y
                 press(k)
             }
             MotionEvent.ACTION_MOVE -> {
@@ -343,7 +366,10 @@ class KeyboardView(ctx: Context) : View(ctx) {
                 if (abs(x - downX) > 10 * d || abs(y - downY) > 10 * d) removeCallbacks(longPress)
             }
             MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP -> {
-                if (e.getPointerId(e.actionIndex) == activePointer) activeKey?.let { finish(it, true) }
+                if (e.getPointerId(e.actionIndex) == activePointer) activeKey?.let {
+                    lastUpKey = it; lastUpAt = e.eventTime; lastUpX = e.getX(e.actionIndex); lastUpY = e.getY(e.actionIndex)
+                    finish(it, true)
+                }
             }
             MotionEvent.ACTION_CANCEL -> {
                 // the system cancels edge touches it mistakes for a gesture: a finger that barely moved still typed
@@ -449,6 +475,12 @@ class KeyboardView(ctx: Context) : View(ctx) {
         const val TARGET_SIGMA = 0.35f
         /** Every letter keeps some chance, so an unexpected letter is still typed from its own key. */
         const val LIKELY_FLOOR = 0.03f
+        /** Letter keys of the nine-key row and of the row between shift and delete, against the keys of a full row. */
+        const val WIDE_MIDDLE = 1.07f
+        const val WIDE_LOWER = 1.04f
+        /** Touch noise: a contact this soon after another, this close to it (in key sizes), is the same touch. */
+        const val NOISE_MS = 40L
+        const val NOISE_REACH = 0.6f
     }
 
     /** The enlarged key shown above a pressed letter. */
