@@ -160,6 +160,8 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
     /** Settings changed while the keyboard is up (size, offset sliders) apply right away. */
     private val onPrefChange = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
         if (key == "size" || key == "offset") applyLayoutPrefs()
+        // languages ticked while the keyboard is up: their words are loaded now, not at the next field
+        if (key == "langs") Dictionary.ensureLoaded(this, prefs.langs)
         if (key == "longpress" && ::kb.isInitialized) kb.longPressMs = prefs.longPressMs.toLong()
         if (key == "preview" && ::kb.isInitialized) kb.previewLingerMs = prefs.previewMs.toLong()
         if (key == "balloon" && ::kb.isInitialized) kb.balloonPercent = prefs.balloonPercent
