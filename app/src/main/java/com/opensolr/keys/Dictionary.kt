@@ -100,6 +100,7 @@ object Dictionary {
     /** A typed word that only lacks diacritics (masina → mașina) switches on a smaller lead: both spellings are in the corpus. */
     private const val MARGIN_DIACRITICS = 0.25
     private const val PROTECTED_FREQ = 40_000
+    private const val EXTRA_FREQ = 1000
     private const val SHORT_TYPO_FREQ = 1_000_000
 
     /** Words that are all valid but often swapped; the context picks between them. */
@@ -138,6 +139,15 @@ object Dictionary {
                     val m = b.int
                     val raw = LongArray(m) { b.long }
                     pairs.add(raw); locals.add(local)
+                } catch (_: Exception) {
+                }
+            }
+            // the hand-kept list (rude words, slang, regional and old words): known words, never taken for a typo of a commoner one
+            for (lang in langs) {
+                try {
+                    for (w in String(open("words_$lang.txt"), Charsets.UTF_8).lineSequence()) {
+                        if (w.isNotEmpty()) freqOf[w] = maxOf(freqOf[w] ?: 0, EXTRA_FREQ)
+                    }
                 } catch (_: Exception) {
                 }
             }
