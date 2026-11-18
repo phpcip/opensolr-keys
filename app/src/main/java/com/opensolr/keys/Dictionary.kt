@@ -54,6 +54,9 @@ object Dictionary {
     /** Typos of three letters are fixed only when the slip is a likely one (teh, yuo). */
     private const val SHORT_MAX_COST = 1.0
     /** A word the corpus has seen only a handful of times, one likely slip from a word hundreds of times commoner, is a typo (helo, vreai). */
+    private const val MARKED_MIN_LENGTH = 5
+    private const val MARKED_MAX_COST = 1.0
+    private const val SPLIT_LETTER_COST = 0.6
     private const val RARE_FREQ = 300
     private const val RARE_RATIO = 500L
     private const val RARE_MAX_COST = 1.6
@@ -292,7 +295,8 @@ object Dictionary {
         val lw = typed.lowercase()
         if (!lw.all { it.isLetter() || it == '\'' }) return null
         if (Fun.protectedWord(lw)) return null
-        if (!revising && lw != strip(lw)) return null
+        // a known word typed with its diacritics is what was meant; an unknown one may still hide a slip (mâncarw)
+        if (!revising && lw != strip(lw) && m.contains(lw)) return null
         if ("en" in loadedLangs) contractions[lw]?.let { return recase(typed, it) }
         val p = prev?.lowercase(); val n = next?.let { canonical(it) }
         val plain = strip(lw)
@@ -326,8 +330,14 @@ object Dictionary {
         val costs = HashMap<String, Double>()
         for (f in m.family(plain)) costs[f] = 0.0
         if (plain.length >= 3) edits(m, plain, costs, plain.length < 4)
+        if (lw != plain) {
+            // typed with diacritics: only a longer word, only a likely slip, and the fix keeps its diacritics
+            if (plain.length < MARKED_MIN_LENGTH) return null
+            val marks = lw.count { it.code > 0x7f }
+            val fix = best(m, costs.filter { it.value in 0.01..MARKED_MAX_COST && it.key.count { c -> c.code > 0x7f } >= marks }, p, n, MIN_FIX_FREQ)
+            return fix?.let { recase(typed, it.first) }
+        }
         val one = best(m, costs, p, n, MIN_FIX_FREQ)
-        if (lw != plain) return one?.let { recase(typed, it.first) }
         val two = split(m, plain, p)
         if (one != null || two != null) {
             val pickTwo = two != null && (one == null || two.second > one.second)
@@ -407,7 +417,7 @@ object Dictionary {
             if (fa < SPLIT_MIN_FREQ || fb < SPLIT_MIN_FREQ) return
             if (letter && (if (a.length < 2) fa else fb) < SPLIT_LETTER_FREQ) return
             if (pair < (if (letter) SPLIT_LETTER_PAIR else SPLIT_MIN_PAIR)) return
-            val s = ln(1.0 + bigram(m, p, wa)) + UNI_WEIGHT * ln(1.0 + minOf(fa, fb)) + SPLIT_PAIR_WEIGHT * ln(1.0 + pair) - COST_SPLIT
+            val s = ln(1.0 + bigram(m, p, wa)) + UNI_WEIGHT * ln(1.0 + minOf(fa, fb)) + SPLIT_PAIR_WEIGHT * ln(1.0 + pair) - COST_SPLIT - (if (letter) SPLIT_LETTER_COST else 0.0)
             if (s > bestScore) { bestScore = s; best = "$wa $wb" }
         }
         for (i in 1..w.length - 1) consider(w.substring(0, i), w.substring(i))
