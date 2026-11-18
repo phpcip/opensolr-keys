@@ -2,7 +2,7 @@ package com.opensolr.keys
 
 /** The words autocorrect must never touch, whatever the dictionary says of them. */
 object Fun {
-    /** Rude words, English and Romanian: kept exactly as typed, and reachable from a typo. */
+    /** Kept exactly as typed, and reachable from a typo. */
     val PROTECTED: Set<String> = setOf(
         "fuck", "fucking", "fucked", "fucker", "fuckers", "motherfucker", "motherfucking", "shit", "shitty", "bullshit",
         "cunt", "cunts", "dick", "dicks", "dickhead", "cock", "cocks", "pussy", "pussies", "asshole", "assholes", "ass",

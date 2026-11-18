@@ -115,17 +115,17 @@ acceptabil	🉑
 acceptable	🉑
 acces	⛔ 🎟️ ♿ 🛜
 accesibil	♿
-accesibilitate	🦾 🦿 🦻 🧏 🧑‍🦯 👨‍🦯 👩‍🦯 🧑‍🦼 👨‍🦼 👩‍🦼 🧑‍🦽 👨‍🦽 👩‍🦽 🦮 🐕‍🦺 🦽 🦼 🦯 🛗 ♿
+accesibilitate	🦾 🦿 🦻 🧏 🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🧑‍🦽 🧑‍🦽‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️ 🦮 🐕‍🦺
 accesinterzis	⛔
 accesorii	👛 👒 🎩
 accesoriu	🌂 ☂️ 👛 👜 👝
 access	♿
-accessibility	🦾 🦿 🦻 🧏 🧏‍♂️ 🧏‍♀️ 🧑‍🦯 👨‍🦯 👩‍🦯 🧑‍🦼 👨‍🦼 👩‍🦼 🧑‍🦽 👨‍🦽 👩‍🦽 🦮 🐕‍🦺 🦽 🦼 🦯 🛗 ♿ 🩼
+accessibility	🦾 🦿 🦻 🧏 🧏‍♂️ 🧏‍♀️ 🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🧑‍🦽 🧑‍🦽‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️
 accessible	♿
 accessories	⌚ 👓 🕶️ 👛 👜 👝 👒
 accessory	👜
 accesul	🚳 🚷
-accident	🫗
+accident	🫗 🛘
 accidentare	🩼
 accommodation	🛌 🏨
 accomodation	🏨
@@ -139,6 +139,8 @@ acdesiguranta	🧷
 ace	🦔 🤵 🎩
 acelor	🔃 🔄 🔁 🔂
 achoo	🤧
+acidic	🍋‍🟩
+acidity	🍋‍🟩
 acopera	🤦 🤦‍♂️ 🤦‍♀️
 acoperire	👮 👮‍♀️
 acoperit	🧕
@@ -151,6 +153,7 @@ acorn	🌰
 acoustic	🎸
 acousticguitar	🎸
 acquire	🉐
+acru	🍋‍🟩
 act	🤹 🤹‍♂️ 🤹‍♀️ 🪪
 acting	🎭
 action	🎬
@@ -192,10 +195,10 @@ adorable	🩷
 adoratie	🥰
 adorbs	😘 💘 💞 🐶
 adore	🥰
-adormit	😪 💤 🛌
+adormit	😪 🫩 💤 🛌
 adormita	😴
 adrenalina	🎢
-adult	🔞 🍆 🍑 💦 😈 🥵 🫦 🧑 🧑‍🦰 🧑‍🦱 🧑‍🦳 🧑‍🦲 🧓 👨 👨‍🦰 👨‍🦱 👨‍🦳 👨‍🦲 👩 👩‍🦰 👩‍🦱 👩‍🦳 👩‍🦲 👴
+adult	🔞 🍆 🍑 💦 😈 🥵 🫦 🧑 🧑‍🦰 🧑‍🦱 🧑‍🦳 🧑‍🦲 🧓 🧑‍🧑‍🧒 🧑‍🧑‍🧒‍🧒 🧑‍🧒 🧑‍🧒‍🧒 👨 👨‍🦰 👨‍🦱 👨‍🦳 👨‍🦲 👩 👩‍🦰
 adulta	👩 👩‍🦰 👩‍🦱 👩‍🦳 👩‍🦲 👵
 adultchelie	🧑‍🦲
 adultparalb	🧑‍🦳
@@ -226,6 +229,7 @@ afghan	🇦🇫
 afghanistan	🇦🇫
 afina	🫐
 afine	🫐
+afirmativ	🙂‍↕️
 afraid	😨 😱 😰
 africa	🌍 🇿🇦
 african	🇨🇫 🐆 🇿🇦
@@ -234,7 +238,7 @@ afro	🪮
 afternoon	🔅
 afumat	🥴
 again	🤦 🤦‍♂️ 🤦‍♀️ 🔄
-agale	🚶 🚶‍♀️
+agale	🚶 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️
 agatat	🪝
 age	🔞
 agent	🕵️ 🕵️‍♂️
@@ -268,6 +272,7 @@ ajustare	🎚️
 ajutor	💁 💁‍♂️ ⛑️ 🆘
 aladdin	👨‍🎤
 alambic	⚗️
+alamuri	🪊
 aland	🇦🇽
 alandislands	🇦🇽
 alaptare	🤱 👩‍🍼 🧑‍🍼
@@ -287,14 +292,14 @@ albine	🍯
 alces	🫎
 alcohol	🍷 🍸 🍹 🍺 🍻 🍶 🥂 🥃
 alcool	🍶 🍷 🍸 🍹 🍺 🍻
-alearga	🏃 🏃‍♂️ 🏃‍♀️
+alearga	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
 aleatorie	🔀
 alegare	🎽
 alembic	⚗️
-alergand	🏃‍♀️
-alergare	💨 🏃 🏃‍♂️ 🏃‍♀️ 🎽 👟
+alergand	🏃‍♀️ 🏃‍♀️‍➡️
+alergare	💨 🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🎽 👟
 alergari	🎽
-alergator	🏃‍♀️
+alergator	🏃‍♀️ 🏃‍♀️‍➡️
 alert	🚨 ⚠️
 alerta	🚨
 alfabet	🔤
@@ -303,7 +308,7 @@ algerian	🇩🇿
 alien	👽 👾 🛸
 alienmonster	👾
 aliens	🛸 📡
-aliment	🍞 🍗
+aliment	🍄‍🟫 🍞 🍗
 alimentare	⛽
 allergy	🤧
 alligator	🐊
@@ -321,6 +326,8 @@ alternation	〽️
 aluat	🎂 🍰 🥧
 aluna	🌰
 alune	🥜
+alunecare	🛘
+alunecaredeteren	🛘
 alunecos	🦦
 am	🫡 😕 😮 😧 💀 🙈 💨 👋 👌 👍 👁️‍🗨️ 🇦🇲
 amar	🍋
@@ -328,7 +335,7 @@ amator	📹
 amazed	😲 😳
 amazement	🫢
 ambarcatiune	⛴️
-amble	🚶 🚶‍♂️ 🚶‍♀️
+amble	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️
 ambulance	🚑 🚨
 ambulanta	🚑
 ameliorare	❤️‍🩹
@@ -360,6 +367,7 @@ amor	💕
 amount	🈷️ 🤏
 ampersand	🔣
 amphora	🏺
+amprenta	🫆
 amulet	🧿 🪬
 amuleta	🧿 🪬
 amuletanazar	🧿
@@ -443,7 +451,8 @@ antricot	🥩
 anulare	✖️ ❌
 anunt	🪧
 anvelopa	🛞
-anxietate	🫦
+anxietate	🫪 🫦
+anxiety	🫪
 anxious	😰 😟 😨 😥 🫦
 anxiousfacewithsweat	😰
 ao	🇦🇴
@@ -460,7 +469,7 @@ aplauda	👏
 aplauze	👏
 aplecat	🙇 🙇‍♀️
 aplicare	🈸
-apocalypse	🧟 🧟‍♂️ 🧟‍♀️
+apocalypse	🧟 🧟‍♂️ 🧟‍♀️ 🪋
 apology	🙇 🙇‍♂️ 🙇‍♀️
 appetizer	🍤
 applause	👏
@@ -517,16 +526,16 @@ arest	👮‍♀️
 argentina	🇦🇷
 argentinian	🇦🇷
 argila	🧱
-argint	🥈 🪙
+argint	🥈 🪙 🪎
 argintiu	🩶
-argument	🪝
+argument	🫯 🪝
 arhitect	🧑‍💼 👨‍💼 👩‍💼
 arhitecta	👩‍💼
 arhitectura	🏛️
 arhiva	🗄️
 arhivare	📁 📂
 arici	🦔
-arid	🌵
+arid	🌵 🪾
 ariel	🧜‍♀️
 aries	♈ 🐏
 aripa	🪽
@@ -603,10 +612,11 @@ as	❣️
 asa	👎 👏
 asamblare	👨‍🏭 👩‍🏭
 asasin	🥷
-ascend	🪽
+ascend	🪽 🐦‍🔥
 ascendent	💹 📈
-ascension	🇦🇨 🇸🇭
+ascension	🇦🇨 🇸🇭 🐦‍🔥
 ascensionisland	🇦🇨
+ascensiune	🐦‍🔥
 ascensor	🛗
 asclepios	⚕️
 asclepius	⚕️
@@ -639,6 +649,7 @@ asterisccuoptcolturi	✳️
 asterisk	✳️ *️⃣
 astonished	😲
 astonishedface	😲
+astringent	🍋‍🟩
 astrology	♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎
 astronaut	🧑‍🚀 👨‍🚀 👩‍🚀
 astronauta	👩‍🚀 🧑‍🚀
@@ -677,7 +688,7 @@ auditiva	🦻
 auditive	🦻
 august	🎴
 aumkara	🕉️
-aur	🏅 🥇 🪙
+aur	🏅 🥇 🪙 🪎
 aura	😇 👼
 aureola	😇 👼
 aussie	🇦🇺
@@ -705,6 +716,8 @@ autovehicule	🛣️
 autumn	🍂 🥮 🎑
 auz	🙉 👂 🧏 🦻
 available	🈳
+avalanche	🛘
+avalansa	🛘
 aveam	😓
 avertisment	⚠️
 avertizare	⚠️
@@ -776,7 +789,7 @@ baggageclaim	🛄
 bagheta	🥖 🪄
 baghetadepaine	🥖
 baghetamagica	🪄
-bags	🛍️ 🛄 👚
+bags	🫩 🛍️ 🛄 👚
 baguette	🥖
 baguettebread	🥖
 bagwith	🛅
@@ -803,14 +816,17 @@ balci	🎡
 bald	👨‍🦲 👩‍🦲 🧑‍🦲 👴 🦅
 baldman	👨‍🦲
 baldwoman	👩‍🦲
-balena	🐋 🐳
+balena	🐋 🐳 🫍
 balenaimproscandapa	🐳
-balerin	🥿
+balerin	🧑‍🩰 🥿
+balerina	🧑‍🩰
 balerini	🥿
-balet	🩰 🥿
+balerinsaubalerina	🧑‍🩰
+balet	🩰 🧑‍🩰 🥿
 ball	⛹️ ⛹️‍♂️ ⛹️‍♀️ 🍙 🎊 ⚽ 🎱 🔮 🪩 🏌️ 🏌️‍♂️ 🏌️‍♀️ 🤾 🤾‍♂️ 🤾‍♀️ ⚾ 🥎 🏀 🏐 🏈 🏉 🎾 🎳 🏏
 ballerina	🙆
-ballet	🩰 🥿
+ballet	🧑‍🩰 🩰 🥿
+balletdancer	🧑‍🩰
 balletshoes	🩰
 balloon	🎈 💬 💭 👁️‍🗨️ 🗨️ 🗯️
 ballot	🗳️ ☑️
@@ -822,8 +838,8 @@ balls	🥜 🍒 🥚 🍡 ⚾ 🥎 🏀 🏐 🏈 🎾
 baloane	🫧
 balon	🎈 💬 👁️‍🗨️ 🗨️ 🗯️ 💭 🐡 🏈 🏉
 balonase	🫧
-balonat	🫃 🫄
-balonata	🫄
+balonat	🫪 🫃 🫄
+balonata	🫪 🫄
 balondedialog	💬
 balondedialogfuriosladreapta	🗯️
 balondedialoglastanga	🗨️
@@ -854,7 +870,7 @@ bang	❣️ ❕ ❗ 💥
 bangbang	‼️
 bangladesh	🇧🇩
 bangladeshi	🇧🇩
-bani	💰 💸 🤑 💵 🧐 🫰 🧧 💎 🪙 💴 💶 💷 💳 💹 🏧 💱 💲
+bani	💰 💸 🤑 💵 🧐 🫰 🧧 💎 🪙 🪎 💴 💶 💷 💳 💹 🏧 💱 💲
 banii	💰 💸 🤑 💵
 baniinaripati	💸
 banjo	🪕
@@ -878,6 +894,7 @@ barbatbarba	🧔‍♂️
 barbatblond	👱‍♂️
 barbatbosumflat	🙎‍♂️
 barbatcarealearga	🏃‍♂️
+barbatcarealeargaorientatespredreapta	🏃‍♂️‍➡️
 barbatcarebatemingea	⛹️‍♂️
 barbatcareexplica	💁‍♂️
 barbatcarefaceroata	🤸‍♂️
@@ -888,6 +905,7 @@ barbatcarejoacahandbal	🤾‍♂️
 barbatcarejoacapolopeapa	🤽‍♂️
 barbatcarejongleza	🤹‍♂️
 barbatcaremerge	🚶‍♂️
+barbatcaremergeorientatespredreapta	🚶‍♂️‍➡️
 barbatcarepracticasurfing	🏄‍♂️
 barbatcarepracticawrestling	🤼‍♂️
 barbatcareprimesteunmasajfacial	💆‍♂️
@@ -901,6 +919,7 @@ barbatcarevaslesteinbarca	🚣‍♂️
 barbatchelie	👨‍🦲
 barbatcubarba	🧔
 barbatcubastonpentrunevazatori	👨‍🦯
+barbatcubastonpentrunevazatoriorientatespredreapta	👨‍🦯‍➡️
 barbatcubonetachinezeasca	👲
 barbatcuturban	👳‍♂️
 barbatcuvoal	👰‍♂️
@@ -913,12 +932,15 @@ barbathranindunbebelus	👨‍🍼
 barbati	👯‍♂️ 👬 🚹 🤼‍♂️ 🚾
 barbaticarepoartaurechideiepuras	👯‍♂️
 barbatingenunchi	🧎‍♂️
+barbatingenunchiorientatespredreapta	🧎‍♂️‍➡️
 barbatinpicioare	🧍‍♂️
 barbatinpozitialotus	🧘‍♂️
 barbatinsarcinat	🫃
 barbatinsauna	🧖‍♂️
 barbatinscauncurotilemanual	👨‍🦽
+barbatinscauncurotilemanualorientatespredreapta	👨‍🦽‍➡️
 barbatinscauncurotilemotorizat	👨‍🦼
+barbatinscauncurotilemotorizatorientatespredreapta	👨‍🦼‍➡️
 barbatinsmoching	🤵‍♂️
 barbatintristat	🙍‍♂️
 barbatitinandusedemana	👬
@@ -948,7 +970,7 @@ barcacumotor	🛥️
 barcacupanze	⛵
 barcadeviteza	🚤
 barchart	📊
-bare	📊 📶 ⏯️ ⏸️
+bare	📊 📶 🪾 ⏯️ ⏸️
 baredesemnal	📶
 barefoot	👣
 barf	🤢 🤮
@@ -957,6 +979,7 @@ bargain	🉐 🈹
 bariera	🚧
 barrel	🍯
 barrell	🛢️
+barren	🪾
 barrier	🚧
 bars	📶
 bart	🚎
@@ -975,11 +998,11 @@ basotho	🇱🇸
 bass	🎸
 bastard	🤬 😡 🖕
 bastards	🤬 😡 🖕
-baston	🧑‍🦯 👨‍🦯 👩‍🦯 🦯 🩼
+baston	🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🦯 🩼
 bastonpentrunevazatori	🦯
 bat	🦇 🍡 🍢 🍭 🏏 🥍 🏓
 bata	🏏
-bataie	💓 🪘
+bataie	🫯 💓 🪘
 batalie	⚔️
 batand	💓
 bate	⛹️ ⛹️‍♂️ ⛹️‍♀️ 💓 ✋ 🫷 🫸 🙏
@@ -1019,7 +1042,7 @@ bea	🚰
 beach	🏖️ ⛱️ 😎 🏄 🏄‍♂️ 🏄‍♀️ 🐳 🐋 🐬 🐚 🌴 🌞 👙 🩴 👣 🐠 🦈 🐙 🌺 🍥 🍹 ☀️ 🌊
 beachumbrella	🏖️ ⛱️
 beachwithumbrella	🏖️
-beacon	🚨
+beacon	🚨 🛙
 bead	🧿
 beads	📿
 beak	🐦‍⬛
@@ -1058,6 +1081,7 @@ beer	🍺 🍻 🫚
 beermug	🍺
 beers	🍻
 bees	🍯
+beet	🫜
 beetle	🪲 🐞
 befuddled	😕
 beg	🙏 🙇 🙇‍♂️ 🙇‍♀️
@@ -1137,7 +1161,9 @@ bifare	✅ ✔️
 bifat	✅ ☑️ ✔️
 bifata	☑️
 big	😃 🥺 🐯 🐅 🐆 😆 🎡 🎪
+bigfoot	🫈
 bijuterie	💎
+bijuterii	🪎
 bike	🚴 🚴‍♂️ 🚴‍♀️ 🚵 🚵‍♂️ 🚵‍♀️ 🚲 🔐 🚳 🛵
 biker	🚵 🚵‍♂️ 🚵‍♀️
 bikes	🚳
@@ -1172,7 +1198,7 @@ biologic	☣️
 biologie	🦠 🧫 🧬
 biologist	🧑‍🔬 👨‍🔬 👩‍🔬 🧫 🧬
 biology	🧫
-bird	🐦 🐦‍⬛ 🦃 🐔 🐓 🐣 🐤 🐥 🐧 🕊️ 🦅 🦆 🦢 🦉 🦤 🪶 🦩 🦚 🦜 🪽 🪿 🪺 🖕 🪹
+bird	🐦 🐦‍⬛ 🦃 🐔 🐓 🐣 🐤 🐥 🐧 🕊️ 🦅 🦆 🦢 🦉 🦤 🪶 🦩 🦚 🦜 🪽 🪿 🪺 🖕 🐦‍🔥
 birdie	🏌️ 🏌️‍♂️ 🏌️‍♀️ 🏸
 birds	🪽
 birmania	🇲🇲
@@ -1223,9 +1249,9 @@ bleeper	📟
 bless	⛪
 blessed	😇 🙏
 bleu	🩵 🟦
-blind	🙈 🧑‍🦯 👨‍🦯 👩‍🦯 🦮 🦯 🐕‍🦺 🦇
+blind	🙈 🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🦮 🦯 🐕‍🦺 🦇
 blit	📸
-bloated	🫃 🫄
+bloated	🫪 🫃 🫄
 bloc	🏢
 blocat	🔒
 block	🫷 🫸 🚫
@@ -1286,7 +1312,7 @@ bocanc	🥾
 body	💀 👂 👃 👀 👁️ 👅 👄 ☠️ 👋 🤚 🖐️ ✋ 🖖 👌 🤏 ✌️ 🤞 🤟 🤘 🤙 👈 👉 👆 🖕
 bodybuilder	💪 🏋️ 🏋️‍♂️ 🏋️‍♀️
 bogat	🧐 💰 💶
-bogatie	💰 🪙
+bogatie	🪙 💰 🪎
 boiled	🍚
 bok	🥬
 bokchoy	🥬
@@ -1332,7 +1358,7 @@ booze	🍷 🍸 🍹 🍺 🍻 🍶 🥃
 borcan	🫙 🍯
 borcancumiere	🍯
 border	🛂 🛃 🎌
-bored	😒 🥱 😑 😔 💅
+bored	😒 🥱 😑 😔 🫩 💅
 boring	😒 🥱 😑 💤 🪴
 born	🍼 🐣
 bosnia	🇧🇦
@@ -1388,24 +1414,25 @@ brahiozaur	🦕
 brain	🧠 🤓 😶‍🌫️
 brainy	🤓
 branch	🪹 🪺 🏦 🎋
-branches	🕎
+branches	🪾 🕎
 brand	💙 ™️
 branza	🧀 🍕 🫕 🥯
 brasil	🇧🇷
-brass	🎺
+brass	🪊 🎺
 brat	🦾 💪
 brate	🤗 🕎
 bratmecanic	🦾
 bravo	🎉 👏 🥳 🍾 🙌
+brawl	🫯
 brazil	🇧🇷
 brazilia	🇧🇷
 brazilian	🇧🇷
 brazzaville	🇨🇬
 brb	✋ ⏳ 🔜
 bread	🍞 🥖 🥐 🫓 🥯 🥪 🥨
-break	💔 🔔 💥
+break	💔 🔔 ⛓️‍💥 💥
 breakfast	🥐 🥯 🥞 🧇 🥓 🥚 🍳 🥣 🍩 🍵 🍴 🍞
-breaking	💔
+breaking	🫫 ⛓️‍💥 💔
 breaky	🍴
 breast	🤱
 breastfeeding	🤱
@@ -1428,6 +1455,7 @@ bright	🔆 😎 ☀️ 🌝 🌞 🧒 👦 👧
 brightbutton	🔆
 brightness	🔅 🔆 ☀️
 briliant	💍
+brine	🫝
 briosa	🧁
 britain	🇬🇧
 britanic	🇮🇴
@@ -1445,7 +1473,8 @@ broccoli	🥦
 brocoli	🥦
 broderie	🪡
 brofist	👊
-broken	💔 ❤️‍🩹 🏚️
+broken	💔 ⛓️‍💥 ❤️‍🩹 🏚️
+brokenchain	⛓️‍💥
 brokenheart	💔 ❤️‍🩹
 brokenhearted	💔
 bromance	👬
@@ -1456,9 +1485,10 @@ bronze	🥉
 broom	🧹
 broscoi	🐸
 brothers	👬
-brown	🤎 🟤 🟫 👞 🥾 🐴 🍂
+brown	🤎 🍄‍🟫 🟤 🟫 👞 🥾 🐴 🍂
 browncircle	🟤
 brownheart	🤎
+brownmushroom	🍄‍🟫
 brownsquare	🟫
 brows	🥸
 brr	🧥
@@ -1563,7 +1593,7 @@ bursuc	🦡
 burta	🫃 🫄
 burundi	🇧🇮
 burundian	🇧🇮
-bury	👎
+bury	👎 🪏
 bus	🚌 🚍 🚏 🚋 🚎 🚐 💺
 business	🕴️ 🈺 🧑‍💼 👨‍💼 👩‍💼 💼 🏌️ 🏌️‍♀️ 🏦 ⛳ 👔 📁 🗂️ 📇 📈 📉 🗃️ 〽️
 businessman	👨‍💼
@@ -1646,7 +1676,7 @@ butt	🍑
 butter	🧈
 buttercup	🌼
 butterflies	😟
-butterfly	🦋 👐
+butterfly	🦋 🫌 👐
 button	🔄 🔀 🔁 🔂 ▶️ ⏩ ⏭️ ⏯️ ◀️ ⏪ ⏮️ 🔼 ⏫ 🔽 ⏬ ⏸️ ⏹️ ⏺️ ⏏️ 🔅 🔆 ✅ ❎ 🅰️
 butts	🍑
 buturuga	🪵
@@ -1679,6 +1709,7 @@ cactus	🌵
 cada	🛁 🛀
 caddy	🏌️ 🏌️‍♂️ 🏌️‍♀️
 cadere	🍂 🌠 🍁
+caderi	🛘
 cadou	🎁 💝 🧧
 cadouimpachetat	🎁
 cadre	🎞️
@@ -1774,7 +1805,7 @@ candle	🕯️
 candles	🎂 🕎
 candlestick	🕎
 candy	🍬 🍫 🍭 🪅
-cane	🧑‍🦯 👨‍🦯 👩‍🦯 🦯 🩼
+cane	🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🦯 🩼
 cangur	🦘
 canicula	🫠 😳 🪭
 canis	🐩
@@ -1791,9 +1822,11 @@ cantarit	⚖️
 cantec	🎤
 cantecul	⏮️
 cantitate	🤏
-cap	🙄 🤯 🗣️ 🐮 🐷 🎓 🧢 🤕 💀 👽 🤖 👂 👲 🐱 🐴 🐲 😣 😓 🤦 🤦‍♂️ 🤦‍♀️ 💆 💆‍♂️ 🤸
+cap	🙄 🙂‍↔️ 🙂‍↕️ 🤯 🗣️ 🐮 🐷 🎓 🧢 🤕 💀 👽 🤖 👂 👲 🐱 🐴 🐲 😣 😓 🤦 🤦‍♂️ 🤦‍♀️ 💆
 capcana	🕸️ 🪤
 capcareexplodeaza	🤯
+capcareseclatinapeorizontala	🙂‍↔️
+capcareseclatinapeverticala	🙂‍↕️
 capcaun	👹
 capdeporc	🐷
 capdevaca	🐮
@@ -1932,14 +1965,14 @@ catara	🧗 🧗‍♂️ 🧗‍♀️
 catarare	🧗 🧗‍♂️ 🧗‍♀️
 cataratoare	🧗‍♂️
 catarator	🧗 🧗‍♀️
-catch	🫴 🤾 🤾‍♂️ 🤾‍♀️ 🪝 🥅
+catch	🫴 🤾 🤾‍♂️ 🤾‍♀️ 🪍 🪝 🥅
 catea	🐕 😈 💅
 catel	🐶 🐕 🥺 🧄
 catelus	🐶 🥺
-caterpillar	🦋 🐛
+caterpillar	🫌 🦋 🐛
 catface	🐱
 cats	🐈 😺 😸 😹 😻 😼 😽 🙀 😿 😾
-catuse	⛓️ 😈
+catuse	⛓️ 😈 ⛓️‍💥
 catwithtearsofjoy	😹
 catwithwrysmile	😼
 cauciuc	🛞
@@ -1958,6 +1991,7 @@ caz	🙅
 cazare	🏨 🏩 🛏️
 cazatoare	🌠 💫 🌳 🍂
 cazinou	🎰
+cazma	🪏
 cd	💿 💽 📀
 ce	😮 😳 😦 😧 😒 🥺
 cea	🦢
@@ -1965,6 +1999,8 @@ ceai	🧋 ☕ 🫖 🍵
 ceaicuperle	🧋
 ceainic	🫖
 ceapa	🧅
+cearcane	🫩
+cearta	🫯
 ceas	⏰ ⌛ 🕐 ⌚ 🕰️ ⏱️ ⏲️ 🕛 🕧 🕜 🕑 🕝 🕒 🕞 🕓 🕟 🕔 🕠 🕕 🕡 🕖 🕢 🕗 🕣
 ceasca	🍵 ☕ 🍶
 ceascafaramaner	🍵
@@ -2029,7 +2065,7 @@ chadder	🧀
 chadian	🇹🇩
 chagos	🇮🇴
 chai	☕
-chain	⛓️ 🔗
+chain	⛓️‍💥 ⛓️ 🔗
 chains	⛓️
 chair	🪑 💺
 chamorro	🇬🇺
@@ -2037,7 +2073,7 @@ champagne	🍾 🥂
 champion	🏆
 championship	⛹️ ⛹️‍♂️ ⛹️‍♀️ 🏆
 champs	🏆
-change	🪸 🚼
+change	🪸 🫌 🚼
 changing	🚼
 chanukiah	🕎
 chapel	💒 ⛪
@@ -2092,7 +2128,7 @@ cherryblossom	🌸
 cherub	👼
 chess	♟️
 chesspawn	♟️
-chest	🧰
+chest	🪎 🧰
 chestnut	🌰
 chevron	🔰
 chick	🐣 🐤 🐥
@@ -2104,9 +2140,9 @@ chiftele	🍝
 chifteluta	🧆
 chiftelute	🍙
 chiftelutedeorez	🍙
-child	🧒 👶 👦 👧 👪 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦
+child	🧒 🧑‍🧑‍🧒 🧑‍🧑‍🧒‍🧒 🧑‍🧒 🧑‍🧒‍🧒 👶 👦 👧 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦
 childish	😛 😜
-children	🚸 👶 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦‍👦 👨‍👧‍👦 👨‍👧‍👧 👩‍👦‍👦 👩‍👧‍👦 👩‍👧‍👧
+children	🚸 👶 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦‍👦 👨‍👧‍👦 👨‍👧‍👧 👩‍👦‍👦 👩‍👧‍👦 👩‍👧‍👧 🧑‍🧑‍🧒‍🧒 🧑‍🧒‍🧒
 childrencrossing	🚸
 chile	🇨🇱
 chilean	🇨🇱
@@ -2195,8 +2231,9 @@ citadin	🏙️
 citatie	👮 👮‍♀️
 citation	👮 👮‍♂️ 👮‍♀️
 citit	📖 📗 📘 📙
-citrice	🍊 🍋
-citrus	🍊 🍋
+citric	🍋‍🟩
+citrice	🍊 🍋 🍋‍🟩
+citrus	🍊 🍋 🍋‍🟩
 city	🌆 🌇 🇻🇦 🏢 🏙️ 🌁 🌃
 cityscape	🏙️ 🌆
 cityscapeatdusk	🌆
@@ -2204,7 +2241,8 @@ citysunrise	🌇
 citysunset	🌆
 ciubuc	🫰
 ciudat	😜 🤪
-ciuperca	🍄
+ciuperca	🍄 🍄‍🟫
+ciupercamaro	🍄‍🟫
 ciupi	👌
 ciupit	🤏
 ciupitura	👌 🦟
@@ -2242,6 +2280,9 @@ classical	🏛️
 classicalbuilding	🏛️
 classroom	📔
 classy	🧐 🎩 👨
+clatina	🙂‍↔️ 🙂‍↕️
+clatinandu	🙂‍↔️ 🙂‍↕️
+clatinat	🙂‍↔️ 🙂‍↕️
 clatita	🥞
 clatite	🥞
 claun	🤡
@@ -2325,7 +2366,7 @@ closet	🚾 🚪 🚹 🚺 🚻
 cloth	👔 👕
 clothes	👚 🥼 👕 👖 👗 👛 👜 👝 👞 👟 👠 👢 👒 🎩 🧣 🧤 🧦
 clothing	👣 🌂 ☂️ ☔ 👓 👔 👕 👖 👗 👘 🥻 👙 👚 👛 👜 👝 👞 👟 👠 👡 👢 👑 👒 🎩
-cloud	☁️ ⛅ ⛈️ 🌤️ 🌥️ 🌦️ 🌧️ 🌨️ 🌩️ 💨 💭 🌪️ 🌫️ 🌬️ 🌀
+cloud	☁️ 🫯 ⛅ ⛈️ 🌤️ 🌥️ 🌦️ 🌧️ 🌨️ 🌩️ 💨 💭 🌪️ 🌫️ 🌬️ 🌀
 clouds	😶‍🌫️
 cloudwithlightning	🌩️
 cloudwithlightningandrain	⛈️
@@ -2340,7 +2381,7 @@ club	♣️ 🍷 🍸 🍹 🏌️ 💳
 clubs	♣️
 clubsuit	♣️
 cluck	🐔
-clue	🧩 🗝️
+clue	🫆 🧩 🗝️
 clumsy	🤕
 clutch	👝
 clutchbag	👝
@@ -2373,7 +2414,7 @@ cock	🍆 🍌 🌭 🥒 🐓
 cockerel	🐓
 cockroach	🪳
 cocks	🍆 🍌 🌭 🥒 🐓
-cocktail	🍸 🍹
+cocktail	🍸 🍋‍🟩 🍹
 cocktailglass	🍸
 cocoanut	🥥
 cocoasa	🐪 🐫
@@ -2413,6 +2454,7 @@ collage	📌
 collapsed	🌂
 collapsedumbrella	🌂
 collar	👕 👚 🧑‍💼 👨‍💼 👩‍💼
+collect	🪍
 college	🎓
 collide	💥
 collision	💥
@@ -2448,6 +2490,7 @@ comoara	🪙 🏴‍☠️
 comod	👘
 comoran	🇰🇲
 comore	🇰🇲
+comori	🪎
 comoros	🇰🇲
 compact	💿
 companie	🐶 🐱 🐕 🐈 🐹 🐰 🐇
@@ -2489,7 +2532,7 @@ concertina	🪗
 conch	🐚
 concierge	💁
 concurs	🏇
-condiment	🌿 🧄 🧅 🫚 🧂 🍛 🫙
+condiment	🌿 🫝 🧄 🧅 🫚 🧂 🍛 🫙
 conduce	🚘
 condus	🚐 🚖 🚗 🚘 🚚 🚛 🚦
 cone	🍧
@@ -2500,6 +2543,7 @@ confetti	🎉 🎊
 confettiball	🎊
 confidentialitate	🔏
 confirm	☑️
+conflict	🫯
 confortabil	🥿
 confounded	😖
 confoundedface	😖
@@ -2529,6 +2573,7 @@ consider	🤔
 console	🎮
 constelatie	🌌
 constellation	⛎
+constraint	⛓️‍💥
 constructie	🏗️ 🏘️ 🚧
 constructii	👷‍♂️ 👷‍♀️ 👷 🔨
 construction	🚧 👷 👷‍♂️ 👷‍♀️ 🏗️ 🚩 🧱 🪨 🪵 ⛑️
@@ -2566,13 +2611,14 @@ cool	😎 🆒 🔥 👌 😛 🪭 👍 🫎 ✨ 🕶️
 coolbutton	🆒
 cooling	🪭
 cop	👮 👮‍♂️ 👮‍♀️ 🚓 🚔
-copac	🎋 🌲 🌳 🌴
+copac	🪾 🎋 🌲 🌳 🌴
+copacdesfrunzit	🪾
 copactanabata	🎋
 copan	🍗
 copanele	🍗
 coperta	📔
 copii	🚸 👶
-copil	🧒 👶 👦 👧 🤱 👼 👪 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦 👨‍👦‍👦
+copil	🧒 🧑‍🧑‍🧒 🧑‍🧑‍🧒‍🧒 🧑‍🧒 🧑‍🧒‍🧒 👶 👦 👧 🤱 👼 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦
 copilas	👶
 cops	🚓
 copt	🍠 🍎
@@ -2598,6 +2644,7 @@ coronavirus	😷 🦠
 corp	💀 💪 👂 👃 👀 👁️ 👅 👄
 corporatisti	🏢
 correct	👊 ⭕
+correction	🪌
 cort	⛺ 🎪 🏕️
 cortdecirc	🎪
 cortul	🏕️ ⛺
@@ -2663,17 +2710,23 @@ cowface	🐮
 cowgirl	🤠 👢
 cozoroc	🧢
 cozy	🫛
+cq	🇨🇶
 crab	🦀 ♋
 craciun	🎄 🎅 🎁 🧑‍🎄 🤶 🌲
 craciunita	🤶 🧑‍🎄
 cracked	🔓
 cracker	🍘
+cracking	🫫
+crackingface	🫫
 crafts	🧵 🧶
 crane	🏗️
 craniu	💀 ☠️
 craniucuoaseincrucisate	☠️
 crap	🤬 😤 😈 🎏 💩
+crapa	🫫
+crapare	🫫
 crapdecorativinvant	🎏
+crate	🪎
 cratita	🥘
 cratitacumancare	🥘
 craul	🏊
@@ -2685,8 +2738,9 @@ create	🔨 ⚒️ 🛠️
 creativ	🎨
 creative	🎨
 creativity	🧑‍🎨 🖌️ 🖍️
-creatura	👹 👺 👻 👽 👾 🧜
-creature	👹 👺 👻 👽 👾 🧜 🧜‍♂️ 🧜‍♀️ 🐙 🦭
+creatura	🫈 👹 👺 👻 👽 👾 🧜
+creaturaparoasa	🫈
+creature	🫈 👹 👺 👻 👽 👾 🧜 🧜‍♂️ 🧜‍♀️ 🐙 🦭
 cred	😮 😳
 credentials	🪪
 credit	💳
@@ -2717,11 +2771,13 @@ crezut	🤨
 crichet	🏏
 cricket	🦗 🏏
 cricketgame	🏏
-crime	🕵️‍♂️
+crime	🫆 🕵️‍♂️
 criminal	🦹 🦹‍♂️ 🦹‍♀️
 criminala	🦹‍♀️
+criminalistica	🫆
 crin	⚜️
 cringe	😬 😅 😰 🫠 😖
+criptid	🫈
 cristal	🔮
 cristos	✝️
 croak	🐸
@@ -2757,6 +2813,7 @@ cruce	✝️ ☦️ ⛪ ⛑️
 crucelatina	✝️
 cruceortodoxa	☦️
 cruise	🚣 🚣‍♂️ 🚣‍♀️ 🛳️ 🚢
+crumbling	🫫
 crush	🥰 😍 😊
 crushed	💔
 crustacean	🦀
@@ -2767,6 +2824,7 @@ crying	😭 😢 🥲 😿 🤣 😂 😪 😩
 cryingcat	😿
 cryingcatface	😿
 cryingface	😢
+cryptid	🫈
 crystal	🔮 💠
 crystalball	🔮
 cub	🧊
@@ -2775,9 +2833,11 @@ cuban	🇨🇺
 cubdegheata	🧊
 cube	🧊
 cubical	🏢
-cucumber	🥒
+cucumber	🥒 🫝
 cue	🎱
-cufar	🧰
+cufar	🪎 🧰
+cufardecomori	🪎
+cuffs	⛓️‍💥
 cugetare	🤔
 cui	🔨
 cuib	🪹 🪺
@@ -2788,6 +2848,7 @@ cuibcuoua	🪺
 cuibgol	🪹
 culcare	😴 🥱 🛌
 culinary	🧑‍🍳
+culisa	🪊
 culme	🏔️
 culoare	💈
 culori	🌈 🎨
@@ -2808,8 +2869,8 @@ cup	🥤 🍵 🍶 🪠 🫗
 cupa	♥️ 🙏 🏆
 cupcake	🧁
 cupertino	🛣️
-cupid	💘 👼
-cupidon	💘
+cupid	💘 🪉 👼
+cupidon	💘 🪉
 cuplu	💑 👩‍❤️‍👨 👨‍❤️‍👨 👩‍❤️‍👩 💕 🧑‍🤝‍🧑 👭 👫 👬 💏 👩‍❤️‍💋‍👨 👨‍❤️‍💋‍👨 👩‍❤️‍💋‍👩
 cuplucuinima	💑
 cuplucuinimabarbatbarbat	👨‍❤️‍👨
@@ -2850,7 +2911,7 @@ currency	💱 💴 💵 💶 💷 💹 💲 🪙
 currencyexchange	💱
 curry	🍛 🥘
 curryrice	🍛
-cursa	🪤 🏃 🏇 🏎️ 🏁
+cursa	🪤 🏃 🏃‍➡️ 🏇 🏎️ 🏁
 cursadesoareci	🪤
 curse	🏇 🏎️ 🐎 🏍️ 🏁
 cursedecai	🏇
@@ -2887,7 +2948,7 @@ cutit	🍽️ 🍴 🔪 🗡️
 cutitdebucatarie	🔪
 cutlery	🍽️ 🍴 🥄 🔪
 cutofmeat	🥩
-cutremur	🫨
+cutremur	🫨 🛘
 cutting	✂️ 💇
 cutu	🐶
 cuvinte	😶
@@ -2906,7 +2967,7 @@ cz	🇨🇿
 czech	🇨🇿
 czechia	🇨🇿
 czechrepublic	🇨🇿
-da	👍 ✅ 👌 🙄 🇸🇭 🇹🇦 🫡 🤝 🤦 🤦‍♂️ 🤦‍♀️
+da	👍 ✅ 👌 🙄 🇸🇭 🇹🇦 🫡 🙂‍↕️ 🤝 🤦 🤦‍♂️ 🤦‍♀️
 dad	👨 👨‍🍼 🧢 👪
 dafuq	🤨 😳 🤯 😵
 dagger	🗡️
@@ -2917,20 +2978,21 @@ dam	🦫
 dama	👚 👡 👢 👒 👗 👜 👠
 damn	🤬 😤 😈
 dance	💃 🕺 🪩 🪭 🩰 🪇
-dancer	💃 🕺 👯 👯‍♂️ 👯‍♀️
+dancer	🧑‍🩰 💃 🕺 👯 👯‍♂️ 👯‍♀️
 dancers	👯
 dancing	💃 🕺 👯‍♂️ 👯‍♀️ 👯
 dancingmen	👯‍♂️
 dancingwomen	👯‍♀️
+dand	🙂‍↔️ 🙂‍↕️
 dandelion	🌼
 danemarca	🇩🇰
-danger	💀 ☠️ ⚡ 🐯 🚸 ☢️ ☣️ ❗ 🔴
+danger	💀 ☠️ 🛘 ⚡ 🐯 🚸 ☢️ ☣️ ❗ 🔴
 dangerous	💣
 dango	🍡
 danish	🇩🇰
 dans	💃 🕺 👯 👯‍♂️ 👯‍♀️ 🪩 🪭 🩰
-dansatoare	💃 👯
-dansator	🕺 💃 👯‍♂️
+dansatoare	💃 🧑‍🩰 👯
+dansator	🕺 🧑‍🩰 💃 👯‍♂️
 dansatori	👯‍♂️
 danseaza	🕺
 dantura	🪥
@@ -2959,7 +3021,7 @@ daydream	💭
 daze	🫨
 dazed	😳
 ddraig	🏴󠁧󠁢󠁷󠁬󠁳󠁿
-dead	💀 ☠️ 😵 😑 😳 🧟 🧟‍♂️ 🧟‍♀️ ⚰️ 🪦 🥀 🪫 ⚱️
+dead	💀 ☠️ 😵 😑 😳 🧟 🧟‍♂️ 🧟‍♀️ 🪾 ⚰️ 🪦 🥀 🪫 ⚱️
 deadlift	🏋️ 🏋️‍♂️ 🏋️‍♀️
 deadline	⏱️
 deadly	☠️
@@ -2970,6 +3032,7 @@ deafperson	🧏
 deafwoman	🧏‍♀️
 deal	🤝 🙅
 death	💀 ☠️ ⚰️ ⚱️ 🪦
+debate	🫯
 debloca	🔓
 deblocat	🔓
 december	🎄
@@ -3017,7 +3080,7 @@ deja	🔄
 dejavu	🔄
 dejected	😅 😔 😞
 dejun	🥯 🧇 🥓 🥚 🍳 🥣 🍴
-delete	❌
+delete	🪌 ❌
 delfin	🐬
 deli	🥪
 delicioasa	😋
@@ -3046,7 +3109,7 @@ department	🏬 🚒
 departmentstore	🏬
 departure	🛫
 departures	🛫
-deplasare	🚶 🚶‍♀️
+deplasare	🚶 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️
 deploy	🚢 🚀
 depozitare	🛅 🫙
 depozitarebagaje	🛅
@@ -3086,6 +3149,7 @@ desert	🏜️ 🍧 🏝️ 🐪 🐫 🌵 🍥 🍡 🍦 🍨 🍩 🍪 🎂 �
 desertdinfulgidegheata	🍧
 desertisland	🏝️
 deseuri	🚮
+desfrunzit	🪾
 desfundare	🪠
 desfundat	🪠
 design	🎨 🍥 📱
@@ -3103,11 +3167,12 @@ detasabile	📆
 detectiv	🕵️ 🕵️‍♂️ 🕵️‍♀️
 detectiva	🕵️‍♀️
 detectivbarbat	🕵️‍♂️
-detective	🕵️ 🕵️‍♂️ 🕵️‍♀️ 🔍 🔎
+detective	🕵️ 🕵️‍♂️ 🕵️‍♀️ 🫆 🔍 🔎
 detectivfemeie	🕵️‍♀️
 deutsch	🇩🇪
 developer	🧑‍💻 👨‍💻 👩‍💻
 devil	😈 👿 👹 🤘
+dezacord	🫯
 dezactivare	📴
 dezactivat	🔕 🔇
 dezactivata	🔕
@@ -3115,9 +3180,11 @@ dezamagire	😅 🫤 ☹️ 😥 😞 🙎
 dezamagit	😅 😔 🫤 ☹️ 😥 😞
 dezamagita	😥 😞 🙍
 dezaprobare	👎 🤨
+dezastru	🛘
 dezbracat	🔞 🍑 🙈 👙
 dezbracata	🔞 🍑 🙈 👙
 dezgustator	😝 🤢
+dezvaluire	🫫
 dezvoltatoare	👩‍💻
 dezvoltator	🧑‍💻 👨‍💻 👩‍💻
 dharma	☸️
@@ -3154,7 +3221,7 @@ difuzare	📢 📣
 difuzor	🔇 🔈 🔊 📢 📣 🔉
 difuzorfarasunet	🔇
 difuzorului	🔈 🔉 🔊
-dig	⛏️
+dig	🪏 ⛏️
 digit	0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣
 digital	📻 📷
 dildo	🍆 🍌 🌭 🥒 🐓
@@ -3185,16 +3252,17 @@ direction	🧭 ⬆️ ↗️ ➡️ ↘️ ⬇️ ↙️ ⬅️ ↖️ 👈 👉
 director	🧑‍💼 📂 🎬
 directory	📁
 dirt	💩
-disability	🩼 🧑‍🦼 👨‍🦼 👩‍🦼 🧑‍🦽 👨‍🦽 👩‍🦽
+disability	🩼 🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🧑‍🦽 🧑‍🦽‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️
 disabled	🔕 ♿
+disagreement	🫯
 disallow	🚫
 disappear	🫠 🫥 👻
 disappointed	😥 😞 😔 🫤 🙍 🙍‍♂️ 🙍‍♀️ 🙎 🙎‍♂️ 🙎‍♀️ 🙁 🤦
 disappointedface	😞
 disappointedrelieved	😥
 disapproval	🤨
-disapprove	👎
-disaster	🌋 🌊
+disapprove	👎 🙂‍↔️
+disaster	🛘 🌋 🌊
 disbelief	🫢 🤨 😳 🤦 🤦‍♂️ 🤦‍♀️
 disc	🥏 💽 💿 📀
 discdecomputer	💽
@@ -3226,6 +3294,9 @@ dispozitiv	📱 📲 📟 📠 🖱️ 🖲️
 dissatisfied	😒
 dissolve	🫠
 distilling	⚗️
+distorsionata	🫪
+distorted	🫪
+distortedface	🫪
 distractie	😜 🥳 👯 👯‍♂️ 👯‍♀️ 🎠 🎡 🎢
 distractii	🛝 🎡 🎢
 distraught	😖 😩 😫
@@ -3289,13 +3360,13 @@ doing	🤸 🤸‍♂️ 🤸‍♀️
 doiochi	👀
 doispe	🕛
 doisprezece	🕛 🕧
-dolar	💵 💲 🤑 💰 🪙
+dolar	💵 💲 🤑 🪙 💰
 dolari	💰 💵
 doll	🎎 🪆
-dollar	💵 💲 💰 🪙 💸 🤑 💴 💶 💳 💱
+dollar	💵 💲 🪙 💰 💸 🤑 💴 💶 💳 💱
 dollarbanknote	💵
 dolls	🎎 🪆
-dolphin	🐬
+dolphin	🐬 🫍
 dom	🇩🇴
 domed	🕌
 domeniul	🧑‍⚕️ 👨‍⚕️ 👩‍⚕️
@@ -3355,7 +3426,7 @@ dovada	🧾
 dove	🕊️
 dovleac	🎃 🥮 🥧
 dovleaccufelinar	🎃
-down	🙃 🫳 👇 👎 ↘️ ⬇️ ↙️ ↕️ ⤵️ 🔽 ⏬ 🔻 🐨 📩 📉
+down	🙃 🫳 👇 👎 ↘️ ⬇️ ↙️ ↕️ ⤵️ 🔽 ⏬ 🔻 🐨 📩 📉 🙂‍↕️
 downarrow	⬇️
 downcast	😓
 downcastfacewithsweat	😓
@@ -3384,12 +3455,12 @@ draguta	🥰 🥺 😊
 drained	🪫
 drama	🎭 🍿
 draw	🧑‍🎨 🎨 〰️ ➰
-drawing	🖌️ 🖍️ 📏
+drawing	🪌 🖌️ 🖍️ 📏
 drc	🇨🇩
 dread	🫠
 dream	💭 😶‍🌫️ 💤
 dreams	🌒 🌜
-dreapta	🗯️ 🫱 🫸 👉 🤜 🔎 ↗️ ➡️ ↘️ ↔️ ↩️ ↪️ ⤴️ ⤵️ ▶️ ⏯️ 👮 👮‍♀️ 📏
+dreapta	🗯️ 🫱 🫸 👉 🤜 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️ 🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️ 🧑‍🦼‍➡️ 👨‍🦼‍➡️ 👩‍🦼‍➡️ 🧑‍🦽‍➡️ 👨‍🦽‍➡️ 👩‍🦽‍➡️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🔎
 drept	🧍 📐 ©️
 dreptate	⚖️
 drepti	🧍
@@ -3405,7 +3476,7 @@ dribling	⛹️
 drink	🍹 🍼 🥛 ☕ 🫖 🍵 🍶 🍾 🍷 🍸 🍺 🥂 🫗 🥤 🧉 🏺 🍻 🥃 🧃 🚰 🚱 🔞
 drinking	🍷 🍸 🍹 🍺 🍻 🚰 🚱
 drinks	🍷 🍸 🍹 🍺 🍻
-drip	💦 💧
+drip	💦 🫟 💧
 drive	🚐 🚕 🚙 🚚 🚛
 driving	🏌️ 🏌️‍♂️ 🏌️‍♀️ 🚗 🚦 🚸
 drizzle	🌂
@@ -3422,12 +3493,12 @@ droplets	💦
 dropofblood	🩸
 dropped	🫳 📍
 drops	💦 ☔
-drought	🌵
+drought	🌵 🪾
 drove	🚖 🚘 🚦
 drug	💊
 drugs	💊 💉
 drum	🥁 🛢️ 🪘 🛣️ 👣 🔜
-drumetie	🚶 🚶‍♀️ 🎒 🥾
+drumetie	🚶 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🎒 🥾
 drumstick	🍗 🍖
 drumsticks	🥁
 drunk	🥴 🍻 🍹 😲 🍶 🍷 🍸 🍺 🥃
@@ -3478,7 +3549,7 @@ earth	🌍 🌎 🌏 🌐
 earthafrica	🌍
 earthamericas	🌎
 earthasia	🌏
-earthquake	🫨
+earthquake	🫨 🛘
 earthworm	🪱
 earwithhearingaid	🦻
 east	➡️ 🌏 ↗️ ↘️ 🇹🇱
@@ -3541,7 +3612,7 @@ elan	🫎
 elder	👨‍🦳 👩‍🦳 🧑‍🦳 🧓 👴 👵
 elderly	🧓 👴 👵
 election	🗳️ ✅ ☑️
-electric	🔌 🚃 ⚡ 💡 🔦 👨‍🦼 👩‍🦼 🦼 🚆 🚎 🎸
+electric	🔌 🚃 ⚡ 💡 🔦 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🦼 🚆 🚎 🎸
 electrica	🔌
 electricbus	🚎
 electrician	🧑‍🔧 👨‍🔧 👩‍🔧
@@ -3581,6 +3652,7 @@ emblema	🔱
 emblematrident	🔱
 embrace	🫂
 embroidery	🪡
+emerge	🐦‍🔥
 emergency	🚑 🚨 🦺 🆘 🏥
 emergencylight	🚨
 emiratele	🇦🇪
@@ -3611,6 +3683,7 @@ engine	🚒 🚂
 engineer	🧑‍🔬 👨‍🔬 👩‍🔬 🧑‍💻 👨‍💻 👩‍💻
 england	🏴󠁧󠁢󠁥󠁮󠁧󠁿 💷 🇬🇧
 english	🇬🇧 🏴󠁧󠁢󠁥󠁮󠁧󠁿
+enlightenment	🛙
 enraged	😡
 enragedface	😡
 ensnare	🪝
@@ -3630,7 +3703,8 @@ envelopewitharrow	📩
 environment	♻️ 🏔️ ⛰️ 🏞️
 epic	😜 😯 😱
 eprubeta	🧪
-epuizat	😮‍💨
+epuizare	🫩
+epuizat	😮‍💨 🫩
 epuizata	😩
 equal	🟰
 equality	🟰
@@ -3641,6 +3715,8 @@ equatorialguinea	🇬🇶
 equestrian	🐎
 equine	🐴
 er	🇪🇷
+erase	🪌
+eraser	🪌
 erectie	🍆 🍌 🌭 🥒 🐓
 eritrea	🇪🇷
 eritrean	🇪🇷
@@ -3648,7 +3724,7 @@ eritreea	🇪🇷
 eroina	🦸 🦸‍♀️
 erotic	🔞 🍆 🍑 💦 😈 🥵 🫦
 erou	🦸 🦸‍♂️ 🦸‍♀️
-error	🚨 ⚠️ 🔴
+error	🪌 🚨 ⚠️ 🔴
 eruptie	🌋
 eruption	🌋
 es	🇪🇸
@@ -3710,6 +3786,7 @@ exact	💯
 exam	💯 ⌛ 📝
 exasperare	🤦 🤦‍♂️ 🤦‍♀️
 exasperation	🤦 🤦‍♂️ 🤦‍♀️
+excavare	🪏
 exchange	💱 💹
 excitat	🥵 😈 🤤 🫦 💦 😏
 excitata	🥵 😈 🤤 🫦 💦 😏
@@ -3721,11 +3798,11 @@ exclamation	❣️ ‼️ ⁉️ ❕ ❗ ⚠️ 🔛 🆙
 exclamationmark	❗
 exclamationquestionmark	⁉️
 excursie	🚞 📷
-exercise	🙆 🙆‍♂️ 🙆‍♀️ 🏃 🏃‍♂️ 🏃‍♀️ 😅 😓 🏊‍♂️ 🏊‍♀️ 🏋️ 🏋️‍♀️ 🚴‍♂️ 🚴‍♀️ 🚲
+exercise	🙆 🙆‍♂️ 🙆‍♀️ 🏃 🏃‍♂️ 🏃‍♀️ 😅 😓 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🏊‍♂️ 🏊‍♀️ 🏋️ 🏋️‍♀️ 🚴‍♂️ 🚴‍♀️ 🚲
 exhalation	🫁
 exhale	😮‍💨
 exhaling	😮‍💨
-exhausted	😮‍💨 😫
+exhausted	😮‍💨 🫩 😫
 exist	🈶
 exit	🚪
 exotic	🐠 🌴 🍌 🍍 🍹
@@ -3759,7 +3836,8 @@ express	🚛
 expressionless	😑 😐 😶
 expressionlessface	😑
 extended	🖕
-extenuare	😫
+extenuare	🫩 😫
+extenuat	🫩
 extenuata	😩
 external	👽
 extinct	🦣 🦤 🦕 🦖
@@ -3778,11 +3856,11 @@ exuberant	💁‍♂️
 eye	👁️ 😜 🫣 👁️‍🗨️ 😄 😁 😊 😍 😚 😙 🤪 😝 😸 😻 😽 👀 👓 🕶️ 🥽 🧿 😉 😒 🙄 😎
 eyeballs	👀
 eyebrow	🤨 🥸 😥
-eyed	🤩 🧒 👦 👧
+eyed	🤩 🧒 👦 👧 🫪
 eyeglasses	👓
 eyeinspeechbubble	👁️‍🗨️
 eyeroll	🙄
-eyes	👀 👁️ 😃 😄 😁 😊 😍 😚 😙 😝 🫢 🙄 😵 😵‍💫 😸 😻 😆 🤩 🤪 🥴 🥺 😽 🥰 🤑
+eyes	👀 👁️ 😃 😄 😁 😊 😍 😚 😙 😝 🫢 🙄 🫩 😵 😵‍💫 😸 😻 😆 🤩 🤪 🥴 🥺 😽 🥰
 eyesight	👓
 eyespeechbubble	👁️‍🗨️
 eyewear	👓 🕶️ 😎
@@ -3800,6 +3878,7 @@ facepunch	👊
 facesavoringfood	😋
 facescreaminginfear	😱
 facevomiting	🤮
+facewithbagsundereyes	🫩
 facewithcrossedouteyes	😵
 facewithdiagonalmouth	🫤
 facewithhandovermouth	🤭
@@ -3821,7 +3900,7 @@ facewithtongue	😛
 facial	💆 💆‍♂️ 💆‍♀️ 🧔‍♂️ 🧔‍♀️
 faciala	🙍 🙍‍♂️ 🙎 🙎‍♂️
 facialhair	🧔‍♂️ 🧔‍♀️
-facing	🤛 🤜 🐥 📄 🤲
+facing	🤛 🤜 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️ 🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️ 🧑‍🦼‍➡️ 👨‍🦼‍➡️ 👩‍🦼‍➡️ 🧑‍🦽‍➡️ 👨‍🦽‍➡️ 👩‍🦽‍➡️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🐥 📄 🤲
 facsimile	📠
 factory	🏭 🧑‍🏭 👨‍🏭 👩‍🏭
 factoryworker	🧑‍🏭
@@ -3849,9 +3928,13 @@ falklands	🇫🇰
 fall	🍂 🌻 🍁 ⛅ 🎃
 fallen	🍂
 fallenleaf	🍂
-falling	🍁 🍂 🌠
+falling	🍁 🍂 🌠 🪋
 fals	🤞
 familie	👪 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦 👨‍👧‍👧 👩‍👦 👩‍👦‍👦 👩‍👧
+familieadultadultcopil	🧑‍🧑‍🧒
+familieadultadultcopilcopil	🧑‍🧑‍🧒‍🧒
+familieadultcopil	🧑‍🧒
+familieadultcopilcopil	🧑‍🧒‍🧒
 familiebarbatbaiat	👨‍👦
 familiebarbatbaiatbaiat	👨‍👦‍👦
 familiebarbatbarbatbaiat	👨‍👨‍👦
@@ -3878,6 +3961,10 @@ familiefemeiefemeiefata	👩‍👩‍👧
 familiefemeiefemeiefatabaiat	👩‍👩‍👧‍👦
 familiefemeiefemeiefatafata	👩‍👩‍👧‍👧
 family	👪 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦 👨‍👧‍👧 👩‍👦 👩‍👦‍👦 👩‍👧
+familyadultadultchild	🧑‍🧑‍🧒
+familyadultadultchildchild	🧑‍🧑‍🧒‍🧒
+familyadultchild	🧑‍🧒
+familyadultchildchild	🧑‍🧒‍🧒
 familymanboy	👨‍👦
 familymanboyboy	👨‍👦‍👦
 familymangirl	👨‍👧
@@ -3911,11 +3998,11 @@ fantana	⛲
 fantanaarteziana	⛲
 fantastic	👿 🦄 🐲
 fantasy	😇 😈 👿 👹 👺 👻 👽 👾 🤴 👸 👼 🎅 🤶 🧑‍🎄 🧙 🧙‍♂️ 🧙‍♀️ 🧚 🧚‍♂️ 🧚‍♀️ 🧝 🧝‍♂️ 🧝‍♀️ 🧞
-fantezie	😇 😈 👿 👹 👺 👻 👽 👾 👸 👼 🧚 🧌 🦄 🔮
+fantezie	😇 😈 👿 👹 👺 👻 👽 👾 👸 👼 🧚 🧌 🦄 🐦‍🔥 🔮
 fantoma	👻
 fap	✊ 💦 🍆
 far	🚨
-fara	😑 😶 🍵 ⛄ 🥿 🔇 🈵 😐 🚳 📵 🛜
+fara	😑 😶 🍵 ⛄ 🥿 🔇 🈵 😐 🪾 🚳 📵 🛜
 faramata	💔
 farduri	💄
 farewell	🫂 👋
@@ -3934,7 +4021,7 @@ farts	💨 😷
 fashion	👠 💅 🤵‍♂️ 🤵‍♀️ 👓 👔 👕 👖 👗 👘 🩱 👙 👚 👛 👜 👞 👡 👢 👒 💄 💍
 faso	🇧🇫
 fasole	🫘
-fast	⏩ ⏪ ⏫ ⏬ 💨 🏃 🏃‍♂️ 🏃‍♀️ 🍔 🍟 👟 🍕 🌭 🥪 🌮 🚅 🏎️ 🏍️ ⚡ 📨
+fast	⏩ ⏪ ⏫ ⏬ 💨 🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🍔 🍟 👟 🍕 🌭 🥪 🌮 🚅 🏎️ 🏍️ ⚡ 📨
 fastdownbutton	⏬
 fastfood	🍔 🍟
 fastforward	⏩
@@ -3955,6 +4042,7 @@ fatacaresaliveaza	🤤
 fatacaresaluta	🫡
 fatacaresasaie	🤫
 fatacarescoatefumpenari	😤
+fatacaresecrapa	🫫
 fatacaresetopeste	🫠
 fatacarestranuta	🤧
 fatacaretragecuochiul	🫣
@@ -3962,6 +4050,7 @@ fatacaretrimiteunpupic	😘
 fatacherchelita	🥴
 fataconfuza	😕
 fatacucapulbandajat	🤕
+fatacucearcane	🫩
 fatacuconturpunctat	🫥
 fatacufermoarlabuze	🤐
 fatacugestdeimbratisare	🤗
@@ -4000,6 +4089,7 @@ fatadetigru	🐯
 fatadetocilar	🤓
 fatadezamagita	😞
 fatadezamagitadarusurata	😥
+fatadistorsionata	🫪
 fataextenuata	😩
 fatafaraexpresie	😑
 fatafaragura	😶
@@ -4056,9 +4146,10 @@ fatazambitoarecuochizambitori	😊
 fatazambitoareincornorata	😈
 fatazgaltaita	🫨
 fateh	🪯
-father	👨 👨‍🍼 🎅 👪 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦 👨‍👧‍👧
+father	👨 👨‍🍼 🎅 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦 👨‍👧‍👧 👪
 fatherchristmas	🎅
 fathers	👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧
+fatigued	🫩
 fatima	🪬
 faucet	💧 🚰 🚱
 favoare	🙇‍♂️ 🙇‍♀️
@@ -4101,6 +4192,7 @@ femeiebarba	🧔‍♀️
 femeieblonda	👱‍♀️
 femeiebosumflata	🙎‍♀️
 femeiecarealearga	🏃‍♀️
+femeiecarealeargaorientatespredreapta	🏃‍♀️‍➡️
 femeiecarebatemingea	⛹️‍♀️
 femeiecareexplica	💁‍♀️
 femeiecarefaceroata	🤸‍♀️
@@ -4111,6 +4203,7 @@ femeiecarejoacahandbal	🤾‍♀️
 femeiecarejoacapolopeapa	🤽‍♀️
 femeiecarejongleaza	🤹‍♀️
 femeiecaremerge	🚶‍♀️
+femeiecaremergeorientatespredreapta	🚶‍♀️‍➡️
 femeiecarepracticasurfing	🏄‍♀️
 femeiecarepracticawrestling	🤼‍♀️
 femeiecareprimesteunmasajfacial	💆‍♀️
@@ -4123,6 +4216,7 @@ femeiecaresetunde	💇‍♀️
 femeiecarevaslesteinbarca	🚣‍♀️
 femeiechelie	👩‍🦲
 femeiecubastonpentrunevazatori	👩‍🦯
+femeiecubastonpentrunevazatoriorientatespredreapta	👩‍🦯‍➡️
 femeiecunaframa	🧕
 femeiecuturban	👳‍♀️
 femeiecuvoal	👰‍♀️
@@ -4132,12 +4226,15 @@ femeiefacandungestdenegatie	🙅‍♀️
 femeiefacandungestdeok	🙆‍♀️
 femeiehranindunbebelus	👩‍🍼
 femeieingenunchi	🧎‍♀️
+femeieingenunchiorientatespredreapta	🧎‍♀️‍➡️
 femeieinpicioare	🧍‍♀️
 femeieinpozitialotus	🧘‍♀️
 femeieinsarcinata	🤰
 femeieinsauna	🧖‍♀️
 femeieinscauncurotilemanual	👩‍🦽
+femeieinscauncurotilemanualorientatespredreapta	👩‍🦽‍➡️
 femeieinscauncurotilemotorizat	👩‍🦼
+femeieinscauncurotilemotorizatorientatespredreapta	👩‍🦼‍➡️
 femeieinsmoching	🤵‍♀️
 femeieintristata	🙍‍♀️
 femeiemag	🧙‍♀️
@@ -4164,6 +4261,7 @@ fericit	😊 😄 😁 🥳 😀 😃 😆 🙂 😇 ☺️ 👻
 fericita	😊 😄 😁 🥳
 ferma	🐴 🐎 🐮 🐄 🐷 🐖 🐽 🐑 🐐 🌽
 fermecat	🫣
+ferment	🫝
 fermier	👨‍🌾 🧑‍🌾 👩‍🌾
 fermiera	👩‍🌾 🧑‍🌾
 fermiersaufermiera	🧑‍🌾
@@ -4190,7 +4288,8 @@ fierastrau	🪚
 fierastraupentrutamplarie	🪚
 fierbinte	🥵 ☕ 🫠 🍜 ♨️ 🔥 💣
 fife	🪈
-fight	🥷
+fight	🫯 🥷
+fightcloud	🫯
 fighter	🥷
 fighting	🥊
 figura	🔴 🔵 ⚫ ⚪ ⬛ ⬜ ◼️ ◻️ ◾ ◽ ▪️ ▫️ 🔶 🔷 🔸 🔹 🔺 🔻 💠 🔘 🔳 🔲
@@ -4218,6 +4317,7 @@ finalizat	✅
 find	🔍 🔎
 fine	😐 😑 😒 🙂
 finger	🫰 🖕 🖐️ 🖖 🤞 🤘 👈 👉 👆 👇 ☝️ 🫵 🤫 🤌 💅 🈯
+fingerprint	🫆
 fingers	🤞 🖐️ 🤌 🤏 🤟 🤚 ✋ 🖖 👌 ✌️ 🤘 👈 👉 👆 🖕 👇 ☝️ ✊ 👐 💅
 finish	🏁
 finishline	🏁
@@ -4227,6 +4327,8 @@ finnish	🇫🇮
 fins	🐬 🦈
 fir	🧶 🧵 🪢 🛜 🌲
 fire	🔥 ❤️‍🔥 🚒 🧯 🧑‍🚒 👨‍🚒 👩‍🚒 🧨 🕯️ 📛
+fireball	🪋
+firebird	🐦‍🔥
 firecracker	🧨
 fireengine	🚒
 fireextinguisher	🧯
@@ -4483,6 +4585,7 @@ flags	🎌 🎏 🏁
 flagsamoa	🇼🇸
 flagsanmarino	🇸🇲
 flagsaotomeprincipe	🇸🇹
+flagsark	🇨🇶
 flagsaudiarabia	🇸🇦
 flagscotland	🏴󠁧󠁢󠁳󠁣󠁴󠁿
 flagsenegal	🇸🇳
@@ -4627,6 +4730,7 @@ flushed	😳 😊
 flushedface	😳
 flute	🪈
 flutter	🍃 🪭
+fluttered	🫪
 fluttering	🍃
 fluturand	🏴 🏳️
 fluturas	🦋 🏸
@@ -4642,7 +4746,7 @@ foame	😋 🤤 🍽️ 😩 🍗 🍔 🍕 🍴
 foarfeca	💇 ✂️
 foarfece	✂️
 foarte	👏
-foc	🔥 🎇 🧨 🧯 🔫
+foc	🔥 🎇 🧨 🧯 🐦‍🔥 🔫
 foca	🦭
 focbengal	🎇
 focus	😣
@@ -4661,7 +4765,7 @@ folklore	🧜 🧜‍♂️ 🧜‍♀️ 🧝 🧝‍♂️ 🧝‍♀️
 folosirea	🚮
 folositi	🚮
 fondue	🫕
-food	🍔 🍕 🍽️ 😋 🥘 🍲 🥫 🥭 🍎 🫐 🥝 🍅 🫒 🥑 🥔 🥕 🫑 🥒 🥜 🫘 🍞 🥐 🥖 🫓
+food	🍔 🍕 🍽️ 😋 🥘 🍲 🥫 🦐 🦑 🥭 🍎 🫐 🥝 🍅 🫒 🥑 🥔 🥕 🫑 🥒 🥜 🫘 🍄‍🟫 🫜
 foot	🦶 🦵 👞
 football	🏈 🏉 ⚽
 footprint	👣
@@ -4671,7 +4775,8 @@ footwear	🛼 🩴
 forbid	🚫 📛 🈲
 forbidden	🙈 🙉 🙊 🙅 🙅‍♂️ 🙅‍♀️ 🔕 ⛔ 🚫 🚳 🚭 🚯 🚷 📵 🔞 🚱 🈲
 force	🪠
-forest	🌲 🌳
+forensics	🫆
+forest	🫈 🌲 🌳
 forever	♾️
 forgetful	😶‍🌫️
 forgive	🙇 🙇‍♂️ 🙇‍♀️
@@ -4712,6 +4817,7 @@ fox	🦊
 foxface	🦊
 fr	🇫🇷
 frac	🤵
+fragile	🫌
 frame	🖼️ 🪟 🧮 🔲
 framed	🖼️
 framedpicture	🖼️
@@ -4731,6 +4837,7 @@ frati	👬
 fratior	👬
 free	🆓 🈶 🈚
 freebutton	🆓
+freedom	⛓️‍💥
 freestyle	🏊 🏊‍♂️ 🏊‍♀️
 freezing	🥶
 french	🍟 🇬🇫 🇵🇫 🇹🇫 🥐 🥖 🇫🇷 📯
@@ -4772,9 +4879,9 @@ frowningman	🙍‍♂️
 frowningperson	🙍
 frowningwoman	🙍‍♀️
 frozen	🥶 ☃️ ⛄
-fruct	🍇 🍈 🍉 🍊 🍋 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🥝 🍅 🥑 🥧
-fructe	🍇 🍈 🍉 🍊 🍋 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🫐 🥝 🍅 🥑 🥧 🍢 🦞 🦐
-fruit	🥝 🍇 🍈 🍉 🍊 🍋 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🫐 🍅 🥑 🥧 🫒 🥥 🫑 🥒 🥦
+fruct	🍇 🍈 🍉 🍊 🍋 🍋‍🟩 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🥝 🍅 🥑 🥧
+fructe	🍇 🍈 🍉 🍊 🍋 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🫐 🥝 🍅 🥑 🥧 🦞 🦐 🍢
+fruit	🥝 🍇 🍈 🍉 🍊 🍋 🍋‍🟩 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🫐 🍅 🥑 🥧 🫒 🥥 🫑 🥒
 fruitmachine	🎰
 frumoasa	🦚 🌞
 frumos	🦋 🥺
@@ -4783,7 +4890,7 @@ frunza	🍁 🍂 🍃 🌿 🔰
 frunzadeartar	🍁
 frunzaincadere	🍂
 frunzaplutindinaer	🍃
-frunze	🍀 🍂 🌳 🥬
+frunze	🍀 🍂 🌳 🪾 🥬
 frustrare	🫤 😠
 frustrat	😖 😠
 frustrata	🙍
@@ -4801,10 +4908,10 @@ fuckoff	🖕 🍆 🍑 💦 👉 👌
 fuel	⛽
 fuelpump	⛽
 fug	💨
-fuga	💨 🏃 🏃‍♂️ 🏃‍♀️
-fuge	🏃‍♀️
+fuga	💨 🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
+fuge	🏃‍♀️ 🏃‍♀️‍➡️
 fugi	😲
-fugind	🏃‍♀️
+fugind	🏃‍♀️ 🏃‍♀️‍➡️
 fugu	🐡
 fuji	🗻
 fular	🧣
@@ -4835,8 +4942,8 @@ fundulet	🍑
 funeral	⚱️ ⚰️
 funeralurn	⚱️
 funerara	🪦 ⚱️
-fungi	🍄
-fungus	🍄
+fungi	🍄 🍄‍🟫
+fungus	🍄 🍄‍🟫
 funicular	🚞
 funny	🤣 😂 😜 😃 😄
 furajera	🥬
@@ -4878,12 +4985,13 @@ ga	🇬🇦
 gabon	🇬🇦
 gabonese	🇬🇦
 gadgets	🎧 📱 📷 📸
+gadina	🫜
 gafait	🥵
 gagait	🪿
 gaggle	🪿
 gaina	🐔 🐤 🐥
 gains	💪
-gait	🚶 🚶‍♂️ 🚶‍♀️
+gait	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️
 galagie	🔊
 galaxy	🌌
 galben	🍈 🟡 🟨 💛 🌻 🚕 🚖
@@ -4927,13 +5035,14 @@ gara	🚉
 garbage	🗑️ 🚯 ♻️
 garcia	🇩🇬 🇮🇴
 garda	💂 💂‍♂️ 💂‍♀️ 🚓
-garden	🏡 🐌 🐛 🐜 🐞 👒
+garden	🏡 🐌 🐛 🐜 🐞 🫜 👒 🪏
 gardener	🧑‍🌾 👨‍🌾 👩‍🌾
 gardian	💂 💂‍♂️ 💂‍♀️
 gardianbarbat	💂‍♂️
 gardianfemeie	💂‍♀️
 gargarita	🐞
 garlic	🧄
+garnish	🍋‍🟩
 gas	⛽ 😤
 gasca	🪿
 gasculita	🪿
@@ -4965,7 +5074,7 @@ geez	😳
 gelatina	🪼
 gelos	😐 😑 😒
 gelozie	😑 😒
-gem	💎 💍 🔶 🔷 🔸 🔹 💠
+gem	💎 🪎 💍 🔶 🔷 🔸 🔹 💠
 gemene	👯 👭
 gemeni	♊ 👯‍♂️ 👬
 gemini	♊
@@ -4983,7 +5092,7 @@ genieman	🧞‍♂️
 geniewoman	🧞‍♀️
 gentleman	🎩
 gentuta	👝
-genunchi	🧎 🧎‍♂️ 🧎‍♀️ 🦵
+genunchi	🧎 🧎‍♂️ 🧎‍♀️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️ 🦵
 geometric	🔴 🔵 ⚫ ⚪ ⬛ ⬜ ◼️ ◻️ ◾ ◽ ▪️ ▫️ 🔶 🔷 🔸 🔹 🔺 🔻 💠 🔘 🔳 🔲 🟠 🟡
 geometrica	🔴 🔵 ⚫ ⚪ ⬛ ⬜ ◼️ ◻️ ◾ ◽ ▪️ ▫️ 🔶 🔷 🔸 🔹 🔺 🔻 💠 🔘 🔳 🔲
 geometrie	◼️
@@ -5012,7 +5121,7 @@ ghana	🇬🇭
 ghanaian	🇬🇭
 gheata	🍧 🧊 🏒 ⛸️ 🐧 🥾
 ghem	🧶
-gherkin	🥒
+gherkin	🫝 🥒
 ghici	🔮
 ghid	🦮
 ghimbir	🫚
@@ -5022,12 +5131,14 @@ ghiveci	🪴
 ghost	👻
 ghoul	👻
 gi	🇬🇮
+giant	🫈
 gibbous	🌔 🌖
 gibraltar	🇬🇮
 gibraltarian	🇬🇮
 gift	🎁 💝 🧧 📦
 gifted	🤓
 giftheart	💝
+gigant	🫈
 giggle	🤭
 giggling	🤭
 gimnast	🤸‍♂️
@@ -5071,6 +5182,8 @@ globeshowingasiaaustralia	🌏
 globeshowingeuropeafrica	🌍
 globewithmeridians	🌐
 globul	🌍 🌏
+glorie	🐦‍🔥
+glory	🐦‍🔥
 gloss	💄
 glossy	🥺
 glove	🥊 🥎
@@ -5103,7 +5216,7 @@ gogosar	🫑
 goguma	🍠
 gokart	🏁
 gol	🔞 🍑 🙈 👙 🪹 ⭕ 🫗 🫙 🥍 🥅 📥
-gold	🏅 🥇 💰 🪙 💛 ⭐ 🔑
+gold	🏅 🥇 🪙 💰 🪎 💛 ⭐ 🔑
 golden	🍏 🌉
 golf	🏌️ 🏌️‍♂️ 🏌️‍♀️ ⛳ 🚩 👏 🥏
 golfer	🏌️ 🏌️‍♂️ 🏌️‍♀️
@@ -5134,8 +5247,8 @@ gown	👗 👘
 gp	🇬🇵
 gps	🛰️
 gr	🇬🇷
-graba	💨 🏃 🏃‍♀️
-grabeste	🏃 🏃‍♀️
+graba	💨 🏃 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️
+grabeste	🏃 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️
 grabit	😰
 grade	🈴 🥶
 gradina	🏡 🐌 🐛 🐜 🐞 🐅 🐆 🐃 🐊
@@ -5180,6 +5293,7 @@ grave	🪦
 graveyard	🪦 ⚰️
 gravid	🫃
 gravida	🤰 🫄
+gravity	🪋
 grawlix	🤬
 gray	🩶 🌔 ❔ ❕
 great	👏 🦈 🇬🇧
@@ -5233,10 +5347,11 @@ grinningfacewithbigeyes	😃
 grinningfacewithsmilingeyes	😄
 grinningfacewithsweat	😅
 grinningsquintingface	😆
+grip	🫹 🫺
 gripa	🤧
 grizzly	🐻
 groan	😮‍💨
-groapa	🕳️ 🪦
+groapa	🕳️ 🪏 🪦
 groaznic	😢 😞
 groceries	🏪
 groenlanda	🇬🇱
@@ -5274,6 +5389,7 @@ guatemalan	🇬🇹
 guernsey	🇬🇬
 guess	🤷 🤷‍♂️ 🤷‍♀️
 guiana	🇬🇫
+guidance	🛙
 guide	🦮 🪬
 guidedog	🦮
 guinea	🇬🇳 🇬🇶 🇬🇼 🇵🇬
@@ -5320,6 +5436,8 @@ haired	👱 👨‍🦰 👨‍🦱 👨‍🦳 👩‍🦰 👩‍🦱 👩‍�
 hairless	👨‍🦲 👩‍🦲 🧑‍🦲
 hairpick	🪮
 hairstyle	👱 👨‍🦰 👨‍🦱 👩‍🦰 🧑‍🦰 👩‍🦱 🧑‍🦱 💇
+hairy	🫈
+hairycreature	🫈
 haiti	🇭🇹
 haitian	🇭🇹
 hajj	🕋
@@ -5357,7 +5475,7 @@ handball	🤾 🤾‍♂️ 🤾‍♀️
 handballperson	🤾
 handgun	🔫
 handicap	♿
-handle	🍵 🤹 🤹‍♂️ 🤹‍♀️
+handle	🍵 🪍 🤹 🤹‍♂️ 🤹‍♀️
 handovermouth	🤭
 hands	🤗 👏 🙌 🫶 👐 🙏 🧑‍🤝‍🧑 👭 👫 👬 🖖 🤲 👋 🤙 🤝 🙆 🧤
 handset	📞
@@ -5376,6 +5494,8 @@ happytears	😂
 hard	🦻 😓 👷
 hardhat	👷 👷‍♂️ 👷‍♀️
 harm	🩸
+harp	🪉
+harpa	🪉
 harta	🗺️ 🗾 📍
 hartajaponiei	🗾
 hartalumii	🗺️
@@ -5393,12 +5513,13 @@ hatchingchick	🐣
 hate	😡
 hats	👒
 hau	🕳️
+haul	🪎
 haunted	🏚️
 haunting	👻
 have	🈶
 haze	😶‍🌫️
 hazliu	😂
-head	🤕 🤯 🗣️ 😶‍🌫️ 🧕 🙆 🤦 💆 💆‍♂️ 💆‍♀️ 🐵 🐴 🐷 🐲 🚿
+head	🙂‍↔️ 🙂‍↕️ 🤕 🤯 🗣️ 😶‍🌫️ 🧕 🙆 🤦 💆 💆‍♂️ 💆‍♀️ 🐵 🐴 🐷 🐲 🚿
 headache	😣 😓 💆 💆‍♂️ 💆‍♀️
 headdress	👳
 heading	⤴️ ⤵️
@@ -5406,6 +5527,8 @@ headline	📰 🗞️
 headphone	🎧
 headphones	🎧
 headscarf	🧕
+headshakinghorizontally	🙂‍↔️
+headshakingvertically	🙂‍↕️
 headstone	🪦
 heal	🩹
 healing	☮️ ❤️‍🩹
@@ -5493,7 +5616,7 @@ highvoltage	⚡
 highway	🛣️
 hihi	😂 🤣 😆 😄 😹
 hijab	🧕
-hike	🚶 🚶‍♂️ 🚶‍♀️
+hike	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️
 hiking	🥾
 hikingboot	🥾
 hilar	😂
@@ -5535,7 +5658,8 @@ hohote	😭
 hoist	🛗
 hold	🫱 🫲 🫴 🫷 🫸 🤌 🧑‍🤝‍🧑 👭 👫 👬
 holding	🥹 🧑‍🤝‍🧑 👭 👫 👬
-hole	🕳️ ⛳
+hole	🕳️ ⛳ 🪏
+holi	🫟
 holiday	🎅 🤶 🧑‍🎄
 hollow	⭕
 hollowredcircle	⭕
@@ -5561,15 +5685,16 @@ hoop	🏀
 hooray	🥳 🙌 🎉
 hoot	🦉
 hop	🦘
-hope	🙏
+hope	🙏 🫌 🛙
 hopeful	🤞
 horizontal	🚥 ↔️
 horizontalarrows	↔️
+horizontally	🙂‍↔️
 horizontaltrafficlight	🚥
 horn	📯 🥳 🦏 🎺
 horns	😈 👿 🤘 🐏 🦌
 horny	🥵 😈 🤤 🫦 💦 😏
-horoscop	🦁 🐂 🐏 🐟 🦂 🦀 🏺 ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
+horoscop	🦁 🐂 🐏 🐟 🦀 🦂 🏺 ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
 horoscope	♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
 horrible	😝
 horror	😱 🙀 🧟 🧟‍♂️ 🧟‍♀️
@@ -5626,7 +5751,7 @@ hungary	🇭🇺
 hungry	😋 🤤 🍽️ 😩 🍗 🍔 🍕 🍴
 hurl	🤾 🤾‍♂️ 🤾‍♀️
 hurricane	🌀
-hurry	🏃 🏃‍♂️ 🏃‍♀️
+hurry	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
 hurt	🤕 🩼 🩸
 hush	🤐 🙊 🤫
 hushed	😯
@@ -5643,7 +5768,7 @@ iacint	🪻
 iades	🦴
 iaht	⛵ 🚤 🛥️
 iar	🔄
-iarna	🧑‍🎄
+iarna	🧑‍🎄 🪾
 iarta	🙏 😔 🥺 😞
 ice	🧊 🍦 🍧 🍨 🏒 ⛸️ 🥶 🩵
 iceberg	🧊
@@ -5666,8 +5791,8 @@ identice	👯
 identici	👯‍♂️
 identification	🪪 🆔
 identificationcard	🪪
-identitate	🪪 🆔
-identity	🆔
+identitate	🪪 🫆 🆔
+identity	🫆 🆔
 ideograma	🈷️ 🈶 🈯 🉐 🈹 🈚 🈲 🉑 🈸 🈴 🈳 ㊗️ ㊙️ 🈺 🈵
 ideograph	🉐 🈷️ 🈶 🈯 🈹 🈚 🈲 🉑 🈸 🈴 🈳 ㊗️ ㊙️ 🈺 🈵
 ideographadvantage	🉐
@@ -5707,10 +5832,12 @@ imbujorat	😊 😚 😳
 imbujorata	😳
 imi	🤐 🤢
 imitatie	🦜
+immortal	🐦‍🔥
 imp	😈 👿
 impachetare	🧳 🛃
 impachetat	🎁 🧳 🛃 🛄
 impact	💥
+impaired	🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️
 impartire	➗
 impartirii	➗
 imperial	🎎
@@ -5730,6 +5857,7 @@ impreunate	🤲
 imprimanta	🖨️
 imprimare	🖨️
 improscand	🐳
+improscare	🫟
 improve	🎨
 improvement	🔨 🔧 🔩 💩
 improving	❤️‍🩹
@@ -5804,6 +5932,7 @@ indiciu	🧩 🗝️
 indiferenta	😑 🤷 🤷‍♂️ 🤷‍♀️
 indifference	🤷 🤷‍♂️ 🤷‍♀️ 😐 😒 😕
 indifferent	😑 🫤 🤷‍♂️ 🤷‍♀️
+indiffernt	🙂‍↔️
 indigo	🪻
 indoiala	🤷 🤷‍♂️ 🤷‍♀️
 indoit	🦵
@@ -5850,11 +5979,11 @@ infricosator	👹
 infuriat	😠
 ingandurat	😔
 ingandurata	😔
-ingenunchea	🧎
-ingenuncheat	🧎‍♂️
-ingenuncheata	🧎‍♀️
-ingenunchere	🧎
-ingenunchind	🧎‍♂️ 🧎‍♀️
+ingenunchea	🧎 🧎‍➡️
+ingenuncheat	🧎‍♂️ 🧎‍♂️‍➡️
+ingenuncheata	🧎‍♀️ 🧎‍♀️‍➡️
+ingenunchere	🧎 🧎‍➡️
+ingenunchind	🧎‍♂️ 🧎‍♀️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️
 inger	😇 👼
 ingeras	😇 👼
 inghet	🥶
@@ -5903,7 +6032,7 @@ injuratura	🤬
 injuraturi	🤬
 injured	🩼 🤕
 injury	🤕 🩸
-ink	🔏 🖨️
+ink	🔏 🫟 🖨️
 inlantuire	🖇️
 inlantuite	🖇️
 inline	🛼
@@ -5935,7 +6064,7 @@ inregistrata	®️ ™️
 insanatosire	❤️‍🩹
 insarcinat	🫃 🫄
 insarcinata	🤰 🫄 👶
-insect	🦋 🐛 🐜 🐝 🪲 🐞 🦗 🪳 🕷️ 🦟 🪰 🕸️
+insect	🦋 🫌 🐛 🐜 🐝 🪲 🐞 🦗 🪳 🕷️ 🦟 🪰 🕸️
 insecta	🦋 🐛 🐜 🐝 🪲 🐞 🦗 🪳 🕷️ 🦂 🦟 🪰
 inserare	🌆 🌇
 insert	📩
@@ -5954,7 +6083,7 @@ instelata	🌃
 instructment	🪕
 instructoare	👩‍🏫
 instructor	🧑‍🏫 👨‍🏫 👩‍🏫
-instrument	🔪 ⚓ 🔮 🎷 🪗 🎸 🎹 🎺 🎻 🪕 🪘 🪇 🪈 🔍 🔎 🔦 ✂️ 🔨 ⛏️ ⚒️ 🛠️ 🏹 🪚 🔧
+instrument	🔪 ⚓ 🔮 🎷 🎺 🪊 🪗 🎸 🎹 🎻 🪕 🪘 🪇 🪈 🪉 🔍 🔎 🔦 ✂️ 🔨 ⛏️ ⚒️ 🛠️ 🏹
 insula	🏝️ 🇦🇨 🇧🇻 🇨🇵 🇨🇽 🇭🇲 🇮🇲 🇳🇫 🗿
 insulapustie	🏝️
 insulele	🇦🇽 🇧🇶 🇨🇨 🇨🇰 🇫🇰 🇫🇴 🇬🇸 🇭🇲 🇮🇨 🇰🇾 🇲🇭 🇲🇵 🇵🇳 🇸🇧 🇹🇨 🇺🇲 🇻🇬 🇻🇮
@@ -6037,7 +6166,7 @@ invers	🔄
 inversare	◀️
 invertebrate	🪼
 investigate	🔬
-investigatie	🕵️
+investigatie	🕵️ 🫆
 invidie	😐 😑 😒
 invidios	😐 😑 😒
 invingator	✌️ 🏅 👑
@@ -6158,7 +6287,7 @@ japoniei	🗾
 jar	🫙 🍯 🏺
 javra	🤬 😡 🖕
 jaws	🦈
-jazz	👐 🎷 🎺
+jazz	👐 🎷 🪊 🎺
 je	🇯🇪
 jealous	😐 😑 😒
 jeans	👖
@@ -6177,7 +6306,8 @@ jersey	🇯🇪
 jet	🐳 ✈️
 jew	🕍 ✡️
 jewel	💎 🔶 🔷 🔸 🔹 💠
-jewelry	💍 💎
+jewelry	💍 💎 🪎
+jewels	🪎
 jewish	🕍 ✡️ 🕎 🔯 🥯
 jewishbakery	🥯
 jiaozi	🥟
@@ -6198,6 +6328,7 @@ jocuri	🎰 👾
 jocurimecanice	🎰
 jocvideo	🎮
 joey	🦘
+jog	🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
 jogging	🏃
 join	🈴
 joint	🚬
@@ -6211,7 +6342,7 @@ jonglerie	🤹 🤹‍♂️ 🤹‍♀️
 jongleza	🤹‍♂️
 jordan	🇯🇴
 jordanian	🇯🇴
-jos	🤣 🙃 🫳 👇 📪 📭 🚯 ↘️ ⬇️ ↙️ ↕️ ⤵️ 🔽 ⏬ 🔻 🇳🇱 👎 📩 🚶 🚶‍♀️ 🪑
+jos	🤣 🙃 🫳 👇 📪 📭 🚯 ↘️ ⬇️ ↙️ ↕️ ⤵️ 🔽 ⏬ 🔻 🇳🇱 👎 📩 🚶 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🪑
 journey	🛄
 joy	😂 😹 😃 😄 🤣 🥲 🥹 😀 😁 😆 😊 😋
 joycat	😹
@@ -6265,7 +6396,7 @@ kenya	🇰🇪
 kenyan	🇰🇪
 kerchief	🧕
 kettle	🫖
-key	🔑 🔐 🗝️ 🛅 #️⃣
+key	🔑 🔐 🗝️ 🍋‍🟩 🛅 #️⃣
 keyboard	⌨️ 🎹
 keycap	#️⃣ *️⃣ 0️⃣ 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟
 keycap0	0️⃣
@@ -6288,7 +6419,7 @@ khanda	🪯
 ki	🇰🇮
 kick	🛴 🦵 🦶 👞 👟
 kickscooter	🛴
-kid	🧒 👦 👧
+kid	🧒 👦 👧 🧑‍🧑‍🧒 🧑‍🧒
 kidding	😏
 kidney	🫘
 kids	🚸
@@ -6325,12 +6456,12 @@ kiwi	🥝 🇳🇿
 kiwifruit	🥝
 km	🇰🇲
 knee	🦵 👢
-kneel	🧎 🧎‍♂️ 🧎‍♀️
-kneeling	🧎 🧎‍♂️ 🧎‍♀️
+kneel	🧎 🧎‍♂️ 🧎‍♀️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️
+kneeling	🧎 🧎‍♂️ 🧎‍♀️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️
 kneelingman	🧎‍♂️
 kneelingperson	🧎
 kneelingwoman	🧎‍♀️
-knees	🧎 🧎‍♂️ 🧎‍♀️
+knees	🧎 🧎‍♂️ 🧎‍♀️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️
 knife	🍽️ 🍴 🔪 🗡️
 knights	🐉 ⚜️
 knit	🧶
@@ -6401,7 +6532,7 @@ lai	🧧
 lake	🚣 🚣‍♂️ 🚣‍♀️ 🚤
 lalea	🌷
 lama	🦙 🪒
-lamaie	🍋
+lamaie	🍋 🍋‍🟩
 lamb	🐑
 lambchop	🥩
 lamp	🪔 🛋️ 🧞 🧞‍♂️ 🧞‍♀️
@@ -6413,13 +6544,15 @@ land	🇦🇽
 landing	🛬 🛫
 lands	🇹🇫
 landscape	🌆
+landslide	🛘
 lanka	🇱🇰
 lankan	🇱🇰
 lanos	🦣
 lansare	🚀
-lant	⛓️ 📿 🔗
+lant	⛓️ ⛓️‍💥 📿 🔗
 lantern	🎃 🏮
 lanterna	🔦 🎃
+lantrupt	⛓️‍💥
 lanturi	⛓️
 lao	🇱🇦
 laos	🇱🇦
@@ -6439,7 +6572,7 @@ lastquartermoon	🌗
 lastquartermoonface	🌜
 lastquartermoonwithface	🌜
 lasttrackbutton	⏮️
-late	⏰ 🕛 🕧 🕐 🕜 🕑 🕝 🕒 🕞 🕓 🕟 🕔 🕠 🕕 🕡 🕖 🕢 🕗 🕣 🕘 🕤 🕙 🕥 🕚
+late	🫩 ⏰ 🕛 🕧 🕐 🕜 🕑 🕝 🕒 🕞 🕓 🕟 🕔 🕠 🕕 🕡 🕖 🕢 🕗 🕣 🕘 🕤 🕙 🕥
 later	👋
 lather	🧼
 latin	✝️ 🔠 🔡 🔤 🅰️ 🅱️ Ⓜ️ 🅾️ 🅿️
@@ -6467,6 +6600,8 @@ lead	✏️
 leader	👑
 leaf	🍀 🍁 🍂 🍃 🌿 🔰
 leafflutteringinwind	🍃
+leafless	🪾
+leaflesstree	🪾
 leafy	🥬
 leafygreen	🥬
 league	🏉
@@ -6478,7 +6613,7 @@ lebanon	🇱🇧
 lecturer	🧑‍🏫 👨‍🏫 👩‍🏫
 ledger	📒
 leer	😏
-left	🗨️ 👈 🤛 🔍 🛅 ↙️ ⬅️ ↖️ ↔️ ↩️ ↪️ 🫲 ◀️ ✍️ 📲 🖋️ 🖊️ 🖌️ 🖍️ 🔛 ⏪ ⏮️
+left	🗨️ 👈 🤛 🔍 🛅 ↙️ ⬅️ ↖️ ↔️ ↩️ ↪️ 🫲 🫹 ◀️ 🙂‍↔️ ✍️ 📲 🖋️ 🖊️ 🖌️ 🖍️ 🔛 ⏪ ⏮️
 leftarrow	⬅️ ↙️ ↖️
 leftarrowcurvingright	↪️
 leftfacingfist	🤛
@@ -6487,10 +6622,11 @@ leftovers	🥡
 leftrightarrow	↔️
 leftspeechbubble	🗨️
 leftward	🫲 🫷
-leftwards	🫲 🫷 ↩️ 🤛 ⬅️ 🔙 🔚 🔁 🔂
+leftwards	🫲 🫷 🫹 ↩️ 🤛 ⬅️ 🔙 🔚 🔁 🔂
 leftwardsarrowwithhook	↩️
 leftwardshand	🫲
 leftwardspushinghand	🫷
+leftwardsthumbsign	🫹
 leg	🦵 🦿 🍗
 lega	🪢
 legal	👮‍♂️ 👮‍♀️ 🚓 🚔 🚨 🎓 📝 💼 ©️ ™️
@@ -6501,7 +6637,8 @@ legit	👌
 legitimatie	🪪 📛
 legolas	🧝
 legs	🧘 🧘‍♂️ 🧘‍♀️
-leguma	🍅 🍆 🥔 🥕 🌶️ 🫑 🥜 🫘 🫛
+leguma	🫜 🍅 🍆 🥔 🥕 🌶️ 🫑 🥜 🫘 🫛 🍄‍🟫
+legumaradacinoasa	🫜
 legume	🥔 🥕 🥒 🥜 🫘 🫛 🥗
 leguminoasa	🫛
 lehamite	🤢
@@ -6551,7 +6688,7 @@ liber	🆓 🫳 🏊 💺 🥾
 libere	🈳 🈵
 liberia	🇱🇷
 liberian	🇱🇷
-libertate	🗽
+libertate	🗽 ⛓️‍💥
 libertatii	🗽
 liberty	🗽 🔔
 libia	🇱🇾
@@ -6575,9 +6712,10 @@ lifesaver	🛟
 lift	🛗 🫴 🚠
 lifter	🏋️ 🏋️‍♂️ 🏋️‍♀️
 lifting	🏋️ 🏋️‍♂️ 🏋️‍♀️
-light	🩵 🚈 🚨 🚥 🚦 💡 🪶 🧨 🕯️ 🔦 🏮 🪔 🔆 🏳️‍⚧️ 🎃
+light	🩵 🚈 🚨 🚥 🚦 💡 🪶 🛙 🧨 🕯️ 🔦 🏮 🪔 🔆 🏳️‍⚧️ 🎃
 lightblueheart	🩵
 lightbulb	💡
+lighthouse	🛙
 lighting	🪔
 lightning	⛈️ 🌩️ ⚡
 lightningbolt	⚡
@@ -6589,6 +6727,8 @@ liliac	🦇
 limb	🦵
 limba	😛 😜 🤪 😝 😋 👅 🥵
 limbs	👌
+lime	🍋‍🟩
+limeta	🍋‍🟩
 limit	⛔ ⌛ 🚫 🈲
 line	🫥 〰️
 lines	📨
@@ -6612,7 +6752,7 @@ lipieumpluta	🥙
 lipii	🥙
 lips	👄 🫦 💋 😋 🤫 🤐
 lipstick	💄 💋 👄 🫦
-liquid	🫗 🫠 🚰
+liquid	🫗 🫠 🫟 🚰
 liquor	🥃
 lira	💷
 lire	💷
@@ -6687,6 +6827,8 @@ looking	👀
 loop	➰ ➿ 🔁 🔂
 loopy	😜
 loose	🤙
+loot	🪎
+lopata	🪏
 lord	👑
 lorry	🚛
 loser	🏳️
@@ -6777,7 +6919,7 @@ lupainclinataspredreapta	🔎
 lupainclinatasprestanga	🔍
 lupin	🪻
 lupine	🪻
-lupta	🤼 🤼‍♀️ ⚔️
+lupta	🫯 🤼 🤼‍♀️ ⚔️
 luptatoare	🤼‍♀️
 luptator	🥷 🤼 🪖
 luptatori	🤼
@@ -6914,7 +7056,7 @@ manblondhair	👱‍♂️
 manbouncingball	⛹️‍♂️
 manbowing	🙇‍♂️
 manca	😋
-mancare	🍔 🍕 🍽️ 😋 🥘 🍲 🥫 🍱 🥡 🦴 🍌 🥭 🫐 🥝 🍅 🫒 🥑 🥔 🥕 🌶️ 🫑 🥒 🥬 🧄
+mancare	🍔 🍕 🍽️ 😋 🥘 🍲 🥫 🍱 🥡 🦴 🦐 🦑 🦪 🍌 🥭 🫐 🥝 🍅 🫒 🥑 🥔 🥕 🌶️ 🫑
 mancarejaponezalapachet	🍱
 mancarelaconserva	🥫
 mancarelapachet	🥡
@@ -6958,7 +7100,9 @@ manie	💢
 manilla	📁
 maninlotusposition	🧘‍♂️
 maninmanualwheelchair	👨‍🦽
+maninmanualwheelchairfacingright	👨‍🦽‍➡️
 maninmotorizedwheelchair	👨‍🦼
+maninmotorizedwheelchairfacingright	👨‍🦼‍➡️
 maninsteamyroom	🧖‍♂️
 maninsuitlevitating	🕴️
 manintuxedo	🤵‍♂️ 🤵
@@ -6966,6 +7110,7 @@ manioasa	👿
 manjudge	👨‍⚖️
 manjuggling	🤹‍♂️
 mankneeling	🧎‍♂️
+mankneelingfacingright	🧎‍♂️‍➡️
 manliftingweights	🏋️‍♂️
 manmage	🧙‍♂️
 manmechanic	👨‍🔧
@@ -6980,6 +7125,7 @@ manraisinghand	🙋‍♂️
 manredhair	👨‍🦰
 manrowingboat	🚣‍♂️
 manrunning	🏃‍♂️
+manrunningfacingright	🏃‍♂️‍➡️
 mans	👞
 manscientist	👨‍🔬
 manshrugging	🤷‍♂️
@@ -6998,13 +7144,14 @@ mantelpiece	🕰️
 mantelpiececlock	🕰️
 mantilla	🧕
 mantippinghand	💁‍♂️
-manual	🧑‍🦽 👨‍🦽 👩‍🦽 🦽
+manual	🧑‍🦽 🧑‍🦽‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️ 🦽
 manualwheelchair	🦽
 manusa	🥊 🥎 🧤
 manusadebox	🥊
 manusi	🧤 🥊
 manvampire	🧛‍♂️
 manwalking	🚶‍♂️
+manwalkingfacingright	🚶‍♂️‍➡️
 manwearingturban	👳‍♂️
 manwhitehair	👨‍🦳
 manwithguapimao	👲
@@ -7013,6 +7160,7 @@ manwithskullcap	👲
 manwithturban	👳‍♂️
 manwithveil	👰‍♂️
 manwithwhitecane	👨‍🦯
+manwithwhitecanefacingright	👨‍🦯‍➡️
 manx	🇮🇲
 manz	🐴
 manzombie	🧟‍♂️
@@ -7023,8 +7171,8 @@ mapleleaf	🍁
 mapofjapan	🗾
 mar	🍎 🍏
 maracas	🪇
-marathon	🏃 🏃‍♂️ 🏃‍♀️ 🎽
-maraton	🏃 🏃‍♂️ 🏃‍♀️
+marathon	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🎽
+maraton	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
 marca	®️ ™️
 marcacomerciala	™️
 marcainregistrata	®️
@@ -7033,8 +7181,9 @@ marcatoare	📑
 marcatoaredepagini	📑
 marcator	📑 🔖
 marching	🪈
-mare	🫰 🦜 🎡 🚄 🚅 🌥️ ⬛ ⬜ 🔶 🔷 🤪 🦣 🦤 🏬 🌊 ⭕ 👎 🦭 🍢 🦞 🦐 ⚡ 🔊
+mare	🫰 🦜 🎡 🚄 🚅 🌥️ ⬛ ⬜ 🔶 🔷 🤪 🦣 🦤 🏬 🌊 ⭕ 👎 🦭 🦞 🦐 🍢 ⚡ 🔊
 marfa	🚚
+margarita	🍋‍🟩
 margea	🧿
 margele	📿
 margica	🧿
@@ -7043,15 +7192,17 @@ mari	😃 🥺 🔠
 maria	🪬
 mariana	🇲🇵
 mariane	🇲🇵
+marin	🫍
 marina	🪼 🧜
-marine	🪼
+marine	🫍 🪼
 marino	🇸🇲
 marire	🔍 🔎
 maritim	🚢 🔱
+maritime	🛙
 mark	💋 ‼️ ⁉️ ❓ ❔ ❕ ❗ ✅ ✔️ ❌ ❎ 〽️ ™️ ❣️ 📑 🔖 🔛 🆙 🏣 📌 🔰 ⭕ ☑️ 🚩
 marker	📑
 market	💹
-maro	🤎 🟤 🟫 👞 🥾
+maro	🤎 🍄‍🟫 🟤 🟫 👞 🥾
 maroc	🇲🇦
 marriage	🤵 👰 💒 💍 👰‍♂️ 👰‍♀️ 👫 💏 👨‍❤️‍💋‍👨 👩‍❤️‍💋‍👩 💑 👨‍❤️‍👨 👩‍❤️‍👩
 married	💍
@@ -7080,6 +7231,7 @@ masa	🍴 🪵 🏓 🫔
 masaj	💆 💆‍♂️ 💆‍♀️
 masca	😷 🤿 😐 😶 👹 👺 🎭
 mascadescufundari	🤿
+mascare	🫫
 masculin	♂️ 🐓 👞 👟
 masele	🦷
 masina	🚗 🚒 🚓 🚔 🏎️ 🚕 🚖 🚘 🚙 🛻 🚨 🧑‍🚒 👨‍🚒 👩‍🚒
@@ -7091,6 +7243,7 @@ masini	🚍 🚘
 masiv	⛰️
 masjid	🕌
 mask	😷 🤿 👹 👺 🎭
+masking	🫫
 masks	🎭
 maslina	🫒
 massage	💆 💆‍♂️ 💆‍♀️ ☺️ 😌 🙇
@@ -7223,7 +7376,7 @@ merci	🙏 😊 🤗 ❤️
 mercur	🌡️
 mercy	🥺
 mere	🥧
-merge	🚶 🚶‍♂️ 🚶‍♀️ 🏕️ ⛺ 🔀
+merge	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🏕️ ⛺ 🔀
 mergirl	🧜
 meridiane	🌐
 meridianele	🌐
@@ -7232,18 +7385,21 @@ mermaid	🧜‍♀️ 🧜 🧜‍♂️
 merman	🧜‍♂️ 🧜
 merperson	🧜
 merry	🎅 🤶 🧑‍🎄 🎠
-mers	🚶 🚶‍♂️ 🚶‍♀️
+mers	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️
 mersi	🙏 😊 🤗 ❤️
 mersului	🩼
 merwoman	🧜‍♀️ 🧜
 mesaj	💬 📧 📨 📩 📤 📥 📢
 meserias	🧑‍🔧
+mesh	🪍
+mess	🫟
 message	💬 🗨️
 mester	👨‍🔧 👩‍🔧 🪛
 mestera	👩‍🔧
 metal	🤘 🪙
+metamorphosis	🫌
 meteo	🌁 🌡️ ☀️ 🌞 ☁️ ⛅ 🌤️ 🌥️ 🌦️ 🌧️ 🌪️ 🌫️ 🌀 ☔ ❄️
-meteor	🌠
+meteor	🪋 🌠
 meteoroid	🌠
 metrics	📈 📉 📊
 metro	🚇 Ⓜ️
@@ -7284,6 +7440,7 @@ mierla	🐦‍⬛
 miezul	🕛
 migdala	🌰
 migdale	🌰
+migration	🫌
 mijloc	💺
 mijlociu	🖕
 mila	🥺
@@ -7308,6 +7465,7 @@ milkyway	🌌
 million	💰 💸 💲
 millionaire	🚤
 miloaga	🥺
+mimic	🪎
 mina	🖊️
 minaret	🕌
 mincinoasa	🤥
@@ -7353,6 +7511,7 @@ mirror	🪞 🪩
 mirrorball	🪩
 mischievous	👿 😉 😛 😜 😝
 miss	🥺 💔 😢 😘
+mistake	🪌
 mister	👤
 misterios	👤
 misto	😎 🆒 🔥 👌 😉 😛 😜 😏 👍
@@ -7379,7 +7538,7 @@ mobilephoneoff	📴
 mobilephonewitharrow	📲
 mobilier	🪑
 mobilitate	📱
-mobility	🩼
+mobility	🩼 👨‍🦼‍➡️ 👩‍🦼‍➡️ 🧑‍🦽‍➡️ 👨‍🦽‍➡️ 👩‍🦽‍➡️
 mocasin	🥿
 mock	🤡
 moda	👠 📼 📇
@@ -7387,7 +7546,7 @@ mode	📳
 modul	📳
 modulvibrare	📳
 moisturizer	🧴
-mojito	🌴 🍸 🍹 🏖️ 🏝️
+mojito	🍋‍🟩 🌴 🍸 🍹 🏖️ 🏝️
 moldova	🇲🇩
 moldovan	🇲🇩
 molester	🌚
@@ -7398,13 +7557,14 @@ mom	🤱 👩‍🍼 👪
 momeala	🪝 🪤
 momi	🧋
 monaco	🇲🇨
-monarch	🫅
+monarch	🫌 🫅
+monarchbutterfly	🫌
 monarh	🫅
 monarhie	🫅
 moneda	🪙 💴 💵 💶 💷
 monede	👛
 monegasque	🇲🇨
-money	💰 💸 🤑 💵 🫰 🧧 💎 🪙 💴 💶 💷 💳 💹 🏧 💱 💲 🏦 👛 📈 📉
+money	💰 💸 🤑 💵 🫰 🧧 💎 🪙 🪎 💴 💶 💷 💳 💹 🏧 💱 💲 🏦 👛 📈 📉
 moneybag	💰
 moneybags	💰
 moneymouthface	🤑
@@ -7463,7 +7623,7 @@ mosque	🕌 🕋
 mosquito	🦟
 mosul	🎅
 motan	🐈‍⬛
-mother	🤱 👩‍🍼 🤶 👪 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👩‍👦 👩‍👦‍👦 👩‍👧 👩‍👧‍👦 👩‍👧‍👧 🌬️
+mother	🤱 👩‍🍼 🤶 👨‍👩‍👦 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 👩‍👦 👩‍👦‍👦 👩‍👧 👩‍👧‍👦 👩‍👧‍👧 👪 🌬️
 motherchristmas	🤶
 mothers	👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧
 motocicleta	🏍️ 🛵
@@ -7474,14 +7634,14 @@ motorboat	🛥️ 🚤
 motorcycle	🏍️
 motoreta	🛵
 motorhome	🚙
-motorizat	🧑‍🦼 👨‍🦼 👩‍🦼 🦼
-motorized	🧑‍🦼 👨‍🦼 👩‍🦼 🦼
+motorizat	🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🦼
+motorized	🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🦼
 motorizedwheelchair	🦼
 motorscooter	🛵
 motorway	🛣️
 motoscuter	🛵
 mount	🗻
-mountain	⛰️ 🚵 🚵‍♂️ 🚵‍♀️ 🏔️ 🚞 🚠 🧗 🧗‍♂️ 🧗‍♀️ 🌋 🗻 🌁 🌄
+mountain	⛰️ 🚵 🚵‍♂️ 🚵‍♀️ 🏔️ 🚞 🚠 🧗 🧗‍♂️ 🧗‍♀️ 🛘 🌋 🗻 🌁 🌄
 mountainbicyclist	🚵
 mountainbikingman	🚵‍♂️
 mountainbikingwoman	🚵‍♀️
@@ -7498,7 +7658,7 @@ moustache	🥸 👨 〰️
 mouth	👄 🤑 🤭 🫢 🤐 😶 🫤 😮 😦 🤬 😃 😄 😆 😅 🥴 😰 😺 😐 😑 🤮 😖 🙊 👅
 mouthless	😶
 mov	💜 🟣 🟪
-move	🏃 🏃‍♂️ 🏃‍♀️ 🚛 🚶 🚣 🚴 🚵 🛺
+move	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🚛 🚶 🚣 🚴 🚵 🛺
 mover	🚐
 movie	🎥 🍿 🎞️ 📽️ 🎬 🎦
 moviecamera	🎥
@@ -7519,6 +7679,7 @@ ms	🙏 😊 🤗 ❤️ 🇲🇸
 mt	🇲🇹
 mu	🐮 🐄 🇲🇺
 muah	😘 💗
+mudslide	🛘
 mue	🖕 🍆 👅 💦 😮
 mug	🍺 ☕ 🍻
 mugs	🍻
@@ -7553,7 +7714,7 @@ muncitor	🧑‍🏭 👨‍🏭 👷‍♂️ 👷 👷‍♀️
 muncitorinconstructii	👷‍♂️
 muncitorinfabrica	👨‍🏭
 muncitorsaumuncitoareinfabrica	🧑‍🏭
-munte	⛰️ 🏔️ 🧗 🚵 🚵‍♀️ 🌋 🗻 🌄 🚞 🚠
+munte	⛰️ 🏔️ 🧗 🚵 🚵‍♀️ 🛘 🌋 🗻 🌄 🚞 🚠
 muntele	🗻
 muntelefuji	🗻
 muntenegru	🇲🇪
@@ -7568,8 +7729,8 @@ muscle	💪
 muscles	💪
 musculos	💪
 museum	🖼️ 🎨
-mushroom	🍄
-music	🎵 🎶 🎧 🔊 🎼 🎙️ 🎚️ 🎛️ 🎤 🎷 🪗 🎸 🎹 🎺 🎻 🪕 🥁 🪇 🪈 🧑‍🎤 👨‍🎤 👩‍🎤 📯 📻
+mushroom	🍄 🍄‍🟫
+music	🎵 🎶 🎧 🔊 🎼 🎙️ 🎚️ 🎛️ 🎤 🎷 🎺 🪊 🪗 🎸 🎹 🎻 🪕 🥁 🪇 🪈 🪉 🧑‍🎤 👨‍🎤 👩‍🎤
 musical	🎼 🎵 🎶 🎹
 musicalkeyboard	🎹
 musicalnote	🎵
@@ -7589,7 +7750,7 @@ muted	🔇 🔕
 mutedspeaker	🔇
 mutual	😎
 muzeu	🖼️ 🎨
-muzica	🎵 🎶 🎧 🔊 🎼 🎙️ 🎚️ 🎛️ 🎤 🎷 🪗 🎸 🎹 🎺 🎻 🪕 🥁 🪘 🪇 🪈
+muzica	🎵 🎶 🎧 🔊 🎼 🎙️ 🎚️ 🎛️ 🎤 🎷 🎺 🪊 🪗 🎸 🎹 🎻 🪕 🥁 🪘 🪇 🪈 🪉
 muzical	🎸 🎹 🎻
 muzicala	🎵 🎹 🎼
 muzicale	🎶
@@ -7603,9 +7764,11 @@ myanmar	🇲🇲
 myanmarese	🇲🇲
 myanmareseflag	🇲🇲
 mysterious	👤
+mystery	🫆
 mystical	🧌 🦄
 myth	🧚 🧚‍♂️ 🧚‍♀️ 🧝 🧝‍♂️ 🧝‍♀️ 🧞 🧞‍♂️ 🧞‍♀️ 🐲 🐉
 mythology	🪽
+mythtical	🐦‍🔥
 mz	🇲🇿
 na	🇳🇦
 naan	🫓
@@ -7626,7 +7789,7 @@ namibian	🇳🇦
 nani	🛌
 nanna	👵
 nanny	👩‍🍼 👨‍🍼 🧑‍🍼
-nap	😴 😫 🥱 🛌 😪
+nap	😴 😫 🥱 🛌 🫜 😪
 nari	😤 👃
 narutomaki	🍥
 nas	👃 🥸 🐽
@@ -7643,10 +7806,10 @@ national	🏞️
 nationalpark	🏞️
 nations	🇺🇳
 natiunile	🇺🇳
-natura	🐌 🐝 🐞 🌵 🌋 🗻 🌅 🌈 ⚡ 💧 🌊
+natura	🐌 🐝 🐞 🌵 🍄‍🟫 🌋 🗻 🌅 🌈 ⚡ 💧 🌊
 natural	🫚
 naturala	🏞️
-nature	🐌 🐝 🐞 🌵 🌋 🗻 🌅 🌈 ⚡ 💧 🌊 🙈 🙉 🙊 🐵 🐒 🦍 🐶 🐕 🐩 🐺 🦊 🦝 🐱
+nature	🐌 🐝 🐞 🌵 🍄‍🟫 🌋 🗻 🌅 🌈 ⚡ 💧 🌊 🙈 🙉 🙊 🐵 🐒 🦍 🐶 🐕 🐩 🐺 🦊 🦝
 naughty	🥵 😈 🤤 🫦 💦 😏
 nauru	🇳🇷
 nauruan	🇳🇷
@@ -7659,7 +7822,7 @@ nautic	🤽 🤽‍♂️ 🤽‍♀️
 nava	⚓ 🛳️ ⛴️ 🚢
 naval	🚢
 navigatie	🧭 ⛵ 🚢
-navigation	🧭
+navigation	🧭 🛙
 nazar	🧿
 nazaramulet	🧿
 nba	🏀
@@ -7683,9 +7846,10 @@ needs	💩
 needsimprovement	💩
 nefericire	😒 😭 😡 😠
 nefericit	😑 😒 😧 😢 😭 😞 😩 😤 😡 😠
-negatie	🙅 🙅‍♂️ 🙅‍♀️
+nefertil	🪾
+negatie	🙅 🙅‍♂️ 🙅‍♀️ 🙂‍↔️
 negation	🈚
-negativ	👎 🦹 🧲
+negativ	🙂‍↔️ 👎 🦹 🧲
 negativa	📉
 negative	❎ 📉 🧲 🎞️ 🅰️ 🆎 🅱️ 🅾️ 🅿️
 negativechart	📉
@@ -7704,6 +7868,7 @@ nemernic	🤬 😡 🖕
 nemo	🐠
 nemultumire	😒
 nemultumita	🙍
+nemurire	🐦‍🔥
 nenorocit	🤬 😡 🖕
 nepal	🇳🇵
 nepalese	🇳🇵
@@ -7716,6 +7881,7 @@ neputinta	😣
 nerd	🤓
 nerdface	🤓
 nerdy	🤓 👓
+neroditor	🪾
 nerves	😟
 nervi	😒 😖 😤 😠 🗯️
 nervoasa	😠 😡 🤬 😤
@@ -7726,19 +7892,21 @@ nesigur	🫤
 nesiguranta	🫤
 nest	🪹 🪺
 nestemata	💎
+nestemate	🪎
 nesting	🪆 🪹 🪺
 nestingdolls	🪆
 nestwitheggs	🪺
-net	🥅 ⛹️ ⛹️‍♂️ ⛹️‍♀️
+net	🥅 🪍 ⛹️ ⛹️‍♂️ ⛹️‍♀️
 netherlands	🇧🇶 🇳🇱
+netwithhandle	🪍
 network	🛜
 neutra	😐
-neutral	😐 💙 🧒 🧑 🧓 🧑‍🤝‍🧑 💏 💑
+neutral	😐 🫹 🫺 💙 🧒 🧑 🧓 🧑‍🤝‍🧑 💏 💑
 neutralface	😐
 neutru	😐 🧒 🧑 🧑‍🦰 🧑‍🦱 🧑‍🦳 🧑‍🦲 🧓
-nevazatoare	👩‍🦯
-nevazator	🧑‍🦯 👨‍🦯 🦮 🦯
-nevazatori	🧑‍🦯 👨‍🦯 👩‍🦯 🦯
+nevazatoare	👩‍🦯 👩‍🦯‍➡️
+nevazator	🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 🦮 🦯
+nevazatori	🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🦯
 nevertebrata	🪼
 nevinovatie	👐
 nevis	🇰🇳
@@ -7792,7 +7960,7 @@ niue	🇳🇺
 niuean	🇳🇺
 nivel	🎚️
 nl	🇳🇱
-no	👎 ❌ 🙅 🚫 😶 🙈 🙉 🙊 🙅‍♂️ 🙅‍♀️ 🔕 📭 ⛔ 🚳 🚭 🚯 🚷 📵 🔞 🈵 🤯 😲 🤦 🤦‍♂️
+no	👎 ❌ 🙅 🚫 😶 🙈 🙉 🙊 🙅‍♂️ 🙅‍♀️ 🔕 📭 ⛔ 🚳 🚭 🚯 🚷 📵 🔞 🈵 🙂‍↔️ 🤯 😲 🤦
 noapte	🌙 🌃 😴 😙 🌉 🌟 🌠 🥱 💖 💤 🛌 🦉
 noaptea	🌉
 noapteinstelata	🌃
@@ -7801,7 +7969,7 @@ nobicycles	🚳
 nobikes	🚳
 nobil	🫅
 noble	🫅
-nod	🪢
+nod	🪢 🙂‍↕️
 noentry	⛔
 noentrysign	🚫
 nogood	🙅
@@ -7828,11 +7996,12 @@ nooo	😩
 nope	👎 ❌ 🙅 🚫 🙅‍♂️ 🙅‍♀️
 nopedestrians	🚷
 noptii	🕛
-nor	☁️ ⛈️ 🌤️ 🌥️ 🌦️ 🌧️ 🌨️ 🌩️ 💨 💭 ⛅ 🌪️ 🌫️ 🌬️
+nor	☁️ 🫯 ⛈️ 🌤️ 🌥️ 🌦️ 🌧️ 🌨️ 🌩️ 💨 💭 ⛅ 🌪️ 🌫️ 🌬️
 norcufulger	🌩️
 norcufulgersiploaie	⛈️
 norcuploaie	🌧️
 nord	🇰🇵 🇲🇰 🇲🇵 ⬆️ ↗️ ↖️
+nordebataie	🫯
 nordeninsoare	🌨️
 norfolk	🇳🇫
 norfolkisland	🇳🇫
@@ -7877,7 +8046,7 @@ novels	📖 📚
 np	🇳🇵
 nr	🇳🇷
 nsfw	🔞 🍆 🍑 💦 😈 🥵 🫦
-nu	👎 ❌ 🙅 🚫 🙈 🙉 🙊 🚯 🙅‍♂️ 🙅‍♀️ 🔕 ⛔ 🚳 🚭 🚷 📵 🔞 🤐 🤯 😕 😮 😲 😳 🥺
+nu	👎 ❌ 🙅 🚫 🙈 🙉 🙊 🚯 🙂‍↔️ 🙅‍♂️ 🙅‍♀️ 🔕 ⛔ 🚳 🚭 🚷 📵 🔞 🤐 🤯 😕 😮 😲 😳
 nuaruncatigunoipejos	🚯
 nuaudnimicrau	🙉
 nuca	🥥
@@ -7920,13 +8089,13 @@ oala	🍲 🥘
 oalacumancare	🍲
 oameni	👥
 oar	🚣 🚣‍♂️ 🚣‍♀️
-oarba	👩‍🦯
+oarba	👩‍🦯 👩‍🦯‍➡️
 oase	☠️ 🦴 🩻
 oatmeal	🥣
 oberon	🧚 🧚‍♂️
 obiect	🫖 🩴 🪚 🪝 🪜 🪞 🪟 🪠 🪣 🪥
-oboseala	😴 😩 😫 🥱 🙀 💤 🛌
-obosit	😴 🥱 😪 💤 😵 😩 😫 🛌
+oboseala	😴 🫩 😩 😫 🥱 🙀 💤 🛌
+obosit	😴 🥱 😪 💤 🫩 😵 😩 😫 🛌
 obosita	😴 🥱 😪 💤 😫 😩 🙀
 obraznic	🥵 😈 🤤 🫦 💦 😏
 obraznica	🥵 😈 🤤 🫦 💦 😏
@@ -7938,12 +8107,12 @@ obutton	🅾️
 obuttonbloodtype	🅾️
 ocazie	🉐
 occidentala	🇪🇭
-ocean	🇮🇴 🧜 🧜‍♂️ 🧜‍♀️ 🏄 🏄‍♂️ 🏄‍♀️ 🐳 🐋 🐬 🦭 🐙 🪸 🪼 🌊 🐠 🐡 🦈 🦐 🦑 🤿
+ocean	🇮🇴 🧜 🧜‍♂️ 🧜‍♀️ 🏄 🏄‍♂️ 🏄‍♀️ 🐳 🐋 🐬 🫍 🦭 🐙 🪸 🪼 🌊 🐠 🐡 🦈 🦐 🦑 🤿
 oceanul	🇮🇴
 ochelari	👓 😎 🕶️ 🥽 🥸 🤓
 ochelarideprotectie	🥽
 ochelaridesoare	🕶️
-ochi	👀 👁️ 😄 😁 😊 😍 🤩 😚 😙 😵‍💫 🥹 😸 😻 👁️‍🗨️ 😜 🤪 😝 🙄 💩 😽 👓 🕶️ 😆 🥴
+ochi	👀 👁️ 😄 😁 😊 😍 🤩 😚 😙 😵‍💫 🥹 😸 😻 👁️‍🗨️ 😜 🤪 😝 🙄 💩 😽 👓 🕶️ 😆 🫩
 ochii	😃 😆 😝 🫢 🙄 😻 😽 👀
 ochiinbalondedialog	👁️‍🗨️
 ochiul	😉 😜 🫣 👀 🧿
@@ -8014,7 +8183,7 @@ oldschool	⌛ ⏳ 📟 💾 📺 📼
 oldwoman	👵
 olive	🫒
 olives	🫒
-om	🕉️ 🧑‍🔬 👨‍🔬 👩‍🔬 ☃️ ⛄ 👱 💂 ⛹️ 🤸 🤼 🤽 🤾 🛀 🛌 👨‍💼 🚶‍♀️ 🕴️ 🥼 🇴🇲
+om	🕉️ 🧑‍🔬 👨‍🔬 👩‍🔬 ☃️ ⛄ 👱 💂 ⛹️ 🤸 🤼 🤽 🤾 🛀 🛌 👨‍💼 🚶‍♀️ 🚶‍♀️‍➡️ 🕴️ 🥼 🇴🇲
 oman	🇴🇲
 omani	🇴🇲
 omat	⛷️ ❄️ ☃️ 🎿 🛷
@@ -8108,10 +8277,11 @@ oraunufix	🕐
 oraunusijumatate	🕜
 orazecefix	🕙
 orazecesijumatate	🕥
-orb	🧑‍🦯 👨‍🦯 🦮 🦯
-orbi	👨‍🦯 👩‍🦯 🦯
+orb	🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 🦮 🦯
+orbi	👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🦯
 orbit	🛰️
-orchestra	🪈 🎻
+orca	🫍
+orchestra	🪈 🪉 🎻
 order	🦁 📑
 ore	⏳ 🏪
 oreo	🍪
@@ -8127,10 +8297,11 @@ orgoliu	🦚
 oribil	😝
 orientare	🧭
 orientata	⬆️ ↗️ ➡️ ↘️ ⬇️ ↙️ ⬅️ ↖️ 🔍 🔎
-orientate	🔃
+orientate	🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️ 🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️ 🧑‍🦼‍➡️ 👨‍🦼‍➡️ 👩‍🦼‍➡️ 🧑‍🦽‍➡️ 👨‍🦽‍➡️ 👩‍🦽‍➡️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🔃
 orienteering	🧭
 orizont	🏙️
-orizontal	🚥
+orizontal	🚥 🙂‍↔️
+orizontala	🙂‍↔️
 orleans	⚜️
 ornament	❣️ ❓ ❔ ❕
 ornithology	🐔 🐓 🐤 🐥 🐦 🐧 🕊️ 🦅 🦆 🦢 🦉 🦤 🦩 🦚 🦜 🐦‍⬛ 🪿
@@ -8176,7 +8347,7 @@ ozn	👽 👾 🛸
 pa	👋 📢 🎤 🇵🇦
 pacalici	🃏
 pacanele	🎰
-pace	✌️ ☮️ 😌 🚶 🚶‍♂️ 🚶‍♀️ 🕊️ 🏳️ 🪦
+pace	✌️ ☮️ 😌 🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🕊️ 🏳️ 🪦
 pachet	📦 🍱 🥡 🛃
 pacii	☮️
 package	📦
@@ -8187,7 +8358,7 @@ pad	🗒️ 🗓️
 paddle	🚣 🚣‍♂️ 🚣‍♀️ 🏓 🛶
 paddles	🚣
 padlock	🔒 🔓
-padure	🌳 🫐
+padure	🫈 🌳 🫐
 paella	🥘
 page	📃 📄
 pageant	🎽
@@ -8213,7 +8384,7 @@ pail	🥡 🪣
 pain	🥲 🫦
 paine	🍞 🥖 🥐 🫓 🥯 🥪
 pained	😧
-paint	🎨 🧑‍🎨 👨‍🎨 👩‍🎨
+paint	🎨 🫟 🧑‍🎨 👨‍🎨 👩‍🎨
 paintbrush	🖌️
 painter	👨‍🎨 👩‍🎨 🎨 🧑‍🎨
 painting	🖼️ 🎨 🖌️ 🧑‍🎨
@@ -8263,8 +8434,8 @@ panda	🐼 🎍
 pandaface	🐼
 panglica	🎗️ 💝 🎀 👒
 panglicainmemoriam	🎗️
-panic	🫨
-panica	😦
+panic	🫨 🫪
+panica	🫪 😦
 panicat	😦 😰 😓
 panorama	🌆
 pantalon	👖
@@ -8319,15 +8490,16 @@ parchment	📜
 parcnational	🏞️
 pardesiu	🧥
 pardon	🙏 😔 🥺 😞
-parent	🧑‍🍼 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦 👨‍👧‍👧 👩‍👦 👩‍👦‍👦 👩‍👧 👩‍👧‍👦 👩‍👧‍👧
-parents	👪 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧
+parent	🧑‍🍼 👨‍👦 👨‍👦‍👦 👨‍👧 👨‍👧‍👦 👨‍👧‍👧 👩‍👦 👩‍👦‍👦 👩‍👧 👩‍👧‍👦 👩‍👧‍👧 🧑‍🧒 🧑‍🧒‍🧒
+parents	👪 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧 🧑‍🧑‍🧒 🧑‍🧑‍🧒‍🧒
 parfum	🌸
 pariu	💰
 park	🏞️ 🛝 🎡 🎢 ⛲
 parking	🅿️
 parlor	💇 💇‍♂️ 💇‍♀️
+paroasa	🫈
 parola	🔑
-paros	🧔
+paros	🧔 🫈
 parrot	🦜
 part	💨 😷 〽️ 🖖
 partalternationmark	〽️
@@ -8339,11 +8511,11 @@ party	🥳 🎉 🎊 🍾 🪩 😛 😜 👯 👯‍♂️ 👯‍♀️ 🎂 �
 partying	🥳 👯 👯‍♂️ 👯‍♀️
 partyingface	🥳
 partypopper	🎉
-pas	🦵 🚶‍♀️ 🚶
+pas	🦵 🚶‍♀️ 🚶‍♀️‍➡️ 🚶 🚶‍➡️
 pasageri	🛳️ ⛴️ 🚢
 pasapoarte	🛂
 pasaport	🛂
-pasare	🐦 🐦‍⬛ 🍗 🦃 🐔 🐓 🐣 🐤 🐥 🐧 🕊️ 🦅 🦆 🦢 🦉 🦤 🪶 🦩 🦚 🦜 🪽 🪿
+pasare	🐦 🐦‍⬛ 🍗 🦃 🐔 🐓 🐣 🐤 🐥 🐧 🕊️ 🦅 🦆 🦢 🦉 🦤 🪶 🦩 🦚 🦜 🪽 🪿 🐦‍🔥
 pasareneagra	🐦‍⬛
 pasarica	🐱 🍑 🌮 🌷 💦
 pasi	👣
@@ -8361,6 +8533,7 @@ password	🔑 🔒 🗝️
 pasta	🍝 🖊️
 pastaie	🫛
 pastaiedemazare	🫛
+pastarnac	🫜
 paste	🍝 🍥
 pastelui	🗿
 pastila	💊
@@ -8368,6 +8541,7 @@ pastile	💊
 pastrare	🛅
 pastry	🍥 🎂 🍰 🥧 🧁
 pat	🛏️ 🛌 😴
+pata	🫟
 pateu	🍥
 patience	🤌
 patina	🛼 ⛸️
@@ -8428,13 +8602,14 @@ peapod	🫛
 pear	🍐
 pearl	🦪 🧋 🫧
 pearly	🦷
-pedestrian	🚶 🚶‍♂️ 🚶‍♀️ 🚸 🚷
+pedestrian	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🚸 🚷
 pedestrians	🚷
 pee	💦 🚽
 peek	🫣 🙈 👀
 peekaboo	🫣 🙈
 peeking	🫣 🙈
 peep	🫣 👀
+peerson	🚶‍➡️
 peisaj	🏙️ 🌆
 peisajurban	🏙️
 peisajurbanlaapus	🌆
@@ -8454,8 +8629,8 @@ pensionara	👵
 pensive	😔
 pensiveface	😔
 pensula	🖌️
-pentru	🧑‍🦯 👨‍🦯 👩‍🦯 🛝 🕰️ 🪚 🦯 🏧 🚮 ♿ ⚛️ ⏭️ ⏮️ 🔼 ⏫ 🔽 ⏬ ♻️ 🔰 🈂️ 🈺 🤟 🤲 🥢
-people	👯 🤼 🧑‍🤝‍🧑 🫂 👯‍♂️ 👯‍♀️ 👥 👭 👫 👬 👪 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦
+pentru	🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 🛝 🕰️ 🪚 🦯 🏧 🚮 ♿ ⚛️ ⏭️ ⏮️ 🔼 ⏫ 🔽 ⏬ ♻️ 🔰 🈂️ 🈺
+people	👯 🤼 🧑‍🤝‍🧑 🫂 👯‍♂️ 👯‍♀️ 👥 👭 👫 👬 👨‍👩‍👧 👨‍👩‍👧‍👦 👨‍👩‍👦‍👦 👨‍👩‍👧‍👧 👨‍👨‍👦 👨‍👨‍👧 👨‍👨‍👧‍👦 👨‍👨‍👦‍👦 👨‍👨‍👧‍👧 👩‍👩‍👦 👩‍👩‍👧 👩‍👩‍👧‍👦 👩‍👩‍👦‍👦 👩‍👩‍👧‍👧
 peopleholdinghands	🧑‍🤝‍🧑
 peoplehugging	🫂
 peoplewithbunnyears	👯
@@ -8479,7 +8654,7 @@ performing	🎭
 performingarts	🎭
 pergament	📜
 periaj	🪥
-pericol	⚡ ☢️ ☣️
+pericol	🛘 ⚡ ☢️ ☣️
 periculos	💣
 periere	🪥
 periferic	🖱️ 🖲️
@@ -8496,10 +8671,11 @@ persevere	😣
 perseverenta	😣
 persevering	😣
 perseveringface	😣
-persoana	👱 🧓 🙍 🙎 🙅 🙆 💁 🙋 🧏 🙇 🤦 🤷 🧑‍⚕️ 🫅 👳 🤵 👰 🫄 🧑‍🍼 🧜 💆 💇 🚶 🧍
+persoana	👱 🧓 🙍 🙎 🙅 🙆 💁 🙋 🧏 🙇 🤦 🤷 🧑‍⚕️ 🫅 👳 🤵 👰 🫄 🧑‍🍼 🧜 💆 💇 🚶 🚶‍➡️
 persoanablonda	👱
 persoanabosumflata	🙎
 persoanacarealearga	🏃
+persoanacarealeargaorientatespredreapta	🏃‍➡️
 persoanacarebatemingea	⛹️
 persoanacareexplica	💁
 persoanacarefacebaie	🛀
@@ -8511,6 +8687,7 @@ persoanacarejoacahandbal	🤾
 persoanacarejoacapolopeapa	🤽
 persoanacarejongleaza	🤹
 persoanacaremerge	🚶
+persoanacaremergeorientatespredreapta	🚶‍➡️
 persoanacarepracticascrima	🤺
 persoanacarepracticasnowboard	🏂
 persoanacarepracticasurfing	🏄
@@ -8524,6 +8701,7 @@ persoanacareseinclina	🙇
 persoanacaresetunde	💇
 persoanacarevaslesteinbarca	🚣
 persoanacubastonpentrunevazatori	🧑‍🦯
+persoanacubastonpentrunevazatoriorientatespredreapta	🧑‍🦯‍➡️
 persoanacucoroana	🫅
 persoanacuturban	👳
 persoanacuvoal	👰
@@ -8532,13 +8710,16 @@ persoanafacandungestdeok	🙆
 persoanahranindunbebelus	🧑‍🍼
 persoanaincostumlevitand	🕴️
 persoanaingenunchi	🧎
+persoanaingenunchiorientatespredreapta	🧎‍➡️
 persoanainpat	🛌
 persoanainpicioare	🧍
 persoanainpozitialotus	🧘
 persoanainsarcinata	🫄
 persoanainsauna	🧖
 persoanainscauncurotilemanual	🧑‍🦽
+persoanainscauncurotilemanualorientatespredreapta	🧑‍🦽‍➡️
 persoanainscauncurotilemotorizat	🧑‍🦼
+persoanainscauncurotilemotorizatorientatespredreapta	🧑‍🦼‍➡️
 persoanainsmoching	🤵
 persoanaintristata	🙍
 persoanainvarsta	🧓
@@ -8577,12 +8758,15 @@ persongolfing	🏌️
 personinbed	🛌
 personinlotusposition	🧘
 personinmanualwheelchair	🧑‍🦽
+personinmanualwheelchairfacingright	🧑‍🦽‍➡️
 personinmotorizedwheelchair	🧑‍🦼
+personinmotorizedwheelchairfacingright	🧑‍🦼‍➡️
 personinsteamyroom	🧖
 personinsuitlevitating	🕴️
 personintuxedo	🤵
 personjuggling	🤹
 personkneeling	🧎
+personkneelingfacingright	🧎‍➡️
 personliftingweights	🏋️
 personmountainbiking	🚵
 personplayinghandball	🤾
@@ -8592,6 +8776,7 @@ personraisinghand	🙋
 personredhair	🧑‍🦰
 personrowingboat	🚣
 personrunning	🏃
+personrunningfacingright	🏃‍➡️
 personshrugging	🤷
 personstanding	🧍
 personsurfing	🏄
@@ -8599,6 +8784,7 @@ personswimming	🏊
 persontakingbath	🛀
 persontippinghand	💁
 personwalking	🚶
+personwalkingfacingright	🚶‍➡️
 personwearingturban	👳
 personwhitehair	🧑‍🦳
 personwithcrown	🫅
@@ -8607,6 +8793,7 @@ personwithskullcap	👲
 personwithturban	👳
 personwithveil	👰
 personwithwhitecane	🧑‍🦯
+personwithwhitecanefacingright	🧑‍🦯‍➡️
 peru	🇵🇪
 peruvian	🇵🇪
 pescuit	🚣 🚣‍♀️ 🦦 🐟 🎣 🪝
@@ -8634,6 +8821,7 @@ pharmacy	💊
 phew	😅 😮‍💨 🥵 😥 😌 😤
 philippines	🇵🇭
 pho	🍜
+phoenix	🐦‍🔥
 phone	📱 📞 📲 📴 🤳 ☎️ 📵 📶 📳 🤙 🔋
 phones	📵
 photo	📷 📸 🏔️ ⛰️ 🌋 🗻 🏕️ 🏜️ 🏝️ 🏞️ 🏟️ 🏘️ 🏯 🗼 ⛲ ⛺ 🌁 🏙️ 🌄 🌅 🌆 🌇 🌉 🎠
@@ -8667,7 +8855,7 @@ piciorului	🦶 🦵
 pick	⛏️ 🪮 ⚒️ 🫳 🙋 🙋‍♂️ 🙋‍♀️ 🛻
 pickaxe	⛏️
 picket	🪧
-pickle	🥒
+pickle	🫝 🥒
 pickup	🛻
 pickuptruck	🛻
 picnic	🧺 🍉
@@ -8689,10 +8877,11 @@ pierre	🇵🇲
 piersica	🍑
 piesa	🧩
 piesadepuzzle	🧩
-pieton	🚶 🚶‍♀️
+pieton	🚶 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️
 pietonal	🚸
 pietoni	🚸 🚷
 pietonilor	🚷
+pietre	🛘
 pig	🐖 🐷 🐽 🐗 🥓
 pig2	🐖
 pigface	🐷
@@ -8789,7 +8978,7 @@ pizdele	🐱 🍑 🌮 🌷 💦
 pizdoc	🐱 🍑 🌮 🌷 💦
 pizdos	🐱 🍑 🌮 🌷 💦
 pizdulice	🐱 🍑 🌮 🌷 💦
-pizza	🍕
+pizza	🍕 🍄‍🟫
 pk	🇵🇰
 pl	🇵🇱
 placa	🏂 🏄 🛹 🏄‍♀️
@@ -8816,7 +9005,7 @@ planning	📆 🗓️
 plans	😂 😪 🥹 😢 😭 😩 😿
 planset	😪 😢 😩 😿
 planseta	📋
-plant	🪴 💐 🌸 🏵️ 🌹 🌺 🌻 🌼 🌷 🪻 🌱 🌴 🌵 🌾 🌿 ☘️ 🍀 🌰 🎍 🥀 🌲 🌳 🍁 🍂
+plant	🪴 💐 🌸 🏵️ 🌹 🌺 🌻 🌼 🌷 🪻 🌱 🌴 🌵 🌾 🌿 ☘️ 🍀 🌰 🎍 🪏 🥀 🌲 🌳 🍁
 planta	🪴 🌿 🌸 🏵️ 🌹 🌺 🌻 🌼 🌷 🌱 🌵 🌾 ☘️ 🍀 🍄 🌰 🎍
 plantaaromatica	🌿
 plantain	🍌
@@ -8862,7 +9051,7 @@ plicrosu	🧧
 plictis	🥱
 plictiseala	😒 🥱 😑 🙄 😴 💅
 plictisit	😒 🥱 😑 😔
-plimbare	🚶 🚶‍♂️ 🚶‍♀️
+plimbare	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️
 plin	🌕
 plina	🌕 🌝 📬
 plm	🖕 🍆 🤬
@@ -8895,7 +9084,7 @@ podcast	🎙️ 📻
 podluminatnoaptea	🌉
 pofta	🥵 😈 🤤 🫦 💦 😏
 poftim	😮 😦 😧 👀
-point	👉 👈 👆 👇 ☝️ 💯 🪝 🫵 ↗️ ↖️ 🔼 🈯
+point	👉 👈 👆 👇 ☝️ 💯 🫹 🫺 🪝 🫵 ↗️ ↖️ 🔼 🈯
 pointdown	👇
 pointe	🩰
 pointed	🔯 ✴️ 🔺 🔻 🧝 🧝‍♂️ 🧝‍♀️
@@ -8969,6 +9158,7 @@ portabil	💻
 portativ	🎼
 portavoce	📢
 portii	🥅
+portobello	🍄‍🟫
 portocala	🍊
 portocalie	🧡 📙 🟠
 portocaliu	🟠 🟧 🔶 🔸 🧡 📙
@@ -9030,7 +9220,7 @@ pozitia	🧘 🧘‍♂️ 🧘‍♀️
 pozitiv	👍 🧲
 practica	🤺 🏂 🏄 🏄‍♂️ 🏄‍♀️ 🤼 🤼‍♂️ 🤼‍♀️
 practicant	🏂
-prada	🏴‍☠️ 🐯 🐅 🐆
+prada	🪎 🏴‍☠️ 🐯 🐅 🐆
 praf	💨
 praise	👏 🙌
 prajire	🍤
@@ -9043,7 +9233,7 @@ prajiturelecuravas	🥠
 pranava	🕉️
 prank	😜 😝 😛 😏
 prawn	🍤 🦐
-pray	🙏 🤲 🛐 🧎 🧎‍♂️ 🧎‍♀️
+pray	🙏 🤲 🛐 🧎 🧎‍♂️ 🧎‍♀️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️
 prayed	👏
 prayer	📿 🤲 🙏 🛐
 prayerbeads	📿
@@ -9055,7 +9245,7 @@ pregnantlady	🤰
 pregnantman	🫃
 pregnantperson	🫄
 pregnantwoman	🤰
-premiu	🎖️ 🏆 🏅
+premiu	🎖️ 🏆 🏅 🪎
 preparare	🍚
 presa	📰
 present	🎁
@@ -9094,7 +9284,7 @@ prince	🤴
 princess	👸
 principe	🇸🇹 🤴
 prinde	🫴 🤾‍♀️ 🤾
-print	🤴 👣 🐾
+print	🤴 👣 🫆 🐾
 printa	🖨️
 printed	📄
 printer	🖨️
@@ -9106,10 +9296,10 @@ private	🔒 🕵️
 privire	👀
 privitor	🫵
 priza	🔌
-prize	🏆
+prize	🏆 🪎
 proaspat	🪟
 proasta	🤡 🤦 🐂
-probing	🧑‍🦯 👨‍🦯 👩‍🦯 🦯
+probing	🧑‍🦯 👨‍🦯 👩‍🦯 🦯 🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️
 probingcane	🦯
 problem	⚠️
 problema	😵‍💫
@@ -9205,6 +9395,7 @@ puncte	💯
 punctuatie	❣️ ‼️ ⁉️ ❓ ❔ ❕ ❗
 punctuation	❣️ ‼️ ⁉️ ❓ ❔ ❕ ❗ 〰️
 punga	🛍️ 💰
+pungi	🫩
 punk	🧷
 pup	😘 💋 😗 😚
 pupacioasa	😗 😚 😙 😽 😘
@@ -9267,7 +9458,7 @@ queer	🌈 🏳️‍🌈
 quench	🧯
 question	❓ 🤔 ⁉️ ❔ 🙋 🙋‍♂️ 🙋‍♀️
 questionmark	❓
-quick	🏃 🏃‍♂️ 🏃‍♀️
+quick	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
 quid	💷
 quiet	🤫 🤐 🤭 🫢 😶 🙊 🔇 🔕 📴
 quivering	😖
@@ -9278,12 +9469,12 @@ rabbit2	🐇
 rabbitface	🐰
 rac	🦀 ♋
 raccoon	🦝
-race	🏃 🏃‍♂️ 🏃‍♀️ 🏁 🏇 🚵‍♂️ 🚵‍♀️ 🏎️ 🏍️
+race	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🏁 🏇 🚵‍♂️ 🚵‍♀️ 🏎️ 🏍️
 raceala	🤒 🤧 😷 🤢 🥶
 racehorse	🏇 🐎
 racheta	🚀 🧑‍🚀 👨‍🚀 👩‍🚀 🎾 🏸
 rachete	🚀
-racing	🏇 🏎️ 🏃 🏃‍♂️ 🏃‍♀️ 🐎 🏍️ 🏁
+racing	🏇 🏎️ 🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🐎 🏍️ 🏁
 racingcar	🏎️
 racire	🪭
 racit	🤒 🤧 😷 🤢
@@ -9292,8 +9483,9 @@ racorire	🪭
 racoritoare	🥤
 racquet	🎾 🏸
 rad	😂 🤣 😆 😄 😹 😎 👌
-radacina	🫚
+radacina	🫚 🫜
 radacinadeghimbir	🫚
+radacinoasa	🫜
 rade	😄 😆 🤣 😂 😹
 radem	😂 🤣 😆 😄 😹
 radiatii	☢️
@@ -9306,6 +9498,7 @@ radioactivitate	☢️
 radioasa	😁
 radiobutton	🔘
 radiografie	🩻
+radish	🫜
 raft	🚣 🚣‍♂️ 🚣‍♀️
 rafting	🚣
 rage	😡 😠
@@ -9349,7 +9542,7 @@ range	🏌️ 🏌️‍♂️ 🏌️‍♀️
 ranita	💔
 ranjet	😏 😸
 ranjind	😸
-rapid	💨 🏃 🏃‍♀️ 👟
+rapid	💨 🏃 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 👟
 rapida	⏩ ⏪
 ras	😂 🤣 😆 😄 😹 😀 🤭 💈 🪒
 rasa	🐩
@@ -9387,6 +9580,8 @@ ready	🛄
 real	🫀
 realization	🤭
 realize	💭
+rebirth	🐦‍🔥
+reborn	🐦‍🔥
 rebound	🪃
 rebuild	👷 👷‍♂️ 👷‍♀️
 rece	🥶 ❄️ 😅 😰 😓 🧊 💧
@@ -9454,6 +9649,7 @@ reflectorizant	🦺
 reflectorizanta	🦺
 reflexie	🪞
 refresh	🔃 🔄 🚻
+refreshing	🍋‍🟩
 refuse	🫷 🫸
 refuz	🫷 🫸
 regal	🫅 🤴 👑
@@ -9462,6 +9658,7 @@ regalitate	🫅 👑
 regardless	🤷
 regatul	🇬🇧
 rege	👑 🤴 🦁
+regenerare	🐦‍🔥
 regina	👑 👸
 reginei	💂‍♀️
 regional	🇨🇳 🇩🇪 🇪🇸 🇫🇷 🇮🇹 🇯🇵 🇰🇷 🇷🇺 🇺🇸
@@ -9472,7 +9669,11 @@ reglare	🎛️
 regret	🙇 🙇‍♂️ 🙇‍♀️
 regular	🚆
 reincarcare	🔃
+reincarnare	🐦‍🔥
+reincarnation	🐦‍🔥
 reindeer	🦌
+reinvent	🐦‍🔥
+reinventare	🐦‍🔥
 relatie	👭 👬
 relationship	💑 👩‍❤️‍👨 👨‍❤️‍👨 👩‍❤️‍👩
 relax	🤌 💆 💆‍♂️ 💆‍♀️ 🧖 🧖‍♂️ 🧖‍♀️ 🧘 🧘‍♂️ 🧘‍♀️ 🍺 🍻 ♨️
@@ -9488,11 +9689,14 @@ relievedface	😌
 religie	💒 ⛪ 🕌 🕍 ⛩️ 🕋 📿 🛐 🕉️ ✡️ ☸️ ☯️ ✝️ ☦️ ☪️ 🕎 🪯
 religion	⛪ 🕌 🕍 ⛩️ 🕋 📿 🛐 🕉️ ✡️ ☸️ ☯️ ✝️ ☦️ ☪️ 🕎 🪯 🛕 🪬 🔯
 religious	📿 🛐
+relish	🫝
 reload	🔃
 reminder	🎗️
 reminderribbon	🎗️
 remodel	👷 👷‍♂️ 👷‍♀️
-remove	🔥 ⚰️ ➖ ❌
+remove	🪌 🔥 ⚰️ ➖ ❌
+renastere	🐦‍🔥
+renewal	🐦‍🔥
 renunta	🫳
 rep	🇩🇴
 repair	👷 👷‍♂️ 👷‍♀️ 🧑‍🔧 👨‍🔧 👩‍🔧
@@ -9504,7 +9708,7 @@ repeat	🔁 🔂 🔃
 repeatbutton	🔁
 repeatone	🔂
 repeatsinglebutton	🔂
-repede	⏫ ⏬ 🏃 🏃‍♀️ 👟 ⏩
+repede	⏫ ⏬ 🏃 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 👟 ⏩
 repercusiune	🪃
 repercussion	🪃
 repertoriu	📇
@@ -9521,6 +9725,7 @@ rescueworkerhelmet	⛑️
 rescueworkershelmet	⛑️
 research	👨‍🔬 👩‍🔬
 reserved	🈯
+resilience	🫫
 resist	🥹
 resort	⛵
 resources	🚚
@@ -9549,6 +9754,7 @@ reunion	🇷🇪
 reunionnais	🇷🇪
 reuse	♻️
 reusita	🎯
+reveal	🫫
 revedere	👋 🫂
 revenire	🪃
 reverie	💭
@@ -9556,6 +9762,8 @@ reverse	◀️ ⏪
 reversebutton	◀️
 reversed	🖕
 revert	⏪
+revival	🐦‍🔥
+revive	🐦‍🔥
 revolver	🔫
 revolving	💞 🚨
 revolvinghearts	💞
@@ -9565,6 +9773,7 @@ rex	🦖
 rezervat	🈯
 rezervatie	🏞️
 rezervor	🖋️
+rezilienta	🫫
 rezistenta	🥹
 rhino	🦏
 rhinoceros	🦏
@@ -9576,7 +9785,8 @@ rice	🌾 🍘 🍙 🍚 🍛 🎑 🍣 🍶
 riceball	🍙
 ricecracker	🍘
 ricescene	🎑
-rich	🤑 🧐 💰 🪙 💶
+rich	🤑 🧐 🪙 💰 💶
+riches	🪎
 rickshaw	🛺
 rico	🇵🇷
 ride	🚲
@@ -9586,7 +9796,7 @@ ridicat	🤚 ✊ 🔊 🙌 🙋 🙋‍♂️ 🧍 🧍‍♂️
 ridicata	🤨 🖐️ ✋ 🧍‍♀️ 🙋‍♂️ 🙋‍♀️
 ridicate	🙌 🤲
 riding	🏇 🚴 🚴‍♂️ 🚴‍♀️ 🚵 🚵‍♂️ 🚵‍♀️
-right	🗯️ 👉 🤜 🔎 ↗️ ➡️ ↘️ ↔️ ↩️ ↪️ ⤴️ ⤵️ 🫱 📈 ▶️ ⏯️ 🔛 ⏩ ⏭️
+right	🗯️ 👉 🤜 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️ 🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️ 🧑‍🦼‍➡️ 👨‍🦼‍➡️ 👩‍🦼‍➡️ 🧑‍🦽‍➡️ 👨‍🦽‍➡️ 👩‍🦽‍➡️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🔎 ↗️ ➡️
 rightangerbubble	🗯️
 rightarrow	➡️ ↘️
 rightarrowcurvingdown	⤵️
@@ -9597,9 +9807,10 @@ rightfacingfist	🤜
 rightfist	🤜
 righttriangle	▶️
 rightward	🫱 🫸
-rightwards	🫱 🫸 🔀 🤜 📲 ➡️ ↪️ ⤴️ ⤵️ 🔜 🔁 🔂
+rightwards	🫱 🫸 🫺 🔀 🤜 📲 ➡️ ↪️ ⤴️ ⤵️ 🔜 🔁 🔂
 rightwardshand	🫱
 rightwardspushinghand	🫸
+rightwardsthumbsign	🫺
 rigla	📏 📐
 ring	💍 🛟 🤼 🤼‍♂️ 🤼‍♀️ 🖖
 ringbuoy	🛟
@@ -9613,8 +9824,8 @@ ripe	🍎
 ripped	💪
 risc	☣️
 riscbiologic	☣️
-rise	💹 🏢
-ritm	🚶 💃 🕺 🪘
+rise	🐦‍🔥 💹 🏢
+ritm	🚶 🚶‍➡️ 💃 🕺 🪘
 river	🚣 🚣‍♂️ 🚣‍♀️
 ro	🇷🇴
 roach	🪳
@@ -9630,11 +9841,12 @@ robot	🤖
 robotica	🦾 🦿
 roca	🪨
 rochie	👗 🥻 👠
-rock	🪨 🤘 👊 🧑‍🎤 👨‍🎤 👩‍🎤 🧗 🧗‍♂️ 🧗‍♀️ 🥌 🎸 🧷 🤨 🗿
+rock	🪨 🤘 👊 🧑‍🎤 👨‍🎤 👩‍🎤 🧗 🧗‍♂️ 🧗‍♀️ 🪋 🥌 🎸 🧷 🤨 🗿
 rocker	🧑‍🎤 👨‍🎤 👩‍🎤
 rocket	🚀 🧑‍🚀 👨‍🚀 👩‍🚀
 rockets	🚀
 rockon	🤘
+rocks	🛘
 rockstar	🧑‍🎤 👨‍🎤 👩‍🎤
 rod	🎣 ⚕️
 rodent	🐭 🐁 🐀 🐿️ 🦫 🪤
@@ -9676,7 +9888,8 @@ roof	🕌
 rook	🐦‍⬛
 room	🧖 🧖‍♂️ 🧖‍♀️ 🚹 🚺 🏥
 rooster	🐓
-root	🫚
+root	🫚 🫜
+rootvegetable	🫜
 rope	🪢
 ropeway	🚡
 rosary	📿
@@ -9684,7 +9897,7 @@ roscat	👨‍🦰 👩‍🦰 🧑‍🦰
 rose	🌹 🥀
 rosette	🏵️
 rosie	🍅 ❤️ 🏮 🥵 🫘 🥩 ♥️ 🧰 🔴
-rosu	🍎 🧧 🀄 ❓ ⭕ 🔴 🟥 🔺 🔻 😡 ❣️ ❤️ 💋 🌹 🍁 🍒 ♥️ 🏮 🍉 🦞
+rosu	🍎 🧧 🀄 ❓ ⭕ 🔴 🟥 🔺 🔻 😡 ❣️ ❤️ 💋 🌹 🍁 🍒 ♥️ 🏮 🦞 🍉
 rotary	☎️
 rotate	↪️ 🔄
 rotating	🚨
@@ -9692,7 +9905,7 @@ rotatinglight	🚨
 rotativ	📇
 rotfl	🤣
 roti	🛹 ♿
-rotile	🧑‍🦼 👨‍🦼 👩‍🦼 🧑‍🦽 👨‍🦽 👩‍🦽 🦽 🦼 🛼 ♿
+rotile	🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🧑‍🦽 🧑‍🦽‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️ 🦽 🦼 🛼 ♿
 rotita	⚙️
 rotitazimtata	⚙️
 rotting	🪰
@@ -9715,10 +9928,11 @@ rozator	🐁 🐀 🐇 🐿️
 rozeta	🏵️
 rs	🇷🇸
 ru	🇷🇺
-rub	🧞 🧞‍♂️ 🧞‍♀️
+rub	🧞 🧞‍♂️ 🧞‍♀️ 🪌
 rubbish	🗑️
 ruby	💎
 rucksack	🎒
+ruckus	🫯
 rucsac	🎒
 rude	🖕 🕴️
 rufe	🧺
@@ -9730,7 +9944,7 @@ rugbyfootball	🏉
 ruj	💄 👄 🫦
 rulada	🍥 🌯
 ruladajaponezacupeste	🍥
-rulant	👨‍🦼 👩‍🦼 👨‍🦽 👩‍🦽 🦽 🦼
+rulant	👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️ 🦽 🦼
 rulare	📃
 rulat	🗞️ 🌯
 rulata	📃
@@ -9739,19 +9953,20 @@ ruler	📏 📐
 rules	🚷
 rulou	📜
 rum	🥃
-run	🏃 🏃‍♂️ 🏃‍♀️
+run	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
 rung	🪜
 runner	🏃 🏃‍♂️ 🏃‍♀️ 👟
-running	🏃 🏃‍♂️ 🏃‍♀️ 🎽 👟 💨
+running	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🎽 👟 💨
 runningman	🏃‍♂️
 runningshirt	🎽
 runningshirtwithsash	🎽
 runningshoe	👟
 runningwoman	🏃‍♀️
-rupt	😵
+rupere	⛓️‍💥
+rupt	⛓️‍💥 😵
 ruseasca	🪆
 rusesc	🪆
-rush	🏃 🏃‍♂️ 🏃‍♀️
+rush	🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️
 rushed	😰
 rusia	🇷🇺 🪆
 rusinat	😊 😳 ☺️ 🫣
@@ -9776,12 +9991,12 @@ sacra	❤️‍🔥
 sacred	❤️‍🔥
 sacrificiu	♟️
 sacru	🙈
-sad	😢 😞 😔 🙁 😭 😥 😪 😕 😟 ☹️ 🥺 🥹 😖 😓 😩 😫 😿 💔 💧 🥲 👿 🙍 🙍‍♂️ 🙍‍♀️
+sad	😢 😞 😔 🙁 😭 😥 😪 😕 😟 ☹️ 🥺 🥹 😖 😓 😩 😫 😿 💔 💧 🪊 🥲 👿 🙍 🙍‍♂️
 sadbutrelievedface	😥
 sadcat	😿
 sadface	😔 😟 😞
 safari	🦁 🦓 🦒
-safety	🦺 🧷 🛟 👷 🥽
+safety	🦺 🧷 🫆 🛟 👷 🥽
 safetypin	🧷
 safetyvest	🦺
 sageata	📲 📩 🏹 ⬆️ ↗️ ➡️ ↘️ ⬇️ ↙️ ⬅️ ↖️ ↕️ ↔️ ↩️ ↪️ ⤴️ ⤵️ 🔙 🔚 🔛 🔜 🔝 💘 🔄
@@ -9820,7 +10035,7 @@ saints	⚜️
 sake	🍶
 sakura	🌸
 sala	💦 💪 🏋️
-salad	🥗 🥬
+salad	🥗 🥬 🫜
 salata	🥗 🥬
 salataverde	🥗
 salbatic	🐺 🦁 🐅 🐆 🦍 🦓 🦌 🐗 🐘 🦏
@@ -9830,7 +10045,7 @@ saliva	🤤
 salivare	🤤
 saliveaza	🤤
 salon	💆 💆‍♂️ 💆‍♀️ 💇 💈
-salsa	💃 🕺
+salsa	💃 🕺 🍋‍🟩
 salt	🧂 🦘 🪂
 saltire	🏴󠁧󠁢󠁳󠁣󠁴󠁿
 salty	🧂
@@ -9883,7 +10098,9 @@ santier	🚧 👷 👷‍♀️ 🏗️
 sao	🇸🇹
 saorma	🥙
 saotomeprincipe	🇸🇹
+sapa	🪏
 sapat	⛏️
+sapaturi	🪏
 sapca	🧢
 sapling	🌱
 sapte	🕖 🕢 7️⃣
@@ -9901,6 +10118,7 @@ sare	🧂 🍾
 saree	🥻
 sari	🥻
 saritura	🦘
+sark	🇨🇶
 sarlota	🍮
 sarpe	🐍 ⛎
 sarumana	👋
@@ -9914,6 +10132,7 @@ sase	🕕 🕡 🔯 6️⃣
 sash	🎽
 sasha	🛵
 sashimi	🍣
+sasquatch	🫈
 sassy	💁‍♂️ 💁‍♀️ 💁
 sassyman	💁‍♂️
 sassywoman	💁‍♀️
@@ -9957,6 +10176,7 @@ scadere	🔅 📉 ➖
 scale	⚖️ 🧗 🧗‍♂️ 🧗‍♀️ 🎚️
 scales	🧑‍⚖️ 👨‍⚖️ 👩‍⚖️ ⚖️ ♎
 scamatorie	🪄
+scandal	🫯
 scantei	🎇 ✨
 scanteie	🧨
 scanteietor	💍
@@ -9967,7 +10187,7 @@ scarbos	🤮 🤢 😝
 scared	😨 😱 😰 🫢 🫣 😦 😧 😓 🙈 🙀
 scarf	🧣
 scary	😦 😧 👹 👻 🧛 🧛‍♂️ 🧛‍♀️ 🧟 🧟‍♂️ 🧟‍♀️ ☠️ 👺
-scaun	🪑 🧑‍🦼 👨‍🦼 👩‍🦼 🧑‍🦽 👨‍🦽 👩‍🦽 🦽 🦼 ♿ 💺
+scaun	🪑 🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🧑‍🦽 🧑‍🦽‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️ 🦽 🦼 ♿ 💺
 scauncurotilemanual	🦽
 scauncurotilemotorizat	🦼
 scazut	🔈
@@ -10004,6 +10224,7 @@ scoasa	😛 😜 😝 🥵
 scoate	😤
 scoica	🐚 🦪
 sconcs	🦨
+scoop	🪏
 scooter	🛵 🛴
 scor	💯
 score	🎼 💯 🎵 🎶 🎧
@@ -10054,9 +10275,9 @@ scuturat	🪇
 scuza	🙇 🙇‍♂️ 🙇‍♀️
 scuze	🙏 😔 🥺 😞 🙇 🙇‍♀️
 sd	🇸🇩 🇸🇸
-se	🤣 🫠 💞 🙇 🙇‍♂️ 🙇‍♀️ 💇 💇‍♂️ 💇‍♀️ 🧗 🧗‍♂️ 🧗‍♀️ 🧑‍🤝‍🧑 👭 👫 👬 🚍 🚔 🚖 🚘 ⏳ 😋 🤯 😮
-sea	🧜 🧜‍♂️ 🧜‍♀️ 🐳 🦭 🐚 🪸 🪼 ⛵ 🌊 🏄 🏄‍♂️ 🏄‍♀️ 🐋 🐬 🐡 🦈 🐙 🍥 🦑 ⚓
-seafood	🍢 🦞 🍣 🦐
+se	🤣 🫠 🫫 🙂‍↔️ 🙂‍↕️ 💞 🙇 🙇‍♂️ 🙇‍♀️ 💇 💇‍♂️ 💇‍♀️ 🧗 🧗‍♂️ 🧗‍♀️ 🧑‍🤝‍🧑 👭 👫 👬 🚍 🚔 🚖 🚘 ⏳
+sea	🧜 🧜‍♂️ 🧜‍♀️ 🐳 🦭 🐚 🪸 🪼 🛙 ⛵ 🌊 🏄 🏄‍♂️ 🏄‍♀️ 🐋 🐬 🐡 🦈 🐙 🦑 🍥 ⚓
+seafood	🦞 🍢 🦐 🍣
 seal	🦭
 sealed	🤐
 seara	🌆
@@ -10064,7 +10285,7 @@ search	🔍 🔎
 seashell	🐚
 season	❄️ ☃️ ⛄
 seat	💺 🪑
-seceta	🌵
+seceta	🌵 🪾
 second	🥈
 secret	🤫 🤐 ㊙️ 🤭 😶 🙈 🙉 🙊 🥷 🕵️ 🕵️‍♂️ 😉 🫢 ☝️ 🔏 🔐
 secreta	🕵️‍♀️
@@ -10169,6 +10390,7 @@ seychelloisflag	🇸🇨
 sezut	🪑
 sfanta	🇱🇨 🇸🇭
 sfantul	🇲🇫
+sfecla	🫜
 sfesnic	🕎
 sfoara	🪢
 sfoorrrrr	💤
@@ -10181,10 +10403,10 @@ shadow	👤 🌑
 shadowmoon	🌑
 shadows	👥
 shaka	🤙
-shake	🫱 🫲 🤝 🪇
+shake	🙂‍↔️ 🫱 🫲 🤝 🪇
 shaker	🧂 🪇
 shakespeare	🎭
-shaking	🫨 🤝
+shaking	🫨 🙂‍↔️ 🙂‍↕️ 🤝
 shakingface	🫨
 shallow	🥘
 shallowpanoffood	🥘
@@ -10213,6 +10435,7 @@ shh	🤫 🤐 🙉 😯
 shhh	🤫 🤐
 shield	🛡️ 🔰
 shifty	👀
+shiitake	🍄‍🟫
 shine	🌞 🎇 ✨
 shining	💫 🌟
 shinkansen	🚄 🚅
@@ -10227,7 +10450,7 @@ shit	💩 🚽
 shitface	💩
 shitty	💩 🚽
 shock	😱 😲 🤯 😳 🤭 🫢 🫨 🤦 🤦‍♂️ 🤦‍♀️
-shocked	😱 😲 🤯 😳 😮 😨
+shocked	😱 😲 🤯 😳 😮 🫪 😨
 shoe	👞 👟 🥿 👠 🩴 🥾 👡 👢 🩰
 shoes	🩰 👞 👟 👠 👢 👡
 shoo	🫳 💨
@@ -10245,13 +10468,14 @@ shoshinsha	🔰
 shot	🥃 💉
 shout	🗣️
 shouting	🗣️
+shovel	🪏
 show	📺
 shower	🚿 🛀 😶‍🌫️ 🛁
 showing	🌍 🌎 🌏
 shrek	👹 🧌
 shrimp	🦐 🍤
 shrine	⛩️
-shroom	🍄
+shroom	🍄‍🟫 🍄
 shrub	🪻
 shrug	🤷 🤷‍♂️ 🤷‍♀️
 shruggie	🤷
@@ -10277,13 +10501,13 @@ sierraleone	🇸🇱
 sifon	🥤
 sigh	😮‍💨
 sight	🔦
-sign	🤘 🛑 🏧 🚮 🚫 ♀️ ♂️ ➕ ➖ ➗ 🟰 💲 🪧 ☢️ ☣️ ✖️ 🤑 💢 💤 👋 👌 ✌️ 🤟 🤙
-signal	📶 🚥 🚦 📡 🛜 🆘
+sign	🤘 🫹 🫺 🛑 🏧 🚮 🚫 ♀️ ♂️ ➕ ➖ ➗ 🟰 💲 🪧 ☢️ ☣️ ✖️ 🤑 💢 💤 👋 👌 ✌️
+signal	📶 🚥 🚦 🛙 📡 🛜 🆘
 signalstrength	📶
 signofhorns	🤘
 signofthehorns	🤘
 sigur	👍 ✅ 👌 👊 🔐
-siguranta	🦺 🧷 🛟 🔒 🔐
+siguranta	🦺 🧷 🫆 🛟 🔒 🔐
 sikh	🪯 👳
 sikhism	🪯 🕉️ ☸️
 silence	🤫 🤐 😶 😯 🫢 🔇 🔈 📴
@@ -10297,7 +10521,7 @@ silueta	👤 🗣️ 👥
 siluetabust	👤
 siluete	👥
 siluetebusturi	👥
-silver	🩶 🥈 🪙
+silver	🩶 🥈 🪙 🪎
 silverware	🍴
 simbol	💢 🏧 🚮 ♿ 🚼 ⚛️ 🕉️ ⚕️ 🔰 ☢️ ☣️ ☮️ ⚧️ ♻️
 simbolbebelus	🚼
@@ -10389,13 +10613,13 @@ sleep	😴 🥱 😪 💤 🛌 🛏️ 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 �
 sleeping	😴 🛌 😪 💤
 sleepingbed	🛌
 sleepingface	😴
-sleepy	😴 🥱 😪 💤 😩
+sleepy	😴 🥱 😪 💤 🫩 😩
 sleepyface	😪
 sleigh	🛷
 sleuth	🕵️ 🕵️‍♂️ 🕵️‍♀️
 slice	🍕 🍰 🥧
 slick	😏
-slide	🛝 😉 📐
+slide	🛝 😉 🪊 📐
 slider	🎚️
 sliding	🛝
 slightly	🙂 🙁
@@ -10425,7 +10649,7 @@ slurp	👅
 slut	👠 💋 💃 😈
 sluts	👠 💋 💃 😈
 sly	😏 🥷 🦝
-small	🛩️ 🌤️ 🔼 🔽 ◾ ◽ ▪️ ▫️ 🔸 🔹 🔺 🔻 🤪 🤏 🫘 🦐 💕 🤌 👝 🔡
+small	🛩️ 🌤️ 🔼 🔽 ◾ ◽ ▪️ ▫️ 🔸 🔹 🔺 🔻 🤪 🤏 🦐 🫘 💕 🤌 👝 🔡
 smallairplane	🛩️
 smallbluediamond	🔹
 smallest	🎻
@@ -10497,7 +10721,7 @@ snoring	😴
 snorkeling	🤿
 snot	😪
 snout	🐽
-snow	❄️ ☃️ 🌨️ 🏂 🏔️ ⛄ ⛷️ 🎿 🛷 🍧 🗻
+snow	❄️ ☃️ 🌨️ 🏂 🏔️ ⛄ ⛷️ 🎿 🛷 🪏 🍧 🗻
 snowboard	🏂
 snowboarder	🏂
 snowboarding	🏂
@@ -10527,8 +10751,8 @@ sob	😭
 sobbing	😭
 sobolan	🐀
 soc	🤭 🫨 🤯 😲 😱 🙀
-socat	😱 😲 🤯 😳 😮 😯 🙀
-socata	🫢
+socat	😱 😲 🤯 😳 😮 😯 🫪 🙀
+socata	🫪 🫢
 soccer	⚽
 soccerball	⚽
 socks	🧦 🎏
@@ -10596,7 +10820,7 @@ soto	💯
 soulmate	👯 👯‍♂️ 👯‍♀️
 sound	🔊 👂 🔇 🔈 🔉 📢 📣 🔔 🔕 🎵 🎶 🎤 🎧
 soup	🍲 🍜 🥫
-sour	🍋
+sour	🍋 🍋‍🟩
 source	ℹ️
 south	🇬🇸 🇰🇷 🇸🇸 🇿🇦 ⬇️ ↘️ ↙️
 southafrica	🇿🇦
@@ -10609,12 +10833,12 @@ southwest	↙️
 sow	🐖
 soybean	🫛
 spa	💆 💆‍♂️ 💆‍♀️ 🧖 🧖‍♂️ 🧖‍♀️
-space	👾 👽 🧑‍🚀 👨‍🚀 👩‍🚀 🛰️ 🚀 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 🌙 🌚 🌛 ☀️ 🌠 🌌 ☄️ 🛸 🌜
+space	👾 👽 🧑‍🚀 👨‍🚀 👩‍🚀 🛰️ 🚀 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘 🌙 🌚 🌛 ☀️ 🌠 🌌 ☄️ 🪋 🛸
 spaceflight	🛰️
 spaceinvader	👾
 spada	🤺
 spadasin	🤺
-spade	♠️ ⚔️
+spade	♠️ ⚔️ 🪏
 spades	♠️
 spadesuit	♠️
 spaghete	🍝
@@ -10626,6 +10850,7 @@ spalator	🦝
 spania	🇪🇸
 spanish	🇪🇸
 spanner	🛠️ 🔧
+spargere	🫫
 spark	🧨 💥
 sparkle	✨ 🪄 ❇️ 💖 🌟 🎇 💫 ✳️
 sparkler	🎇
@@ -10657,7 +10882,7 @@ speculum	🪞
 speech	💬 👁️‍🗨️ 🗨️ 🗯️ 💭
 speechballoon	💬
 speechless	😶 😯
-speed	🚄 🏃 🏃‍♂️ 🏃‍♀️ 🐎 🚅 ⚡ ⏩
+speed	🚄 🏃 🏃‍♂️ 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🏃‍♂️‍➡️ 🐎 🚅 ⚡ ⏩
 speedboat	🚤
 spell	🧙 🧙‍♂️ 🧙‍♀️
 spent	😵
@@ -10671,7 +10896,7 @@ spice	🫚 🧄 🧅
 spicy	🌶️ 🍛
 spider	🕷️ 🕸️
 spiderweb	🕸️
-spill	🫗
+spill	🫗 🫟
 spin	🚲 🌀
 spinning	🚲
 spiny	🦔
@@ -10689,6 +10914,7 @@ spirit	😇
 spirtoase	🥃
 spital	🏥
 splashing	💦
+splatter	🫟
 splayed	🖐️
 split	🪓 🖖
 spock	🖖
@@ -10697,7 +10923,8 @@ sponge	🧽
 spooky	👻 🏮
 spool	🧵
 spoon	🥄 🥣
-sport	🚙 👟 💓 💦 🙆 🙆‍♂️ 🏃 🤺 🏇 🏂 🏌️ 🏄 🏄‍♂️ 🏄‍♀️ 🏊 🏊‍♂️ 🏊‍♀️ ⛹️ 🏋️ 🚴 🚴‍♂️ 🚴‍♀️ 🚵 🚵‍♂️
+spore	🍄‍🟫
+sport	🚙 👟 💓 💦 🙆 🙆‍♂️ 🏃 🏃‍➡️ 🤺 🏇 🏂 🏌️ 🏄 🏄‍♂️ 🏄‍♀️ 🏊 🏊‍♂️ 🏊‍♀️ ⛹️ 🏋️ 🚴 🚴‍♂️ 🚴‍♀️ 🚵
 sportiva	🏅
 sports	🏅 ⚽ ⚾ 🥎 🏀 🏈 🎾 🥍 🧗‍♂️ 🧗‍♀️ 🤺 ⛷️ 🏂 🏌️ 🏌️‍♀️ 🏄‍♂️ 🏄‍♀️ 🚣‍♂️ 🚣‍♀️ 🏊‍♂️ 🏊‍♀️ ⛹️ ⛹️‍♀️ 🏋️
 sportsmedal	🏅
@@ -10708,13 +10935,13 @@ spouting	🐳
 spoutingwhale	🐳
 spranceana	🤨
 sprancene	🥸
-spre	🫱 🫲 🫷 🫸 👈 👉 🫵 🤛 🤜 🔍 🔎 ↩️ ↪️ ◾ ◽
+spre	🫱 🫲 🫷 🫸 👈 👉 🫵 🤛 🤜 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🧎‍➡️ 🧎‍♀️‍➡️ 🧎‍♂️‍➡️ 🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️ 🧑‍🦼‍➡️ 👨‍🦼‍➡️ 👩‍🦼‍➡️ 🧑‍🦽‍➡️ 👨‍🦽‍➡️ 👩‍🦽‍➡️
 sprijin	🩼
 spring	🐝 🌸 🪻 🐰 🐇 🐦 💐 💮 🌹 🌷 🌱 🍃 ☀️ ⛅ 🌈 ☂️ ☔ 💧 🎐 👒
 springs	♨️
 springtime	🌸
 sprinkles	🧁
-sprout	🌱
+sprout	🌱 🍄‍🟫
 sprouting	🌱
 spuma	🧼
 spun	🙊
@@ -10747,12 +10974,14 @@ stafie	👻
 stag	🦌
 stage	🎦
 stai	✋ ⏳
+stain	🫟
 stairs	📶
 staisfactie	😊
 stalk	👀
 stalp	💈
 stamp	💮
 stanca	⛰️ 🪨
+stanci	🛘
 stand	🧍 🧍‍♂️ 🧍‍♀️
 standard	🐩
 standing	🧍 🧍‍♂️ 🧍‍♀️ 🐥
@@ -10765,7 +10994,7 @@ stanjeni	🫣
 stanjenit	😳
 stanjenita	🫣
 stanjenitor	😐 😑 😶 😬 😳
-star	⭐ 🌟 ✨ 🤩 🌠 ✡️ ☪️ 🔯 ✴️ 💫 🧑‍🎤 👨‍🎤 👩‍🎤 🌃 🖖 🎋 ✳️ *️⃣
+star	⭐ 🌟 ✨ 🤩 🌠 ✡️ ☪️ 🔯 ✴️ 💫 🧑‍🎤 👨‍🎤 👩‍🎤 🌃 🪋 🖖 🎋 ✳️ *️⃣
 star2	🌟
 starandcrescent	☪️
 starch	🥔
@@ -11012,6 +11241,7 @@ steagsamoa	🇼🇸
 steagsamoaamericana	🇦🇸
 steagsanmarino	🇸🇲
 steagsaotomesiprincipe	🇸🇹
+steagsark	🇨🇶
 steagscotia	🏴󠁧󠁢󠁳󠁣󠁴󠁿
 steagsenegal	🇸🇳
 steagserbia	🇷🇸
@@ -11101,13 +11331,14 @@ stergandorapid	💨
 sterlina	💷
 sterline	💷
 sterling	💷
+sterp	🪾
 sters	💨
 stethoscope	🩺
 stetoscop	🩺
 stew	🍲
 stfu	🖕 🤬
 sthelena	🇸🇭
-stick	🍢 🍡 🏑 🏒 🥍 🩼
+stick	🍢 🍡 🏑 🏒 🥍 🩼 👨‍🦯‍➡️ 👩‍🦯‍➡️
 sticla	🍾 🍼 🍶 🔍 🔎
 sticlacareiaiisaredopul	🍾
 stiinta	🧑‍🔬 👨‍🔬 👩‍🔬 🦠 🔍 🔎 🧪 🔬 🔭 📡 🥼
@@ -11178,7 +11409,7 @@ stres	😬 😅 😰 🫠 😟 😧
 stresat	😬 😅 😰 🫠 😟 😧
 stress	😅 😟
 stressed	😅 😟 😧
-stride	🚶 🚶‍♂️ 🚶‍♀️
+stride	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️
 stridie	🦪
 strigoaie	🧛‍♀️
 strigoi	🧛 🧛‍♂️ 🧟 🧟‍♂️ 🧟‍♀️
@@ -11192,9 +11423,9 @@ stripes	🦓 💈
 striptease	🔞 🍑 🙈 👙
 strivire	🦶
 stroke	🥵 🔇 🔕 ⚧️
-stroll	🚶 🚶‍♂️ 🚶‍♀️
+stroll	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️
 strong	💪 🦁
-stropi	💦 ☔
+stropi	💦 🫟 ☔
 stropit	💦
 struck	🤩
 structure	🛖
@@ -11224,7 +11455,7 @@ stupid	🤡 🤦 🐂
 stvincentgrenadines	🇻🇨
 style	😎 💇 💇‍♂️ 💇‍♀️ 💈 💄
 suave	😏
-sub	🔞 🥶 👮 👮‍♀️ 🧜
+sub	🔞 🫩 🥶 👮 👮‍♀️ 🧜
 subacvatic	🫧
 subrat	🥎
 subscription	💳
@@ -11255,7 +11486,7 @@ suferinta	😧 💘
 sufla	🌬️
 sufland	🌬️
 suflare	🌬️
-suflat	🪈
+suflat	🪊 🪈
 suflet	🥺
 suflete	👯
 suflu	😮‍💨 🌬️
@@ -11329,6 +11560,8 @@ suppedaneum	☦️
 support	🫶 🎗️
 supranatural	🧛
 supraveghea	🙈
+suprins	🫪
+suprinsa	🫪
 surd	🧏‍♂️ 🦻
 surda	🧏 🧏‍♀️
 surditate	🧏
@@ -11349,7 +11582,7 @@ surprindere	🤭
 surprins	🤭 🤨 😟 😮 😯 😲 😦 😧 😱 🙀
 surprinsa	🙀
 surprise	🤭 🫢 🤨 🫨 😮 😦 😧 🎁 😯 ‼️ ⁉️ ❕ ❗
-surprised	😟 😮 😯 😱 🙀 😲 😨
+surprised	😟 😮 😯 🫪 😱 🙀 😲 😨
 surpriza	🫢 🫨 😮 😯 😦 😧 😱 🙀 🎁
 surrender	🏳️
 sursa	ℹ️
@@ -11480,6 +11713,7 @@ tanara	👧
 tangerine	🍊
 tangled	🪢
 tango	💃 🕺
+tangy	🍋‍🟩
 tantar	🦟
 tanzaku	🎋
 tanzania	🇹🇿
@@ -11491,6 +11725,7 @@ tap	🐐 🚰 🚱
 tape	📼 📽️ ➿
 tapioca	🧋
 tara	🏴󠁧󠁢󠁷󠁬󠁳󠁿 🏠 🏡
+taraboi	🫯
 taran	👨‍🌾
 taranca	👩‍🌾
 taratoare	🦎 🐍
@@ -11542,7 +11777,7 @@ taximetrie	🚕 🚖
 taximetrist	🚕 🚖
 tbt	📻 📷 📹
 td	🇹🇩
-te	🤟 🥰 😘 😗 😚 🥺 💓 💕 🖐️ ✋ 🙏 🏃 🏃‍♀️
+te	🤟 🥰 😘 😗 😚 🥺 💓 💕 🖐️ ✋ 🙏 🏃 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️
 tea	🧋 ☕ 🫖 🍵 🧉
 teach	🏫
 teacher	🧑‍🏫 👨‍🏫 👩‍🏫
@@ -11584,6 +11819,7 @@ telescop	🔭
 telescope	🔭
 television	📺
 televizor	📺
+telina	🫜
 tell	🫴
 teller	🏧 🔮
 tematic	🛝 🎡
@@ -11601,18 +11837,20 @@ tenis	🎾 🏓
 tenisi	👟
 tennis	🎾 🏓 👟
 tenoclock	🕙
-tension	💆 💆‍♂️ 💆‍♀️
-tensiune	⚡ 💆 💆‍♂️
+tension	🫫 💆 💆‍♂️ 💆‍♀️
+tensiune	⚡ 🫫 💆 💆‍♂️
 tent	⛺ 🎪 🏕️
 tentacles	🪼
 tentacule	🐙
 tenthirty	🕥
 tepi	🦔 🐡 🌵
 tepos	🦔 🐡
+tequila	🍋‍🟩
 terapeut	🧑‍⚕️ 👨‍⚕️
 terapeuta	👩‍⚕️
 terapie	💆
 terci	🥣
+teren	🛘
 teritoriile	🇵🇸 🇹🇫
 teritoriul	🇮🇴
 termal	♨️
@@ -11645,6 +11883,7 @@ thank	🙏 😊 🤗 ❤️
 thanks	🙏 😊 🤗 ❤️ 🙇 🙇‍♂️ 🙇‍♀️ 🫂
 thanksgiving	🦃
 thankyou	🙏
+that	🫹 🫺
 theater	🎭 🍿 🎦
 theatre	🎭
 theatremasks	🎭
@@ -11662,7 +11901,7 @@ third	🥉
 thirst	🚰
 thirsty	🚰
 thirty	🕧 🕜 🕝 🕞 🕟 🕠 🕡 🕢 🕣 🕤 🕥 🕦
-this	☝️ 🙂
+this	☝️ 🫹 🫺 🙂
 thong	🩴
 thongs	🩴
 thongsandal	🩴
@@ -11676,7 +11915,7 @@ threethirty	🕞
 throw	🤮 ⛹️ ⛹️‍♂️ ⛹️‍♀️ 🤾 🤾‍♂️ 🤾‍♀️ 🤢
 throwing	😘 🤔 🤮
 throwup	🤢
-thumb	🫰 👍 👎 🤔 📌
+thumb	🫰 🫹 🫺 👍 👎 🤔 📌
 thumbs	👍 👎
 thumbsdown	👎
 thumbsup	👍
@@ -11736,7 +11975,7 @@ tippinghandwoman	💁‍♀️
 tipsy	🥴
 tiranozaur	🦖
 tire	🛞
-tired	😴 🥱 😪 💤 😫 😵 😩 🛌 😮‍💨 😓
+tired	😴 🥱 😪 💤 😫 🫩 😵 😩 🛌 😮‍💨 😓
 tiredface	😫
 titania	🧚 🧚‍♀️
 titanic	🚢
@@ -11749,7 +11988,7 @@ tmi	🙉
 tn	🇹🇳
 tnx	🙏 😊 🤗 ❤️
 toad	🐸
-toadstool	🍄
+toadstool	🍄 🍄‍🟫
 toaleta	🚽 🚹 🚺 🚻 🪠 🚾 🧻
 toaletabarbati	🚹
 toaletafemei	🚺
@@ -11806,6 +12045,8 @@ topire	🫠
 topita	🫕 🥯
 topor	🪓
 toporisca	🪓
+topping	🍄‍🟫
+toppings	🍄‍🟫
 torch	🔦
 tornada	🌪️ 🌀
 tornado	🌪️ 🌀
@@ -11825,6 +12066,7 @@ towels	🧻
 tower	🗼 🏫
 toy	🪀 🧸 🐩 🎎 🪁 🪆
 tr	🇹🇷
+trace	🫆
 track	🛤️ ⏭️ ⏮️ 🔂
 trackball	🖲️
 tracking	👣 🐾
@@ -11855,6 +12097,9 @@ tramway	🚡
 trandafir	🌹 🥀
 trandav	🦥
 trans	🌈 🏳️‍🌈 🏳️‍⚧️
+transform	🐦‍🔥
+transformare	🫫 🐦‍🔥
+transformation	🫫 🫌
 transgen	🏳️‍🌈
 transgender	⚧️ 🏳️‍⚧️ 🌈 🏳️‍🌈
 transgenderflag	🏳️‍⚧️
@@ -11866,7 +12111,7 @@ transpiratie	💦 😅 🥵 😰 😥 😓 💧
 transport	💺 🚂 🚃 🚊 🚌 🚎 🚐 🛻 🏍️ 🦽 🦼 🛺 ⛴️ 🚠 🚡 🛍️ 🎒 📦 🛞 🛄
 transportation	🛻 🚵‍♂️ 🚵‍♀️ 🚂 🚃 🚄 🚅 🚆 🚇 🚈 🚉 🚊 🚝 🚞 🚋 🚌 🚍 🚎 🚐 🚒 🚓 🚕 🚗 🚘
 transsexual	🌈 🏳️‍🌈
-trap	🪤
+trap	🪤 🪍
 tras	👮 👮‍♀️
 trash	🗑️ 🚮 🚯 ♻️
 trasnet	⛈️
@@ -11878,7 +12123,8 @@ traversare	🚸
 traverseaza	🚸
 tray	📤 📥
 treapta	🪜
-treasure	🪙 🏴‍☠️
+treasure	🪎 🪙 🏴‍☠️
+treasurechest	🪎
 treat	🧁
 treatment	💆 💆‍♂️ 💆‍♀️
 treble	🎼
@@ -11886,7 +12132,8 @@ trece	⛔
 trecere	🚸 🈴
 trecerecopii	🚸
 treceti	⛔
-tree	🌲 🌳 🌴 🎄 🎋 🍃 🏡
+tree	🌲 🌳 🌴 🪾 🎄 🎋 🍃 🏡
+treeman	🫈
 trefla	♣️
 trefoil	☘️
 trei	🕒 🕞 3️⃣ 🤟 🥉
@@ -11926,7 +12173,7 @@ trinidad	🇹🇹
 trinidadtobago	🇹🇹
 trip	🚞 📷 🛄
 triple	💗
-trist	😢 😞 😔 🙁 😭 😪 😕 😟 ☹️ 🥺 😰 😥 😖 😓 😩 😫 😿 💔 🙍‍♂️ 💧
+trist	😢 😞 😔 🙁 😭 😪 😕 😟 ☹️ 🥺 😰 😥 😖 😓 😩 😫 😿 💔 🙍‍♂️ 💧 🪊
 trista	😢 😞 😔 🙁 😭 ☹️ 😦
 tristan	🇸🇭 🇹🇦
 tristandacunha	🇹🇦
@@ -11948,22 +12195,26 @@ troll	🧌
 trolley	🚋 🚎 🛒
 trolleybus	🚎 🚃 🚊 🚋
 trolling	🧌
+trombon	🪊
+trombone	🪊
 trompeta	🎺 🥳 📯
 tronc	🥰
 troops	🫡
 trophy	🏆
-tropical	🐠 🍹 🦩 🌴 🍍 🥭 🏝️
+tropical	🐠 🍹 🦩 🌴 🍋‍🟩 🍍 🥭 🏝️
 tropicala	🍹
 tropicaldrink	🍹
 tropicalfish	🐠
 tropics	🍹
 trotineta	🛴
-trouble	😵‍💫
+trouble	😵‍💫 🫝
 trousers	👖
 truck	🛻 🚚 🚒 🚛
 true	💯
+trufe	🍄‍🟫
+truffle	🍄‍🟫
 trumpet	🎺
-trunk	🪵
+trunk	🪾 🪵
 trusa	🧰
 trusadescule	🧰
 truth	💯
@@ -12007,6 +12258,7 @@ turkscaicosislands	🇹🇨
 turn	🗼 🛞
 turnat	🫗
 turneu	🤼‍♂️
+turnip	🫜
 turnul	🗼
 turnultokio	🗼
 turrets	🏰
@@ -12117,7 +12369,7 @@ uncomfortable	🫦
 unconscious	😵
 undead	🧛 🧛‍♂️ 🧛‍♀️ 🧟 🧟‍♂️ 🧟‍♀️
 unded	🧛‍♀️
-under	🔞 🐨 🌁
+under	🫩 🔞 🐨 🌁
 underage	🔞
 underarm	🥎
 undercover	👮 👮‍♂️ 👮‍♀️
@@ -12125,7 +12377,7 @@ underground	🚇
 underwater	🫧
 underwear	🩲 🩳
 undita	🎣
-undo	↩️
+undo	🪌 ↩️
 unealta	🔪 🔍 🔎 🔨 ⛏️ 🛠️ 🪚 🪛 🔩 🗜️ 🧰
 unelte	🧰
 uneven	🥴
@@ -12274,6 +12526,8 @@ valentines	🥰 😍 😘 😗 😚 😙 😻 💌 💘 💝 💖 💗 💓 💞
 valiza	🧳 🛄 🛅
 valize	🛄 🛅
 valoare	🈷️ 💎 🤏
+valori	🪎
+valuables	🪎
 valuri	🏄 🏄‍♀️ 〰️
 valurit	〰️
 valuta	💴 💵 💶 💷 💹 💱 💲
@@ -12298,7 +12552,7 @@ vara	🚤
 varf	🏔️ 🚅 ⛰️ 🔝 🔺 🔻
 varfdemunteinzapezit	🏔️
 varful	🔺 🔻
-varsa	🫗
+varsa	🫗 🫟
 varsator	♒ 🏺
 varsta	🧓 👴 👵 🔞
 varstnic	🧓
@@ -12328,9 +12582,10 @@ vederii	🥽
 vedeta	🧑‍🎤 👨‍🎤 👩‍🎤
 vegas	🎰
 vegatable	🥔
-vegetable	🍅 🍆 🥔 🥕 🫑 🥒 🥜 🫛 🌺 🌴 🌵 🌿 ☘️ 🍀 🍁 🍂 🍃 🍄 🌽 🥬 🥦 🧄 🧅 🥗
+vegetable	🫜 🍅 🍆 🥔 🥕 🫑 🥒 🥜 🫛 🍄‍🟫 🌺 🌴 🌵 🌿 ☘️ 🍀 🍁 🍂 🍃 🍄 🌽 🥬 🥦 🧄
 vegetables	🥪
-veggie	🫛
+vegetarian	🍄‍🟫 🫜
+veggie	🫛 🍄‍🟫
 vehicle	🚙 🚝 🚌 🚐 🚑 🚕 🚗 🚘 🚚 🚛 🚜 🛞 🚁 🚣 🚣‍♂️ 🚣‍♀️ 🚂 🚃 🚄 🚅 🚆 🚇 🚈 🚉
 vehicul	🚙 🚝 🚌 🚍 🚎 🚐 🚑 🚒 🚗 🚘 🚚 🚛 🚜 🚲 🚁
 vehiculrecreational	🚙
@@ -12345,7 +12600,7 @@ ventuza	🪠
 venue	🏟️
 venus	♀️
 verbal	🧾
-verde	💚 🍉 🍏 🥗 📗 🟢 🟩 🇨🇻 🌳 🥬
+verde	💚 🍉 🍏 🥗 📗 🟢 🟩 🇨🇻 🍋‍🟩 🌳 🥬
 verdeata	🏡
 verdeturi	🥬
 verdian	🇨🇻
@@ -12353,8 +12608,10 @@ verificare	🛂
 veriga	🔗
 versant	🏔️
 versus	🆚
-vertical	🚦 🔃 ⏸️ ↕️ ⏭️ ⏯️ ⏮️
+vertical	🚦 🔃 ⏸️ 🙂‍↕️ ↕️ ⏭️ ⏯️ ⏮️
+verticala	🙂‍↕️
 verticale	🔃
+vertically	🙂‍↕️
 verticaltrafficlight	🚦
 verzui	🩵
 vesel	😀
@@ -12398,7 +12655,7 @@ viezure	🦡
 vii	🧟 🧟‍♂️ 🧟‍♀️
 viitor	🥠 🔮
 villain	🦹 🦹‍♂️ 🦹‍♀️
-vin	🍷 🥂 🏃 🏃‍♀️ 🍇
+vin	🍷 🥂 🏃 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🍇
 vina	😨 😞 😠
 vincent	🇻🇨
 vindecare	☮️
@@ -12419,13 +12676,15 @@ vis	💭
 visa	💳
 visare	💭
 vise	🌒 🌜
+visually	🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️
+visuallyimpaired	🧑‍🦯‍➡️ 👨‍🦯‍➡️ 👩‍🦯‍➡️
 visuri	💭
 vita	🍇
 vitamin	🍊 💊
 vitamina	🍊
 vitamine	💊
 vite	🧑‍🌾
-viteza	🚄 🚅 🚤 💨 🏃 🏃‍♀️ 🛥️
+viteza	🚄 🚅 🚤 💨 🏃 🏃‍♀️ 🏃‍➡️ 🏃‍♀️‍➡️ 🛥️
 viu	🦩
 vizita	📇
 voal	👰 👰‍♂️ 👰‍♀️
@@ -12449,6 +12708,7 @@ vomita	🤮
 vomitand	🤮
 vomiting	🤮
 vomitingface	🤮
+vopsea	🫟
 vorbeste	🗣️
 vorbi	🗣️
 vorbire	🙊 💬 🗨️ 🗣️
@@ -12472,6 +12732,9 @@ vu	🔄 🇻🇺
 vulcan	🌋 🖖
 vulcanian	🖖
 vulcansalute	🖖
+vulnerabil	🫪
+vulnerabila	🫪
+vulnerable	🫪
 vulpe	🦊
 vultur	🦅
 vuoi	🤌
@@ -12484,9 +12747,9 @@ wait	✋ ⏳ 🫷 🫸 🚏
 waiting	⏳ ⏰
 wake	⏰
 wales	🏴󠁧󠁢󠁷󠁬󠁳󠁿 🇬🇧
-walk	🚶 🚶‍♂️ 🚶‍♀️ 👣
+walk	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 👣 🧑‍🦯‍➡️ 👨‍🦯‍➡️
 walker	🚶
-walking	🚶 🚶‍♂️ 🚶‍♀️ 🧟 🧟‍♂️ 🧟‍♀️ 🏃‍♂️ 🏃‍♀️ 👣 🚷
+walking	🚶 🚶‍♂️ 🚶‍♀️ 🚶‍➡️ 🚶‍♀️‍➡️ 🚶‍♂️‍➡️ 🧟 🧟‍♂️ 🧟‍♀️ 🏃‍♂️ 🏃‍♀️ 👣 🚷
 walkingdead	🧟‍♂️ 🧟‍♀️
 walkingman	🚶‍♂️
 walkingwoman	🚶‍♀️
@@ -12533,11 +12796,12 @@ waxingcrescentmoon	🌒
 waxinggibbousmoon	🌔 🌖
 way	🌌 🤯 😲 ↕️
 wc	🚾 🚽 🚹 🚺 🚻
+wealth	🪎
 wealthy	🧐
 weapon	🔪 🏺 🔫 🗡️ ⚔️ 🪃 🏹 🛡️ 🔱
 wear	🎩
 wearing	👳 👳‍♂️ 👳‍♀️ 👯 👯‍♂️ 👯‍♀️
-weary	😩 🙀
+weary	😩 🙀 🫩
 wearycat	🙀
 wearyface	😩
 weather	🌡️ ☀️ 🌞 ☁️ ⛅ 🌤️ 🌥️ 🌦️ 🌧️ 🌨️ 🌩️ 🌪️ 🌫️ 🌀 🌈 🌂 ☔ ❄️ 💧 😎 🌋 🏖️ 🌁 🌃
@@ -12564,13 +12828,13 @@ west	⬅️ ↙️ ↖️ 🇪🇭
 western	🇪🇭
 westernsahara	🇪🇭
 wet	💦
-whale	🐋 🐳
+whale	🐋 🐳 🫍
 whale2	🐋
 what	🤨 😳 😦 😧 🤌
 whatever	😒 🙄 😑 🤷 😝 😐 🫥 😴 🫤 🥱 💅 💁 💁‍♂️ 💁‍♀️ 🤷‍♂️ 🤷‍♀️
 wheat	🍞 🌾
 wheel	🛞 🎡 ☸️
-wheelchair	🧑‍🦼 👨‍🦼 👩‍🦼 🧑‍🦽 👨‍🦽 👩‍🦽 🦽 🦼 ♿
+wheelchair	🧑‍🦼 🧑‍🦼‍➡️ 👨‍🦼 👨‍🦼‍➡️ 👩‍🦼 👩‍🦼‍➡️ 🧑‍🦽 🧑‍🦽‍➡️ 👨‍🦽 👨‍🦽‍➡️ 👩‍🦽 👩‍🦽‍➡️ 🦽 🦼 ♿
 wheelchairsymbol	♿
 wheelofdharma	☸️
 wheels	🛹
@@ -12587,7 +12851,7 @@ whisky	🥃
 whisper	😮‍💨
 whistle	😮‍💨 😙
 whistling	😗 😙
-white	🤍 👨‍🦳 👩‍🦳 🧑‍🦳 🧑‍🦯 👨‍🦯 👩‍🦯 💮 🦯 ❔ ❕ ✅ ⚪ ⬜ ◻️ ◽ ▫️ 🔳 🏳️ 💟 🦷 🐻‍❄️ ⭐ 🥼
+white	🤍 👨‍🦳 👩‍🦳 🧑‍🦳 🧑‍🦯 🧑‍🦯‍➡️ 👨‍🦯 👨‍🦯‍➡️ 👩‍🦯 👩‍🦯‍➡️ 💮 🦯 ❔ ❕ ✅ ⚪ ⬜ ◻️ ◽ ▫️ 🔳 🏳️ 💟 🦷
 whitecane	🦯
 whitecheckmark	✅
 whitecircle	⚪
@@ -12611,7 +12875,8 @@ whores	👠 💋 💃 😈
 why	🥺
 wi	🛜
 wicked	🖤
-wide	😳 👀 🌐
+wide	😳 🫪 👀 🌐
+wideeyed	🫪
 wiener	🌭
 wifi	📶 🛜 💓
 wii	🎮
@@ -12637,7 +12902,7 @@ winky	😉
 winner	🏆 🥇 🎉 🏅
 winners	🏆
 winning	🏆 🎖️ 🏅 🥇
-winter	❄️ ☃️ ⛄ ⛷️ 🏂 🏔️ 🎿 🧣 🧤
+winter	🪾 ❄️ ☃️ ⛄ ⛷️ 🏂 🏔️ 🎿 🧣 🧤
 winzip	🗜️
 wip	🚧 ⚠️ 👷‍♂️ 👷‍♀️ 🏗️
 wireless	🛜 📻
@@ -12690,12 +12955,15 @@ womanguard	💂‍♀️
 womanhealthworker	👩‍⚕️
 womaninlotusposition	🧘‍♀️
 womaninmanualwheelchair	👩‍🦽
+womaninmanualwheelchairfacingright	👩‍🦽‍➡️
 womaninmotorizedwheelchair	👩‍🦼
+womaninmotorizedwheelchairfacingright	👩‍🦼‍➡️
 womaninsteamyroom	🧖‍♀️
 womanintuxedo	🤵‍♀️
 womanjudge	👩‍⚖️
 womanjuggling	🤹‍♀️
 womankneeling	🧎‍♀️
+womankneelingfacingright	🧎‍♀️‍➡️
 womanliftingweights	🏋️‍♀️
 womanmage	🧙‍♀️
 womanmechanic	👩‍🔧
@@ -12710,6 +12978,7 @@ womanraisinghand	🙋‍♀️
 womanredhair	👩‍🦰
 womanrowingboat	🚣‍♀️
 womanrunning	🏃‍♀️
+womanrunningfacingright	🏃‍♀️‍➡️
 womans	👚 👒 🥿 👡 👢
 womansboot	👢
 womanscientist	👩‍🔬
@@ -12729,6 +12998,7 @@ womantechnologist	👩‍💻
 womantippinghand	💁‍♀️
 womanvampire	🧛‍♀️
 womanwalking	🚶‍♀️
+womanwalkingfacingright	🚶‍♀️‍➡️
 womanwearingturban	👳‍♀️
 womanwhitehair	👩‍🦳
 womanwithheadscarf	🧕
@@ -12736,6 +13006,7 @@ womanwithprobingcane	👩‍🦯
 womanwithturban	👳‍♀️
 womanwithveil	👰‍♀️
 womanwithwhitecane	👩‍🦯
+womanwithwhitecanefacingright	👩‍🦯‍➡️
 womanzombie	🧟‍♀️
 women	👯‍♀️ 🤼‍♀️ 👭 🚺 🧑 🧔‍♀️ 👩 👩‍🦰 👩‍🦱 👩‍🦳 👩‍🦲 👱‍♀️ 🧓 👵 🙍‍♀️ 🙎‍♀️ 🙅‍♀️ 🙆‍♀️ 💁 💁‍♀️ 🙋‍♀️ 🧏‍♀️ 🙇‍♀️ 🤦‍♀️
 womenholdinghands	👭
@@ -12748,8 +13019,9 @@ won	😤
 wonder	🤔 🧐 💭
 wondering	🤔 🧐 💭
 woo	😯
-wood	🪵 🌲 🌳 🪓
+wood	🪵 🌲 🌳 🪾 🪓
 woodwind	🪈
+woodwose	🫈
 woof	🐶
 woohoo	🎉 🥳 🙌 🎊
 wool	🐑 🦙
@@ -12773,7 +13045,7 @@ worm	🪱 🐛
 worried	😟 😨 🫦 🙍
 worriedface	😟
 worry	😟 🫦
-worship	🛐 🕌 🕍
+worship	🛐 🧎‍♀️‍➡️ 🧎‍♂️‍➡️ 🕌 🕍
 wound	🩸
 wounded	❤️‍🩹
 wow	😱 😮 🤯 😲 🤩 🫨 😯 😳 😦 😧 🙀 ❕ ❗
@@ -12782,14 +13054,14 @@ wrapped	🎁 🫔
 wrappedgift	🎁
 wrapper	🍬
 wrench	🔧 🛠️ 👨‍🔧 👩‍🔧
-wrestle	🤼 🤼‍♂️ 🤼‍♀️
+wrestle	🫯 🤼 🤼‍♂️ 🤼‍♀️
 wrestler	🤼 🤼‍♂️ 🤼‍♀️
 wrestlers	🤼 🤼‍♂️ 🤼‍♀️
-wrestling	🤼 🤼‍♂️ 🤼‍♀️
+wrestling	🤼 🤼‍♂️ 🤼‍♀️ 🫯
 wrist	⌚
 wristwatch	⌚
 write	✍️ ✏️ ✒️ 🖋️ 🖊️ 📝
-writing	✍️ 📔 ✏️ ✒️ 🖋️ 🖊️ 📝
+writing	✍️ 📔 🪌 ✏️ ✒️ 🖋️ 🖊️ 📝
 writinghand	✍️
 wry	😼
 ws	🇦🇸 🇼🇸
@@ -12830,7 +13102,8 @@ yen	💴 💹
 yenbanknote	💴
 yep	👍 ✅ 👌
 yerba	🧉
-yes	👍 ✅ 👌 🫡 🆗 ☑️ ✔️ 🉑
+yes	👍 ✅ 👌 🫡 🙂‍↕️ 🆗 ☑️ ✔️ 🉑
+yeti	🫈
 yey	🎉 🥳 🙌
 yikes	😰 😓
 yin	☯️
@@ -12884,6 +13157,7 @@ zece	🕙 🕥
 zeelanda	🇳🇿
 zen	😌 🧘 🧘‍♂️ 🧘‍♀️
 zero	📥 0️⃣ 🥶
+zest	🍋‍🟩
 zgai	🫣
 zgaltait	🫨
 zgaltaita	🫨
@@ -12914,7 +13188,7 @@ zmeu	🪁
 zodia	♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎
 zodiabalanta	♎
 zodiaberbec	♈
-zodiac	👧 🦁 🐂 🐏 🐐 🐍 🐟 🦂 🦀 🏺 🏹 ⚖️ ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
+zodiac	👧 🦁 🐂 🐏 🐐 🐍 🐟 🦀 🦂 🏺 🏹 ⚖️ ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓
 zodiacapricorn	♑
 zodiafecioara	♍
 zodiagemeni	♊
@@ -12926,7 +13200,7 @@ zodiasagetator	♐
 zodiascorpion	♏
 zodiataur	♉
 zodiavarsator	♒
-zodie	🦁 🐂 🐟 🦂 🦀 🏺 🏹 ⚖️ ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎
+zodie	🦁 🐂 🐟 🦀 🦂 🏺 🏹 ⚖️ ♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎
 zombi	🧟 🧟‍♂️ 🧟‍♀️
 zombie	🧟 🧟‍♂️ 🧟‍♀️
 zombieman	🧟‍♂️

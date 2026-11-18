@@ -151,7 +151,7 @@ object Dictionary {
                 } catch (_: Exception) {
                 }
             }
-            // Rude words are never rare: a typo near one reaches it, and no tamer word wins over it
+            // Protected words are never rare: a typo near one reaches it, and no commoner word wins over it
             for (w in Fun.PROTECTED) freqOf[w] = maxOf(freqOf[w] ?: 0, PROTECTED_FREQ)
             val words = freqOf.keys.toTypedArray(); words.sort()
             val freq = IntArray(words.size) { freqOf.getValue(words[it]) }

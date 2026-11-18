@@ -1,14 +1,15 @@
 """
-Builds the emoji assets: emoji.txt (emoji, category) and emoji_index.txt (keyword, its emoji, best first).
+Builds the emoji assets: emoji.txt (emoji, category, its skin tone variants) and emoji_index.txt (keyword, its emoji, best first).
 
-  python3 build.py <cldr_dir> <emojilib.json> <assets_dir>
+  python3 build.py <cldr_dir> <emojilib.json> <emoji-test.txt> <assets_dir>
 
 cldr_dir holds the CLDR annotation files en.xml, ro.xml (annotations) and end.xml, rod.xml (annotationsDerived).
-base.tsv is the emoji list with its gemoji keywords; extra.tsv the words and emoticons picked by hand, which rank first.
+emoji-test.txt is the Unicode list of every emoji (unicode.org/Public/emoji/latest): the emoji, their order, groups and variants.
+base.tsv holds the gemoji keywords; extra.tsv the words and emoticons picked by hand, which rank first.
 """
 import sys, re, json, os, unicodedata, collections
 
-cldr, emojilib_path, out = sys.argv[1], sys.argv[2], sys.argv[3]
+cldr, emojilib_path, test_path, out = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 here = os.path.dirname(os.path.abspath(__file__))
 MAX_PER_KEY = 24
 STOP = set('with the of and a an in on for to at or face cu de si la pe un o fata care din al sau ale'.split())
@@ -27,13 +28,43 @@ def words(text):
     return [w for w in re.split(r"[^0-9a-z]+", plain(text)) if w]
 
 
-base = []
+TONES = set('\U0001F3FB\U0001F3FC\U0001F3FD\U0001F3FE\U0001F3FF')
+gemoji = {}
 for line in open(os.path.join(here, 'base.tsv'), encoding='utf-8'):
     p = line.rstrip('\n').split('\t')
     if len(p) >= 3:
-        base.append((p[0], p[1], p[2].split(',')))
+        gemoji[bare(p[0])] = p[2].split(',')
+
+# every emoji Unicode lists, in its order and group; the forms with a skin tone are variants of the form without
+base = []; names = {}; toned = []; group = ''
+for line in open(test_path, encoding='utf-8'):
+    if line.startswith('# group:'):
+        group = line.split(':', 1)[1].strip()
+    m = re.match(r'^([0-9A-F ]+); fully-qualified\s+# (\S+) E[0-9.]+ (.+)$', line)
+    if not m or group == 'Component':
+        continue
+    e = ''.join(chr(int(c, 16)) for c in m.group(1).split())
+    if TONES & set(e):
+        toned.append(e)
+    else:
+        base.append((e, group, gemoji.get(bare(e), [])))
+        names[e] = m.group(3)
 order = {e: i for i, (e, _, _) in enumerate(base)}
 by_bare = {bare(e): e for e, _, _ in base}
+variants = collections.defaultdict(list)
+# two people in different tones are spelled with their own sequence; without the tones it is one of these
+PAIRS = {'🫱‍🫲': '🤝', '👩‍🤝‍👨': '👫', '👨‍🤝‍👨': '👬', '👩‍🤝‍👩': '👭', '🧑‍❤‍💋‍🧑': '💏', '🧑‍❤‍🧑': '💑',
+         '🧑‍🐰‍🧑': '👯', '👨‍🐰‍👨': '👯‍♂️', '👩‍🐰‍👩': '👯‍♀️', '🧑‍🫯‍🧑': '🤼', '👨‍🫯‍👨': '🤼‍♂️', '👩‍🫯‍👩': '🤼‍♀️'}
+missing = set()
+for e in toned:
+    plain_form = bare(''.join(c for c in e if c not in TONES))
+    b = by_bare.get(plain_form) or PAIRS.get(plain_form)
+    if b:
+        variants[b].append(e)
+    else:
+        missing.add(plain_form)
+if missing:
+    sys.exit('no emoji without skin tone for: ' + ' '.join(sorted(missing)) + ' (add them to PAIRS)')
 
 # keyword -> emoji -> tier (lower is better)
 index = collections.defaultdict(dict)
@@ -59,6 +90,7 @@ def add_name(name, emoji):
 
 
 for e, _, kws in base:
+    add_name(names[e], e)
     for k in kws:
         if '_' in k:
             add_name(k.replace('_', ' '), e)
@@ -105,7 +137,7 @@ for line in open(os.path.join(here, 'extra.tsv'), encoding='utf-8'):
     emojis = p[1].split(' ')
     for e in emojis:
         if e not in order:
-            sys.exit(f'extra.tsv: {e} is not in base.tsv ({p[0]})')
+            sys.exit(f'extra.tsv: {e} is not in the emoji list ({p[0]})')
     for key in p[0].split(','):
         if re.fullmatch(r'[0-9a-z]+', key) and not key.isdigit():
             picked[key] += [e for e in emojis if e not in picked[key]]
@@ -114,7 +146,7 @@ for line in open(os.path.join(here, 'extra.tsv'), encoding='utf-8'):
 
 with open(os.path.join(out, 'emoji.txt'), 'w', encoding='utf-8') as f:
     for e, cat, _ in base:
-        f.write(f'{e}\t{cat}\n')
+        f.write(f'{e}\t{cat}\t{" ".join(variants.get(e, []))}\n')
 
 n = 0
 with open(os.path.join(out, 'emoji_index.txt'), 'w', encoding='utf-8') as f:
@@ -125,4 +157,4 @@ with open(os.path.join(out, 'emoji_index.txt'), 'w', encoding='utf-8') as f:
         n += 1
     for key in sorted(emoticons):
         f.write(key + '\t' + ' '.join(emoticons[key]) + '\n')
-print(n, 'keywords,', len(emoticons), 'emoticons')
+print(len(base), 'emoji,', sum(len(v) for v in variants.values()), 'variants,', n, 'keywords,', len(emoticons), 'emoticons')

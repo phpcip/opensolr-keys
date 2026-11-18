@@ -72,6 +72,11 @@ class Prefs(ctx: Context) {
         get() = sp.getString("recent_emoji", "")!!.split('\u0001').filter { it.isNotEmpty() }
         set(v) = sp.edit().putString("recent_emoji", v.joinToString("\u0001")).apply()
 
+    /** The skin tone form chosen for an emoji (emoji without tone → the form), from a long press in the picker. */
+    var tones: Map<String, String>
+        get() = sp.getString("emoji_tones", "")!!.split('\u0002').mapNotNull { val p = it.split('\u0001'); if (p.size == 2) p[0] to p[1] else null }.toMap()
+        set(v) = sp.edit().putString("emoji_tones", v.entries.joinToString("\u0002") { it.key + '\u0001' + it.value }).apply()
+
     fun useEmoji(e: String) { recentEmoji = listOf(e) + recentEmoji.filter { it != e } }
 
     fun learn(word: String) { learned = learned + word.lowercase() }
