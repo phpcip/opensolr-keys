@@ -198,6 +198,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
 
     override fun onCreateInputView(): View {
         kb = KeyboardView(this).apply { listener = this@KeysService; sizePercent = prefs.sizePercent }
+        feedback.view = kb
         root = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL; setBackgroundColor(kb.colorBg) }
 
         barScroll = HorizontalScrollView(this).apply { isHorizontalScrollBarEnabled = false; isFillViewport = true }

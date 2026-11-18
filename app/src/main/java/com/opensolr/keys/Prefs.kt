@@ -38,6 +38,11 @@ class Prefs(ctx: Context) {
         get() = sp.getInt("haptic_strength", 8)
         set(v) = sp.edit().putInt("haptic_strength", v).apply()
 
+    /** The key tap, 0..3 from lightest to heaviest. */
+    var hapticLevel: Int
+        get() = ((hapticStrength - 1) / 25).coerceIn(0, 3)
+        set(v) { hapticStrength = v.coerceIn(0, 3) * 25 + 13 }
+
     var sound: Boolean
         get() = sp.getBoolean("sound", true)
         set(v) = sp.edit().putBoolean("sound", v).apply()

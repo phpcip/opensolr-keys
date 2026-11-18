@@ -8,9 +8,13 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
+import android.view.HapticFeedbackConstants
+import android.view.View
 
 /** Key click sound (the system's own key tone) and the key tap felt under the finger, both with user-set strength. */
 class Feedback(private val ctx: Context, private val prefs: Prefs) {
+    /** The view on screen (the keys, or the strength slider): the system plays its own tick through it. */
+    var view: View? = null
     enum class Kind { STANDARD, DELETE, SPACE, RETURN }
 
     private val audio = ctx.getSystemService(Context.AUDIO_SERVICE) as AudioManager
@@ -41,23 +45,29 @@ class Feedback(private val ctx: Context, private val prefs: Prefs) {
     }
 
     /**
-     * One short pulse per key, its force following the strength setting all the way: a faint, very short tick at the bottom,
-     * longer and harder towards the top. Motors that take scaled primitives get a scaled tick, then a scaled click.
+     * The key tap is one of the phone's own tuned effects, never a raw pulse (a motor without braking turns that into a buzz).
+     * Four levels, lightest first: the system tick (the one sliders give), tick, click, heavy click; motors that take
+     * scaled primitives play a soft or full tick, then a soft or full click.
      */
     fun vibrate() {
         val v = vibrator ?: return
-        val s = prefs.hapticStrength.coerceIn(1, 100)
+        val level = prefs.hapticLevel
         if (Build.VERSION.SDK_INT >= 30 &&
             v.areAllPrimitivesSupported(VibrationEffect.Composition.PRIMITIVE_TICK, VibrationEffect.Composition.PRIMITIVE_CLICK)) {
-            val effect = VibrationEffect.startComposition()
-            if (s <= 50) effect.addPrimitive(VibrationEffect.Composition.PRIMITIVE_TICK, 0.1f + 0.9f * s / 50f)
-            else effect.addPrimitive(VibrationEffect.Composition.PRIMITIVE_CLICK, 0.3f + 0.7f * (s - 50) / 50f)
-            v.vibrate(effect.compose())
+            val primitive = if (level < 2) VibrationEffect.Composition.PRIMITIVE_TICK else VibrationEffect.Composition.PRIMITIVE_CLICK
+            v.vibrate(VibrationEffect.startComposition().addPrimitive(primitive, if (level % 2 == 0) 0.45f else 1f).compose())
             return
         }
-        val ms = 4L + s / 12
-        val amp = (25 + s * 2.3f).toInt().coerceIn(1, 255)
-        v.vibrate(VibrationEffect.createOneShot(ms, if (v.hasAmplitudeControl()) amp else VibrationEffect.DEFAULT_AMPLITUDE))
+        if (level == 0 && view?.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK) == true) return
+        if (Build.VERSION.SDK_INT >= 29) {
+            v.vibrate(VibrationEffect.createPredefined(when (level) {
+                0, 1 -> VibrationEffect.EFFECT_TICK
+                2 -> VibrationEffect.EFFECT_CLICK
+                else -> VibrationEffect.EFFECT_HEAVY_CLICK
+            }))
+            return
+        }
+        v.vibrate(VibrationEffect.createOneShot(10, if (v.hasAmplitudeControl()) 60 + level * 65 else VibrationEffect.DEFAULT_AMPLITUDE))
     }
 
     /** The tap alone, without the sound: one for every character a held delete removes. */
