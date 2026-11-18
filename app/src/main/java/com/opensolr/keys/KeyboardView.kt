@@ -105,7 +105,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
 
     private val longPress = Runnable { onLongPress() }
     // the balloon lingers a moment after the finger lifts, like on iOS
-    private val hidePreview = Runnable { if (preview.isShowing && activeKey?.type != KType.CHAR) preview.dismiss() }
+    private val hidePreview = Runnable { if (activeKey?.type != KType.CHAR) previewView.clear() }
     private val repeat = object : Runnable {
         override fun run() {
             val k = activeKey ?: return
@@ -427,7 +427,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         val alts = if (mode.pad) (if (k.text == ".") "," else return) else Accents.of(k.text, mode == Mode.LETTERS && shift != Shift.OFF) ?: return
         // only the alternatives: the key's own letter is what a plain tap already gives
         val chars = alts
-        if (preview.isShowing) preview.dismiss()
+        previewView.clear()
         accentView.setup(chars.map { it.toString() }, unit, keyH * 1.1f, keyH * 0.5f)
         val pw = accentView.cellW * chars.length + accentView.pad * 2
         accentLeft = min(max(k.x - accentView.pad, side), width - side - pw)
@@ -439,25 +439,35 @@ class KeyboardView(ctx: Context) : View(ctx) {
         if (accents.isShowing) accents.update(px, py, pw.roundToInt(), ph) else { accents.width = pw.roundToInt(); accents.height = ph; accents.contentView = accentView; accents.showAtLocation(this, android.view.Gravity.NO_GRAVITY, px, py) }
     }
 
+    /**
+     * The balloon is drawn inside one window that covers the keys and the room above them and never moves:
+     * from one key to the next only the drawing changes, so the balloon appears in place.
+     */
     private fun showPreview(k: Key) {
         removeCallbacks(hidePreview)
         val label = if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text
         val s = balloonPercent / 100f
         // the body scales with the setting; the stem grows with it, so a bigger balloon also sits higher
         val stem = k.h * (1.15f + 0.6f * (s - 1f))
-        val pw = (k.w * 1.8f * s).roundToInt()
-        val ph = (k.h * 1.6f * s + stem).roundToInt()
+        val pw = k.w * 1.8f * s
+        val ph = k.h * 1.6f * s + stem
+        // room above the keys for the tallest balloon of the top row
+        val above = (keyH * 1.3f * (1.6f * s + 1.15f + 0.6f * (s - 1f))).roundToInt()
         getLocationInWindow(winPos)
-        val px = (winPos[0] + k.x + k.w / 2 - pw / 2).roundToInt()
-        val py = (winPos[1] + k.y + k.h - ph).roundToInt()
-        previewView.set(label, k.w, stem, keyH * 1.15f * s)
-        if (preview.isShowing) preview.update(px, py, pw, ph)
-        else { preview.width = pw; preview.height = ph; preview.contentView = previewView; preview.showAtLocation(this, android.view.Gravity.NO_GRAVITY, px, py) }
+        val wx = winPos[0]; val wy = winPos[1] - above
+        val ww = width; val wh = height + above
+        previewView.set(label, k.w, stem, keyH * 1.15f * s, k.x + k.w / 2 - pw / 2, above + k.y + k.h - ph, pw, ph)
+        if (!preview.isShowing) { preview.width = ww; preview.height = wh; preview.contentView = previewView; preview.showAtLocation(this, android.view.Gravity.NO_GRAVITY, wx, wy) }
+        else if (wx != previewX || wy != previewY || ww != preview.width || wh != preview.height) preview.update(wx, wy, ww, wh)
+        previewX = wx; previewY = wy
         previewView.invalidate()
     }
 
+    private var previewX = 0; private var previewY = 0
+
     fun dismissPopups() {
         removeCallbacks(longPress); removeCallbacks(repeat); removeCallbacks(hidePreview)
+        previewView.clear()
         if (preview.isShowing) preview.dismiss()
         if (accents.isShowing) accents.dismiss()
         activeKey = null; pressedKey = null
@@ -486,11 +496,18 @@ class KeyboardView(ctx: Context) : View(ctx) {
     /** The enlarged key shown above a pressed letter. */
     private inner class BalloonView(ctx: Context) : View(ctx) {
         private var label = ""; private var keyW = 0f; private var stemH = 0f; private var fontPx = 0f
+        private var left = 0f; private var top0 = 0f; private var bw = 0f; private var bh = 0f
+        private var shown = false
         private val p = Paint(Paint.ANTI_ALIAS_FLAG)
         private val t = Paint(Paint.ANTI_ALIAS_FLAG).apply { textAlign = Paint.Align.CENTER; typeface = keyFace }
-        fun set(l: String, w: Float, stem: Float, f: Float) { label = l; keyW = w; stemH = stem; fontPx = f }
+        fun set(l: String, w: Float, stem: Float, f: Float, x: Float, y: Float, pw: Float, ph: Float) {
+            label = l; keyW = w; stemH = stem; fontPx = f; left = x; top0 = y; bw = pw; bh = ph; shown = true
+        }
+        fun clear() { if (shown) { shown = false; invalidate() } }
         override fun onDraw(c: Canvas) {
-            val w = width.toFloat(); val h = height.toFloat()
+            if (!shown) return
+            c.translate(left, top0)
+            val w = bw; val h = bh
             val top = 0f; val bodyBottom = h - stemH
             val r = 8 * d
             path.reset()
