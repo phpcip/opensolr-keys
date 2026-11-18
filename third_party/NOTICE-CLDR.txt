@@ -2,7 +2,7 @@ Part of the emoji keywords (assets/emoji_index.txt) comes from the emoji annotat
 Unicode Common Locale Data Repository (https://github.com/unicode-org/cldr), English and Romanian:
 common/annotations and common/annotationsDerived.
 
-The list of emoji and of their skin tone forms (assets/emoji.txt) comes from the Unicode emoji data file
+The list of emoji (assets/emoji.txt) comes from the Unicode emoji data file
 emoji-test.txt (https://unicode.org/Public/emoji/latest/emoji-test.txt).
 
 Copyright © 1991-present Unicode, Inc. All rights reserved.

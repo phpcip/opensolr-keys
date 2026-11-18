@@ -18,18 +18,6 @@ object Emoji {
     @Volatile private var keys: Array<String> = emptyArray()
     @Volatile private var values: Array<String> = emptyArray()
     @Volatile private var emoticons: Map<String, List<String>> = emptyMap()
-    /** The skin tone forms of an emoji, and the emoji each of them is a form of. */
-    @Volatile private var variants: Map<String, List<String>> = emptyMap()
-    @Volatile private var baseOf: Map<String, String> = emptyMap()
-    /** The form chosen for an emoji with a long press in the picker; it is the one offered from then on. Set by the service from the prefs. */
-    @Volatile var tones: Map<String, String> = emptyMap()
-
-    /** [e] in the skin tone chosen for it, or as it is. */
-    fun toned(e: String): String = tones[e] ?: e
-    /** The emoji without a skin tone that [e] is a form of ([e] itself when it has none). */
-    fun plain(e: String): String = baseOf[e] ?: e
-    /** The other forms of [e], lightest first; empty when it has none. */
-    fun variantsOf(e: String): List<String> = variants[plain(e)] ?: emptyList()
     @Volatile private var loaded = false
 
     fun ensureLoaded(ctx: Context) {
@@ -41,8 +29,6 @@ object Emoji {
             for ((c, _) in CATEGORIES) cats[c] = ArrayList()
             val words = ArrayList<Pair<String, String>>(13500)
             val faces = HashMap<String, List<String>>()
-            val forms = HashMap<String, List<String>>()
-            val bases = HashMap<String, String>()
             // an emoji this phone has no picture for is left out: newer ones than its font
             val paint = android.graphics.Paint()
             val known = HashSet<String>(2500)
@@ -53,10 +39,6 @@ object Emoji {
                         if (p.size < 2 || !paint.hasGlyph(p[0])) continue
                         known.add(p[0])
                         cats.getOrPut(p[1]) { ArrayList() }.add(p[0])
-                        if (p.size > 2 && p[2].isNotEmpty()) {
-                            val v = p[2].split(' ').filter { paint.hasGlyph(it) }
-                            if (v.isNotEmpty()) { forms[p[0]] = v; for (f in v) bases[f] = p[0] }
-                        }
                     }
                 }
                 app.assets.open("emoji_index.txt").bufferedReader().useLines { lines ->
@@ -77,8 +59,6 @@ object Emoji {
             values = Array(words.size) { words[it].second }
             keys = Array(words.size) { words[it].first }
             emoticons = faces
-            variants = forms
-            baseOf = bases
         }.start()
     }
 
@@ -107,7 +87,7 @@ object Emoji {
         out.addAll(exact(k, q))
         addPrefixed(k, q, 99, 30, out)
         if (out.size < 30) for (i in k.indices) if (k[i].contains(q)) { out.addAll(values[i].split(' ')); if (out.size >= 30) break }
-        return out.take(30).map { toned(it) }
+        return out.take(30)
     }
 
     /** Suggestions for the word being typed: its keyword, the keywords it nearly spells (think → thinking), or a ":prefix" search. */
@@ -121,12 +101,12 @@ object Emoji {
             if (p.length < 2) return emptyList()
             out.addAll(exact(k, p))
             addPrefixed(k, p, 99, MAX, out)
-            return out.take(MAX).map { toned(it) }
+            return out.take(MAX)
         }
         if (lw.length < 2) return emptyList()
         out.addAll(exact(k, lw))
         if (lw.length >= 4 && out.size < MAX) addPrefixed(k, lw, 3, MAX, out)
-        return out.take(MAX).map { toned(it) }
+        return out.take(MAX)
     }
 
     /**
@@ -151,7 +131,7 @@ object Emoji {
             while (run < sub.length && sub[sub.length - 1 - run] == last) run++
             val stem = sub.substring(0, sub.length - run)
             val hit = (if (run >= 2) table[stem + last + last] else null) ?: (if (stem.isNotEmpty() || run == 1) table[stem + last] else null) ?: table[sub]
-            if (hit != null) return (raw.length - s) to hit.map { toned(it) }
+            if (hit != null) return (raw.length - s) to hit
         }
         return null
     }

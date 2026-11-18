@@ -1,10 +1,11 @@
 """
-Builds the emoji assets: emoji.txt (emoji, category, its skin tone variants) and emoji_index.txt (keyword, its emoji, best first).
+Builds the emoji assets: emoji.txt (emoji, category) and emoji_index.txt (keyword, its emoji, best first).
 
   python3 build.py <cldr_dir> <emojilib.json> <emoji-test.txt> <assets_dir>
 
 cldr_dir holds the CLDR annotation files en.xml, ro.xml (annotations) and end.xml, rod.xml (annotationsDerived).
-emoji-test.txt is the Unicode list of every emoji (unicode.org/Public/emoji/latest): the emoji, their order, groups and variants.
+emoji-test.txt is the Unicode list of every emoji (unicode.org/Public/emoji/latest): the emoji, their order and groups.
+Only the default form of each emoji is kept: the forms with a skin tone are left out.
 base.tsv holds the gemoji keywords; extra.tsv the words and emoticons picked by hand, which rank first.
 """
 import sys, re, json, os, unicodedata, collections
@@ -35,8 +36,8 @@ for line in open(os.path.join(here, 'base.tsv'), encoding='utf-8'):
     if len(p) >= 3:
         gemoji[bare(p[0])] = p[2].split(',')
 
-# every emoji Unicode lists, in its order and group; the forms with a skin tone are variants of the form without
-base = []; names = {}; toned = []; group = ''
+# every emoji Unicode lists, in its order and group, in its default form only
+base = []; names = {}; group = ''
 for line in open(test_path, encoding='utf-8'):
     if line.startswith('# group:'):
         group = line.split(':', 1)[1].strip()
@@ -45,26 +46,10 @@ for line in open(test_path, encoding='utf-8'):
         continue
     e = ''.join(chr(int(c, 16)) for c in m.group(1).split())
     if TONES & set(e):
-        toned.append(e)
-    else:
-        base.append((e, group, gemoji.get(bare(e), [])))
-        names[e] = m.group(3)
+        continue
+    base.append((e, group, gemoji.get(bare(e), []))); names[e] = m.group(3)
 order = {e: i for i, (e, _, _) in enumerate(base)}
 by_bare = {bare(e): e for e, _, _ in base}
-variants = collections.defaultdict(list)
-# two people in different tones are spelled with their own sequence; without the tones it is one of these
-PAIRS = {'🫱‍🫲': '🤝', '👩‍🤝‍👨': '👫', '👨‍🤝‍👨': '👬', '👩‍🤝‍👩': '👭', '🧑‍❤‍💋‍🧑': '💏', '🧑‍❤‍🧑': '💑',
-         '🧑‍🐰‍🧑': '👯', '👨‍🐰‍👨': '👯‍♂️', '👩‍🐰‍👩': '👯‍♀️', '🧑‍🫯‍🧑': '🤼', '👨‍🫯‍👨': '🤼‍♂️', '👩‍🫯‍👩': '🤼‍♀️'}
-missing = set()
-for e in toned:
-    plain_form = bare(''.join(c for c in e if c not in TONES))
-    b = by_bare.get(plain_form) or PAIRS.get(plain_form)
-    if b:
-        variants[b].append(e)
-    else:
-        missing.add(plain_form)
-if missing:
-    sys.exit('no emoji without skin tone for: ' + ' '.join(sorted(missing)) + ' (add them to PAIRS)')
 
 # keyword -> emoji -> tier (lower is better)
 index = collections.defaultdict(dict)
@@ -146,7 +131,7 @@ for line in open(os.path.join(here, 'extra.tsv'), encoding='utf-8'):
 
 with open(os.path.join(out, 'emoji.txt'), 'w', encoding='utf-8') as f:
     for e, cat, _ in base:
-        f.write(f'{e}\t{cat}\t{" ".join(variants.get(e, []))}\n')
+        f.write(f'{e}\t{cat}\n')
 
 n = 0
 with open(os.path.join(out, 'emoji_index.txt'), 'w', encoding='utf-8') as f:
@@ -157,4 +142,4 @@ with open(os.path.join(out, 'emoji_index.txt'), 'w', encoding='utf-8') as f:
         n += 1
     for key in sorted(emoticons):
         f.write(key + '\t' + ' '.join(emoticons[key]) + '\n')
-print(len(base), 'emoji,', sum(len(v) for v in variants.values()), 'variants,', n, 'keywords,', len(emoticons), 'emoticons')
+print(len(base), 'emoji,', n, 'keywords,', len(emoticons), 'emoticons')

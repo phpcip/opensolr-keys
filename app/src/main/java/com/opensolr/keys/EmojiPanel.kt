@@ -20,7 +20,7 @@ import kotlin.math.roundToInt
 class EmojiPanel(
     ctx: Context, private val kb: KeyboardView, private val heightPx: Int,
     private val recent: () -> List<String>,
-    private val onEmoji: (String) -> Unit, private val onTone: (String, String) -> Unit, private val onAbc: () -> Unit, private val onDelete: () -> Unit
+    private val onEmoji: (String) -> Unit, private val onAbc: () -> Unit, private val onDelete: () -> Unit
 ) : LinearLayout(ctx) {
     private val d = resources.displayMetrics.density
     private val grid = GridView(ctx)
@@ -50,9 +50,7 @@ class EmojiPanel(
         grid.stretchMode = GridView.STRETCH_COLUMN_WIDTH
         grid.setPadding((4 * d).toInt(), 0, (4 * d).toInt(), 0)
         grid.isVerticalScrollBarEnabled = false
-        grid.setOnItemClickListener { _, _, pos, _ -> onEmoji(shown(grid.adapter.getItem(pos) as String)) }
-        // a long press on an emoji that comes in skin tones opens them; the one picked is remembered for that emoji
-        grid.setOnItemLongClickListener { _, cell, pos, _ -> showTones(cell, grid.adapter.getItem(pos) as String) }
+        grid.setOnItemClickListener { _, _, pos, _ -> onEmoji(grid.adapter.getItem(pos) as String) }
         addView(grid, LayoutParams(LayoutParams.MATCH_PARENT, 0).apply { weight = 1f })
 
         val bottom = LinearLayout(ctx).apply { orientation = HORIZONTAL }
@@ -73,57 +71,6 @@ class EmojiPanel(
         bottom.addView(del, LayoutParams(0, (48 * d).roundToInt()).apply { weight = 1f; marginStart = (6 * d).toInt() })
         addView(bottom, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
         show(current)
-    }
-
-    /** A category shows each emoji in the skin tone chosen for it; Recent shows exactly what was used. */
-    private fun shown(item: String) = if (current == Emoji.RECENT) item else Emoji.toned(item)
-
-    private var tonePopup: android.widget.PopupWindow? = null
-
-    private fun showTones(cell: View, item: String): Boolean {
-        val base = Emoji.plain(item)
-        val forms = Emoji.variantsOf(base)
-        if (forms.isEmpty()) return false
-        tonePopup?.dismiss()
-        val side = (44 * d).roundToInt()
-        val pad = (4 * d).roundToInt()
-        val box = LinearLayout(context).apply {
-            orientation = VERTICAL
-            setPadding(pad, pad, pad, pad)
-            background = GradientDrawable().apply { cornerRadius = 8 * d; setColor(kb.colorKey); setStroke((1 * d).roundToInt(), kb.colorShadow) }
-        }
-        val popup = android.widget.PopupWindow(context).apply {
-            isClippingEnabled = false; isTouchable = true; isFocusable = false; isOutsideTouchable = true
-            inputMethodMode = android.widget.PopupWindow.INPUT_METHOD_NOT_NEEDED; animationStyle = 0
-            setBackgroundDrawable(android.graphics.drawable.ColorDrawable(Color.TRANSPARENT))
-        }
-        fun cellFor(e: String) = TextView(context).apply {
-            text = e; textSize = 26f; gravity = Gravity.CENTER
-            if (e == Emoji.toned(base)) background = GradientDrawable().apply { cornerRadius = 5 * d; setColor(kb.colorSpecial) }
-            setOnClickListener { onTone(base, e); onEmoji(e); popup.dismiss(); (grid.adapter as? BaseAdapter)?.notifyDataSetChanged() }
-        }
-        // one tone per person: the emoji and its five tones in a row; pairs of people: the emoji, then five rows of five
-        val rows = if (forms.size <= 5) listOf(listOf(base) + forms) else listOf(listOf(base)) + forms.chunked(5)
-        for (r in rows) {
-            val line = LinearLayout(context).apply { orientation = HORIZONTAL }
-            for (e in r) line.addView(cellFor(e), LayoutParams(side, side))
-            box.addView(line)
-        }
-        val w = rows.maxOf { it.size } * side + 2 * pad
-        val h = rows.size * side + 2 * pad
-        val at = IntArray(2); cell.getLocationInWindow(at)
-        val x = (at[0] + cell.width / 2 - w / 2).coerceIn(pad, (resources.displayMetrics.widthPixels - w - pad).coerceAtLeast(pad))
-        popup.contentView = box; popup.width = w; popup.height = h
-        popup.showAtLocation(this, Gravity.NO_GRAVITY, x, at[1] - h - pad)
-        tonePopup = popup
-        return true
-    }
-
-    override fun onDetachedFromWindow() { tonePopup?.dismiss(); super.onDetachedFromWindow() }
-
-    override fun onVisibilityChanged(changedView: View, visibility: Int) {
-        super.onVisibilityChanged(changedView, visibility)
-        if (visibility != VISIBLE) tonePopup?.dismiss()
     }
 
     private fun keyView(label: String) = TextView(context).apply {
@@ -151,7 +98,7 @@ class EmojiPanel(
                     textSize = 26f; gravity = Gravity.CENTER
                     layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, (46 * d).roundToInt())
                 }
-                t.text = shown(items[p])
+                t.text = items[p]
                 return t
             }
         }

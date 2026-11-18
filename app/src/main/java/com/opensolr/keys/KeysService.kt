@@ -171,7 +171,6 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         super.onCreate()
         prefs = Prefs(this)
         feedback = Feedback(this, prefs)
-        Emoji.tones = prefs.tones
         d = resources.displayMetrics.density
         getSharedPreferences("keys", MODE_PRIVATE).registerOnSharedPreferenceChangeListener(onPrefChange)
         runCatching { clipboard.addPrimaryClipChangedListener(onClipChange) }
@@ -795,11 +794,6 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         kb.dismissPopups()
         val panel = emojiPanel ?: EmojiPanel(this, kb, (kb.keyboardHeight() * 1.2f).toInt(), { prefs.recentEmoji }, { e ->
             commitEmoji(e)
-        }, { base, form ->
-            // the form picked with a long press is the one this emoji is offered in from now on
-            val t = HashMap(prefs.tones)
-            if (form == base) t.remove(base) else t[base] = form
-            prefs.tones = t; Emoji.tones = t
         }, { feedback.key(Feedback.Kind.STANDARD); hideEmoji(); updateBar() }, {
             feedback.key(Feedback.Kind.DELETE)
             onKey(Key(KType.DELETE), null)
