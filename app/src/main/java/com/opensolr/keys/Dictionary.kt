@@ -142,7 +142,7 @@ object Dictionary {
                 } catch (_: Exception) {
                 }
             }
-            // the hand-kept list (rude words, slang, regional and old words): known words, never taken for a typo of a commoner one
+            // the hand-kept list (slang, regional and old words): known words, never taken for a typo of a commoner one
             for (lang in langs) {
                 try {
                     for (w in String(open("words_$lang.txt"), Charsets.UTF_8).lineSequence()) {
