@@ -80,6 +80,7 @@ class SettingsActivity : Activity() {
         slider(R.id.haptic_strength, R.id.haptic_strength_value, { prefs.hapticLevel }, { getString(R.string.s_strength) + ": ${prefs.hapticLevel + 1} / 4" }, tick = false) { prefs.hapticLevel = it; feedback.vibrate() }
         slider(R.id.volume, R.id.volume_value, { prefs.volume - 1 }, { getString(R.string.s_volume) + ": ${prefs.volume}%" }) { prefs.volume = it + 1 }
 
+        findViewById<Switch>(R.id.balloon_on).setOnCheckedChangeListener { _, on -> if (!binding) prefs.balloonOn = on }
         val haptic = findViewById<Switch>(R.id.haptic)
         haptic.setOnCheckedChangeListener { _, on -> if (!binding) prefs.haptic = on }
         val sound = findViewById<Switch>(R.id.sound)
@@ -96,6 +97,7 @@ class SettingsActivity : Activity() {
         findViewById<CheckBox>(R.id.lang_en).isChecked = "en" in langs
         findViewById<CheckBox>(R.id.lang_ro).isChecked = "ro" in langs
         for (r in sliderRefresh) r()
+        findViewById<Switch>(R.id.balloon_on).isChecked = prefs.balloonOn
         findViewById<Switch>(R.id.haptic).isChecked = prefs.haptic
         findViewById<Switch>(R.id.sound).isChecked = prefs.sound
         binding = false

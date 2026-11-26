@@ -165,6 +165,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         if (key == "longpress" && ::kb.isInitialized) kb.longPressMs = prefs.longPressMs.toLong()
         if (key == "preview" && ::kb.isInitialized) kb.previewLingerMs = prefs.previewMs.toLong()
         if (key == "balloon" && ::kb.isInitialized) kb.balloonPercent = prefs.balloonPercent
+        if (key == "balloon_on" && ::kb.isInitialized) kb.balloonOn = prefs.balloonOn
     }
 
     override fun onCreate() {
@@ -260,6 +261,7 @@ class KeysService : InputMethodService(), KeyboardView.Listener {
         kb.longPressMs = prefs.longPressMs.toLong()
         kb.previewLingerMs = prefs.previewMs.toLong()
         kb.balloonPercent = prefs.balloonPercent
+        kb.balloonOn = prefs.balloonOn
         applyBottomSpace()
         root.post { applyBottomSpace(); hideSystemImeBar() }
         // a restart (same field, re-laid out) keeps the emoji panel or search open

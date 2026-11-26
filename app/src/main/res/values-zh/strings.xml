@@ -31,6 +31,7 @@
     <string name="s_check_updates">检查更新</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">恢复默认设置</string>
+    <string name="s_balloon_on">按键气泡</string>
     <string name="s_preview">按键气泡停留时间</string>
     <string name="s_balloon">气泡大小</string>
 </resources>

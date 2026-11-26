@@ -31,6 +31,7 @@
     <string name="s_check_updates">Caută actualizări</string>
     <string name="s_abc">ABC</string>
     <string name="s_defaults">Revino la setările implicite</string>
+    <string name="s_balloon_on">Balonul tastei</string>
     <string name="s_preview">Balonul tastei rămâne</string>
     <string name="s_balloon">Mărimea balonului</string>
 </resources>

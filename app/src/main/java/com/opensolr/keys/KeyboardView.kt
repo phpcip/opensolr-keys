@@ -41,6 +41,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
     var previewLingerMs = 40L
     /** Balloon size in percent; above 100 the balloon also rises higher above the key. */
     var balloonPercent = 100
+    var balloonOn = true
     var shift = Shift.OFF
         set(v) { field = v; invalidate() }
 
@@ -445,6 +446,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
      */
     private fun showPreview(k: Key) {
         removeCallbacks(hidePreview)
+        if (!balloonOn) return
         val label = if (mode == Mode.LETTERS && shift != Shift.OFF) k.text.uppercase() else k.text
         val s = balloonPercent / 100f
         // the body scales with the setting; the stem grows with it, so a bigger balloon also sits higher
