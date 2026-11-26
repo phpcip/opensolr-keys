@@ -34,4 +34,12 @@
     <string name="s_balloon_on">キーの吹き出し</string>
     <string name="s_preview">キーの吹き出しの表示時間</string>
     <string name="s_balloon">吹き出しの大きさ</string>
+    <string name="s_backup">バックアップ</string>
+    <string name="s_backup_hint">すべての設定、残した単語、最近使った絵文字をファイルに保存し、別の電話で読み込みます。</string>
+    <string name="s_export">設定をエクスポート</string>
+    <string name="s_import">設定をインポート</string>
+    <string name="s_export_done">設定をファイルに保存しました。</string>
+    <string name="s_import_done">ファイルから設定を読み込みました。</string>
+    <string name="s_import_bad">Opensolr Keys の設定ファイルではありません。何も変更されていません。</string>
+    <string name="s_backup_io">ファイルを読み書きできませんでした。何も変更されていません。</string>
 </resources>

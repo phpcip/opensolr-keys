@@ -34,4 +34,12 @@
     <string name="s_balloon_on">Tastenballon</string>
     <string name="s_preview">Tastenballon bleibt</string>
     <string name="s_balloon">Größe des Tastenballons</string>
+    <string name="s_backup">Sicherung</string>
+    <string name="s_backup_hint">Alle Einstellungen, behaltenen Wörter und zuletzt verwendeten Emoji in einer Datei speichern und auf einem anderen Telefon laden.</string>
+    <string name="s_export">Einstellungen exportieren</string>
+    <string name="s_import">Einstellungen importieren</string>
+    <string name="s_export_done">Einstellungen in der Datei gespeichert.</string>
+    <string name="s_import_done">Einstellungen aus der Datei geladen.</string>
+    <string name="s_import_bad">Das ist keine Einstellungsdatei von Opensolr Keys. Es wurde nichts geändert.</string>
+    <string name="s_backup_io">Die Datei konnte nicht gelesen oder geschrieben werden. Es wurde nichts geändert.</string>
 </resources>

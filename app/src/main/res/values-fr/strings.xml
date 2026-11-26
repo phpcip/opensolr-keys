@@ -34,4 +34,12 @@
     <string name="s_balloon_on">Bulle de la touche</string>
     <string name="s_preview">La bulle de la touche reste</string>
     <string name="s_balloon">Taille de la bulle</string>
+    <string name="s_backup">Sauvegarde</string>
+    <string name="s_backup_hint">Enregistrez tous les réglages, les mots conservés et les emoji récents dans un fichier, puis chargez ce fichier sur un autre téléphone.</string>
+    <string name="s_export">Exporter les réglages</string>
+    <string name="s_import">Importer les réglages</string>
+    <string name="s_export_done">Réglages enregistrés dans le fichier.</string>
+    <string name="s_import_done">Réglages chargés depuis le fichier.</string>
+    <string name="s_import_bad">Ce n’est pas un fichier de réglages Opensolr Keys. Rien n’a été modifié.</string>
+    <string name="s_backup_io">Le fichier n’a pas pu être lu ou écrit. Rien n’a été modifié.</string>
 </resources>

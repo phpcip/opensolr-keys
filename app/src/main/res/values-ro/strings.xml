@@ -34,4 +34,12 @@
     <string name="s_balloon_on">Balonul tastei</string>
     <string name="s_preview">Balonul tastei rămâne</string>
     <string name="s_balloon">Mărimea balonului</string>
+    <string name="s_backup">Backup</string>
+    <string name="s_backup_hint">Salvează toate setările, cuvintele păstrate și emoji-urile recente într-un fișier, apoi încarcă fișierul pe alt telefon.</string>
+    <string name="s_export">Exportă setările</string>
+    <string name="s_import">Importă setările</string>
+    <string name="s_export_done">Setările au fost salvate în fișier.</string>
+    <string name="s_import_done">Setările au fost încărcate din fișier.</string>
+    <string name="s_import_bad">Nu e un fișier de setări Opensolr Keys. Nu s-a schimbat nimic.</string>
+    <string name="s_backup_io">Fișierul nu a putut fi citit sau scris. Nu s-a schimbat nimic.</string>
 </resources>

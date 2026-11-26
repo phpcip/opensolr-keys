@@ -34,4 +34,12 @@
     <string name="s_balloon_on">Globo de la tecla</string>
     <string name="s_preview">El globo de la tecla permanece</string>
     <string name="s_balloon">Tamaño del globo</string>
+    <string name="s_backup">Copia de seguridad</string>
+    <string name="s_backup_hint">Guarda todos los ajustes, las palabras conservadas y los emoji recientes en un archivo y cárgalo en otro teléfono.</string>
+    <string name="s_export">Exportar ajustes</string>
+    <string name="s_import">Importar ajustes</string>
+    <string name="s_export_done">Ajustes guardados en el archivo.</string>
+    <string name="s_import_done">Ajustes cargados desde el archivo.</string>
+    <string name="s_import_bad">No es un archivo de ajustes de Opensolr Keys. No se ha cambiado nada.</string>
+    <string name="s_backup_io">No se pudo leer ni escribir el archivo. No se ha cambiado nada.</string>
 </resources>

@@ -52,6 +52,16 @@ class SettingsActivity : Activity() {
             // in place: a recreate() would hide the keyboard and give the controls back their old state
             bindValues()
         }
+        findViewById<android.view.View>(R.id.btn_export).setOnClickListener {
+            val i = Intent(Intent.ACTION_CREATE_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE).setType("application/json")
+                .putExtra(Intent.EXTRA_TITLE, "opensolr-keys-settings.json")
+            startActivityForResult(i, REQ_EXPORT)
+        }
+        findViewById<android.view.View>(R.id.btn_import).setOnClickListener {
+            val i = Intent(Intent.ACTION_OPEN_DOCUMENT).addCategory(Intent.CATEGORY_OPENABLE).setType("*/*")
+                .putExtra(Intent.EXTRA_MIME_TYPES, arrayOf("application/json", "text/plain", "application/octet-stream"))
+            startActivityForResult(i, REQ_IMPORT)
+        }
         findViewById<android.view.View>(R.id.btn_learned).setOnClickListener {
             startActivity(Intent(this, WordsActivity::class.java))
         }
@@ -90,6 +100,32 @@ class SettingsActivity : Activity() {
 
     private var binding = false
 
+    @Deprecated("Activity result API of the platform Activity")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val uri = data?.data
+        if (resultCode != RESULT_OK || uri == null) return
+        val status = findViewById<TextView>(R.id.backup_status)
+        val msg = when (requestCode) {
+            REQ_EXPORT -> try {
+                contentResolver.openOutputStream(uri, "wt")!!.use { it.write(prefs.export().toByteArray(Charsets.UTF_8)) }
+                R.string.s_export_done
+            } catch (e: Exception) { R.string.s_backup_io }
+            REQ_IMPORT -> try {
+                val text = contentResolver.openInputStream(uri)!!.use { s ->
+                    val out = java.io.ByteArrayOutputStream()
+                    val buf = ByteArray(64 * 1024)
+                    while (out.size() <= MAX_FILE) { val n = s.read(buf); if (n < 0) break; out.write(buf, 0, n) }
+                    if (out.size() > MAX_FILE) null else out.toString("UTF-8")
+                }
+                if (text != null && prefs.import(text)) { bindValues(); R.string.s_import_done } else R.string.s_import_bad
+            } catch (e: Exception) { R.string.s_backup_io }
+            else -> return
+        }
+        status.text = getString(msg)
+        status.visibility = android.view.View.VISIBLE
+    }
+
     /** Every control shows what is saved; only the user's own touches write back. */
     private fun bindValues() {
         binding = true
@@ -108,6 +144,12 @@ class SettingsActivity : Activity() {
         binding = true
         super.onRestoreInstanceState(state)
         bindValues()
+    }
+
+    private companion object {
+        const val REQ_EXPORT = 1
+        const val REQ_IMPORT = 2
+        const val MAX_FILE = 8 * 1024 * 1024
     }
 
     /** Puts every slider and its exact value back from the saved prefs. */
