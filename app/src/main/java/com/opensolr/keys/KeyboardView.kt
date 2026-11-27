@@ -361,7 +361,13 @@ class KeyboardView(ctx: Context) : View(ctx) {
                 val idx = e.findPointerIndex(activePointer)
                 if (idx < 0) return true
                 val x = e.getX(idx); val y = e.getY(idx)
-                if (accents.isShowing) { accentView.select(((x - accentLeft) / accentView.cellW).toInt()); return true }
+                if (accents.isShowing) {
+                    // the default alternative (the symbol) stays chosen until the finger really slides: at the edge of the
+                    // keyboard the strip is pushed aside and the finger may rest over another alternative
+                    if (!accentSlid && abs(x - downX) < 10 * d) return true
+                    accentSlid = true
+                    accentView.select(((x - accentLeft) / accentView.cellW).toInt()); return true
+                }
                 // The key touched first is the key typed: a finger that slips onto a neighbour while pressing
                 // (m to k on the way down) does not change it. Only the long press is dropped once it slides.
                 if (abs(x - downX) > 10 * d || abs(y - downY) > 10 * d) removeCallbacks(longPress)
@@ -422,6 +428,8 @@ class KeyboardView(ctx: Context) : View(ctx) {
         invalidate()
     }
 
+    private var accentSlid = false
+
     private fun onLongPress() {
         val k = activeKey ?: return
         // on the pads only the decimal point has an alternative: the comma
@@ -436,6 +444,7 @@ class KeyboardView(ctx: Context) : View(ctx) {
         val px = (winPos[0] + accentLeft).roundToInt()
         val py = (winPos[1] + k.y - keyH * 1.1f - accentView.pad * 2 - 4 * d).roundToInt()
         val ph = (keyH * 1.1f + accentView.pad * 2).roundToInt()
+        accentSlid = false
         accentView.select(Accents.defaultIndex(k.text, chars))
         if (accents.isShowing) accents.update(px, py, pw.roundToInt(), ph) else { accents.width = pw.roundToInt(); accents.height = ph; accents.contentView = accentView; accents.showAtLocation(this, android.view.Gravity.NO_GRAVITY, px, py) }
     }
